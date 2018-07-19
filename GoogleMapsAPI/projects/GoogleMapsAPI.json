@@ -1,0 +1,73 @@
+{
+  "links" : [ {
+    "source" : "client/GoogleMapsExample",
+    "target" : "topic//my/response/topic"
+  } ],
+  "name" : "GoogleMapsAPI",
+  "options" : {
+    "description" : "The DynamicMapViewer widget is a wrapper around \"Google Maps\". There are a set of 4 libraries provided by Google to allow you to extend the functionality programmatically (such as enabling drawing tools, adding custom markers, drawing heat maps, drawing shapes, etc.)\n\nThe documentation for these libraries (known as \"drawing\", \"geometry\", \"places\" and \"visualization\") is provided by Google and can be found here: https://developers.google.com/maps/documentation/javascript/tutorial\n\nThe GoogleMapsExample Client provides some simple examples that show how to access these extensions from your JavaScript code. Each of the 4 buttons shows a different piece of functionality; you can see the code by selecting a button and editing the \"On Click\" event handler.\n\n\"Enable Drawing\": Activates the Google Maps drawing tools (and shows how to catch the event when the user draws a polygon).\n\n\"Add Marker\": Draws some custom markers and shapes on the map.\n\n\"Heat Map\": Draws a \"heat map\" overlay on the top of the map.\n\n\"Draw Polygon\": Draws a triangle on top of the map.",
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "showGrid" : true,
+    "v" : 2
+  },
+  "resources" : [ {
+    "label" : "/my/response/topic",
+    "name" : "/my/response/topic",
+    "node" : {
+      "x" : 358.4884911413936,
+      "y" : 222.82688770127595
+    },
+    "type" : 10
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "GoogleMapsExample",
+    "name" : "GoogleMapsExample",
+    "node" : {
+      "x" : 237.46855329755178,
+      "y" : 142.14692913871647
+    },
+    "timestamp" : "2018-07-19T20:06:38.841Z",
+    "type" : 15
+  } ],
+  "tools" : [ {
+    "name" : "GoogleMapsExample",
+    "pane" : {
+      "h" : 700,
+      "w" : 1000,
+      "x" : 710,
+      "y" : 10
+    },
+    "resourceKey" : "client/GoogleMapsExample",
+    "type" : 63
+  }, {
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 520,
+      "w" : 690,
+      "x" : 10,
+      "y" : 10
+    },
+    "type" : 82
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "client/GoogleMapsExample", "projectdescription/Project Description" ]
+  } ]
+}
