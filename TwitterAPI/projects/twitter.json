@@ -1,0 +1,244 @@
+{
+  "links" : [ {
+    "source" : "source/twitterAuth",
+    "target" : "procedure/twitterAuth"
+  }, {
+    "source" : "source/twitterSearch",
+    "target" : "procedure/twitterSearchTweets"
+  }, {
+    "source" : "procedure/twitterSearchTweets",
+    "target" : "procedure/twitterAuth"
+  }, {
+    "source" : "procedure/getTwitterStatuses",
+    "target" : "procedure/twitterAuth"
+  }, {
+    "source" : "source/twitterStatuses",
+    "target" : "procedure/getTwitterStatuses"
+  } ],
+  "name" : "twitter",
+  "options" : {
+    "description" : "Get information from twitter.\n\nIn order to use these API's you'll need to complete the source configuraion for the sources by modifying the source:\n\n- twitterAuth\n\nHeaders: {\"Authorization\":\"Basic <BASE64ENCODED CONUMERKEY:CONSUMERSECRET>\"}\n\n\n\nYou can obtain the base64 encoded version by running the procedure 'createBase64EncodedAuthorization' below and entering your consumerKey and consumerSecret\n\nThen modify the Headers field in the twitterAuth Source.\n\nTo test, run the procedure twitterAuth.  You should receive a bearer key.  \n",
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "showGrid" : true,
+    "v" : 2
+  },
+  "resources" : [ {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "Encode.base64" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "createBase64EncodedAuthorization",
+    "name" : "createBase64EncodedAuthorization",
+    "timestamp" : "2018-10-03T14:35:22.381Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out", "out" ],
+      "procedures" : [ "twitterAuth", "count.toString" ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "twitterStatuses" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "getTwitterStatuses",
+    "name" : "getTwitterStatuses",
+    "node" : {
+      "x" : 466.85196798285676,
+      "y" : 125.20794220565418
+    },
+    "timestamp" : "2018-02-22T16:45:34.610Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "twitterAuth" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "twitterAuth",
+    "name" : "twitterAuth",
+    "node" : {
+      "x" : 347.1829270743237,
+      "y" : 352.9726328338996
+    },
+    "timestamp" : "2018-02-22T16:45:37.998Z",
+    "type" : 3
+  }, {
+    "label" : "twitterAuth",
+    "name" : "twitterAuth",
+    "node" : {
+      "x" : 406.3220335930866,
+      "y" : 219.64246857989576
+    },
+    "timestamp" : "2018-06-15T14:38:46.661Z",
+    "type" : 4
+  }, {
+    "label" : "twitterSearch",
+    "name" : "twitterSearch",
+    "node" : {
+      "x" : 260.25655044701995,
+      "y" : 84.63993356117852
+    },
+    "timestamp" : "2018-06-15T14:38:46.716Z",
+    "type" : 4
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out", "out" ],
+      "procedures" : [ "twitterAuth", "count.toString" ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "twitterSearch" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "twitterSearchTweets",
+    "name" : "twitterSearchTweets",
+    "node" : {
+      "x" : 244.36328594048166,
+      "y" : 232.9285856015847
+    },
+    "timestamp" : "2018-10-03T14:05:28.119Z",
+    "type" : 3
+  }, {
+    "label" : "twitterStatuses",
+    "name" : "twitterStatuses",
+    "node" : {
+      "x" : 371.1951786826416,
+      "y" : 69.28336556200209
+    },
+    "timestamp" : "2018-06-15T14:38:46.807Z",
+    "type" : 4
+  } ],
+  "tools" : [ {
+    "name" : "Project Contents",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 1260,
+      "y" : 20
+    },
+    "type" : 2
+  }, {
+    "name" : "twitterAuth",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 20
+    },
+    "resourceKey" : "source/twitterAuth",
+    "type" : 5
+  }, {
+    "name" : "twitterAuth",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 640,
+      "y" : 20
+    },
+    "resourceKey" : "procedure/twitterAuth",
+    "type" : 24
+  }, {
+    "name" : "twitterSearch",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 440
+    },
+    "resourceKey" : "source/twitterSearch",
+    "type" : 5
+  }, {
+    "name" : "twitterSearchTweets",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 640,
+      "y" : 440
+    },
+    "resourceKey" : "procedure/twitterSearchTweets",
+    "type" : 24
+  }, {
+    "name" : "twitterStatuses",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 860
+    },
+    "resourceKey" : "source/twitterStatuses",
+    "type" : 5
+  }, {
+    "name" : "getTwitterStatuses",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 640,
+      "y" : 860
+    },
+    "resourceKey" : "procedure/getTwitterStatuses",
+    "type" : 24
+  }, {
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 820,
+      "w" : 600,
+      "x" : 1260,
+      "y" : 440
+    },
+    "type" : 82
+  }, {
+    "name" : "createBase64EncodedAuthorization",
+    "pane" : {
+      "h" : 400,
+      "w" : 1220,
+      "x" : 20,
+      "y" : 1280
+    },
+    "resourceKey" : "procedure/createBase64EncodedAuthorization",
+    "type" : 24
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "list/Project Contents", "subsourceeditor/twitterAuth", "cmeditorprocedure/twitterAuth", "subsourceeditor/twitterSearch", "cmeditorprocedure/twitterSearchTweets", "subsourceeditor/twitterStatuses", "cmeditorprocedure/getTwitterStatuses", "projectdescription/Project Description", "cmeditorprocedure/createBase64EncodedAuthorization" ]
+  } ]
+}

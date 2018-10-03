@@ -1,0 +1,14 @@
+{
+  "activationConstraint" : "",
+  "active" : true,
+  "config" : {
+    "pollingInterval" : 0,
+    "requestDefaults" : {
+      "path" : "/1.1/statuses/user_timeline.json"
+    },
+    "uri" : "https://api.twitter.com"
+  },
+  "direction" : "BOTH",
+  "name" : "twitterStatuses",
+  "type" : "REMOTE"
+}

@@ -1,0 +1,20 @@
+{
+  "activationConstraint" : "",
+  "active" : true,
+  "config" : {
+    "pollingInterval" : 0,
+    "requestDefaults" : {
+      "body" : "grant_type=client_credentials",
+      "contentType" : "application/x-www-form-urlencoded",
+      "headers" : {
+        "Authorization" : "Basic ENCODEDCREDENTIALS"
+      },
+      "method" : "POST",
+      "path" : "/oauth2/token"
+    },
+    "uri" : "https://api.twitter.com"
+  },
+  "direction" : "BOTH",
+  "name" : "twitterAuth",
+  "type" : "REMOTE"
+}

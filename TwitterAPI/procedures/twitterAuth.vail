@@ -1,0 +1,26 @@
+PROCEDURE twitterAuth()
+
+/** 
+* 
+* Get an auth token from the twitter api
+*
+* In order to use this you must define a source called: twitterAuth
+* Server URI: https://api.twitter.com
+* Path: /oauth2/token
+* Content-Type: application/x-www-form-urlencoded
+* Headers: {"Authorization":"Basic <BASE64ENCODED CONUMERKEY:CONSUMERSECRET>"}
+* Body: grant_type=client_credentials
+* Method: POST
+* 
+* @author  Brett Rudenstein
+* @version 1.0
+* @since   2018-1-29
+*
+* @return Auth token for use with twitter api.
+* 
+*/
+
+SELECT FROM SOURCE twitterAuth
+
+return "Bearer " + twitterAuth[0].access_token
+

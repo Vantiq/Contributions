@@ -1,0 +1,5 @@
+PROCEDURE createBase64EncodedAuthorization(consumerKey String, consumerSecret String)
+
+var encoded =  Encode.base64(consumerKey + ":" + consumerSecret)
+
+
