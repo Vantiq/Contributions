@@ -17,7 +17,7 @@
   } ],
   "name" : "twitter",
   "options" : {
-    "description" : "Get information from twitter.\n\nIn order to use these API's you'll need to complete the source configuraion for the sources by modifying the source:\n\n- twitterAuth\n\nHeaders: {\"Authorization\":\"Basic <BASE64ENCODED CONUMERKEY:CONSUMERSECRET>\"}\n\n\n\nYou can obtain the base64 encoded version by running the procedure 'createBase64EncodedAuthorization' below and entering your consumerKey and consumerSecret\n\nThen modify the Headers field in the twitterAuth Source.\n\nTo test, run the procedure twitterAuth.  You should receive a bearer key.  \n",
+    "description" : "Get information from twitter.\n\nIn order to use these API's you'll need to complete the source configuraion for the sources by modifying the source:\n\n- twitterAuth\n\nHeaders: {\"Authorization\":\"Basic <BASE64ENCODED CONSUMERKEY:CONSUMERSECRET>\"}\n\nYou can obtain the base64 encoded version by running the procedure 'createBase64EncodedAuthorization' below and entering your consumerKey and consumerSecret\n\nThen modify the Headers field in the twitterAuth Source.\n\nTo test, run the procedure twitterAuth.  You should receive a bearer key.  ",
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "showGrid" : true,
@@ -42,7 +42,11 @@
     },
     "label" : "createBase64EncodedAuthorization",
     "name" : "createBase64EncodedAuthorization",
-    "timestamp" : "2018-10-03T14:35:22.381Z",
+    "node" : {
+      "x" : 318.97151600964804,
+      "y" : 507.5536358261829
+    },
+    "timestamp" : "2018-10-03T18:43:50.532Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -64,10 +68,10 @@
     "label" : "getTwitterStatuses",
     "name" : "getTwitterStatuses",
     "node" : {
-      "x" : 466.85196798285676,
-      "y" : 125.20794220565418
+      "x" : 494.1068813129349,
+      "y" : 263.9600555479393
     },
-    "timestamp" : "2018-02-22T16:45:34.610Z",
+    "timestamp" : "2018-10-03T18:50:19.625Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -89,28 +93,28 @@
     "label" : "twitterAuth",
     "name" : "twitterAuth",
     "node" : {
-      "x" : 347.1829270743237,
+      "x" : 328.6000718497143,
       "y" : 352.9726328338996
     },
-    "timestamp" : "2018-02-22T16:45:37.998Z",
+    "timestamp" : "2018-10-03T18:43:50.749Z",
     "type" : 3
   }, {
     "label" : "twitterAuth",
     "name" : "twitterAuth",
     "node" : {
-      "x" : 406.3220335930866,
-      "y" : 219.64246857989576
+      "x" : 325.7963072747272,
+      "y" : 452.2046634041145
     },
-    "timestamp" : "2018-06-15T14:38:46.661Z",
+    "timestamp" : "2018-10-03T18:43:50.385Z",
     "type" : 4
   }, {
     "label" : "twitterSearch",
     "name" : "twitterSearch",
     "node" : {
-      "x" : 260.25655044701995,
-      "y" : 84.63993356117852
+      "x" : 154.38054336694182,
+      "y" : 164.49633309731132
     },
-    "timestamp" : "2018-06-15T14:38:46.716Z",
+    "timestamp" : "2018-10-03T18:43:50.385Z",
     "type" : 4
   }, {
     "inventory" : {
@@ -132,113 +136,129 @@
     "label" : "twitterSearchTweets",
     "name" : "twitterSearchTweets",
     "node" : {
-      "x" : 244.36328594048166,
-      "y" : 232.9285856015847
+      "x" : 155.16550151665353,
+      "y" : 258.9446225888894
     },
-    "timestamp" : "2018-10-03T14:05:28.119Z",
+    "timestamp" : "2018-10-03T18:50:20.465Z",
     "type" : 3
   }, {
     "label" : "twitterStatuses",
     "name" : "twitterStatuses",
     "node" : {
-      "x" : 371.1951786826416,
-      "y" : 69.28336556200209
+      "x" : 497.0748173545166,
+      "y" : 164.82285530809582
     },
-    "timestamp" : "2018-06-15T14:38:46.807Z",
+    "timestamp" : "2018-10-03T18:43:50.385Z",
     "type" : 4
   } ],
   "tools" : [ {
-    "name" : "Project Contents",
-    "pane" : {
-      "h" : 400,
-      "w" : 600,
-      "x" : 1260,
-      "y" : 20
-    },
-    "type" : 2
-  }, {
+    "isPinned" : false,
     "name" : "twitterAuth",
     "pane" : {
       "h" : 400,
       "w" : 600,
-      "x" : 20,
+      "x" : 1280,
       "y" : 20
     },
     "resourceKey" : "source/twitterAuth",
     "type" : 5
   }, {
+    "isPinned" : false,
     "name" : "twitterAuth",
     "pane" : {
       "h" : 400,
-      "w" : 600,
+      "w" : 620,
       "x" : 640,
       "y" : 20
     },
     "resourceKey" : "procedure/twitterAuth",
     "type" : 24
   }, {
+    "isPinned" : false,
     "name" : "twitterSearch",
     "pane" : {
       "h" : 400,
       "w" : 600,
-      "x" : 20,
+      "x" : 1280,
       "y" : 440
     },
     "resourceKey" : "source/twitterSearch",
     "type" : 5
   }, {
+    "isPinned" : false,
     "name" : "twitterSearchTweets",
     "pane" : {
       "h" : 400,
-      "w" : 600,
+      "w" : 620,
       "x" : 640,
       "y" : 440
     },
     "resourceKey" : "procedure/twitterSearchTweets",
     "type" : 24
   }, {
+    "isPinned" : false,
     "name" : "twitterStatuses",
     "pane" : {
       "h" : 400,
       "w" : 600,
-      "x" : 20,
+      "x" : 1280,
       "y" : 860
     },
     "resourceKey" : "source/twitterStatuses",
     "type" : 5
   }, {
+    "isPinned" : false,
     "name" : "getTwitterStatuses",
     "pane" : {
       "h" : 400,
-      "w" : 600,
+      "w" : 620,
       "x" : 640,
       "y" : 860
     },
     "resourceKey" : "procedure/getTwitterStatuses",
     "type" : 24
   }, {
+    "isPinned" : false,
     "name" : "Project Description",
     "pane" : {
-      "h" : 820,
+      "h" : 450,
       "w" : 600,
-      "x" : 1260,
-      "y" : 440
+      "x" : 20,
+      "y" : 20
     },
     "type" : 82
   }, {
+    "isPinned" : false,
     "name" : "createBase64EncodedAuthorization",
     "pane" : {
-      "h" : 400,
-      "w" : 1220,
+      "h" : 320,
+      "w" : 600,
       "x" : 20,
-      "y" : 1280
+      "y" : 940
     },
     "resourceKey" : "procedure/createBase64EncodedAuthorization",
     "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 430,
+      "w" : 600,
+      "x" : 20,
+      "y" : 490
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.8013441103933676,
+        "translate" : [ 34.439375165738, -45.86233830946742 ]
+      }
+    },
+    "type" : 1
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Main",
-    "projectToolKeys" : [ "list/Project Contents", "subsourceeditor/twitterAuth", "cmeditorprocedure/twitterAuth", "subsourceeditor/twitterSearch", "cmeditorprocedure/twitterSearchTweets", "subsourceeditor/twitterStatuses", "cmeditorprocedure/getTwitterStatuses", "projectdescription/Project Description", "cmeditorprocedure/createBase64EncodedAuthorization" ]
+    "projectToolKeys" : [ "subsourceeditor/twitterAuth", "cmeditorprocedure/twitterAuth", "subsourceeditor/twitterSearch", "cmeditorprocedure/twitterSearchTweets", "subsourceeditor/twitterStatuses", "cmeditorprocedure/getTwitterStatuses", "projectdescription/Project Description", "cmeditorprocedure/createBase64EncodedAuthorization", "graph/Project Resource Graph" ]
   } ]
 }

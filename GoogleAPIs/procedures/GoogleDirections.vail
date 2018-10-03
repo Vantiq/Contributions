@@ -33,4 +33,3 @@ queryparams.travelmode = "driving"
 var directions = SELECT FROM SOURCE GoogleDirections WITH query = queryparams
 
 return directions
-

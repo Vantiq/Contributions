@@ -14,4 +14,3 @@ var answer = SELECT FROM SOURCE GooglePlaceId WITH query = queryparams
 log.debug("PROCEDURE GooglePlaceId returned: {}", [stringify(answer)])
 
 return answer
-
