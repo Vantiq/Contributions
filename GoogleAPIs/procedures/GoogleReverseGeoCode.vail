@@ -1,0 +1,31 @@
+PROCEDURE GoogleReverseGeoCode(location GeoJSON)
+
+/**
+	Uses GoogleAPI to convert latitude and longitude inputs into
+	a likely street adresss as a return value. (Only returns the most likely match from the API)
+ 
+	in order for this procdeure to work the following must be defined for a Vantiq source
+
+	a source named: GoogleGeoCode
+	the Server URI set to: https://maps.googleapis.com/maps/api/geocode/json
+	contentType set to: application/json
+    
+    * @author  Brett Rudenstein
+	* @version 1.0
+	* @since   2018-1-28 
+*/
+
+var lon = location.coordinates[0]
+var lat = location.coordinates[1]
+
+var query = {}
+query.latlng=format("{0},{1}", lat, lon )
+
+var result = SELECT FROM SOURCE GoogleGeoCode WITH "query"=query 
+
+// google returns many results in order of most precise to least.  
+
+// the first match
+var addresses = result.results.formatted_address[0][0]
+
+return addresses

@@ -1,0 +1,30 @@
+PROCEDURE GoogleGeoCode(address String)
+
+/**
+	Uses GoogleAPI to convert an adress into a GeoJson Object
+	
+	in order for this procedure to work the following must be defined for a Vantiq source
+
+	a source named: GoogleGeoCode
+	the Server URI set to: https://maps.googleapis.com/maps/api/geocode/json
+	contentType set to: application/json
+    
+    * @author  Brett Rudenstein
+	* @version 1.0
+	* @since   2018-1-28 
+*/
+
+var query = {}
+query.address=address
+
+var result = SELECT FROM SOURCE GoogleGeoCode WITH "query"=query 
+
+var geojson ={}
+
+if (result[0].status EQ "OK"){
+	geojson.type="Point"
+	geojson.coordinates=[result[0].results[0].geometry.location.lng, result[0].results[0].geometry.location.lat]
+}
+
+return geojson
+
