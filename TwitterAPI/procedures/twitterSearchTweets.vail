@@ -4,8 +4,8 @@ PROCEDURE twitterSearchTweets(query String, count Integer Description "Number of
 * 
 * Search recent tweets with the API
 *
-* To use this you need the Procedure tiwtterAuth and you will need to
-* create a source called twitterSearch
+* To use this you need the Procedure tiwtterAuth and you will need to:
+* create a source named twitterSearch
 * Server URI: https://api.twitter.com
 * Path: /1.1/search/tweets.json
 * 
