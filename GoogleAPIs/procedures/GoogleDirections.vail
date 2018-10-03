@@ -1,0 +1,35 @@
+PROCEDURE GoogleDirections(origin GeoJSON, destination GeoJson)
+
+/**
+	Uses GoogleAPI to take origin and detination latitude and longitudes as GeoJSON and 
+	returns turn by turn directions 
+ 
+	in order for this procdeure to work the following must be defined for a Vantiq source
+
+	a source named: GoogleDirections
+	the Server URI set to: https://maps.googleapis.com/maps/api/directions/json
+	contentType set to: application/json
+    
+    see the google API for more details of what is returned
+    
+    * @author  Brett Rudenstein
+	* @version 1.0
+	* @since   2018-1-28 
+*/
+
+// origin coordinates
+var olon = origin.coordinates[0]
+var olat = origin.coordinates[1]
+
+// destination coordinates
+var dlon = destination.coordinates[0]
+var dlat = destination.coordinates[1]
+
+var queryparams = {}
+queryparams.origin = format("{0},{1}", olat, olon)
+queryparams.destination = format("{0},{1}", dlat, dlon)
+queryparams.travelmode = "driving"
+
+var directions = SELECT FROM SOURCE GoogleDirections WITH query = queryparams
+
+return directions

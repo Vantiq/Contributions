@@ -1,0 +1,379 @@
+{
+  "links" : [ {
+    "source" : "source/GoogleGeoCode",
+    "target" : "procedure/GoogleReverseGeoCode"
+  }, {
+    "source" : "source/GoogleDirections",
+    "target" : "procedure/GoogleDirections"
+  }, {
+    "source" : "source/GoogleDistanceMatrix",
+    "target" : "procedure/GoogleDistanceMatrix"
+  }, {
+    "source" : "source/GoogleGeoCode",
+    "target" : "procedure/GoogleGeoCode"
+  }, {
+    "source" : "source/GooglePlace",
+    "target" : "procedure/GooglePlaceAutoComplete"
+  }, {
+    "source" : "source/GooglePlaceId",
+    "target" : "procedure/GooglePlaceId"
+  } ],
+  "name" : "GoogleAPIs",
+  "options" : {
+    "description" : "A number of google API's for:\n\n- getting directions\n- getting distance\n- getting place infomration\n- geo coding\n- reverse geocoding\n\nIn order to use these API's you'll need to go to each one of the sources and put in your google API key in the query parameters\n\ne.g\n{\"key\":\"YOUR GOOGLE API KEY\"}",
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "showGrid" : true,
+    "v" : 2
+  },
+  "resources" : [ {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "format" ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "GoogleDirections" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "GoogleDirections",
+    "name" : "GoogleDirections",
+    "node" : {
+      "x" : 375.42925877242664,
+      "y" : 68.90127545398371
+    },
+    "timestamp" : "2018-10-03T19:02:40.170Z",
+    "type" : 3
+  }, {
+    "label" : "GoogleDirections",
+    "name" : "GoogleDirections",
+    "node" : {
+      "x" : 376.6459113900795,
+      "y" : 16.935283288492258
+    },
+    "timestamp" : "2018-10-03T18:52:43.312Z",
+    "type" : 4
+  }, {
+    "label" : "GoogleDistanceMatrix",
+    "name" : "GoogleDistanceMatrix",
+    "node" : {
+      "x" : 104.42228363297895,
+      "y" : 139.94747846784182
+    },
+    "timestamp" : "2018-10-03T18:52:43.312Z",
+    "type" : 4
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "format" ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "GoogleDistanceMatrix" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "GoogleDistanceMatrix",
+    "name" : "GoogleDistanceMatrix",
+    "node" : {
+      "x" : 103.93304134747709,
+      "y" : 190.42835376871363
+    },
+    "timestamp" : "2018-10-03T18:52:43.983Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "GoogleGeoCode" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "GoogleGeoCode",
+    "name" : "GoogleGeoCode",
+    "node" : {
+      "x" : 401.84683691111195,
+      "y" : 398.78133464301595
+    },
+    "timestamp" : "2018-10-03T18:52:44.695Z",
+    "type" : 3
+  }, {
+    "label" : "GoogleGeoCode",
+    "name" : "GoogleGeoCode",
+    "node" : {
+      "x" : 397.4588281511308,
+      "y" : 334.1927119865874
+    },
+    "timestamp" : "2018-10-03T18:52:43.300Z",
+    "type" : 4
+  }, {
+    "label" : "GooglePlace",
+    "name" : "GooglePlace",
+    "node" : {
+      "x" : 488.41907229974527,
+      "y" : 135.2846691177981
+    },
+    "timestamp" : "2018-10-03T18:52:43.299Z",
+    "type" : 4
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "GooglePlace" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "GooglePlaceAutoComplete",
+    "name" : "GooglePlaceAutoComplete",
+    "node" : {
+      "x" : 492.8021767836317,
+      "y" : 191.96448971322133
+    },
+    "timestamp" : "2018-10-03T18:52:43.737Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "GooglePlaceId" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "GooglePlaceId",
+    "name" : "GooglePlaceId",
+    "node" : {
+      "x" : 687.1181341191051,
+      "y" : 40.71381385398551
+    },
+    "timestamp" : "2018-10-03T18:59:54.701Z",
+    "type" : 3
+  }, {
+    "label" : "GooglePlaceId",
+    "name" : "GooglePlaceId",
+    "node" : {
+      "x" : 686.3450273208084,
+      "y" : 114.22787747982812
+    },
+    "timestamp" : "2018-10-03T18:52:43.303Z",
+    "type" : 4
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "format" ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "GoogleGeoCode" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "GoogleReverseGeoCode",
+    "name" : "GoogleReverseGeoCode",
+    "node" : {
+      "x" : 397.8318162266437,
+      "y" : 266.1346808440894
+    },
+    "timestamp" : "2018-10-03T18:52:44.231Z",
+    "type" : 3
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 380
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.7031745046886304,
+        "translate" : [ 28.05276901871929, 46.490132357860006 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "GoogleDistanceMatrix",
+    "pane" : {
+      "h" : 430,
+      "w" : 640,
+      "x" : 640,
+      "y" : 20
+    },
+    "resourceKey" : "procedure/GoogleDistanceMatrix",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "GoogleDirections",
+    "pane" : {
+      "h" : 450,
+      "w" : 600,
+      "x" : 20,
+      "y" : 1350
+    },
+    "resourceKey" : "procedure/GoogleDirections",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "GooglePlaceAutoComplete",
+    "pane" : {
+      "h" : 470,
+      "w" : 640,
+      "x" : 640,
+      "y" : 470
+    },
+    "resourceKey" : "procedure/GooglePlaceAutoComplete",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "GooglePlaceId",
+    "pane" : {
+      "h" : 370,
+      "w" : 640,
+      "x" : 640,
+      "y" : 960
+    },
+    "resourceKey" : "procedure/GooglePlaceId",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "GoogleDistanceMatrix",
+    "pane" : {
+      "h" : 340,
+      "w" : 600,
+      "x" : 1300,
+      "y" : 20
+    },
+    "resourceKey" : "source/GoogleDistanceMatrix",
+    "type" : 5
+  }, {
+    "isPinned" : false,
+    "name" : "GooglePlace",
+    "pane" : {
+      "h" : 340,
+      "w" : 600,
+      "x" : 1300,
+      "y" : 380
+    },
+    "resourceKey" : "source/GooglePlace",
+    "type" : 5
+  }, {
+    "isPinned" : false,
+    "name" : "GooglePlaceId",
+    "pane" : {
+      "h" : 340,
+      "w" : 600,
+      "x" : 1300,
+      "y" : 740
+    },
+    "resourceKey" : "source/GooglePlaceId",
+    "type" : 5
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 340,
+      "w" : 600,
+      "x" : 20,
+      "y" : 20
+    },
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "GoogleDirections",
+    "pane" : {
+      "h" : 340,
+      "w" : 600,
+      "x" : 1300,
+      "y" : 1460
+    },
+    "resourceKey" : "source/GoogleDirections",
+    "type" : 5
+  }, {
+    "isPinned" : false,
+    "name" : "GoogleReverseGeoCode",
+    "pane" : {
+      "h" : 530,
+      "w" : 600,
+      "x" : 20,
+      "y" : 800
+    },
+    "resourceKey" : "procedure/GoogleReverseGeoCode",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "GoogleGeoCode",
+    "pane" : {
+      "h" : 340,
+      "w" : 600,
+      "x" : 1300,
+      "y" : 1100
+    },
+    "resourceKey" : "source/GoogleGeoCode",
+    "type" : 5
+  }, {
+    "isPinned" : false,
+    "name" : "GoogleGeoCode",
+    "pane" : {
+      "h" : 450,
+      "w" : 640,
+      "x" : 640,
+      "y" : 1350
+    },
+    "resourceKey" : "procedure/GoogleGeoCode",
+    "type" : 24
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "cmeditorprocedure/GoogleDistanceMatrix", "cmeditorprocedure/GoogleDirections", "cmeditorprocedure/GooglePlaceAutoComplete", "cmeditorprocedure/GooglePlaceId", "subsourceeditor/GoogleDistanceMatrix", "subsourceeditor/GooglePlace", "subsourceeditor/GooglePlaceId", "projectdescription/Project Description", "subsourceeditor/GoogleDirections", "cmeditorprocedure/GoogleReverseGeoCode", "subsourceeditor/GoogleGeoCode", "cmeditorprocedure/GoogleGeoCode" ]
+  } ]
+}

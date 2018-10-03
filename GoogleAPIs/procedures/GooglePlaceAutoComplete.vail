@@ -1,0 +1,27 @@
+PROCEDURE GooglePlaceAutoComplete(input String, location Object)
+
+/*
+    https://developers.google.com/places/web-service/autocomplete#place_types
+    
+    note: location object is not GEOJson
+	{
+    	"longitude":-71.16728522821438,
+        "latitude":42.12179082449723
+	}
+*/
+
+var lat = location.latitude
+var lng = location.longitude
+
+var queryparams = {}
+queryparams.input = input
+queryparams.location=lat + " " + lng
+queryparams.radius = "500"
+// queryparams.types = "geocode"
+
+var answer = SELECT FROM SOURCE GooglePlace WITH query = queryparams
+
+log.debug("PROCEDURE GooglePlaceAutoComplete returned: {}", [stringify(answer)])
+
+return answer
+

@@ -1,0 +1,16 @@
+{
+  "activationConstraint" : "",
+  "active" : true,
+  "config" : {
+    "pollingInterval" : 0,
+    "requestDefaults" : {
+      "query" : {
+        "key" : "YOURGOOGLEAPIKEY"
+      }
+    },
+    "uri" : "https://maps.googleapis.com/maps/api/geocode/json"
+  },
+  "direction" : "BOTH",
+  "name" : "GoogleGeoCode",
+  "type" : "REMOTE"
+}

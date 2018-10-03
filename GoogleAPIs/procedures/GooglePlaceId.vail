@@ -1,0 +1,16 @@
+PROCEDURE GooglePlaceId(placeid String)
+
+/*
+	get place information from a placeid
+	https://developers.google.com/places/web-service/place-id
+*/
+
+
+var queryparams = {}
+queryparams.placeid = placeid
+
+var answer = SELECT FROM SOURCE GooglePlaceId WITH query = queryparams
+
+log.debug("PROCEDURE GooglePlaceId returned: {}", [stringify(answer)])
+
+return answer
