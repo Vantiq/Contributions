@@ -1,0 +1,5 @@
+PROCEDURE msFaceAPI.PersonGroupDelete(groupId String Description "Enter a group ID to delete")
+
+var path = "persongroups/" + groupId
+
+SELECT FROM SOURCE faceapi WITH method = "DELETE", path = path, asFullResponse = true

@@ -1,0 +1,38 @@
+PROCEDURE facedemo.createGroupAndPerson()
+
+var obj= {}
+
+// create a new person group
+msFaceAPI.PersonGroupCreate("friend_group", "Friends", "Person group identifies friends")
+
+var personResult = msFaceAPI.PersonGroupPersonCreate("friend_group", "Joe Smith", "Met him while hiking")
+
+obj.personId = personResult[0].body.personId
+
+var faceResults = msFaceAPI.FaceDetect("https://cdn.pixabay.com/photo/2016/08/24/14/32/man-1617126_1280.jpg")
+
+// FaceDetect returns an array of faces but out image only has one face
+// faceId, contains just the faceId
+// faceRectangle. contains the coordinates of the face rectangle
+// face. contains the whole object with all attributes  and facerectangle
+obj.faceId = faceResults[0].body[0].faceId
+obj.faceRectangle = faceResults[0].body[0].faceRectangle
+obj.face = faceResults[0].body[0]
+
+var targetFace = format("{0},{1},{2},{3}",
+	obj.faceRectangle.left,
+	obj.faceRectangle.top,
+	obj.faceRectangle.width,
+	obj.faceRectangle.height
+)
+
+var faceResult = msFaceAPI.PersonGroupPersonAddFace("friend_group", obj.personId, "https://cdn.pixabay.com/photo/2016/08/24/14/32/man-1617126_1280.jpg", "Trip to the mountains", targetFace)
+
+obj.persistedFaceId = faceResult[0].body.persistedFaceId
+
+// train the face(s) in the person group
+msFaceAPI.PersonGroupTrain("friend_group")
+
+return obj
+
+

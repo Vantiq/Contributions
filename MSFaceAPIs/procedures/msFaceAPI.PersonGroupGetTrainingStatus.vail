@@ -1,0 +1,14 @@
+PROCEDURE msFaceAPI.PersonGroupGetTrainingStatus(groupId String Description "Group Id")
+
+var path = "persongroups/" + groupId + "/training"
+
+SELECT FROM SOURCE faceapi WITH path = path, asFullResponse = true
+
+
+/*
+Response when a person group is not trained
+HTTP Status 400 (Bad Request) executing Procedure msFaceAPI.PersonGroupGetTrainingStatus:
+
+io.vantiq.sourcemgr.remote.query.client.failure: Request to remote service faceapi failed with status Not Found. This usually indicates that there is some issue with the request contents or structure. Please consult the documentation for the remote service to ensure proper request format. Response details: {"error":{"code":"PersonGroupNotTrained","message":"Person group not trained."}}
+
+*/

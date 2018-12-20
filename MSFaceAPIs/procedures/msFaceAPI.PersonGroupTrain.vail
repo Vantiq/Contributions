@@ -1,0 +1,9 @@
+PROCEDURE msFaceAPI.PersonGroupTrain(groupId String Description "Group Id")
+
+var path = "persongroups/" + groupId + "/train"
+
+var body = {}
+
+SELECT FROM SOURCE faceapi WITH body = body, path = path, method = "POST", asFullResponse = true
+
+

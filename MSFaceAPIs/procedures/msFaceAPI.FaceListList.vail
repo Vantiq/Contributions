@@ -1,0 +1,3 @@
+PROCEDURE msFaceAPI.FaceListList()
+
+SELECT FROM SOURCE faceapi WITH path = "facelists", asFullResponse = true

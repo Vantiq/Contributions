@@ -1,0 +1,7 @@
+PROCEDURE msFaceAPI.PersonGroupPersonDelete(personGroupId String, personId String)
+
+var path = "persongroups/" + personGroupId + "/persons/" + personId
+
+
+SELECT FROM SOURCE faceapi WITH method = "DELETE", path = path, asFullResponse = true
+

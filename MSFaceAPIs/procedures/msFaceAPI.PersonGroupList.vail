@@ -1,0 +1,4 @@
+PROCEDURE msFaceAPI.PersonGroupList()
+
+SELECT FROM SOURCE faceapi WITH path = "persongroups", asFullResponse = true
+

@@ -1,0 +1,19 @@
+PROCEDURE msFaceAPI.PersonGroupPersonAddFace(personGroupId String Description "Enter a group ID", personId String Description "Enter the id of the person", url String Description "The URL of the image", userData String Description "Enter any aditional details about this person e.g. 3/4 view", targetFace String Description "Supply the faceId")
+
+var path = "persongroups/" + personGroupId + "/persons/" + personId + "/persistedFaces"
+
+var body = {
+    "url": url
+}
+
+var query = {}
+query.userData = userData
+
+if (targetFace){
+	query.targetFace = targetFace
+}
+
+SELECT FROM SOURCE faceapi WITH body = body, method = "POST", path = path, query = query, asFullResponse = true
+
+
+
