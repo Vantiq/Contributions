@@ -1,73 +1,73 @@
 {
   "links" : [ {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.PersonGroupCreate"
+    "target" : "procedure/MSFaceAPI.personGroupCreate"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.PersonGroupList"
+    "target" : "procedure/MSFaceAPI.personGroupList"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.PersonGroupDelete"
+    "target" : "procedure/MSFaceAPI.personGroupDelete"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.PersonGroupPersonCreate"
+    "target" : "procedure/MSFaceAPI.personGroupPersonCreate"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.PersonGroupPersonList"
+    "target" : "procedure/MSFaceAPI.personGroupPersonList"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.FaceListList"
+    "target" : "procedure/MSFaceAPI.faceListList"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.PersonGroupPersonAddFace"
+    "target" : "procedure/MSFaceAPI.personGroupPersonAddFace"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.PersonGroupGetTrainingStatus"
+    "target" : "procedure/MSFaceAPI.personGroupGetTrainingStatus"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.PersonGroupTrain"
+    "target" : "procedure/MSFaceAPI.personGroupTrain"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.PersonGroupPersonGet"
+    "target" : "procedure/MSFaceAPI.personGroupPersonGet"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.PersonGroupPersonGetFace"
+    "target" : "procedure/MSFaceAPI.personGroupPersonGetFace"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.PersonGroupPersonDelete"
+    "target" : "procedure/MSFaceAPI.personGroupPersonDelete"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.FaceDetect"
+    "target" : "procedure/MSFaceAPI.faceDetect"
   }, {
     "source" : "source/faceapi",
-    "target" : "procedure/msFaceAPI.FaceIdentify"
+    "target" : "procedure/MSFaceAPI.faceIdentify"
   }, {
-    "source" : "procedure/facedemo.createGroupAndPerson",
-    "target" : "procedure/msFaceAPI.PersonGroupCreate"
+    "source" : "procedure/FaceDemo.createGroupAndPerson",
+    "target" : "procedure/MSFaceAPI.personGroupCreate"
   }, {
-    "source" : "procedure/facedemo.createGroupAndPerson",
-    "target" : "procedure/msFaceAPI.PersonGroupPersonCreate"
+    "source" : "procedure/FaceDemo.createGroupAndPerson",
+    "target" : "procedure/MSFaceAPI.personGroupPersonCreate"
   }, {
-    "source" : "procedure/facedemo.resetDemo",
-    "target" : "procedure/msFaceAPI.PersonGroupDelete"
+    "source" : "procedure/FaceDemo.resetDemo",
+    "target" : "procedure/MSFaceAPI.personGroupDelete"
   }, {
-    "source" : "procedure/facedemo.createGroupAndPerson",
-    "target" : "procedure/msFaceAPI.FaceDetect"
+    "source" : "procedure/FaceDemo.createGroupAndPerson",
+    "target" : "procedure/MSFaceAPI.faceDetect"
   }, {
-    "source" : "procedure/facedemo.createGroupAndPerson",
-    "target" : "procedure/msFaceAPI.PersonGroupPersonAddFace"
+    "source" : "procedure/FaceDemo.createGroupAndPerson",
+    "target" : "procedure/MSFaceAPI.personGroupPersonAddFace"
   }, {
-    "source" : "procedure/facedemo.createGroupAndPerson",
-    "target" : "procedure/msFaceAPI.PersonGroupTrain"
+    "source" : "procedure/FaceDemo.createGroupAndPerson",
+    "target" : "procedure/MSFaceAPI.personGroupTrain"
   }, {
-    "source" : "procedure/facedemo.identifyFace",
-    "target" : "procedure/msFaceAPI.FaceDetect"
+    "source" : "procedure/FaceDemo.identifyFace",
+    "target" : "procedure/MSFaceAPI.faceDetect"
   }, {
-    "source" : "procedure/facedemo.identifyFace",
-    "target" : "procedure/msFaceAPI.FaceIdentify"
+    "source" : "procedure/FaceDemo.identifyFace",
+    "target" : "procedure/MSFaceAPI.faceIdentify"
   }, {
-    "source" : "procedure/facedemo.identifyFace",
-    "target" : "procedure/msFaceAPI.PersonGroupPersonGet"
+    "source" : "procedure/FaceDemo.identifyFace",
+    "target" : "procedure/MSFaceAPI.personGroupPersonGet"
   } ],
   "name" : "MSFaceAPIs",
   "options" : {
@@ -79,6 +79,375 @@
     "v" : 2
   },
   "resources" : [ {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out", "out", "out", "out", "out", "out" ],
+      "procedures" : [ "msFaceAPI.PersonGroupCreate", "msFaceAPI.PersonGroupPersonCreate", "msFaceAPI.FaceDetect", "format", "msFaceAPI.PersonGroupPersonAddFace", "msFaceAPI.PersonGroupTrain" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "FaceDemo.createGroupAndPerson",
+    "name" : "FaceDemo.createGroupAndPerson",
+    "timestamp" : "2018-12-21T15:43:07.490Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out", "out", "out", "out" ],
+      "procedures" : [ "msFaceAPI.FaceDetect", "msFaceAPI.FaceIdentify", "msFaceAPI.PersonGroupPersonGet", "push" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "FaceDemo.identifyFace",
+    "name" : "FaceDemo.identifyFace",
+    "timestamp" : "2018-12-21T15:43:37.740Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "msFaceAPI.PersonGroupDelete" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "FaceDemo.resetDemo",
+    "name" : "FaceDemo.resetDemo",
+    "timestamp" : "2018-12-21T15:43:46.548Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.faceDetect",
+    "name" : "MSFaceAPI.faceDetect",
+    "timestamp" : "2018-12-21T15:44:19.514Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.faceIdentify",
+    "name" : "MSFaceAPI.faceIdentify",
+    "timestamp" : "2018-12-21T15:44:29.476Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.faceListList",
+    "name" : "MSFaceAPI.faceListList",
+    "timestamp" : "2018-12-21T15:44:57.410Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.personGroupCreate",
+    "name" : "MSFaceAPI.personGroupCreate",
+    "node" : {
+      "x" : 311.864292782161,
+      "y" : 226.5815821529937
+    },
+    "timestamp" : "2018-12-21T15:46:21.056Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.personGroupDelete",
+    "name" : "MSFaceAPI.personGroupDelete",
+    "node" : {
+      "x" : 310.90079186839023,
+      "y" : 277.83930741731285
+    },
+    "timestamp" : "2018-12-21T15:44:40.943Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.personGroupGetTrainingStatus",
+    "name" : "MSFaceAPI.personGroupGetTrainingStatus",
+    "timestamp" : "2018-12-21T15:46:04.015Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.personGroupList",
+    "name" : "MSFaceAPI.personGroupList",
+    "node" : {
+      "x" : 310.69114416476793,
+      "y" : 173.92834810136588
+    },
+    "timestamp" : "2018-12-21T15:45:18.897Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.personGroupPersonAddFace",
+    "name" : "MSFaceAPI.personGroupPersonAddFace",
+    "timestamp" : "2018-12-21T15:45:09.852Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.personGroupPersonCreate",
+    "name" : "MSFaceAPI.personGroupPersonCreate",
+    "timestamp" : "2018-12-21T15:45:36.812Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.personGroupPersonDelete",
+    "name" : "MSFaceAPI.personGroupPersonDelete",
+    "timestamp" : "2018-12-21T15:45:27.470Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.personGroupPersonGet",
+    "name" : "MSFaceAPI.personGroupPersonGet",
+    "timestamp" : "2018-12-21T15:45:55.754Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.personGroupPersonGetFace",
+    "name" : "MSFaceAPI.personGroupPersonGetFace",
+    "timestamp" : "2018-12-21T15:45:46.280Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.personGroupPersonList",
+    "name" : "MSFaceAPI.personGroupPersonList",
+    "timestamp" : "2018-12-21T15:46:29.520Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "faceapi" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "MSFaceAPI.personGroupTrain",
+    "name" : "MSFaceAPI.personGroupTrain",
+    "timestamp" : "2018-12-21T15:46:12.827Z",
+    "type" : 3
+  }, {
     "inventory" : {
       "appmodelHash" : [ ],
       "appmodels" : [ ],
@@ -103,375 +472,6 @@
     },
     "timestamp" : "2018-12-20T12:41:57.766Z",
     "type" : 4
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ "out", "out", "out", "out", "out", "out" ],
-      "procedures" : [ "msFaceAPI.PersonGroupCreate", "msFaceAPI.PersonGroupPersonCreate", "msFaceAPI.FaceDetect", "format", "msFaceAPI.PersonGroupPersonAddFace", "msFaceAPI.PersonGroupTrain" ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "facedemo.createGroupAndPerson",
-    "name" : "facedemo.createGroupAndPerson",
-    "timestamp" : "2018-12-19T23:32:18.298Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ "out", "out", "out", "out" ],
-      "procedures" : [ "msFaceAPI.FaceDetect", "msFaceAPI.FaceIdentify", "msFaceAPI.PersonGroupPersonGet", "push" ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "facedemo.identifyFace",
-    "name" : "facedemo.identifyFace",
-    "timestamp" : "2018-12-19T23:32:49.436Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ "out" ],
-      "procedures" : [ "msFaceAPI.PersonGroupDelete" ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "facedemo.resetDemo",
-    "name" : "facedemo.resetDemo",
-    "timestamp" : "2018-12-19T23:31:07.444Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.FaceDetect",
-    "name" : "msFaceAPI.FaceDetect",
-    "timestamp" : "2018-12-19T22:25:59.117Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.FaceIdentify",
-    "name" : "msFaceAPI.FaceIdentify",
-    "timestamp" : "2018-12-19T22:25:58.628Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.FaceListList",
-    "name" : "msFaceAPI.FaceListList",
-    "timestamp" : "2018-12-19T22:25:59.631Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.PersonGroupCreate",
-    "name" : "msFaceAPI.PersonGroupCreate",
-    "node" : {
-      "x" : 311.864292782161,
-      "y" : 226.5815821529937
-    },
-    "timestamp" : "2018-12-19T22:25:58.132Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.PersonGroupDelete",
-    "name" : "msFaceAPI.PersonGroupDelete",
-    "node" : {
-      "x" : 310.90079186839023,
-      "y" : 277.83930741731285
-    },
-    "timestamp" : "2018-12-19T22:26:00.252Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.PersonGroupGetTrainingStatus",
-    "name" : "msFaceAPI.PersonGroupGetTrainingStatus",
-    "timestamp" : "2018-12-19T22:25:58.324Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.PersonGroupList",
-    "name" : "msFaceAPI.PersonGroupList",
-    "node" : {
-      "x" : 310.69114416476793,
-      "y" : 173.92834810136588
-    },
-    "timestamp" : "2018-12-19T22:25:58.482Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.PersonGroupPersonAddFace",
-    "name" : "msFaceAPI.PersonGroupPersonAddFace",
-    "timestamp" : "2018-12-19T22:25:58.489Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.PersonGroupPersonCreate",
-    "name" : "msFaceAPI.PersonGroupPersonCreate",
-    "timestamp" : "2018-12-19T22:25:58.650Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.PersonGroupPersonDelete",
-    "name" : "msFaceAPI.PersonGroupPersonDelete",
-    "timestamp" : "2018-12-19T22:25:58.655Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.PersonGroupPersonGet",
-    "name" : "msFaceAPI.PersonGroupPersonGet",
-    "timestamp" : "2018-12-19T22:25:58.801Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.PersonGroupPersonGetFace",
-    "name" : "msFaceAPI.PersonGroupPersonGetFace",
-    "timestamp" : "2018-12-19T22:25:58.814Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.PersonGroupPersonList",
-    "name" : "msFaceAPI.PersonGroupPersonList",
-    "timestamp" : "2018-12-19T22:25:58.817Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "faceapi" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "msFaceAPI.PersonGroupTrain",
-    "name" : "msFaceAPI.PersonGroupTrain",
-    "timestamp" : "2018-12-19T22:25:58.974Z",
-    "type" : 3
   } ],
   "tools" : [ {
     "isPinned" : false,
@@ -495,36 +495,36 @@
     "type" : 82
   }, {
     "isPinned" : false,
-    "name" : "facedemo.createGroupAndPerson",
+    "name" : "FaceDemo.createGroupAndPerson",
     "pane" : {
       "h" : 400,
       "w" : 680,
       "x" : 1210,
       "y" : 20
     },
-    "resourceKey" : "procedure/facedemo.createGroupAndPerson",
+    "resourceKey" : "procedure/FaceDemo.createGroupAndPerson",
     "type" : 24
   }, {
     "isPinned" : false,
-    "name" : "facedemo.resetDemo",
+    "name" : "FaceDemo.resetDemo",
     "pane" : {
       "h" : 400,
       "w" : 680,
       "x" : 1210,
       "y" : 860
     },
-    "resourceKey" : "procedure/facedemo.resetDemo",
+    "resourceKey" : "procedure/FaceDemo.resetDemo",
     "type" : 24
   }, {
     "isPinned" : false,
-    "name" : "facedemo.identifyFace",
+    "name" : "FaceDemo.identifyFace",
     "pane" : {
       "h" : 400,
       "w" : 680,
       "x" : 1210,
       "y" : 440
     },
-    "resourceKey" : "procedure/facedemo.identifyFace",
+    "resourceKey" : "procedure/FaceDemo.identifyFace",
     "type" : 24
   }, {
     "isPinned" : false,
@@ -541,6 +541,6 @@
   "type" : "dev",
   "views" : [ {
     "name" : "Main",
-    "projectToolKeys" : [ "list/Project Contents", "projectdescription/Project Description", "cmeditorprocedure/facedemo.createGroupAndPerson", "cmeditorprocedure/facedemo.resetDemo", "cmeditorprocedure/facedemo.identifyFace", "subsourceeditor/faceapi" ]
+    "projectToolKeys" : [ "list/Project Contents", "projectdescription/Project Description", "cmeditorprocedure/FaceDemo.createGroupAndPerson", "cmeditorprocedure/FaceDemo.resetDemo", "cmeditorprocedure/FaceDemo.identifyFace", "subsourceeditor/faceapi" ]
   } ]
 }

@@ -1,4 +1,4 @@
-PROCEDURE msFaceAPI.FaceIdentify(PersonGroupId String Description "Enter the persongroupId", faceIds String Array Description "A  list of faceId's")
+PROCEDURE MSFaceAPI.faceIdentify(PersonGroupId String Description "Enter the persongroupId", faceIds String Array Description "A  list of faceId's")
 
 var path = "identify"
 

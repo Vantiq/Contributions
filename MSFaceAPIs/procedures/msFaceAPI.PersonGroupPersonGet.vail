@@ -1,4 +1,4 @@
-PROCEDURE msFaceAPI.PersonGroupPersonGet(groupId String Description "Group Id", personId String Description "The Person Id")
+PROCEDURE MSFaceAPI.personGroupPersonGet(groupId String Description "Group Id", personId String Description "The Person Id")
 
 // person 513629d6-e25d-4e8f-a738-397eafdbe351
 

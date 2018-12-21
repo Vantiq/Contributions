@@ -1,4 +1,4 @@
-PROCEDURE facedemo.identifyFace()
+PROCEDURE FaceDemo.identifyFace()
 
 // in order to identify a face we first need to detect faces
 var faceResults = msFaceAPI.FaceDetect("https://cdn.pixabay.com/photo/2016/08/24/14/32/man-1617126_1280.jpg")

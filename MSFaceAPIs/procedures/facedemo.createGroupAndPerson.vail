@@ -1,4 +1,4 @@
-PROCEDURE facedemo.createGroupAndPerson()
+PROCEDURE FaceDemo.createGroupAndPerson()
 
 var obj= {}
 

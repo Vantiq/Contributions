@@ -1,4 +1,4 @@
-PROCEDURE msFaceAPI.PersonGroupGetTrainingStatus(groupId String Description "Group Id")
+PROCEDURE MSFaceAPI.personGroupGetTrainingStatus(groupId String Description "Group Id")
 
 var path = "persongroups/" + groupId + "/training"
 

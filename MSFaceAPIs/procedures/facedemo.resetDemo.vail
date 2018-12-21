@@ -1,4 +1,4 @@
-PROCEDURE facedemo.resetDemo()
+PROCEDURE FaceDemo.resetDemo()
 
 msFaceAPI.PersonGroupDelete("friend_group")
 

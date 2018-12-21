@@ -1,4 +1,4 @@
-PROCEDURE msFaceAPI.FaceDetect(url String Description "The URL of the image")
+PROCEDURE MSFaceAPI.faceDetect(url String Description "The URL of the image")
 
 var path = "detect"
 

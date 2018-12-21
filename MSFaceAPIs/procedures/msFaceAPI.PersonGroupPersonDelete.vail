@@ -1,4 +1,4 @@
-PROCEDURE msFaceAPI.PersonGroupPersonDelete(personGroupId String, personId String)
+PROCEDURE MSFaceAPI.personGroupPersonDelete(personGroupId String, personId String)
 
 var path = "persongroups/" + personGroupId + "/persons/" + personId
 

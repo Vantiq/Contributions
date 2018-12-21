@@ -1,4 +1,4 @@
-PROCEDURE msFaceAPI.PersonGroupCreate(groupId String Description "Enter a group ID", name String Description "Enter a group name", userData String Description "Enter any aditional details about this group")
+PROCEDURE MSFaceAPI.personGroupCreate(groupId String Description "Enter a group ID", name String Description "Enter a group name", userData String Description "Enter any aditional details about this group")
 
 var path = "persongroups/" + groupId
 

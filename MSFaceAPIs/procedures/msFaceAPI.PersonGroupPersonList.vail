@@ -1,4 +1,4 @@
-PROCEDURE msFaceAPI.PersonGroupPersonList(groupId String Description "Group Id")
+PROCEDURE MSFaceAPI.personGroupPersonList(groupId String Description "Group Id")
 
 var path = "persongroups/" + groupId + "/persons"
 
