@@ -1,19 +1,19 @@
 PROCEDURE FaceDemo.identifyFace()
 
 // in order to identify a face we first need to detect faces
-var faceResults = msFaceAPI.FaceDetect("https://cdn.pixabay.com/photo/2016/08/24/14/32/man-1617126_1280.jpg")
+var faceResults = MSFaceAPI.faceDetect("https://cdn.pixabay.com/photo/2016/08/24/14/32/man-1617126_1280.jpg")
 
 var faceIds = faceResults[0].body[0].faceId
 
 // indentification returns a list of candidates by ID
-var identified = msFaceAPI.FaceIdentify("friend_group", [faceIds])
+var identified = MSFaceAPI.faceIdentify("friend_group", [faceIds])
 var candidates = identified[0].body[0].candidates
 
 // loop over each candidate and get the name and metadata
 
 var matches = []
 FOR EACH item IN candidates DO
-	var person = msFaceAPI.PersonGroupPersonGet("friend_group", item.personId )
+	var person = MSFaceAPI.personGroupPersonGet("friend_group", item.personId )
 	push(matches, person[0].body)
 END
 
