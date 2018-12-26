@@ -87,7 +87,7 @@
       "pagesetHash" : [ ],
       "pagesets" : [ ],
       "procedureHash" : [ "out", "out", "out", "out", "out", "out" ],
-      "procedures" : [ "msFaceAPI.PersonGroupCreate", "msFaceAPI.PersonGroupPersonCreate", "msFaceAPI.FaceDetect", "format", "msFaceAPI.PersonGroupPersonAddFace", "msFaceAPI.PersonGroupTrain" ],
+      "procedures" : [ "MSFaceAPI.personGroupCreate", "MSFaceAPI.personGroupPersonCreate", "MSFaceAPI.faceDetect", "format", "MSFaceAPI.personGroupPersonAddFace", "MSFaceAPI.personGroupTrain" ],
       "sourceHash" : [ ],
       "sources" : [ ],
       "topicHash" : [ ],
@@ -97,7 +97,7 @@
     },
     "label" : "FaceDemo.createGroupAndPerson",
     "name" : "FaceDemo.createGroupAndPerson",
-    "timestamp" : "2018-12-21T15:43:07.490Z",
+    "timestamp" : "2018-12-26T18:09:20.431Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -108,7 +108,7 @@
       "pagesetHash" : [ ],
       "pagesets" : [ ],
       "procedureHash" : [ "out", "out", "out", "out" ],
-      "procedures" : [ "msFaceAPI.FaceDetect", "msFaceAPI.FaceIdentify", "msFaceAPI.PersonGroupPersonGet", "push" ],
+      "procedures" : [ "MSFaceAPI.faceDetect", "MSFaceAPI.faceIdentify", "MSFaceAPI.personGroupPersonGet", "push" ],
       "sourceHash" : [ ],
       "sources" : [ ],
       "topicHash" : [ ],
@@ -118,7 +118,7 @@
     },
     "label" : "FaceDemo.identifyFace",
     "name" : "FaceDemo.identifyFace",
-    "timestamp" : "2018-12-21T15:43:37.740Z",
+    "timestamp" : "2018-12-26T18:09:23.991Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -129,7 +129,7 @@
       "pagesetHash" : [ ],
       "pagesets" : [ ],
       "procedureHash" : [ "out" ],
-      "procedures" : [ "msFaceAPI.PersonGroupDelete" ],
+      "procedures" : [ "MSFaceAPI.personGroupDelete" ],
       "sourceHash" : [ ],
       "sources" : [ ],
       "topicHash" : [ ],
@@ -139,7 +139,7 @@
     },
     "label" : "FaceDemo.resetDemo",
     "name" : "FaceDemo.resetDemo",
-    "timestamp" : "2018-12-21T15:43:46.548Z",
+    "timestamp" : "2018-12-26T18:09:29.137Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -160,7 +160,7 @@
     },
     "label" : "MSFaceAPI.faceDetect",
     "name" : "MSFaceAPI.faceDetect",
-    "timestamp" : "2018-12-21T15:44:19.514Z",
+    "timestamp" : "2018-12-26T18:09:41.789Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -181,7 +181,7 @@
     },
     "label" : "MSFaceAPI.faceIdentify",
     "name" : "MSFaceAPI.faceIdentify",
-    "timestamp" : "2018-12-21T15:44:29.476Z",
+    "timestamp" : "2018-12-26T18:09:49.533Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -202,7 +202,7 @@
     },
     "label" : "MSFaceAPI.faceListList",
     "name" : "MSFaceAPI.faceListList",
-    "timestamp" : "2018-12-21T15:44:57.410Z",
+    "timestamp" : "2018-12-26T18:09:55.656Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -227,7 +227,7 @@
       "x" : 311.864292782161,
       "y" : 226.5815821529937
     },
-    "timestamp" : "2018-12-21T15:46:21.056Z",
+    "timestamp" : "2018-12-26T18:10:01.704Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -252,7 +252,7 @@
       "x" : 310.90079186839023,
       "y" : 277.83930741731285
     },
-    "timestamp" : "2018-12-21T15:44:40.943Z",
+    "timestamp" : "2018-12-26T18:10:09.145Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -273,7 +273,7 @@
     },
     "label" : "MSFaceAPI.personGroupGetTrainingStatus",
     "name" : "MSFaceAPI.personGroupGetTrainingStatus",
-    "timestamp" : "2018-12-21T15:46:04.015Z",
+    "timestamp" : "2018-12-26T18:10:22.947Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -298,7 +298,7 @@
       "x" : 310.69114416476793,
       "y" : 173.92834810136588
     },
-    "timestamp" : "2018-12-21T15:45:18.897Z",
+    "timestamp" : "2018-12-26T18:10:36.755Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -319,7 +319,7 @@
     },
     "label" : "MSFaceAPI.personGroupPersonAddFace",
     "name" : "MSFaceAPI.personGroupPersonAddFace",
-    "timestamp" : "2018-12-21T15:45:09.852Z",
+    "timestamp" : "2018-12-26T18:10:46.245Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -340,7 +340,7 @@
     },
     "label" : "MSFaceAPI.personGroupPersonCreate",
     "name" : "MSFaceAPI.personGroupPersonCreate",
-    "timestamp" : "2018-12-21T15:45:36.812Z",
+    "timestamp" : "2018-12-26T18:10:56.928Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -361,7 +361,7 @@
     },
     "label" : "MSFaceAPI.personGroupPersonDelete",
     "name" : "MSFaceAPI.personGroupPersonDelete",
-    "timestamp" : "2018-12-21T15:45:27.470Z",
+    "timestamp" : "2018-12-26T18:11:10.684Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -382,7 +382,7 @@
     },
     "label" : "MSFaceAPI.personGroupPersonGet",
     "name" : "MSFaceAPI.personGroupPersonGet",
-    "timestamp" : "2018-12-21T15:45:55.754Z",
+    "timestamp" : "2018-12-26T18:11:26.745Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -403,7 +403,7 @@
     },
     "label" : "MSFaceAPI.personGroupPersonGetFace",
     "name" : "MSFaceAPI.personGroupPersonGetFace",
-    "timestamp" : "2018-12-21T15:45:46.280Z",
+    "timestamp" : "2018-12-26T18:11:40.552Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -424,7 +424,7 @@
     },
     "label" : "MSFaceAPI.personGroupPersonList",
     "name" : "MSFaceAPI.personGroupPersonList",
-    "timestamp" : "2018-12-21T15:46:29.520Z",
+    "timestamp" : "2018-12-26T18:11:45.104Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -445,7 +445,7 @@
     },
     "label" : "MSFaceAPI.personGroupTrain",
     "name" : "MSFaceAPI.personGroupTrain",
-    "timestamp" : "2018-12-21T15:46:12.827Z",
+    "timestamp" : "2018-12-26T18:11:50.062Z",
     "type" : 3
   }, {
     "inventory" : {

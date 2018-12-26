@@ -1,3 +1,8 @@
+/**  
+* @author Brett Rudenstein
+* @version 1.0 
+*/ 
+
 PROCEDURE MSFaceAPI.faceDetect(url String Description "The URL of the image")
 
 var path = "detect"
