@@ -1,0 +1,212 @@
+{
+  "links" : [ {
+    "source" : "client/TfVisionDemo",
+    "target" : "topic//my/response/topic"
+  }, {
+    "source" : "type/system.documents",
+    "target" : "client/TfVisionDemo"
+  } ],
+  "name" : "VisionDemo",
+  "options" : {
+    "description" : "This project includes two procedures that will demonstrate the VisionScript image processing capabilities in a procedure called vsExample and TensorFlow object recognition support in a procedure called tfExample. \n\nA simple client TfVisionDemo has been created that will allow users to upload an image to VANTIQ that will be processed through TensorFlow and the results displayed on the page. \n\nBefore using the tfExample or TfVisionDemo client make sure to upload a TensorFlow model. The easiest way to do this is using the CLI \"Load\" command: \nhttps://dev.vantiq.com/docs/system/cli/index.html#load\n\n\nAdditional Documentation:\nVisionScript: https://dev.vantiq.com/docs/system/rules/index.html#VisionScriptBuilder\n\nTensorFlow: \nhttps://dev.vantiq.com/docs/system/imageprocessing/index.html#image-analysis",
+    "dockCollapsed" : false,
+    "dockSort" : 1,
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "showGrid" : true,
+    "tileColumns" : 2,
+    "tileRows" : 2,
+    "v" : 3
+  },
+  "resources" : [ {
+    "label" : "/my/response/topic",
+    "name" : "/my/response/topic",
+    "node" : {
+      "x" : 414.6,
+      "y" : 61.6
+    },
+    "type" : 10
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ "in" ],
+      "types" : [ "system.documents" ]
+    },
+    "label" : "TfVisionDemo",
+    "name" : "TfVisionDemo",
+    "node" : {
+      "x" : 331.2,
+      "y" : 131.9
+    },
+    "timestamp" : "2019-10-03T16:01:03.562Z",
+    "type" : 15
+  }, {
+    "label" : "system.documents",
+    "name" : "system.documents",
+    "node" : {
+      "x" : 348,
+      "y" : -12.6
+    },
+    "timestamp" : "2015-05-19T04:39:17.005Z",
+    "type" : 1
+  }, {
+    "label" : "system.videos",
+    "name" : "system.videos",
+    "node" : {
+      "x" : 82.2,
+      "y" : -147
+    },
+    "timestamp" : "2019-04-20T19:19:48.745Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "TensorFlowOperation..processDocument" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "tfExample",
+    "name" : "tfExample",
+    "node" : {
+      "x" : 165.6,
+      "y" : 37.3
+    },
+    "timestamp" : "2019-10-04T16:16:49.187Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "VisionScriptOperation.processImage" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "vsExample",
+    "name" : "vsExample",
+    "node" : {
+      "x" : 168.2,
+      "y" : 76.6
+    },
+    "timestamp" : "2019-10-01T16:23:51.567Z",
+    "type" : 3
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "c" : 0,
+      "lastUsed" : 1571851446961,
+      "r" : 1
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.7966400962855835,
+        "translate" : [ 37.755728572931844, 76.4545004320235 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "Documents",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1571851402742,
+      "r" : -1
+    },
+    "type" : 26
+  }, {
+    "isPinned" : false,
+    "name" : "vsExample",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1571851460719,
+      "r" : -1
+    },
+    "resourceKey" : "procedure/vsExample",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "tfExample",
+    "pane" : {
+      "c" : 0,
+      "lastUsed" : 1570118076696,
+      "r" : 0
+    },
+    "resourceKey" : "procedure/tfExample",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "TfVisionDemo",
+    "pane" : {
+      "c" : 1,
+      "lastUsed" : 1571851459462,
+      "r" : 1
+    },
+    "resourceKey" : "client/TfVisionDemo",
+    "toolOptions" : {
+      "isRunning" : false
+    },
+    "type" : 63
+  }, {
+    "isPinned" : false,
+    "name" : "Find Records",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1570029767984,
+      "r" : -1
+    },
+    "type" : 41
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "c" : 1,
+      "lastUsed" : 1571851879097,
+      "r" : 0
+    },
+    "type" : 82
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "undefined/Documents", "cmeditorprocedure/vsExample", "cmeditorprocedure/tfExample", "client/TfVisionDemo", "findrecords/Find Records", "projectdescription/Project Description" ]
+  } ]
+}

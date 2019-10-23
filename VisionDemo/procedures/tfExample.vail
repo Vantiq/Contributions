@@ -1,0 +1,8 @@
+PROCEDURE tfExample(imageName String, threshold Real)
+
+//imageName: images/groupofpeople3.jpg
+//threshold: 0.5
+
+var yoloResults = TensorFlowOperation..processDocument(imageName, "models/yolov2_9c", threshold)
+
+return yoloResults
