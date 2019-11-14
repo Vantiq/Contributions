@@ -1,33 +1,33 @@
 PROCEDURE vsExample(imageName String)
 
-    // Create the script
-    var script = { scriptName: "FindingFaces"}
-    // Build a convertToGrayscale action
-    var convertAction = { name: "convertToGrayscale"}
-    // Save that image to an image named gsSave.jpg
-    var saveGrayScaleAction = { name: "save"}
-    var saveGSParams = { saveName: "gsSave.jpg", fileType: "image/jpeg"}
-    saveGrayScaleAction.parameters = saveGSParams
+// Create the script
+var script = { scriptName: "FindingFaces"}
+// Build a convertToGrayscale action
+var convertAction = { name: "convertToGrayscale"}
+// Save that image to an image named gsSave.jpg
+var saveGrayScaleAction = { name: "save"}
+var saveGSParams = { saveName: "gsSave.jpg", fileType: "image/jpeg"}
+saveGrayScaleAction.parameters = saveGSParams
 
-    // Find the faces in the image & draw boxes
-    var ffAction = { name: "findFaces", tag: "locateFaces" }
+// Find the faces in the image & draw boxes
+var ffAction = { name: "findFaces", tag: "locateFaces" }
 
-    var drawBoxesAction = { name: "drawBoxes"}
+var drawBoxesAction = { name: "drawBoxes"}
 
-    // Use results from the findFaces action to draw boxes on our image
-    var dbParams = { useResultsFrom: "locateFaces"}
-    drawBoxesAction.parameters = dbParams
+// Use results from the findFaces action to draw boxes on our image
+var dbParams = { useResultsFrom: "locateFaces"}
+drawBoxesAction.parameters = dbParams
 
-    // Save the resulting image to boxedSave.jpg
-    var saveBoxedAction = {name: "save", tag: "boxedSave"}
-    var saveBoxedParams = { saveName: "boxedSave.jpg", fileType: "image/jpeg"}
-    saveBoxedAction.parameters = saveBoxedParams
+// Save the resulting image to boxedSave.jpg
+var saveBoxedAction = {name: "save", tag: "boxedSave"}
+var saveBoxedParams = { saveName: "boxedSave.jpg", fileType: "image/jpeg"}
+saveBoxedAction.parameters = saveBoxedParams
 
-    script.script = [convertAction,
-                    saveGrayScaleAction,
-                    ffAction,
-                    drawBoxesAction, 
-                    saveBoxedAction]
+script.script = [convertAction,
+    saveGrayScaleAction,
+    ffAction,
+    drawBoxesAction, 
+    saveBoxedAction]
 
-    var result = VisionScriptOperation.processImage(imageName, script)
-    return result
+var result = VisionScriptOperation.processImage(imageName, script)
+return result
