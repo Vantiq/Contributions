@@ -1,0 +1,13 @@
+/**  
+* @author Brett Rudenstein
+* @version 1.0 
+*/ 
+
+PROCEDURE MSFaceAPI.personGroupPersonGetFace(groupId String Description "Group Id", personId String Description "The Person Id", persistedFaceId String Description "The Persisted Face Id")
+
+// person 513629d6-e25d-4e8f-a738-397eafdbe351 
+// persisted face 9e555202-9d9a-4b5a-aebb-4de94795c9d1
+
+var path = "persongroups/" + groupId + "/persons/" + personId + "/persistedFaces/" + persistedFaceId
+
+SELECT FROM SOURCE faceapi WITH path = path, asFullResponse = true

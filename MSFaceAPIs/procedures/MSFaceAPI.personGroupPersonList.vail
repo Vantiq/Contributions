@@ -1,0 +1,10 @@
+/**  
+* @author Brett Rudenstein
+* @version 1.0 
+*/ 
+
+PROCEDURE MSFaceAPI.personGroupPersonList(groupId String Description "Group Id")
+
+var path = "persongroups/" + groupId + "/persons"
+
+SELECT FROM SOURCE faceapi WITH path = path, asFullResponse = true

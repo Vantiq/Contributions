@@ -1,0 +1,114 @@
+/**  
+* @author Brett Rudenstein
+* @version 1.0 
+*/ 
+
+PROCEDURE MSFaceAPI.faceDetect(url String Description "The URL of the image")
+
+var path = "detect"
+
+var body = {
+    "url": url
+}
+
+var query = {}
+query.returnFaceId = "true"
+query.returnFaceLandmarks = "false"
+query.returnFaceAttributes="age,gender,facialHair,glasses,emotion,hair,makeup,accessories,blur"
+
+SELECT FROM SOURCE faceapi WITH body = body, method = "POST", path = path, query = query, asFullResponse = true
+
+
+/*
+sample response
+
+[
+   {
+      "status": 200,
+      "headers": {
+         "Cache-Control": "no-cache",
+         "Pragma": "no-cache",
+         "Content-Length": "700",
+         "Content-Type": "application/json; charset=utf-8",
+         "Expires": "-1",
+         "X-AspNet-Version": "4.0.30319",
+         "X-Powered-By": "ASP.NET",
+         "apim-request-id": "bc85f6c1-fa51-40c6-96fc-319936df77d0",
+         "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+         "x-content-type-options": "nosniff",
+         "Date": "Wed, 25 Jul 2018 15:28:13 GMT"
+      },
+      "cookies": [],
+      "body": [
+         {
+            "faceId": "3aabf0d4-93c2-4469-a04e-eedad3d5bfc1",
+            "faceRectangle": {
+               "top": 322,
+               "left": 342,
+               "width": 512,
+               "height": 512
+            },
+            "faceAttributes": {
+               "gender": "male",
+               "age": 45,
+               "facialHair": {
+                  "moustache": 0.4,
+                  "beard": 0.4,
+                  "sideburns": 0.4
+               },
+               "glasses": "NoGlasses",
+               "emotion": {
+                  "anger": 0.054,
+                  "contempt": 0.002,
+                  "disgust": 0,
+                  "fear": 0,
+                  "happiness": 0,
+                  "neutral": 0.942,
+                  "sadness": 0.002,
+                  "surprise": 0
+               },
+               "makeup": {
+                  "eyeMakeup": true,
+                  "lipMakeup": false
+               },
+               "accessories": [],
+               "hair": {
+                  "bald": 0.13,
+                  "invisible": false,
+                  "hairColor": [
+                     {
+                        "color": "black",
+                        "confidence": 1
+                     },
+                     {
+                        "color": "brown",
+                        "confidence": 0.84
+                     },
+                     {
+                        "color": "gray",
+                        "confidence": 0.5
+                     },
+                     {
+                        "color": "other",
+                        "confidence": 0.46
+                     },
+                     {
+                        "color": "red",
+                        "confidence": 0.05
+                     },
+                     {
+                        "color": "blond",
+                        "confidence": 0.02
+                     }
+                  ]
+               }
+            }
+         }
+      ]
+   }
+]
+
+*/
+
+
+

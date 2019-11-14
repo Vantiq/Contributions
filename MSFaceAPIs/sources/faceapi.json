@@ -1,0 +1,19 @@
+{
+  "activationConstraint" : "",
+  "active" : true,
+  "config" : {
+    "pollingInterval" : 0,
+    "query" : {
+      "contentType" : "application/json"
+    },
+    "requestDefaults" : {
+      "headers" : {
+        "Ocp-Apim-Subscription-Key" : "<YOUR SUBSCRIPTION KEY>"
+      }
+    },
+    "uri" : "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/"
+  },
+  "direction" : "BOTH",
+  "name" : "faceapi",
+  "type" : "REMOTE"
+}
