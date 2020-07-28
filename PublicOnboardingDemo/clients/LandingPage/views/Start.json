@@ -1,0 +1,81 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "cdc75e9d-d826-4684-8607-c45624b2d4aa" ],
+    "widgets" : [ {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "fontFamily" : "inherit",
+      "fontSize" : 20,
+      "fontStyle" : "normal",
+      "fontWeight" : "normal",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "WelcomeLine",
+      "text" : "Welcome to VANTIQ!",
+      "type" : "StaticText",
+      "uuid" : "32ec7ad8-2ab1-41b7-b69e-f192c29d99c5",
+      "v" : 16,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    }, {
+      "backgroundColor" : "#ccdaeb",
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 1,
+      "children" : [ "32ec7ad8-2ab1-41b7-b69e-f192c29d99c5", "cfaebcd4-b15b-4839-addb-41de867616df", "fb08ade7-36c6-4906-9386-06a4cdff0403" ],
+      "column" : 0,
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "innerMargin" : 20,
+      "name" : "VerticalLayout34",
+      "row" : 0,
+      "type" : "VerticalLayout",
+      "uuid" : "cdc75e9d-d826-4684-8607-c45624b2d4aa",
+      "v" : 16,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    }, {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "fontFamily" : "inherit",
+      "fontSize" : 20,
+      "fontStyle" : "normal",
+      "fontWeight" : "normal",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "UUID",
+      "text" : "UUID",
+      "type" : "StaticText",
+      "uuid" : "cfaebcd4-b15b-4839-addb-41de867616df",
+      "v" : 16,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    }, {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "fontFamily" : "inherit",
+      "fontSize" : 20,
+      "fontStyle" : "normal",
+      "fontWeight" : "normal",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "Username",
+      "text" : "Username",
+      "type" : "StaticText",
+      "uuid" : "fb08ade7-36c6-4906-9386-06a4cdff0403",
+      "v" : 16,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "single",
+  "responseTopic" : "/my/response/topic"
+}

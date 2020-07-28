@@ -1,0 +1,36 @@
+PROCEDURE Registration.oauthUserRegistration(obj) 
+// Mark this procedure as publicly accessible
+WITH ars_public = true, 
+// Set the execution profiles to admin, regardless of the caller's privilege level
+profiles = ["admin", "admin__system"]
+// I don't think the above line is necessary because checks were moved from procedure to client
+
+// NOTE: This is the minimum possible privilege we can grant here
+var targetProfiles = ["user", "user__system"]
+
+// Create an invitation to join the current namespace
+var authZReq = {}
+authZReq.resourceName = "system.namespaces"
+authZReq.resourceId = Context.namespace()
+authZReq.op = "delegateUserAuthZ"
+authZReq.object = {"profiles": targetProfiles}
+var delegatedReq = ResourceAPI.executeOp(authZReq)
+
+ // Publish invite
+var publishAction = {}
+publishAction.source = "system.GenericEmailSender"
+publishAction.to = obj.email
+publishAction.callbackUri = "/ui/drp/index.html"
+// Redirects user to return to designated landing page 
+publishAction.state = "/ui/rtc/index.html?run=LandingPage"
+var publishReq = {}
+publishReq.resourceName = "system.delegatedrequests"
+publishReq.resourceId = delegatedReq.code
+publishReq.op = "publish"
+publishReq.object = publishAction
+ResourceAPI.executeOp(publishReq)
+
+
+
+// all done
+return true
