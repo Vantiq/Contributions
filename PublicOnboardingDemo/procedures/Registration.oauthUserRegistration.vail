@@ -3,7 +3,6 @@ PROCEDURE Registration.oauthUserRegistration(obj)
 WITH ars_public = true, 
 // Set the execution profiles to admin, regardless of the caller's privilege level
 profiles = ["admin", "admin__system"]
-// I don't think the above line is necessary because checks were moved from procedure to client
 
 // NOTE: This is the minimum possible privilege we can grant here
 var targetProfiles = ["user", "user__system"]
@@ -29,7 +28,6 @@ publishReq.resourceId = delegatedReq.code
 publishReq.op = "publish"
 publishReq.object = publishAction
 ResourceAPI.executeOp(publishReq)
-
 
 
 // all done
