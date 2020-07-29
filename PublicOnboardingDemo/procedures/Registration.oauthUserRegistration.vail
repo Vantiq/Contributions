@@ -4,6 +4,8 @@ WITH ars_public = true,
 // Set the execution profiles to admin, regardless of the caller's privilege level
 profiles = ["admin", "admin__system"]
 
+//// NOTE:  this method only works if run in an Application Namespace (not a Developer namespace) 
+
 // NOTE: This is the minimum possible privilege we can grant here
 var targetProfiles = ["user", "user__system"]
 

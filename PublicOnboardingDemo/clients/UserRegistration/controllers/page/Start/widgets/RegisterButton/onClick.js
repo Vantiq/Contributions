@@ -8,21 +8,18 @@
     };
     
     var http = new Http();
-    http.setVantiqUrlForSystemResource("procedures", 		client.getNamespace());
+    http.setVantiqUrlForSystemResource("procedures", client.getNamespace());
     http.setVantiqHeaders();
     var args = {
         obj:userDef
     };
     
     http.execute(args,"Registration.oauthUserRegistration",function(response) {
-        console.log("SUCCESS: " + JSON.stringify(response));
         // will change pages upon a successful registration
         client.goToPage("WaitingPage");
     },
-    function(errors)
-    {
-        console.log(errors);
-        alert("You have entered an invalid email. Please try a different one.");
+    function(errors) {
+        alert(errors.data[0].message);
         client.data.email = "";
     });
     

@@ -2,7 +2,7 @@
   "links" : [ ],
   "name" : "PublicOnboardingDemo",
   "options" : {
-    "description" : "Public Onboarding Demo\n\nThis contribution allows public users to sign up for a VANTIQ account without requiring a VANTIQ employee to manually send them a link. \n\nThis namespace contains two clients, the first is publicly accessibly and the second is private, and one procedure. The first client allows the user to input their name and email and register for a VANTIQ account. The client makes sure that the user has filled out all the fields and has a valid email address. Then, the user is sent an email with a link to the VANTIQ sign up form with keycloak. Once they have gone through the keycloak sign up process, they are redirected to the second client which is a landing page that tells the user what their account credentials are. \n\n",
+    "description" : "Public Onboarding Demo\n\nThis contribution allows public users to sign up for a VANTIQ account without requiring a VANTIQ employee to manually send them a link. This contribution only works in an Application Namespace and not in a Developer Namespace. \n\nThis namespace contains two clients, the first is publicly accessibly and the second is private, and one procedure. The first client allows the user to input their name and email and register for a VANTIQ account. The client makes sure that the user has filled out all the fields and has a valid email address. Then, the user is sent an email with a link to the VANTIQ sign up form with keycloak. Once they have gone through the keycloak sign up process, they are redirected to the second client which is a landing page that tells the user what their account credentials are. \n\n",
     "dockCollapsed" : {
       "bottom" : false,
       "left" : false,
@@ -59,7 +59,7 @@
       "y" : 297
     },
     "resourceReference" : "/system.clients/LandingPage",
-    "timestamp" : "2020-07-24T18:33:14.675Z",
+    "timestamp" : "2020-07-29T00:02:18.169Z",
     "type" : 15
   }, {
     "inventory" : {
@@ -87,7 +87,7 @@
       "y" : 211.8
     },
     "resourceReference" : "/procedures/Registration.oauthUserRegistration",
-    "timestamp" : "2020-07-28T20:36:28.949Z",
+    "timestamp" : "2020-07-29T00:36:45.303Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -115,7 +115,7 @@
       "y" : 298.1
     },
     "resourceReference" : "/system.clients/UserRegistration",
-    "timestamp" : "2020-07-28T20:34:08.975Z",
+    "timestamp" : "2020-07-29T00:33:51.551Z",
     "type" : 15
   } ],
   "tools" : [ {
@@ -124,7 +124,7 @@
     "name" : "Inactive Panes",
     "pane" : {
       "c" : -1,
-      "lastUsed" : 1595968615051,
+      "lastUsed" : 1595983088722,
       "r" : -1
     },
     "type" : 99
@@ -133,7 +133,7 @@
     "name" : "Project Contents",
     "pane" : {
       "c" : -1,
-      "lastUsed" : 1595968615051,
+      "lastUsed" : 1595980179221,
       "r" : -1
     },
     "type" : 2
@@ -142,7 +142,7 @@
     "name" : "Errors",
     "pane" : {
       "c" : -1,
-      "lastUsed" : 1595968615051,
+      "lastUsed" : 1595983088722,
       "r" : -1
     },
     "type" : 13
@@ -152,7 +152,7 @@
     "pane" : {
       "c" : -1,
       "createdTime" : 1592922142401,
-      "lastUsed" : 1595968605720,
+      "lastUsed" : 1595983005186,
       "r" : -1
     },
     "resourceKey" : "procedure/Registration.oauthUserRegistration",
@@ -162,7 +162,7 @@
     "name" : "Autopsies",
     "pane" : {
       "c" : -1,
-      "lastUsed" : 1595968615051,
+      "lastUsed" : 1595983088722,
       "r" : -1
     },
     "type" : 100
@@ -171,7 +171,7 @@
     "name" : "Log Messages",
     "pane" : {
       "c" : -1,
-      "lastUsed" : 1595968615051,
+      "lastUsed" : 1595983088722,
       "r" : -1
     },
     "type" : 12
@@ -181,7 +181,7 @@
     "pane" : {
       "c" : 1,
       "createdTime" : 1595369265531,
-      "lastUsed" : 1595968612374,
+      "lastUsed" : 1595983043345,
       "r" : 0
     },
     "type" : 82
@@ -191,7 +191,7 @@
     "pane" : {
       "c" : 0,
       "createdTime" : 1595453501430,
-      "lastUsed" : 1595968611099,
+      "lastUsed" : 1595983023680,
       "r" : 0
     },
     "resourceKey" : "client/UserRegistration",
@@ -205,7 +205,7 @@
     "pane" : {
       "c" : -1,
       "createdTime" : 1595615840507,
-      "lastUsed" : 1595968609220,
+      "lastUsed" : 1595983007785,
       "r" : -1
     },
     "toolOptions" : {
@@ -216,10 +216,21 @@
       }
     },
     "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "LandingPage",
+    "pane" : {
+      "c" : -1,
+      "createdTime" : 1595980179224,
+      "lastUsed" : 1595981112217,
+      "r" : -1
+    },
+    "resourceKey" : "client/LandingPage",
+    "type" : 63
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Main",
-    "projectToolKeys" : [ "tiledock/Inactive Panes", "list/Project Contents", "errorviewer/Errors", "cmeditorprocedure/Registration.oauthUserRegistration", "autopsyviewer/Autopsies", "logviewer/Log Messages", "projectdescription/Project Description", "client/UserRegistration", "graph/Project Resource Graph" ]
+    "projectToolKeys" : [ "tiledock/Inactive Panes", "list/Project Contents", "errorviewer/Errors", "cmeditorprocedure/Registration.oauthUserRegistration", "autopsyviewer/Autopsies", "logviewer/Log Messages", "projectdescription/Project Description", "client/UserRegistration", "graph/Project Resource Graph", "client/LandingPage" ]
   } ]
 }

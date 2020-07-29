@@ -4,29 +4,28 @@
     var intro = client.getWidget("WelcomeLine");
     intro.text = isPublic ? "Welcome to VANTIQ! You are currently in Public Mode." : "Welcome to VANTIQ! You are currently in Private Mode.";
     
-    var uuid = client.getUsername();
-    var username = client.getUserRecord();
-    var uuid_widget = client.getWidget("UUID");
+    var username = client.getUsername();
     var username_widget = client.getWidget("Username");
-    var pref_username = "";
+    var preferred_username = "";
+    var preferred_username_widget = client.getWidget("PreferredUsername");
     
-    uuid_widget.text = "Your Unique User ID is: " + uuid;
+    username_widget.text = "Your Username is: " + username;
     
-    // at this point username returns null in some cases
+    // on startup client.getUserRecord() may return null for a 
+    // brief period
     // the following function checks every tenth of a second
-    // to try and request the username data - and also sets and displays
-    // the username of the current user
-    function getPrefUsername(){
+    // to try and request the user record - and then sets and displays
+    // the preferred username of the current user
+    function setPrefUsername() {
         var id = setInterval(check, 100);
         function check() {
-            if (username !== null) {
+            var user_record = client.getUserRecord();
+            if (user_record !== null) {
                 clearInterval(id);
-                pref_username = username.preferredUsername;
-                username_widget.text = "Your Username is: " + 								pref_username;
-            } else {
-                username = client.getUserRecord();
-            }
+                preferred_username = user_record.preferredUsername;
+                preferred_username_widget.text = "Your Preferred Username is: " + preferred_username;
+            } 
         }
     }
     
-    getPrefUsername();
+    setPrefUsername();
