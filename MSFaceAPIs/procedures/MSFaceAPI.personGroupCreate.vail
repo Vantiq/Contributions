@@ -1,0 +1,17 @@
+/**  
+* @author Brett Rudenstein
+* @version 1.0 
+*/ 
+
+PROCEDURE MSFaceAPI.personGroupCreate(groupId String Description "Enter a group ID", name String Description "Enter a group name", userData String Description "Enter any aditional details about this group")
+
+var path = "persongroups/" + groupId
+
+var persongroup = {
+    "name": name,
+    "userData": userData
+}
+
+
+
+SELECT FROM SOURCE faceapi WITH body = persongroup, method = "PUT", path = path, asFullResponse = true

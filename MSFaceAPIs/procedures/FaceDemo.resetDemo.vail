@@ -1,0 +1,9 @@
+/**  
+* @author Brett Rudenstein
+* @version 1.0 
+*/ 
+
+PROCEDURE FaceDemo.resetDemo()
+
+MSFaceAPI.personGroupDelete("friend_group")
+

@@ -1,0 +1,12 @@
+/**  
+* @author Brett Rudenstein
+* @version 1.0 
+*/ 
+
+PROCEDURE MSFaceAPI.personGroupPersonDelete(personGroupId String, personId String)
+
+var path = "persongroups/" + personGroupId + "/persons/" + personId
+
+
+SELECT FROM SOURCE faceapi WITH method = "DELETE", path = path, asFullResponse = true
+

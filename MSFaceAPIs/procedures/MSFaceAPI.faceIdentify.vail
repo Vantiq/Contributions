@@ -1,0 +1,20 @@
+/**  
+* @author Brett Rudenstein
+* @version 1.0 
+*/ 
+
+PROCEDURE MSFaceAPI.faceIdentify(PersonGroupId String Description "Enter the persongroupId", faceIds String Array Description "A  list of faceId's")
+
+var path = "identify"
+
+
+var body = {
+    "PersonGroupId": PersonGroupId,
+    "faceIds": faceIds,
+    "maxNumOfCandidatesReturned": 1,
+    "confidenceThreshold": 0.5
+}
+
+
+SELECT FROM SOURCE faceapi WITH body = body, method = "POST", path = path, asFullResponse = true
+
