@@ -1,0 +1,236 @@
+{
+  "links" : [ ],
+  "name" : "PublicOnboardingDemo",
+  "options" : {
+    "description" : "Public Onboarding Demo\n\nThis contribution allows public users to sign up for a VANTIQ account without requiring a VANTIQ employee to manually send them a link. This contribution only works in an Application Namespace and not in a Developer Namespace. \n\nThis namespace contains two clients, the first is publicly accessibly and the second is private, and one procedure. The first client allows the user to input their name and email and register for a VANTIQ account. The client makes sure that the user has filled out all the fields and has a valid email address. Then, the user is sent an email with a link to the VANTIQ sign up form with keycloak. Once they have gone through the keycloak sign up process, they are redirected to the second client which is a landing page that tells the user what their account credentials are. \n\n",
+    "dockCollapsed" : {
+      "bottom" : false,
+      "left" : false,
+      "right" : false,
+      "top" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 213,
+      "debug" : [ 367.2084789191707, 285, 541.7915210808292 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0
+    },
+    "dockSort" : 1,
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "listFlavor" : "tree",
+    "openResourceFolders" : {
+      "Client" : true,
+      "Procedure" : true,
+      "Topic" : true,
+      "Type" : true
+    },
+    "showGrid" : true,
+    "tileColumns" : 2,
+    "tileRows" : 1,
+    "type" : "dev",
+    "v" : 3
+  },
+  "resources" : [ {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "LandingPage",
+    "name" : "LandingPage",
+    "node" : {
+      "x" : 373.9,
+      "y" : 297
+    },
+    "resourceReference" : "/system.clients/LandingPage",
+    "timestamp" : "2020-07-29T00:02:18.169Z",
+    "type" : 15
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ "out", "out" ],
+      "procedures" : [ "Context.namespace", "ResourceAPI.executeOp" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "Registration.oauthUserRegistration",
+    "name" : "Registration.oauthUserRegistration",
+    "node" : {
+      "x" : 199.8,
+      "y" : 211.8
+    },
+    "resourceReference" : "/procedures/Registration.oauthUserRegistration",
+    "timestamp" : "2020-07-29T00:36:45.303Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "UserRegistration",
+    "name" : "UserRegistration",
+    "node" : {
+      "x" : 122.3,
+      "y" : 298.1
+    },
+    "resourceReference" : "/system.clients/UserRegistration",
+    "timestamp" : "2020-07-29T00:33:51.551Z",
+    "type" : 15
+  } ],
+  "tools" : [ {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1595983088722,
+      "r" : -1
+    },
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1595980179221,
+      "r" : -1
+    },
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Errors",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1595983088722,
+      "r" : -1
+    },
+    "type" : 13
+  }, {
+    "isPinned" : false,
+    "name" : "Registration.oauthUserRegistration",
+    "pane" : {
+      "c" : -1,
+      "createdTime" : 1592922142401,
+      "lastUsed" : 1595983005186,
+      "r" : -1
+    },
+    "resourceKey" : "procedure/Registration.oauthUserRegistration",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "Autopsies",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1595983088722,
+      "r" : -1
+    },
+    "type" : 100
+  }, {
+    "isPinned" : false,
+    "name" : "Log Messages",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1595983088722,
+      "r" : -1
+    },
+    "type" : 12
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "c" : 1,
+      "createdTime" : 1595369265531,
+      "lastUsed" : 1595983043345,
+      "r" : 0
+    },
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "UserRegistration",
+    "pane" : {
+      "c" : 0,
+      "createdTime" : 1595453501430,
+      "lastUsed" : 1595983023680,
+      "r" : 0
+    },
+    "resourceKey" : "client/UserRegistration",
+    "toolOptions" : {
+      "isRunning" : false
+    },
+    "type" : 63
+  }, {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "c" : -1,
+      "createdTime" : 1595615840507,
+      "lastUsed" : 1595983007785,
+      "r" : -1
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 1,
+        "translate" : [ 0, 0 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "LandingPage",
+    "pane" : {
+      "c" : -1,
+      "createdTime" : 1595980179224,
+      "lastUsed" : 1595981112217,
+      "r" : -1
+    },
+    "resourceKey" : "client/LandingPage",
+    "type" : 63
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "tiledock/Inactive Panes", "list/Project Contents", "errorviewer/Errors", "cmeditorprocedure/Registration.oauthUserRegistration", "autopsyviewer/Autopsies", "logviewer/Log Messages", "projectdescription/Project Description", "client/UserRegistration", "graph/Project Resource Graph", "client/LandingPage" ]
+  } ]
+}

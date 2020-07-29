@@ -1,0 +1,103 @@
+{
+  "ars_properties" : {
+    "tags" : [ "#launchable" ]
+  },
+  "ars_public" : true,
+  "controllers" : {
+    "client" : {
+      "onStart" : "RELOCATED to controllers/client/onStart.js"
+    },
+    "dataStream" : { },
+    "page" : {
+      "Start" : {
+        "widgets" : {
+          "InputString12" : {
+            "onChange" : "RELOCATED to controllers/page/Start/widgets/InputString12/onChange.js"
+          },
+          "InputString14" : {
+            "onChange" : "RELOCATED to controllers/page/Start/widgets/InputString14/onChange.js"
+          },
+          "InputString15" : {
+            "onChange" : "RELOCATED to controllers/page/Start/widgets/InputString15/onChange.js"
+          },
+          "RegisterButton" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/RegisterButton/onClick.js"
+          }
+        }
+      },
+      "WaitingPage" : {
+        "widgets" : { }
+      }
+    }
+  },
+  "isLaunchable" : true,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : {
+          "email" : {
+            "defaultLabel" : "email",
+            "defaultValue" : "",
+            "type" : "String"
+          },
+          "first_name" : {
+            "defaultLabel" : "first name",
+            "defaultValue" : "",
+            "type" : "String"
+          },
+          "last_name" : {
+            "defaultLabel" : "last name",
+            "defaultValue" : "",
+            "type" : "String"
+          }
+        }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ ]
+  },
+  "name" : "UserRegistration",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "applyCSSwhileEditing" : true,
+    "badgeCount" : 3,
+    "description" : "",
+    "docAssets" : [ ],
+    "paletteCollapsed" : false,
+    "productV" : "7.2o",
+    "showCategoryButtons" : true,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : true,
+    "showCategoryLayout" : true,
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "v" : 3
+    },
+    "v" : 5
+  },
+  "targetDevice" : "all",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json",
+    "WaitingPage" : "RELOCATED to views/WaitingPage.json"
+  }
+}

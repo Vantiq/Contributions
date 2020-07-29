@@ -1,0 +1,46 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "201fce7c-0220-421c-8762-49e2c487f40c" ],
+    "widgets" : [ {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 1,
+      "children" : [ "549eca8a-257a-470f-a6a4-528cba38dcad" ],
+      "column" : 0,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "innerMargin" : 20,
+      "name" : "HorizontalLayout29",
+      "row" : 0,
+      "type" : "HorizontalLayout",
+      "uuid" : "201fce7c-0220-421c-8762-49e2c487f40c",
+      "v" : 16,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "fontFamily" : "inherit",
+      "fontSize" : 20,
+      "fontStyle" : "normal",
+      "fontWeight" : "normal",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "StaticText35",
+      "text" : "Thank you for registering. Please check your email to finish the sign up process.",
+      "type" : "StaticText",
+      "uuid" : "549eca8a-257a-470f-a6a4-528cba38dcad",
+      "v" : 16,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "single",
+  "responseTopic" : ""
+}
