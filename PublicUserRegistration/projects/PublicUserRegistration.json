@@ -1,18 +1,18 @@
 {
   "links" : [ ],
-  "name" : "PublicOnboardingDemo",
+  "name" : "PublicUserRegistration",
   "options" : {
-    "description" : "Public Onboarding Demo\n\nThis contribution allows public users to sign up for a VANTIQ account without requiring a VANTIQ employee to manually send them a link. This contribution only works in an Application Namespace and not in a Developer Namespace. \n\nThis namespace contains two clients, the first is publicly accessibly and the second is private, and one procedure. The first client allows the user to input their name and email and register for a VANTIQ account. The client makes sure that the user has filled out all the fields and has a valid email address. Then, the user is sent an email with a link to the VANTIQ sign up form with keycloak. Once they have gone through the keycloak sign up process, they are redirected to the second client which is a landing page that tells the user what their account credentials are. \n\n",
+    "description" : "Public User Registration Demo\n\nThis demo allows public users to sign up for a VANTIQ account without requiring a VANTIQ employee to manually send them a link. Please note, this registration process only works in an Application Namespace and not in a Developer Namespace. \n\nThis project contains two clients, the first is publicly accessibly (UserRegistration) and the second is private (LandingPage). The public client allows the user to input their name and email and register for a VANTIQ account. The client makes sure that the user has filled out all the fields and has a valid email address. \n\nWhen the user clicks the Register button, a public procedure is called, which generates an email invite. The email invite contains a link with a one time use code, which will grant the user access to VANTIQ. Before the code can be processed, the user will be redirected to keycloak, where they will identify themselves or create an account, and after which the code will be automatically processed and the user will be redirected to the private client. \n\nThe private client will simply show the username of the newly created identity in keycloak to confirm that the user is now logged in. \n",
     "dockCollapsed" : {
-      "bottom" : false,
+      "bottom" : true,
       "left" : false,
       "right" : false,
       "top" : false
     },
     "dockDimensions" : {
       "bottom" : 213,
-      "debug" : [ 367.2084789191707, 285, 541.7915210808292 ],
-      "left" : 210,
+      "debug" : [ 586.708218474155, 456.958123953099, 870.3336575727461 ],
+      "left" : 233,
       "right" : 220,
       "top" : 0
     },
@@ -59,7 +59,7 @@
       "y" : 297
     },
     "resourceReference" : "/system.clients/LandingPage",
-    "timestamp" : "2020-07-29T00:02:18.169Z",
+    "timestamp" : "2020-07-31T21:50:24.572Z",
     "type" : 15
   }, {
     "inventory" : {
@@ -87,7 +87,7 @@
       "y" : 211.8
     },
     "resourceReference" : "/procedures/Registration.oauthUserRegistration",
-    "timestamp" : "2020-07-29T00:36:45.303Z",
+    "timestamp" : "2020-07-31T21:50:25.426Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -115,7 +115,7 @@
       "y" : 298.1
     },
     "resourceReference" : "/system.clients/UserRegistration",
-    "timestamp" : "2020-07-29T00:33:51.551Z",
+    "timestamp" : "2020-07-31T21:50:24.572Z",
     "type" : 15
   } ],
   "tools" : [ {
@@ -124,7 +124,7 @@
     "name" : "Inactive Panes",
     "pane" : {
       "c" : -1,
-      "lastUsed" : 1595983088722,
+      "lastUsed" : 1596232902239,
       "r" : -1
     },
     "type" : 99
@@ -133,7 +133,7 @@
     "name" : "Project Contents",
     "pane" : {
       "c" : -1,
-      "lastUsed" : 1595980179221,
+      "lastUsed" : 1596232766270,
       "r" : -1
     },
     "type" : 2
@@ -142,7 +142,7 @@
     "name" : "Errors",
     "pane" : {
       "c" : -1,
-      "lastUsed" : 1595983088722,
+      "lastUsed" : 1596232902239,
       "r" : -1
     },
     "type" : 13
@@ -152,7 +152,7 @@
     "pane" : {
       "c" : -1,
       "createdTime" : 1592922142401,
-      "lastUsed" : 1595983005186,
+      "lastUsed" : 1596232766282,
       "r" : -1
     },
     "resourceKey" : "procedure/Registration.oauthUserRegistration",
@@ -162,7 +162,7 @@
     "name" : "Autopsies",
     "pane" : {
       "c" : -1,
-      "lastUsed" : 1595983088722,
+      "lastUsed" : 1596232902239,
       "r" : -1
     },
     "type" : 100
@@ -171,7 +171,7 @@
     "name" : "Log Messages",
     "pane" : {
       "c" : -1,
-      "lastUsed" : 1595983088722,
+      "lastUsed" : 1596232902239,
       "r" : -1
     },
     "type" : 12
@@ -181,7 +181,7 @@
     "pane" : {
       "c" : 1,
       "createdTime" : 1595369265531,
-      "lastUsed" : 1595983043345,
+      "lastUsed" : 1596232891748,
       "r" : 0
     },
     "type" : 82
@@ -191,7 +191,7 @@
     "pane" : {
       "c" : 0,
       "createdTime" : 1595453501430,
-      "lastUsed" : 1595983023680,
+      "lastUsed" : 1596232771194,
       "r" : 0
     },
     "resourceKey" : "client/UserRegistration",
