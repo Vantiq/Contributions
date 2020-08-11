@@ -23,7 +23,7 @@ publishAction.source = "system.GenericEmailSender"
 publishAction.to = obj.email
 publishAction.callbackUri = "/ui/drp/index.html"
 // Redirects user to return to designated landing page 
-publishAction.state = "/ui/rtc/index.html?run=LandingPage"
+publishAction.state = "/ui/rtc/index.html?run=LandingPage&namespace="+Context.namespace()
 var publishReq = {}
 publishReq.resourceName = "system.delegatedrequests"
 publishReq.resourceId = delegatedReq.code
