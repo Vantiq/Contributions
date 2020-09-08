@@ -2,19 +2,41 @@
   "ars_properties" : {
     "tags" : [ "#launchable" ]
   },
+  "ars_public" : false,
   "controllers" : {
     "client" : { },
     "dataStream" : {
       "dc_insert_documents" : {
-        "onDataArrived" : "    //var image = client.getWidget(\"imageViewer\");\n    //image.url = data.name;\n    //console.log(image.url);\n    console.log(\"Document Arrived\");\n    console.log(\"Document Name: \" + data.name);\n    \n    var http = new Http();\n    http.setVantiqUrlForSystemResource(\"procedures\");\n    http.setVantiqHeaders();\n    var args = {\n        imageName:data.name,\n        threshold:client.data.threshold\n    };\n    \n    var scaleFactor = 1;\n    var design = client.getDocumentUrl(data.name);\n    var canvas = $(\"#cameracanvas\").get(0);\n    var img = new Image();\n    var ctx = canvas.getContext(\"2d\");\n    \n\n    http.execute(args,\"tfExample\",function(response)\n    {\n        console.log(\"SUCCESS: \" + JSON.stringify(response));\n        client.getWidget(\"StaticHtmlObjView\").html = \"<pre>\" + JSON.stringify(response, null ,2) + \"</pre>\";\n\t\t\n        img.onload = function() {\n\t\t\tctx.drawImage(this, 0, 0, this.width / scaleFactor, this.height / scaleFactor);ctx.beginPath();\n\t\t\tresponse.forEach(function(result){\n                ctx.lineWidth=\"2\";\t\n                ctx.strokeStyle=\"white\";\t\n                ctx.rect(result.location.left / scaleFactor, result.location.top / scaleFactor , (result.location.right - result.location.left) / scaleFactor, (result.location.bottom -  result.location.top) / scaleFactor); \n                ctx.stroke();\n                ctx.font = '20pt Calibri';\n                ctx.fillStyle = \"white\";\n                ctx.fillText(result.label + \" : \" + result.confidence, result.location.left / scaleFactor , (result.location.top - 20) / scaleFactor);\n                ctx.font = '10pt Calibri';\n                //ctx.fillText(\"UID : \" + result.uid, result.location.left / scaleFactor , (result.location.top - 3) / scaleFactor);\t\n\t\t});\n\t};\n    img.src = design;\n        //client.data.yoloResult = JSON.stringify(response);\n        \n    },\n    function(errors)\n    {\n        //\n        //  This call will format the error into a popup dialog\n        //\n        client.showHttpErrors(errors,\"Executing 'MyService.MyProcedure'\");\n    });\n\n"
-      }
+        "onDataArrived" : "RELOCATED to controllers/dataStream/dc_insert_documents/onDataArrived.js"
+      },
+      "pull_pictures" : { }
     },
     "page" : {
       "Start" : {
-        "onStart" : "\tclient.data.threshold = 0.5;",
+        "onStart" : "RELOCATED to controllers/page/Start/onStart.js",
         "widgets" : {
           "Button1" : {
-            "onClick" : "    var canvas = $(\"#cameracanvas\").get(0);    \n    var ctx = canvas.getContext(\"2d\");\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\n    \n    //\n    //  When \"false\" (the default) the user will be prompted for the document name to use. If \"true\" the \n    //  original file name will be used to name the document.\n    //\n    var useOriginalFileName = false;\n\n    //\n    //  When \"false\" (the default) the user will be warned if an existing document will be overwritten. If\n    //  \"true\" the warning message will be skipped.\n    //\n    var forceOverwrite = false;\n\n    //\n    //  When \"null\" (the default) the document name will be used as specified. Otherwise the string will\n    //  be prepended to the the beginning of document name. \n    //\n    var prefix = \"images/\";\n\n    //\n    //  Ask the user to select a file to be uploaded\n    //\n    client.uploadDocument(function(status, detail)\n    {\n        //\n        //  \"status\" contains either \"success\" or \"error\".\n        //  \"detail\" contains either the name of the saved document (if \"status\" == \"success\") or an\n        //  error message (if \"status\" == \"error\").\n        //\n\n        if (status == \"success\")\n        {\n            console.log(\"File has been uploaded to document '\" + detail + \"'\");\n        }\n        else\n        {\n            console.log(\"Upload failed with error: \" + detail);\n        }\n    }, useOriginalFileName, forceOverwrite, prefix);"
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/Button1/onClick.js"
+          },
+          "ChangeModelButton" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/ChangeModelButton/onClick.js"
+          },
+          "DataTable1" : {
+            "onButtonClickCallback" : "RELOCATED to controllers/page/Start/widgets/DataTable1/onButtonClickCallback.js"
+          },
+          "PageChangeButton" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/PageChangeButton/onClick.js"
+          },
+          "RefreshButton" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/RefreshButton/onClick.js"
+          }
+        }
+      },
+      "VSPage" : {
+        "onStart" : "RELOCATED to controllers/page/VSPage/onStart.js",
+        "widgets" : {
+          "Button85" : {
+            "onClick" : "RELOCATED to controllers/page/VSPage/widgets/Button85/onClick.js"
           }
         }
       }
@@ -42,6 +64,7 @@
       "isUpdateOp" : true,
       "maxRecords" : 0,
       "name" : "dc_insert_documents",
+      "pauseAtStartup" : false,
       "property" : null,
       "sortByProperty" : null,
       "sortDescending" : false,
@@ -49,14 +72,43 @@
       "updateInterval" : 60,
       "uuid" : "39d6c486-33b1-4731-83d3-3cc032b92597",
       "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "basicQueryElement" : [ ],
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "Pictures"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "pull_pictures",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 4,
+      "updateInterval" : 30,
+      "uuid" : "5b47fb0e-c97d-4d31-88b1-747681dbef16",
+      "v" : 1
     } ]
   },
   "name" : "TfVisionDemo",
   "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
     "badgeCount" : 0,
     "description" : "",
     "docAssets" : [ ],
     "paletteCollapsed" : false,
+    "productV" : "7.4g",
     "showCategoryButtons" : true,
     "showCategoryDataDisplay" : true,
     "showCategoryDataInput" : true,
@@ -77,197 +129,12 @@
       "titleBarColor" : "#dddddd",
       "v" : 3
     },
-    "v" : 4
+    "v" : 5
   },
   "targetDevice" : "browser",
   "userList" : [ ],
   "views" : {
-    "Start" : {
-      "bodyChildren" : [ {
-        "CSSClass" : "vantiqInputReal",
-        "actionMenuLabel" : null,
-        "actionMenuTopic" : null,
-        "binding" : "client.data.threshold",
-        "borderColor" : "Default",
-        "borderRadius" : 4,
-        "borderWidth" : 0,
-        "clearOnDataArrive" : false,
-        "default" : 0.5,
-        "flavor" : "text",
-        "h" : 54,
-        "heightPolicy" : 0,
-        "horzGravity" : 4,
-        "horzMargin" : 10,
-        "innerMargin" : 0,
-        "isDraggable" : true,
-        "isSelectable" : true,
-        "label" : "",
-        "labelAlign" : "left",
-        "labelColor" : "default",
-        "labelFontSize" : 16,
-        "labelStyle" : "bold",
-        "maxValue" : 0.99,
-        "minValue" : 0.1,
-        "name" : "InputReal1",
-        "optional" : true,
-        "placeholder" : "0.5",
-        "type" : "PIInputReal",
-        "units" : "",
-        "v" : 15,
-        "vertGravity" : 4,
-        "vertMargin" : 10,
-        "w" : 120,
-        "widthPolicy" : 2,
-        "x" : 939.9999542236328,
-        "y" : 0
-      }, {
-        "CSSClass" : "vantiqStaticText",
-        "actionMenuLabel" : null,
-        "actionMenuTopic" : null,
-        "borderColor" : "Default",
-        "borderRadius" : 4,
-        "borderWidth" : 0,
-        "clearOnDataArrive" : false,
-        "fontFace" : "inherit",
-        "fontSize" : 20,
-        "fontStyle" : "normal",
-        "fontWeight" : "normal",
-        "h" : 20,
-        "heightPolicy" : 0,
-        "horzGravity" : 4,
-        "isDraggable" : true,
-        "isSelectable" : true,
-        "name" : "StaticText17",
-        "text" : "Detection Threshold",
-        "type" : "TextLabel",
-        "v" : 15,
-        "vertGravity" : 4,
-        "w" : 169,
-        "widthPolicy" : 0,
-        "x" : 1069.9999542236328,
-        "y" : 20
-      }, {
-        "CSSClass" : "vantiqVerticalLayout",
-        "actionMenuLabel" : null,
-        "actionMenuTopic" : null,
-        "borderColor" : "Default",
-        "borderRadius" : 4,
-        "borderWidth" : 1,
-        "clearOnDataArrive" : false,
-        "h" : 709,
-        "heightPolicy" : 0,
-        "horzGravity" : 4,
-        "horzMargin" : 10,
-        "innerMargin" : 20,
-        "isDraggable" : true,
-        "isSelectable" : true,
-        "kids" : [ {
-          "CSSClass" : "vantiqStaticHtml",
-          "actionMenuLabel" : null,
-          "actionMenuTopic" : null,
-          "borderColor" : "Default",
-          "borderRadius" : 4,
-          "borderWidth" : 2,
-          "clearOnDataArrive" : false,
-          "dataStreamUUID" : null,
-          "dmh" : 300,
-          "dmw" : 200,
-          "h" : 622,
-          "heightPolicy" : 1,
-          "horzGravity" : 4,
-          "horzScrollPolicy" : 0,
-          "html" : "<canvas id=\"cameracanvas\" width=\"1024\" height=\"768\">Canvas not supported</canvas>",
-          "isDraggable" : true,
-          "isSelectable" : true,
-          "name" : "StaticHtml4",
-          "type" : "RichText",
-          "v" : 15,
-          "vertGravity" : 4,
-          "vertScrollPolicy" : 0,
-          "w" : 819,
-          "widthPolicy" : 1,
-          "x" : 10,
-          "y" : 10
-        }, {
-          "CSSClass" : "vantiqButton",
-          "actionMenuLabel" : null,
-          "actionMenuTopic" : null,
-          "borderColor" : "Default",
-          "borderRadius" : 4,
-          "borderWidth" : 0,
-          "buttonBackgroundColor" : "platform",
-          "buttonLabel" : "Upload",
-          "buttonLabelColor" : "platform",
-          "buttonLabelSize" : 14,
-          "buttonLabelStyle" : "bold",
-          "clearOnDataArrive" : false,
-          "h" : 45,
-          "heightPolicy" : 0,
-          "horzGravity" : 4,
-          "horzMargin" : 10,
-          "innerMargin" : 0,
-          "isDraggable" : true,
-          "isSelectable" : true,
-          "label" : "",
-          "labelAlign" : "left",
-          "labelColor" : "default",
-          "labelFontSize" : 16,
-          "labelStyle" : "bold",
-          "name" : "Button1",
-          "type" : "PIInlineButton",
-          "v" : 15,
-          "value" : 100,
-          "vertGravity" : 4,
-          "vertMargin" : 10,
-          "w" : 819,
-          "widthPolicy" : 2,
-          "x" : 10,
-          "y" : 652
-        } ],
-        "name" : "VerticalLayout22",
-        "type" : "VerticalContainer",
-        "v" : 15,
-        "vertGravity" : 4,
-        "vertMargin" : 10,
-        "w" : 841,
-        "widthPolicy" : 0,
-        "x" : 30,
-        "y" : 99.99998474121094
-      }, {
-        "CSSClass" : "vantiqStaticHtml",
-        "actionMenuLabel" : null,
-        "actionMenuTopic" : null,
-        "borderColor" : "Default",
-        "borderRadius" : 4,
-        "borderWidth" : 1,
-        "clearOnDataArrive" : false,
-        "dataStreamUUID" : null,
-        "dmh" : 300,
-        "dmw" : 200,
-        "h" : 560,
-        "heightPolicy" : 1,
-        "horzGravity" : 4,
-        "horzScrollPolicy" : 0,
-        "html" : "Default for <span style='color:red'>HTML Viewer</span> Widget",
-        "isDraggable" : true,
-        "isSelectable" : true,
-        "name" : "StaticHtmlObjView",
-        "type" : "RichText",
-        "v" : 15,
-        "vertGravity" : 4,
-        "vertScrollPolicy" : 2,
-        "w" : 480,
-        "widthPolicy" : 1,
-        "x" : 949.9999542236328,
-        "y" : 99.99998474121094
-      } ],
-      "data" : {
-        "properties" : { }
-      },
-      "footerChildren" : [ ],
-      "hasFooter" : false,
-      "layoutType" : "browser",
-      "responseTopic" : "/my/response/topic"
-    }
+    "Start" : "RELOCATED to views/Start.json",
+    "VSPage" : "RELOCATED to views/VSPage.json"
   }
 }

@@ -1,24 +1,20 @@
 PROCEDURE vsExample(imageName String)
 
-// Create the script
+// This code can also be found here: https://internal.vantiq.com/docs/system/imageprocessing/index.html#using-vision-script
+
 var script = { scriptName: "FindingFaces"}
-// Build a convertToGrayscale action
 var convertAction = { name: "convertToGrayscale"}
-// Save that image to an image named gsSave.jpg
 var saveGrayScaleAction = { name: "save"}
 var saveGSParams = { saveName: "gsSave.jpg", fileType: "image/jpeg"}
 saveGrayScaleAction.parameters = saveGSParams
 
-// Find the faces in the image & draw boxes
 var ffAction = { name: "findFaces", tag: "locateFaces" }
 
 var drawBoxesAction = { name: "drawBoxes"}
 
-// Use results from the findFaces action to draw boxes on our image
 var dbParams = { useResultsFrom: "locateFaces"}
 drawBoxesAction.parameters = dbParams
 
-// Save the resulting image to boxedSave.jpg
 var saveBoxedAction = {name: "save", tag: "boxedSave"}
 var saveBoxedParams = { saveName: "boxedSave.jpg", fileType: "image/jpeg"}
 saveBoxedAction.parameters = saveBoxedParams
@@ -29,5 +25,6 @@ script.script = [convertAction,
     drawBoxesAction, 
     saveBoxedAction]
 
-var result = VisionScriptOperation.processImage(imageName, script)
+// you can change blood.jpg to be the image name of your choosing if you would like to use your own image
+var result = VisionScriptOperation.processImage("blood.jpg", script)
 return result

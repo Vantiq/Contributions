@@ -1,32 +1,55 @@
 {
   "links" : [ {
-    "source" : "client/TfVisionDemo",
-    "target" : "topic//my/response/topic"
-  }, {
     "source" : "type/system.documents",
+    "target" : "client/TfVisionDemo"
+  }, {
+    "source" : "type/Pictures",
     "target" : "client/TfVisionDemo"
   } ],
   "name" : "VisionDemo",
   "options" : {
-    "description" : "This project includes two procedures that will demonstrate the VisionScript image processing capabilities in a procedure called vsExample and TensorFlow object recognition support in a procedure called tfExample. \n\nA simple client TfVisionDemo has been created that will allow users to upload an image to VANTIQ that will be processed through TensorFlow and the results displayed on the page. \n\nBefore using the tfExample or TfVisionDemo client make sure to upload a TensorFlow model. The easiest way to do this is using the CLI \"Load\" command: \nhttps://dev.vantiq.com/docs/system/cli/index.html#load\n\n\nAdditional Documentation:\nVisionScript: https://dev.vantiq.com/docs/system/rules/index.html#VisionScriptBuilder\n\nTensorFlow: \nhttps://dev.vantiq.com/docs/system/imageprocessing/index.html#image-analysis",
-    "dockCollapsed" : false,
+    "blacklist" : [ "topic//my/response/topic" ],
+    "description" : "This project includes two procedures that will demonstrate the VisionScript image processing capabilities in a procedure called vsExample and TensorFlow object recognition support in a procedure called tfExample. The main purpose of this demo is to showcase VANTIQ's integration with TensorFlow and as a result the VisionScript aspect is more of a side project and is a smaller piece of the demo.\n\nA simple client TfVisionDemo has been created that will allow users to choose or upload an image to VANTIQ that will be processed through TensorFlow and the results displayed on the page. \n\nThe client also allows you to change the confidence threshold and model type for image classification and toggle to the VisionScript part of the demo.\n\nBefore using the TfVisionDemo client make sure to upload a TensorFlow model. The easiest way to do this is using the CLI \"Load\" command: \nhttps://dev.vantiq.com/docs/system/cli/index.html#load\n\nBecause TensorFlow models are not uploaded to github because of the size constraints, here is a list of directions to follow to ensure that the demo gets set up correctly. \n\n1: Confirm that your computer has Java 8 running in order to run the vantiq CLI. If your computer does not have Java 8 installed - use homebrew to install adoptopenjdk and set your path to include the adoptopenjdk directory. To confirm that you have everything set up correctly run java -version to make sure you have 1.8.\n\n2: Confirm the vantiq CLI is functioning. If you do not have the vantiq CLI, click the question mark icon in the top right of your screen in the blue toolbar. Then click developer resources and scroll down to the CLI download. Follow those instructions. \n\n3: In order to load the model, you will need to create an access token so that vantiq recognizes you as a registered user. Change to the operations pane, then select the administer drop down menu, advanced, and access tokens. You will then need to create a new access token for this namespace. \n\n4: Now, you will need to create a directory that holds the necessary files (as described here: https://internal.vantiq.com/docs/system/cli/index.html#load). I wanted to include a way to use multiple different models, so I included coco-1.2, yolov3-1.0, and yolo_open_image-1.0, which I defaulted to calling yolo-1.0. You will need to download two files and then create the third within a directory corresponding to each model.\n\nHere are the coco files:\nhttp://vantiqmaven.s3.amazonaws.com/vantiq/models/coco/1.2/coco-1.2.meta\nhttp://vantiqmaven.s3.amazonaws.com/vantiq/models/coco/1.2/coco-1.2.pb\nFor the .json file, adding these line should suffice:\n{\n \"modelType\" : \"tensorflow/yolo\",\n \"name\" : \"coco-1.2\"\n}\n\nHere are the yolov3 files:\nhttp://vantiqmaven.s3.amazonaws.com/vantiq/models/yolov3/1.0/yolov3-1.0.meta\nhttp://vantiqmaven.s3.amazonaws.com/vantiq/models/yolov3/1.0/yolov3-1.0.pb\nFor the .json file, adding these line should suffice:\n{\n \"modelType\" : \"tensorflow/yolo\",\n \"name\" : \"yolov3-1.0\"\n}\n\nHere are the yolo open image files:\nhttps://vantiqmaven.s3-us-west-2.amazonaws.com/vantiq/models/yolo_open_image/1.0/yolo_open_image-1.0.meta\nhttps://vantiqmaven.s3-us-west-2.amazonaws.com/vantiq/models/yolo_open_image/1.0/yolo_open_image-1.0.pb\nFor the json file:\n{\n \"modelType\" : \"tensorflow/yolo\",\n \"name\" : \"yolo-1.0\"\n}\n\n5: Once you have those three files in a directory corresponding to the specifc model, you can finally load the model to the namespace using a command similar to this:\nvantiq load tensorflowmodel coco-1.2 -t (access token) -b https://internal.vantiq.com -n vision-demo\n\n\nOnce you have finished these steps, you are all set to run the demo. However, if you would like to use your own images as part of the TensorFlow demo, you can download images to your computer and then upload using the client button. If you would like to use yor own images as part of the VisionScript demo, follow these steps.\n\n\n1: Load an image of your choosing through the vantiq CLI. Use an image with people's faces as this part of the demo finds people's faces in an image. You will use a command along these lines: \nvantiq load image (directory containing image name) -t (access token) -b https://internal.vantiq.com -n vision-demo\n\n2: Once you have loaded your image, you can go and check to make sure it is there by going to show, find records, check show system types, and select system.images. \n\n3: Once you see the image you have uploaded, you will need to edit the vsExample procedure to use your image name instead of blood.jpg on line 33 in the processImage method call and on line 21 in the VSPage On Start function. \n\n\nAdditional Documentation:\nVisionScript: https://dev.vantiq.com/docs/system/rules/index.html#VisionScriptBuilder\n\nTensorFlow: \nhttps://dev.vantiq.com/docs/system/imageprocessing/index.html#image-analysis",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0
+    },
     "dockSort" : 1,
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "tile",
+    "openResourceFolders" : {
+      "procedure" : true,
+      "topic" : true,
+      "type" : true
+    },
+    "rootViewFlavor" : 1,
     "showGrid" : true,
     "tileColumns" : 2,
     "tileRows" : 2,
-    "v" : 3
+    "type" : "dev",
+    "v" : 3,
+    "viewUUID" : "MAINVIEW"
   },
   "resources" : [ {
-    "label" : "/my/response/topic",
-    "name" : "/my/response/topic",
+    "label" : "Pictures",
+    "name" : "Pictures",
     "node" : {
-      "x" : 414.6,
-      "y" : 61.6
+      "x" : 235.9,
+      "y" : -0.5
     },
-    "type" : 10
+    "resourceReference" : "/types/Pictures",
+    "timestamp" : "2020-08-27T20:41:28.114Z",
+    "type" : 1
   }, {
     "inventory" : {
       "clientHash" : [ ],
@@ -41,10 +64,10 @@
       "sources" : [ ],
       "systemmodelHash" : [ ],
       "systemmodels" : [ ],
-      "topicHash" : [ "out" ],
-      "topics" : [ "/my/response/topic" ],
-      "typeHash" : [ "in" ],
-      "types" : [ "system.documents" ]
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in", "in" ],
+      "types" : [ "system.documents", "Pictures" ]
     },
     "label" : "TfVisionDemo",
     "name" : "TfVisionDemo",
@@ -52,25 +75,38 @@
       "x" : 331.2,
       "y" : 131.9
     },
-    "timestamp" : "2019-10-03T16:01:03.562Z",
+    "resourceReference" : "/system.clients/TfVisionDemo",
+    "timestamp" : "2020-09-08T23:24:21.020Z",
     "type" : 15
   }, {
     "label" : "system.documents",
     "name" : "system.documents",
     "node" : {
-      "x" : 348,
-      "y" : -12.6
+      "x" : 442.6,
+      "y" : 1.4
     },
-    "timestamp" : "2015-05-19T04:39:17.005Z",
+    "resourceReference" : "/types/system.documents",
+    "timestamp" : "2020-03-18T00:32:42.861Z",
     "type" : 1
   }, {
-    "label" : "system.videos",
-    "name" : "system.videos",
+    "label" : "system.images",
+    "name" : "system.images",
     "node" : {
-      "x" : 82.2,
-      "y" : -147
+      "x" : 226.5,
+      "y" : -59.5
     },
-    "timestamp" : "2019-04-20T19:19:48.745Z",
+    "resourceReference" : "/types/system.images",
+    "timestamp" : "2020-03-18T00:33:10.330Z",
+    "type" : 1
+  }, {
+    "label" : "system.tensorflowmodels",
+    "name" : "system.tensorflowmodels",
+    "node" : {
+      "x" : 451,
+      "y" : -60
+    },
+    "resourceReference" : "/types/system.tensorflowmodels",
+    "timestamp" : "2020-03-18T00:33:10.572Z",
     "type" : 1
   }, {
     "inventory" : {
@@ -81,7 +117,7 @@
       "eventstreamHash" : [ ],
       "eventstreams" : [ ],
       "procedureHash" : [ "out" ],
-      "procedures" : [ "TensorFlowOperation..processDocument" ],
+      "procedures" : [ "TensorFlowOperation.processDocument" ],
       "sourceHash" : [ ],
       "sources" : [ ],
       "systemmodelHash" : [ ],
@@ -94,10 +130,11 @@
     "label" : "tfExample",
     "name" : "tfExample",
     "node" : {
-      "x" : 165.6,
-      "y" : 37.3
+      "x" : 55.2,
+      "y" : 33.8
     },
-    "timestamp" : "2019-10-04T16:16:49.187Z",
+    "resourceReference" : "/procedures/tfExample",
+    "timestamp" : "2020-08-31T23:37:21.907Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -121,92 +158,88 @@
     "label" : "vsExample",
     "name" : "vsExample",
     "node" : {
-      "x" : 168.2,
-      "y" : 76.6
+      "x" : 63.1,
+      "y" : 80.1
     },
-    "timestamp" : "2019-10-01T16:23:51.567Z",
+    "resourceReference" : "/procedures/vsExample",
+    "timestamp" : "2020-09-08T23:16:33.005Z",
     "type" : 3
   } ],
   "tools" : [ {
     "isPinned" : false,
-    "name" : "Project Resource Graph",
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
     "pane" : {
       "c" : 0,
-      "lastUsed" : 1571851446961,
-      "r" : 1
+      "r" : 0
     },
+    "state" : 2,
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "c" : -1,
+      "r" : -1
+    },
+    "state" : 4,
     "toolOptions" : {
       "scaleAndTranslationState" : {
         "lastZoomRequest" : 0,
-        "scale" : 0.7966400962855835,
-        "translate" : [ 37.755728572931844, 76.4545004320235 ]
+        "scale" : 0.5707696843000913,
+        "translate" : [ 131.6719999656331, 201.30931285831653 ]
       }
     },
     "type" : 1
   }, {
     "isPinned" : false,
-    "name" : "Documents",
-    "pane" : {
-      "c" : -1,
-      "lastUsed" : 1571851402742,
-      "r" : -1
-    },
-    "type" : 26
-  }, {
-    "isPinned" : false,
-    "name" : "vsExample",
-    "pane" : {
-      "c" : -1,
-      "lastUsed" : 1571851460719,
-      "r" : -1
-    },
-    "resourceKey" : "procedure/vsExample",
-    "type" : 24
-  }, {
-    "isPinned" : false,
-    "name" : "tfExample",
-    "pane" : {
-      "c" : 0,
-      "lastUsed" : 1570118076696,
-      "r" : 0
-    },
-    "resourceKey" : "procedure/tfExample",
-    "type" : 24
-  }, {
-    "isPinned" : false,
     "name" : "TfVisionDemo",
     "pane" : {
       "c" : 1,
-      "lastUsed" : 1571851459462,
       "r" : 1
     },
     "resourceKey" : "client/TfVisionDemo",
+    "state" : 2,
     "toolOptions" : {
       "isRunning" : false
     },
     "type" : 63
   }, {
     "isPinned" : false,
-    "name" : "Find Records",
+    "name" : "tfExample",
     "pane" : {
-      "c" : -1,
-      "lastUsed" : 1570029767984,
-      "r" : -1
+      "c" : 0,
+      "r" : 1
     },
-    "type" : 41
+    "resourceKey" : "procedure/tfExample",
+    "state" : 2,
+    "type" : 24
   }, {
     "isPinned" : false,
-    "name" : "Project Description",
+    "name" : "vsExample",
     "pane" : {
       "c" : 1,
-      "lastUsed" : 1571851879097,
       "r" : 0
     },
-    "type" : 82
+    "resourceKey" : "procedure/vsExample",
+    "state" : 2,
+    "type" : 24
   } ],
   "type" : "dev",
   "views" : [ {
-    "name" : "Main",
-    "projectToolKeys" : [ "graph/Project Resource Graph", "undefined/Documents", "cmeditorprocedure/vsExample", "cmeditorprocedure/tfExample", "client/TfVisionDemo", "findrecords/Find Records", "projectdescription/Project Description" ]
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph", "client/TfVisionDemo", "cmeditorprocedure/tfExample", "cmeditorprocedure/vsExample" ]
   } ]
 }
