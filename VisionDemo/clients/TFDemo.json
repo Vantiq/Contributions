@@ -9,7 +9,7 @@
       "dc_insert_documents" : {
         "onDataArrived" : "RELOCATED to controllers/dataStream/dc_insert_documents/onDataArrived.js"
       },
-      "pull_pictures" : { }
+      "query_documents" : { }
     },
     "page" : {
       "Start" : {
@@ -24,19 +24,8 @@
           "DataTable1" : {
             "onButtonClickCallback" : "RELOCATED to controllers/page/Start/widgets/DataTable1/onButtonClickCallback.js"
           },
-          "PageChangeButton" : {
-            "onClick" : "RELOCATED to controllers/page/Start/widgets/PageChangeButton/onClick.js"
-          },
           "RefreshButton" : {
             "onClick" : "RELOCATED to controllers/page/Start/widgets/RefreshButton/onClick.js"
-          }
-        }
-      },
-      "VSPage" : {
-        "onStart" : "RELOCATED to controllers/page/VSPage/onStart.js",
-        "widgets" : {
-          "Button85" : {
-            "onClick" : "RELOCATED to controllers/page/VSPage/widgets/Button85/onClick.js"
           }
         }
       }
@@ -78,24 +67,24 @@
       "dataObjectName" : null,
       "dataTypeList" : [ {
         "label" : null,
-        "type" : "Pictures"
+        "type" : "system.documents"
       } ],
       "isDeleteOp" : false,
       "isInsertOp" : false,
       "isUpdateOp" : false,
       "maxRecords" : 0,
-      "name" : "pull_pictures",
+      "name" : "query_documents",
       "pauseAtStartup" : false,
       "property" : null,
       "sortByProperty" : null,
       "sortDescending" : false,
       "type" : 4,
       "updateInterval" : 30,
-      "uuid" : "5b47fb0e-c97d-4d31-88b1-747681dbef16",
+      "uuid" : "68ea2f93-43b7-4aa0-857e-19c5ca790921",
       "v" : 1
     } ]
   },
-  "name" : "TfVisionDemo",
+  "name" : "TFDemo",
   "options" : {
     "RELOCATE" : [ {
       "path" : "controllers",
@@ -108,7 +97,7 @@
     "description" : "",
     "docAssets" : [ ],
     "paletteCollapsed" : false,
-    "productV" : "7.4g",
+    "productV" : "7.4m",
     "showCategoryButtons" : true,
     "showCategoryDataDisplay" : true,
     "showCategoryDataInput" : true,
@@ -134,7 +123,6 @@
   "targetDevice" : "browser",
   "userList" : [ ],
   "views" : {
-    "Start" : "RELOCATED to views/Start.json",
-    "VSPage" : "RELOCATED to views/VSPage.json"
+    "Start" : "RELOCATED to views/Start.json"
   }
 }

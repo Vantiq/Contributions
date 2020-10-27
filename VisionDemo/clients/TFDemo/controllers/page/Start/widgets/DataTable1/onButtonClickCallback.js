@@ -1,11 +1,11 @@
 	var http = new Http();
     http.setVantiqUrlForSystemResource("documents");
     http.setVantiqHeaders();
-    var imageName = extra.dataObject.Name;
+    var imageName = extra.dataObject.name;
     var text = client.getWidget("CurrentDocText");
     text.text = imageName;
     
-    // selects the clicked image from the Pictures type
+    // selects the clicked image from the list of documents
     http.selectOne(imageName,null,function(response)
     {
         var http2 = new Http();

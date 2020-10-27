@@ -1,6 +1,6 @@
 {
   "bodyChildren" : {
-    "rootArray" : [ "da0857b0-3e6f-49eb-8bb3-e8977bbbc529", "435ebcc4-0328-45ff-87ee-111d9632c724", "d4686860-c865-4cbb-8f95-9b34f426bf42", "aa4d6c71-a4f0-451b-8234-24e3b8140360", "b7ba8c55-c73b-465f-8982-4841c2df714a", "7c208598-9e2e-4cf9-8b84-a64f0f5987db", "85cb8ac9-8ce5-43de-9568-e2a738ee741b", "8bfbdf53-095b-4fc1-ae73-3f3d31e5f0a6", "52caebb2-759e-4a98-beaa-4255ce9c04cd", "bb3aee2c-0e8e-42a1-86df-20dad6b25996", "701c8f17-b14c-4d05-803c-cf9b8eb5b43c" ],
+    "rootArray" : [ "da0857b0-3e6f-49eb-8bb3-e8977bbbc529", "435ebcc4-0328-45ff-87ee-111d9632c724", "d4686860-c865-4cbb-8f95-9b34f426bf42", "aa4d6c71-a4f0-451b-8234-24e3b8140360", "b7ba8c55-c73b-465f-8982-4841c2df714a", "85cb8ac9-8ce5-43de-9568-e2a738ee741b", "8bfbdf53-095b-4fc1-ae73-3f3d31e5f0a6", "52caebb2-759e-4a98-beaa-4255ce9c04cd", "bb3aee2c-0e8e-42a1-86df-20dad6b25996", "701c8f17-b14c-4d05-803c-cf9b8eb5b43c" ],
     "widgets" : [ {
       "borderColor" : "Default",
       "borderRadius" : 4,
@@ -65,26 +65,6 @@
       "borderRadius" : 4,
       "borderThickness" : 0,
       "buttonBackgroundColor" : "platform",
-      "buttonLabel" : "VisionScript Page",
-      "buttonLabelColor" : "platform",
-      "buttonLabelSize" : 14,
-      "buttonLabelStyle" : "bold",
-      "heightPolicy" : "naturalSize",
-      "horzGravity" : "center",
-      "name" : "PageChangeButton",
-      "submitValue" : 100,
-      "type" : "Button",
-      "uuid" : "7c208598-9e2e-4cf9-8b84-a64f0f5987db",
-      "v" : 16,
-      "vertGravity" : "center",
-      "widthPolicy" : "sizeToCell",
-      "x" : 1590,
-      "y" : 20
-    }, {
-      "borderColor" : "Default",
-      "borderRadius" : 4,
-      "borderThickness" : 0,
-      "buttonBackgroundColor" : "platform",
       "buttonLabel" : "Refresh",
       "buttonLabelColor" : "platform",
       "buttonLabelSize" : 14,
@@ -127,11 +107,10 @@
       "columnDescriptors" : [ {
         "colorRules" : null,
         "dataType" : "String",
-        "propertyName" : "Name",
+        "propertyName" : "name",
         "selected" : false,
-        "title" : "Name"
+        "title" : "name"
       }, {
-        "buttonIcon" : "fa-check",
         "buttonLabel" : "Select",
         "colorRules" : null,
         "dataType" : "Button",
@@ -141,7 +120,7 @@
       } ],
       "columnSort" : true,
       "dataStreamGroupedByFiltersString" : "",
-      "dataStreamUUID" : "5b47fb0e-c97d-4d31-88b1-747681dbef16",
+      "dataStreamUUID" : "68ea2f93-43b7-4aa0-857e-19c5ca790921",
       "dataType" : null,
       "headerFontColor" : "default",
       "headerFontFace" : "inherit",
@@ -178,7 +157,7 @@
       "v" : 16,
       "vertGravity" : "center",
       "widthPolicy" : "naturalSize",
-      "x" : 650,
+      "x" : 910,
       "y" : 30
     }, {
       "borderColor" : "Default",
@@ -198,7 +177,7 @@
       "v" : 16,
       "vertGravity" : "center",
       "widthPolicy" : "sizeToCell",
-      "x" : 1000,
+      "x" : 1090,
       "y" : 20
     }, {
       "borderColor" : "Default",

@@ -14,7 +14,7 @@
             modelName:client.getWidget("CurrentModel").text,
             threshold:client.data.threshold
         };
-
+		console.log(args);
         // calls the tensorflow procedure
         http.execute(args,"tfExample",function(response)
         {
