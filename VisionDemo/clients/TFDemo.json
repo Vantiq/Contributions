@@ -15,9 +15,6 @@
       "Start" : {
         "onStart" : "RELOCATED to controllers/page/Start/onStart.js",
         "widgets" : {
-          "Button1" : {
-            "onClick" : "RELOCATED to controllers/page/Start/widgets/Button1/onClick.js"
-          },
           "ChangeModelButton" : {
             "onClick" : "RELOCATED to controllers/page/Start/widgets/ChangeModelButton/onClick.js"
           },
@@ -26,6 +23,9 @@
           },
           "RefreshButton" : {
             "onClick" : "RELOCATED to controllers/page/Start/widgets/RefreshButton/onClick.js"
+          },
+          "UploadButton" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/UploadButton/onClick.js"
           }
         }
       }

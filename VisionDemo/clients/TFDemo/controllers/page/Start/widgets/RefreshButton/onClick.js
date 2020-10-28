@@ -4,7 +4,7 @@
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     var curr_doc = client.getWidget("CurrentDocText").text;
-    if (curr_doc != "Text") {
+    if (curr_doc != "No current image") {
         var design = client.getDocumentUrl(curr_doc);
         var http = new Http();
         http.setVantiqUrlForSystemResource("procedures");

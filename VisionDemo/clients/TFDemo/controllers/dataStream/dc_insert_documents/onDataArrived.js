@@ -51,11 +51,16 @@
             	});
         	};
         	img.src = design;
-
+			var upload = client.getWidget("UploadButton");
+            var refresh = client.getWidget("RefreshButton");
+            var model = client.getWidget("ChangeModelButton");
+            upload.isDisabled = false;
+            refresh.isDisabled = false;
+            model.isDisabled = false;
         },
         function(errors)
         {
             client.showHttpErrors(errors,"Executing TensorFlow Procedure");
         });
     
-
+	

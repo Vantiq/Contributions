@@ -56,13 +56,14 @@
       "typeHash" : [ "in" ],
       "types" : [ "system.documents" ]
     },
+    "label" : "TFDemo",
     "name" : "TFDemo",
     "node" : {
       "x" : 240.3,
       "y" : 30.8
     },
     "resourceReference" : "/system.clients/TFDemo",
-    "timestamp" : "2020-10-26T23:37:47.185Z",
+    "timestamp" : "2020-10-28T21:41:34.686Z",
     "type" : 15
   }, {
     "label" : "system.documents",

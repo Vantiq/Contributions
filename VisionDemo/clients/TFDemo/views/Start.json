@@ -209,7 +209,7 @@
       "buttonLabelStyle" : "bold",
       "heightPolicy" : "naturalSize",
       "horzGravity" : "center",
-      "name" : "Button1",
+      "name" : "UploadButton",
       "submitValue" : 100,
       "type" : "Button",
       "uuid" : "c691804c-1000-4399-9f2f-47ecf2c8bfc4",
