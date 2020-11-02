@@ -4,22 +4,25 @@
   },
   "ars_public" : false,
   "controllers" : {
-    "client" : { },
+    "client" : {
+      "onStart" : "RELOCATED to controllers/client/onStart.js"
+    },
     "dataStream" : {
-      "dc_insert_documents" : {
-        "onDataArrived" : "RELOCATED to controllers/dataStream/dc_insert_documents/onDataArrived.js"
+      "dcInsertDocuments" : {
+        "onDataArrived" : "RELOCATED to controllers/dataStream/dcInsertDocuments/onDataArrived.js"
       },
-      "query_documents" : { }
+      "queryDocuments" : { },
+      "queryModels" : { }
     },
     "page" : {
       "Start" : {
         "onStart" : "RELOCATED to controllers/page/Start/onStart.js",
         "widgets" : {
-          "ChangeModelButton" : {
-            "onClick" : "RELOCATED to controllers/page/Start/widgets/ChangeModelButton/onClick.js"
+          "ImageTable" : {
+            "onButtonClickCallback" : "RELOCATED to controllers/page/Start/widgets/ImageTable/onButtonClickCallback.js"
           },
-          "DataTable1" : {
-            "onButtonClickCallback" : "RELOCATED to controllers/page/Start/widgets/DataTable1/onButtonClickCallback.js"
+          "ModelTable" : {
+            "onButtonClickCallback" : "RELOCATED to controllers/page/Start/widgets/ModelTable/onButtonClickCallback.js"
           },
           "RefreshButton" : {
             "onClick" : "RELOCATED to controllers/page/Start/widgets/RefreshButton/onClick.js"
@@ -52,7 +55,7 @@
       "isInsertOp" : true,
       "isUpdateOp" : true,
       "maxRecords" : 0,
-      "name" : "dc_insert_documents",
+      "name" : "dcInsertDocuments",
       "pauseAtStartup" : false,
       "property" : null,
       "sortByProperty" : null,
@@ -73,7 +76,7 @@
       "isInsertOp" : false,
       "isUpdateOp" : false,
       "maxRecords" : 0,
-      "name" : "query_documents",
+      "name" : "queryDocuments",
       "pauseAtStartup" : false,
       "property" : null,
       "sortByProperty" : null,
@@ -81,6 +84,27 @@
       "type" : 4,
       "updateInterval" : 30,
       "uuid" : "68ea2f93-43b7-4aa0-857e-19c5ca790921",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "basicQueryElement" : [ ],
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.tensorflowmodels"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "queryModels",
+      "pauseAtStartup" : false,
+      "property" : "name",
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 4,
+      "updateInterval" : 300,
+      "uuid" : "21fce780-2b71-4cf4-ba14-1ec52a5daa19",
       "v" : 1
     } ]
   },
@@ -97,7 +121,7 @@
     "description" : "",
     "docAssets" : [ ],
     "paletteCollapsed" : false,
-    "productV" : "7.4m",
+    "productV" : "7.4n",
     "showCategoryButtons" : true,
     "showCategoryDataDisplay" : true,
     "showCategoryDataInput" : true,

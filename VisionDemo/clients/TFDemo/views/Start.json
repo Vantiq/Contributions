@@ -1,6 +1,6 @@
 {
   "bodyChildren" : {
-    "rootArray" : [ "da0857b0-3e6f-49eb-8bb3-e8977bbbc529", "435ebcc4-0328-45ff-87ee-111d9632c724", "d4686860-c865-4cbb-8f95-9b34f426bf42", "aa4d6c71-a4f0-451b-8234-24e3b8140360", "b7ba8c55-c73b-465f-8982-4841c2df714a", "85cb8ac9-8ce5-43de-9568-e2a738ee741b", "8bfbdf53-095b-4fc1-ae73-3f3d31e5f0a6", "52caebb2-759e-4a98-beaa-4255ce9c04cd", "bb3aee2c-0e8e-42a1-86df-20dad6b25996", "701c8f17-b14c-4d05-803c-cf9b8eb5b43c" ],
+    "rootArray" : [ "da0857b0-3e6f-49eb-8bb3-e8977bbbc529", "435ebcc4-0328-45ff-87ee-111d9632c724", "d4686860-c865-4cbb-8f95-9b34f426bf42", "aa4d6c71-a4f0-451b-8234-24e3b8140360", "85cb8ac9-8ce5-43de-9568-e2a738ee741b", "8bfbdf53-095b-4fc1-ae73-3f3d31e5f0a6", "52caebb2-759e-4a98-beaa-4255ce9c04cd", "bb3aee2c-0e8e-42a1-86df-20dad6b25996", "701c8f17-b14c-4d05-803c-cf9b8eb5b43c", "755b8c94-e551-4051-8f70-da62f5a6065c" ],
     "widgets" : [ {
       "borderColor" : "Default",
       "borderRadius" : 4,
@@ -60,6 +60,58 @@
       "widthPolicy" : "sizeToCell",
       "x" : 1180,
       "y" : 430
+    }, {
+      "backgroundColor" : null,
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 1,
+      "cellFontColor" : "default",
+      "cellFontFace" : "inherit",
+      "cellFontSize" : 14,
+      "cellFontStyle" : "plain",
+      "clearOnDataArrive" : true,
+      "columnDescriptors" : [ {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "name",
+        "selected" : false,
+        "title" : "name"
+      }, {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "modelType",
+        "selected" : false,
+        "title" : "modelType"
+      }, {
+        "buttonLabel" : "Select",
+        "colorRules" : null,
+        "dataType" : "Button",
+        "propertyName" : "Button",
+        "selected" : false,
+        "title" : "Action"
+      } ],
+      "columnSort" : true,
+      "dataStreamGroupedByFiltersString" : "",
+      "dataStreamUUID" : "21fce780-2b71-4cf4-ba14-1ec52a5daa19",
+      "dataType" : null,
+      "headerFontColor" : "default",
+      "headerFontFace" : "inherit",
+      "headerFontSize" : 14,
+      "headerFontStyle" : "plain",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "ModelTable",
+      "operation" : "insert",
+      "rowsPerPage" : 5,
+      "showPaging" : true,
+      "type" : "DataTable",
+      "uuid" : "755b8c94-e551-4051-8f70-da62f5a6065c",
+      "v" : 16,
+      "vertGravity" : "center",
+      "w" : 400,
+      "widthPolicy" : "explicit",
+      "x" : 900,
+      "y" : 550
     }, {
       "borderColor" : "Default",
       "borderRadius" : 4,
@@ -128,7 +180,7 @@
       "headerFontStyle" : "plain",
       "heightPolicy" : "naturalSize",
       "horzGravity" : "center",
-      "name" : "DataTable1",
+      "name" : "ImageTable",
       "operation" : "insert",
       "rowsPerPage" : 5,
       "showPaging" : true,
@@ -157,28 +209,8 @@
       "v" : 16,
       "vertGravity" : "center",
       "widthPolicy" : "naturalSize",
-      "x" : 910,
+      "x" : 710,
       "y" : 30
-    }, {
-      "borderColor" : "Default",
-      "borderRadius" : 4,
-      "borderThickness" : 0,
-      "buttonBackgroundColor" : "platform",
-      "buttonLabel" : "Change TensorFlow Model",
-      "buttonLabelColor" : "platform",
-      "buttonLabelSize" : 14,
-      "buttonLabelStyle" : "bold",
-      "heightPolicy" : "naturalSize",
-      "horzGravity" : "center",
-      "name" : "ChangeModelButton",
-      "submitValue" : 100,
-      "type" : "Button",
-      "uuid" : "b7ba8c55-c73b-465f-8982-4841c2df714a",
-      "v" : 16,
-      "vertGravity" : "center",
-      "widthPolicy" : "sizeToCell",
-      "x" : 1090,
-      "y" : 20
     }, {
       "borderColor" : "Default",
       "borderRadius" : 4,

@@ -2,6 +2,9 @@
   "links" : [ {
     "source" : "type/system.documents",
     "target" : "client/TFDemo"
+  }, {
+    "source" : "type/system.tensorflowmodels",
+    "target" : "client/TFDemo"
   } ],
   "name" : "TensorFlowDemo",
   "options" : {
@@ -25,8 +28,8 @@
     "isModeloProject" : true,
     "layoutStyle" : "tile",
     "openResourceFolders" : {
+      "client" : true,
       "procedure" : true,
-      "topic" : true,
       "type" : true
     },
     "rootViewFlavor" : 1,
@@ -53,8 +56,8 @@
       "systemmodels" : [ ],
       "topicHash" : [ ],
       "topics" : [ ],
-      "typeHash" : [ "in" ],
-      "types" : [ "system.documents" ]
+      "typeHash" : [ "in", "in" ],
+      "types" : [ "system.documents", "system.tensorflowmodels" ]
     },
     "label" : "TFDemo",
     "name" : "TFDemo",
@@ -63,7 +66,7 @@
       "y" : 30.8
     },
     "resourceReference" : "/system.clients/TFDemo",
-    "timestamp" : "2020-10-28T21:41:34.686Z",
+    "timestamp" : "2020-11-02T21:35:55.763Z",
     "type" : 15
   }, {
     "label" : "system.documents",
