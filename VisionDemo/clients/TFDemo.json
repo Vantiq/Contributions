@@ -1,0 +1,152 @@
+{
+  "ars_properties" : {
+    "tags" : [ "#launchable" ]
+  },
+  "ars_public" : false,
+  "controllers" : {
+    "client" : {
+      "onStart" : "RELOCATED to controllers/client/onStart.js"
+    },
+    "dataStream" : {
+      "dcInsertDocuments" : {
+        "onDataArrived" : "RELOCATED to controllers/dataStream/dcInsertDocuments/onDataArrived.js"
+      },
+      "queryDocuments" : { },
+      "queryModels" : { }
+    },
+    "page" : {
+      "Start" : {
+        "onStart" : "RELOCATED to controllers/page/Start/onStart.js",
+        "widgets" : {
+          "ImageTable" : {
+            "onButtonClickCallback" : "RELOCATED to controllers/page/Start/widgets/ImageTable/onButtonClickCallback.js"
+          },
+          "ModelTable" : {
+            "onButtonClickCallback" : "RELOCATED to controllers/page/Start/widgets/ModelTable/onButtonClickCallback.js"
+          },
+          "RefreshButton" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/RefreshButton/onClick.js"
+          },
+          "UploadButton" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/UploadButton/onClick.js"
+          }
+        }
+      }
+    }
+  },
+  "isLaunchable" : true,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : true,
+      "isUpdateOp" : true,
+      "maxRecords" : 0,
+      "name" : "dcInsertDocuments",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 1,
+      "updateInterval" : 60,
+      "uuid" : "39d6c486-33b1-4731-83d3-3cc032b92597",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "basicQueryElement" : [ ],
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "queryDocuments",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 4,
+      "updateInterval" : 30,
+      "uuid" : "68ea2f93-43b7-4aa0-857e-19c5ca790921",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "basicQueryElement" : [ ],
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.tensorflowmodels"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "queryModels",
+      "pauseAtStartup" : false,
+      "property" : "name",
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 4,
+      "updateInterval" : 300,
+      "uuid" : "21fce780-2b71-4cf4-ba14-1ec52a5daa19",
+      "v" : 1
+    } ]
+  },
+  "name" : "TFDemo",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "badgeCount" : 0,
+    "description" : "",
+    "docAssets" : [ ],
+    "paletteCollapsed" : false,
+    "productV" : "7.4n",
+    "showCategoryButtons" : true,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : true,
+    "showCategoryLayout" : true,
+    "showGridWhileEditing" : true,
+    "showOutlinesWhileEditing" : true,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "v" : 3
+    },
+    "v" : 5
+  },
+  "targetDevice" : "browser",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json"
+  }
+}

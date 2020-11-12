@@ -1,0 +1,6 @@
+PROCEDURE tfExample(imageName String, modelName String, threshold Real)
+
+var results = TensorFlowOperation.processDocument(imageName, modelName, threshold)
+
+return results
+
