@@ -16,9 +16,6 @@
         http.setVantiqHeaders();
         var img = new Image();
         
-        //var results = TensorFlowOperation.processDocument(args);
-        //console.log(results);
-        
         http.execute(args,"tfExample",function(response) {
             client.getWidget("StaticHtmlObjView").html = "<pre>" + JSON.stringify(response, null ,2) + "</pre>";
 			
