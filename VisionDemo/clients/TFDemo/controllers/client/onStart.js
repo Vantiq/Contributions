@@ -44,8 +44,8 @@
                     ctx.font = '10pt Calibri';
                     
             	});
-        	};
-        	img.src = design;
+            };
+            img.src = design;
             var upload = client.getWidget("UploadButton");
             var refresh = client.getWidget("RefreshButton");
             upload.isDisabled = false;

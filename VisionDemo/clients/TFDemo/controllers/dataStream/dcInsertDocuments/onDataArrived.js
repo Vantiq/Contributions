@@ -7,6 +7,5 @@
         modelName:client.getWidget("CurrentModel").text,
         threshold:client.data.threshold
     };
-    // calls the tensorflow procedure 
-	processImage(design, args);
-
+    // calls the tensorflow procedure
+    processImage(design, args);
