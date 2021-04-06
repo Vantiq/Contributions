@@ -15,7 +15,7 @@
         http.setVantiqUrlForSystemResource("procedures");
         http.setVantiqHeaders();
         var img = new Image();
-        
+
         http.execute(args,"tfExample",function(response) {
             client.getWidget("StaticHtmlObjView").html = "<pre>" + JSON.stringify(response, null ,2) + "</pre>";
 			
@@ -29,7 +29,6 @@
                 response.forEach(function(result){
                     ctx.lineWidth = "2";	
                     ctx.strokeStyle = client.getWidget("BoxColor").platformWidget.rawValue;	
-                    
                     ctx.rect(result.location.left * widthScale, result.location.top * heightScale , 
                              (result.location.right - result.location.left) * widthScale, 
                              (result.location.bottom -  result.location.top) * heightScale); 
