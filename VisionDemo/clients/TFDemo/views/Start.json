@@ -61,7 +61,7 @@
       "x" : 1180,
       "y" : 430
     }, {
-      "backgroundColor" : null,
+      "backgroundColor" : "default",
       "borderColor" : "Default",
       "borderRadius" : 4,
       "borderThickness" : 1,
