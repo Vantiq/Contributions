@@ -12,20 +12,20 @@ PROCEDURE GoogleDistanceMatrix(destination GeoJSON, originations GeoJSON ARRAY)
 // turn geojson back into lat, lon for google API
 var ploclon = destination.coordinates[0]
 var ploclat = destination.coordinates[1]
-var destination = format("{0},{1}", ploclat, ploclon)
+destination = format("{0},{1}", ploclat, ploclon)
 
 // variable to hold pipe seperated list of locations to supply to the REST call
 var origins=""
-	
+
 // for each technician get there lat and lon
-FOR EACH origin IN originations DO
+for (origin IN originations) {
 	if (origins == "") {
 		origins = origin.coordinates[1] +"," + origin.coordinates[0]
         origins = format("{0},{1}", origin.coordinates[1], origin.coordinates[0])
-	} else { 
+	} else {
         origins = format("{0}|{1},{2}", origins , origin.coordinates[1], origin.coordinates[0])
 	}
-END
+}
 
 var queryparams = {}
 queryparams.origins = origins

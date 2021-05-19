@@ -17,12 +17,9 @@ var candidates = identified[0].body[0].candidates
 // loop over each candidate and get the name and metadata
 
 var matches = []
-FOR EACH item IN candidates DO
+for (item IN candidates) {
 	var person = MSFaceAPI.personGroupPersonGet("friend_group", item.personId )
 	push(matches, person[0].body)
-END
+}
 
 return matches
-
-
-
