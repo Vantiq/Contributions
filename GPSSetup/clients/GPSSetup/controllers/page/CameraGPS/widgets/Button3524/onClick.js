@@ -1,0 +1,4 @@
+
+
+
+    $("#imageLoader").trigger('click');

@@ -1,0 +1,40 @@
+{
+  "ars_properties" : null,
+  "groupBy" : "",
+  "name" : "s_cameraGPSTrack",
+  "properties" : {
+    "bottomLeftGeo" : {
+      "description" : "a lat, lng coordinate point",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Object",
+      "unique" : false
+    },
+    "bottomRightGeo" : {
+      "description" : "a lat, lng coordinate point",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Object",
+      "unique" : false
+    },
+    "topLeftGeo" : {
+      "description" : "a lat, lng coordinate point",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Object",
+      "unique" : false
+    },
+    "topRightGeo" : {
+      "description" : "a lat, lng coordinate point",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Object",
+      "unique" : false
+    }
+  },
+  "role" : "schema"
+}

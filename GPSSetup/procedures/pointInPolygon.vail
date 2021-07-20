@@ -1,0 +1,41 @@
+PROCEDURE pointInPolygon(point , poly )
+
+/*
+ point is the center pixel, or centroid, of the bounding box 
+ poly are the 4 x-y coordinates pairs that define the zone
+ Poly needs to be setup properly, the calling procedure should do something like this:
+
+ var poly = []
+ push(poly, [camera.topleft.x, camera.topleft.y])
+ push(poly, [camera.bottomleft.x, camera.bottomleft.y])
+ push(poly, [camera.bottomright.x, camera.bottomright.y])
+ push(poly, [camera.topright.x, camera.topright.y])
+ */
+ 
+
+
+var x = point[0]
+var y = point[1]
+
+var inside = false
+
+var j = length(poly) -1
+for (i in range (0, length(poly)  , 1)){
+
+    var xi = poly[i][0]
+    var yi = poly[i][1]
+    var xj = poly[j][0]
+    vAr yj = poly[j][1]
+
+    var intersect = ((yi > y) != (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)
+    if (intersect){
+        inside = true
+    } else {
+        inside = false
+    }
+        
+    j = i++
+    
+}
+
+return inside

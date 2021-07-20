@@ -1,0 +1,241 @@
+{
+  "links" : [ {
+    "source" : "client/GPSSetup",
+    "target" : "topic//none"
+  }, {
+    "source" : "type/cameras",
+    "target" : "procedure/getCameras"
+  }, {
+    "source" : "procedure/submitCamera",
+    "target" : "type/cameras"
+  } ],
+  "name" : "GPSSetup",
+  "options" : {
+    "description" : "GPSSetup is a client builder example of how to convert XY image coordinate points to GPS lat/lng points for the CovertCoordinates activity pattern.\n\n=== Instructions ===\n\n- Run the GPSSetup client. \n- Click anywhere on the map to add camera markers\n- Use the GPS button on the table to open the Calibration page\n- Click Load Image to load a local file into the html canvas\n- Move the 4 green squares around to indicate field of view for a camera\n- Move the 4 GPS points located on the map to the right around to locate physical location\n- Click Submit to save\n\nThe GPS and XY coordinates are saved to the cameras type. Once saved to the cameras type a CachedEnriched event can be used to load those values into each memory and then passed into a ConvertCoordinated activity pattern as a downstream event. An example application in the App Builder will look like this:\n\nEventStream(objrec payload) --> SplitBy CameraId --> CachedEnrich cameras --> Transformation --> ConvertCoordinates --> TrackMotion\n\nThe Transformation can be very tricky so an example procedure has been included in this project called transformCameraEvents that can be applied to the ConvertCoordinates calibrationKey parameters using the value event.calibrationCoordinates. \n\n=== Typical Uses ===\n\nTo show the results of object recognition data on a map. Object recognition systems will return 4 point bounding box results that indicate the location of an object inside its field of view, which is just an image or a frame from a video. To show where in the real-world that object is located a user can use these web tools to calibrate the camera mapping settings in a simple and easy way. \n\nZoning:\nIt is also possible to use similar UI components to create a Zone (area of interest) in the image. The GPSSetup client can be modified to save and load the 4 points from an image and not include any map points. An object property has to be added to store the Zone for each camera. There is no \"Zone\" activity pattern so a procedure would need to be written that looks to see if a bounding box or centroid provided by the computer vision results is located inside your zone of interest. The procedure pointInPolygon was added to this project as an example of how to make that calculation.\n\n=== Caveats and Other Notes ===\n\nIf the Vantiq extension source is being used it has the ability to upload images periodically or on-demand using a remote query. The Image Load feature can then be replaced by loading the most recent image from the camera of that same name. \n\nIf the Vantiq extension source is not being used it may be possible to load an image from a recent payload from the CVE system otherwise a user will have to manually upload an image. A property was added to the type called \"img\" which can be used to reference an image to load here but remember if the camera is ever moved a new upload must be made. \n\n",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 868.75, 1048.25 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
+    "dockSort" : 1,
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "openFolders" : [ "client" ],
+    "rootViewFlavor" : 1,
+    "showGrid" : true,
+    "tileColumns" : 2,
+    "tileRows" : 1,
+    "type" : "dev",
+    "v" : 4,
+    "viewUUID" : "MAINVIEW"
+  },
+  "resources" : [ {
+    "label" : "/clientbuilder/weather",
+    "name" : "/clientbuilder/weather",
+    "resourceReference" : "/topics//clientbuilder/weather",
+    "type" : 10
+  }, {
+    "label" : "/gpslocation",
+    "name" : "/gpslocation",
+    "resourceReference" : "/topics//gpslocation",
+    "type" : 10
+  }, {
+    "label" : "/none",
+    "name" : "/none",
+    "resourceReference" : "/topics//none",
+    "type" : 10
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/none" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "GPSSetup",
+    "name" : "GPSSetup",
+    "resourceReference" : "/system.clients/GPSSetup",
+    "timestamp" : "2021-07-20T00:09:49.932Z",
+    "type" : 15
+  }, {
+    "label" : "cameras",
+    "name" : "cameras",
+    "resourceReference" : "/types/cameras",
+    "timestamp" : "2021-07-19T22:31:41.035Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in" ],
+      "types" : [ "cameras" ]
+    },
+    "label" : "getCameras",
+    "name" : "getCameras",
+    "procedureName" : "getCameras",
+    "resourceReference" : "/procedures/getCameras",
+    "timestamp" : "2021-07-19T19:26:22.728Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ "out", "out" ],
+      "procedures" : [ "length", "range" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "name" : "pointInPolygon",
+    "procedureName" : "pointInPolygon",
+    "resourceReference" : "/procedures/pointInPolygon",
+    "timestamp" : "2021-07-20T00:00:45.813Z",
+    "type" : 3
+  }, {
+    "label" : "s_cameraGPSTrack",
+    "name" : "s_cameraGPSTrack",
+    "resourceReference" : "/types/s_cameraGPSTrack",
+    "timestamp" : "2021-07-19T19:02:34.750Z",
+    "type" : 1
+  }, {
+    "label" : "s_cameraImageTrack",
+    "name" : "s_cameraImageTrack",
+    "resourceReference" : "/types/s_cameraImageTrack",
+    "timestamp" : "2021-07-19T19:02:34.750Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out" ],
+      "types" : [ "cameras" ]
+    },
+    "label" : "submitCamera",
+    "name" : "submitCamera",
+    "procedureName" : "submitCamera",
+    "resourceReference" : "/procedures/submitCamera",
+    "timestamp" : "2021-07-19T22:24:13.649Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "push" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "name" : "transformCameraEvent",
+    "procedureName" : "transformCameraEvent",
+    "resourceReference" : "/procedures/transformCameraEvent",
+    "timestamp" : "2021-07-19T23:43:52.503Z",
+    "type" : 3
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "isPinned" : false,
+    "name" : "GPSSetup",
+    "pane" : {
+      "c" : 0,
+      "r" : 0
+    },
+    "resourceKey" : "client/GPSSetup",
+    "state" : 2,
+    "type" : 63
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Log Messages",
+    "type" : 12
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "c" : 1,
+      "r" : 0
+    },
+    "state" : 2,
+    "type" : 82
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "errorviewer/Errors", "client/GPSSetup", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description" ]
+  } ]
+}

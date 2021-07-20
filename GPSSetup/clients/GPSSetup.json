@@ -1,0 +1,152 @@
+{
+  "ars_properties" : {
+    "tags" : [ "#launchable" ]
+  },
+  "ars_public" : false,
+  "controllers" : {
+    "client" : {
+      "customCode" : "RELOCATED to controllers/client/customCode.js"
+    },
+    "dataStream" : {
+      "ce_cameras" : { }
+    },
+    "page" : {
+      "CameraGPS" : {
+        "onEnd" : "RELOCATED to controllers/page/CameraGPS/onEnd.js",
+        "onStart" : "RELOCATED to controllers/page/CameraGPS/onStart.js",
+        "widgets" : {
+          "Button3523" : {
+            "onClick" : "RELOCATED to controllers/page/CameraGPS/widgets/Button3523/onClick.js"
+          },
+          "Button3524" : {
+            "onClick" : "RELOCATED to controllers/page/CameraGPS/widgets/Button3524/onClick.js"
+          },
+          "Button3525" : {
+            "onClick" : "RELOCATED to controllers/page/CameraGPS/widgets/Button3525/onClick.js"
+          }
+        }
+      },
+      "Start" : {
+        "onStart" : "RELOCATED to controllers/page/Start/onStart.js",
+        "widgets" : {
+          "DataTable492" : {
+            "onButtonClickCallback" : "RELOCATED to controllers/page/Start/widgets/DataTable492/onButtonClickCallback.js"
+          }
+        }
+      }
+    },
+    "sidebar" : {
+      "widgets" : {
+        "MenuButton4" : {
+          "onClick" : "RELOCATED to controllers/sidebar/widgets/MenuButton4/onClick.js"
+        }
+      }
+    }
+  },
+  "isLaunchable" : true,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : {
+          "camGeoSetup" : {
+            "defaultLabel" : "camGeoSetup",
+            "type" : "TypedObject",
+            "typedObject" : {
+              "properties" : {
+                "bottomLeftGeo" : {
+                  "defaultLabel" : "bottomLeftGeo",
+                  "type" : "GeoJSON"
+                },
+                "bottomRightGeo" : {
+                  "defaultLabel" : "bottomRightGeo",
+                  "type" : "GeoJSON"
+                },
+                "topLeftGeo" : {
+                  "defaultLabel" : "topLeftGeo",
+                  "type" : "GeoJSON"
+                },
+                "topRightGeo" : {
+                  "defaultLabel" : "topRightGeo",
+                  "type" : "GeoJSON"
+                }
+              }
+            }
+          }
+        }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "cameras"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "ce_cameras",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "0940da8e-cb63-483f-8f79-79c4f6b0358b",
+      "v" : 1
+    } ]
+  },
+  "name" : "GPSSetup",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    }, {
+      "path" : "options.sidebar",
+      "type" : "jsonObj"
+    } ],
+    "activeTab" : "edit",
+    "badgeCount" : 0,
+    "description" : "Use this client to convert 2d image coordinates to lat/lng points for the CovertCoordinates activity pattern.",
+    "docAssets" : [ "icons/acousticIcon.png", "icons/cameraIcon.png" ],
+    "hasSidebar" : true,
+    "productV" : "7.6j",
+    "showCategoryButtons" : true,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : true,
+    "showCategoryLayout" : true,
+    "showGridCellsWhileEditing" : true,
+    "showGridWhileEditing" : true,
+    "showOutlinesWhileEditing" : true,
+    "sidebar" : "RELOCATED to options/sidebar.json",
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17",
+      "v" : 3
+    },
+    "v" : 5
+  },
+  "targetDevice" : "browser",
+  "userList" : [ ],
+  "views" : {
+    "CameraGPS" : "RELOCATED to views/CameraGPS.json",
+    "Start" : "RELOCATED to views/Start.json"
+  }
+}
