@@ -1,0 +1,26 @@
+PROCEDURE transformCameraEvent(event)
+
+var calibrationCoordinates = {imageCoordinates:[{x:event.cameras.imageTrack.topLeftImage.x, y:event.cameras.imageTrack.topLeftImage.y}, {x:event.cameras.imageTrack.topRightImage.x, y:event.cameras.imageTrack.topRightImage.y}, {x:event.cameras.imageTrack.bottomRightImage.x, y:event.cameras.imageTrack.bottomRightImage.y}, {x:event.cameras.imageTrack.bottomLeftImage.x, y:event.cameras.imageTrack.bottomLeftImage.y}], convertedCoordinates: [{x:event.cameras.gpsTrack.topLeftGeo.lng, y:event.cameras.gpsTrack.topLeftGeo.lat}, {x:event.cameras.gpsTrack.topRightGeo.lng, y:event.cameras.gpsTrack.topRightGeo.lat}, {x:event.cameras.gpsTrack.bottomRightGeo.lng, y:event.cameras.gpsTrack.bottomRightGeo.lat}, {x:event.cameras.gpsTrack.bottomLeftGeo.lng, y:event.cameras.gpsTrack.bottomLeftGeo.lat}]}
+
+var results = []
+
+for each detection in event.detections {
+    if(detection.label == "person"){       
+        var result = {}
+            result.location = {}
+            result.confidence = detection.confidence
+            result.location.centerY = (detection.y + detection.height) / 2
+            result.location.centerX = (detection.x + detection.width) / 2
+            result.location.top = detection.y
+            result.location.bottom = detection.height + detection.y
+            result.location.left = detection.x
+            result.location.right = detection.width + detection.x
+            result.label = detection.label
+            push(results, result)
+    }
+}
+
+event.results = results
+event.calibrationCoordinates = calibrationCoordinates
+
+return event

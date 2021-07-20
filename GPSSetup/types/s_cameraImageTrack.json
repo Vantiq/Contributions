@@ -1,0 +1,40 @@
+{
+  "ars_properties" : null,
+  "groupBy" : "",
+  "name" : "s_cameraImageTrack",
+  "properties" : {
+    "bottomLeftImage" : {
+      "description" : "an x, y coordinate point",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Object",
+      "unique" : false
+    },
+    "bottomRightImage" : {
+      "description" : "an x, y coordinate point",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Object",
+      "unique" : false
+    },
+    "topLeftImage" : {
+      "description" : "an x, y coordinate point",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Object",
+      "unique" : false
+    },
+    "topRightImage" : {
+      "description" : "an x, y coordinate point",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Object",
+      "unique" : false
+    }
+  },
+  "role" : "schema"
+}

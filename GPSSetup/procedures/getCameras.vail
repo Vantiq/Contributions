@@ -1,0 +1,3 @@
+PROCEDURE getCameras()
+
+SELECT * FROM cameras

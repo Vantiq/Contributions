@@ -1,0 +1,73 @@
+{
+  "adminAccessLevel" : "ars_readWrite",
+  "ars_properties" : null,
+  "audited" : false,
+  "encapsulated" : false,
+  "expiresAfter" : null,
+  "foreignKeys" : null,
+  "groupBy" : "",
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ {
+    "keys" : [ "id" ],
+    "options" : {
+      "unique" : true
+    }
+  }, {
+    "keys" : [ "#geo" ],
+    "options" : { }
+  } ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "cameras",
+  "naturalKey" : [ "id" ],
+  "properties" : {
+    "geo" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "GeoJSON",
+      "unique" : false
+    },
+    "gpsTrack" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "s_cameraGPSTrack",
+      "unique" : false
+    },
+    "id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    },
+    "imageTrack" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "s_cameraImageTrack",
+      "unique" : false
+    },
+    "img" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    },
+    "name" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    }
+  },
+  "role" : "standard",
+  "rulesSuppressed" : false,
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
+}

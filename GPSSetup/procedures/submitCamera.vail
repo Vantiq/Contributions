@@ -1,0 +1,4 @@
+PROCEDURE submitCamera(obj Object)
+
+UPSERT cameras(obj)
+
