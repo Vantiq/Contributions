@@ -1,7 +1,60 @@
 {
+  "ars_relationships" : [ ],
+  "links" : [ {
+    "source" : "client/ResidentNotificationSystem",
+    "target" : "topic//vantiq/systemmodel/ResidentNotificationSystem/submitTopic"
+  }, {
+    "source" : "topic//weather/reading",
+    "target" : "client/ResidentNotificationSystem"
+  }, {
+    "source" : "topic//temperature/warning",
+    "target" : "client/ResidentNotificationSystem"
+  }, {
+    "source" : "collaborationtype/EvacuateNotification",
+    "target" : "services/collaborations.services.EvacuateNotification"
+  }, {
+    "source" : "services/collaborations.services.EvacuateNotification",
+    "target" : "collaborationtype/EvacuateNotification"
+  }, {
+    "source" : "collaborationtype/WarnNotification",
+    "target" : "services/collaborations.services.WarnNotification"
+  }, {
+    "source" : "services/collaborations.services.WarnNotification",
+    "target" : "collaborationtype/WarnNotification"
+  }, {
+    "source" : "collaborationtype/EvacuateNotification",
+    "target" : "app/DetectWeatherEmergency"
+  }, {
+    "source" : "collaborationtype/WarnNotification",
+    "target" : "app/DetectWeatherEmergency"
+  }, {
+    "source" : "app/DetectWeatherEmergency",
+    "target" : "procedure/apps.DetectWeatherEmergency.isDangerousWeather_WarnMessage"
+  }, {
+    "source" : "app/DetectWeatherEmergency",
+    "target" : "procedure/apps.DetectWeatherEmergency.isDangerousWeather_getTemperatureAndWind"
+  }, {
+    "source" : "app/DetectWeatherEmergency",
+    "target" : "procedure/apps.DetectWeatherEmergency.isDangerousWeather_EvacuationMessage"
+  }, {
+    "source" : "app/DetectWeatherEmergency",
+    "target" : "services/apps.services.DetectWeatherEmergency"
+  }, {
+    "source" : "services/apps.services.DetectWeatherEmergency",
+    "target" : "app/DetectWeatherEmergency"
+  }, {
+    "source" : "app/DetectWeatherEmergency",
+    "target" : "app/isDangerousWeather"
+  }, {
+    "source" : "procedure/WeatherService.getWeather",
+    "target" : "type/weatherReading"
+  }, {
+    "source" : "procedure/collaborations.WarnNotification.PublishToTopic.start",
+    "target" : "topic//collaborations.WarnNotification/debug"
+  } ],
   "name" : "WeatherEmergencyProject",
   "options" : {
-    "description" : "",
+    "description" : "This is the Project used as the starting place for the Assembly Tutorial. The weather Source produces temperature and wind speed data which triggers the DetectWhetherEmergencyApp. The App uses the isDangerousWeather App Component to determine whether to issue a warning message or evacuation alert to residents. Each alert type will trigger the start of a CollaborationType which will notify the ResidentNotificationSystem Client.\n\nYou can use this Project as a starting point for an Assembly. To convert this Project into an Assembly, use the Projects button and select *Convert To Assembly*.",
     "dockCollapsed" : {
       "bottom" : true,
       "left" : false,
@@ -127,11 +180,11 @@
       "clientHash" : [ ],
       "clients" : [ ],
       "collaborationHash" : [ "in", "in" ],
-      "collaborations" : [ "WarnNotification", "EvacuateNotification" ],
+      "collaborations" : [ "EvacuateNotification", "WarnNotification" ],
       "eventstreamHash" : [ ],
       "eventstreams" : [ ],
       "procedureHash" : [ "out", "out", "out" ],
-      "procedures" : [ "apps.DetectWeatherEmergency.isDangerousWeather_EvacuationMessage", "apps.DetectWeatherEmergency.isDangerousWeather_getTemperatureAndWind", "apps.DetectWeatherEmergency.isDangerousWeather_WarnMessage" ],
+      "procedures" : [ "apps.DetectWeatherEmergency.isDangerousWeather_EvacuationMessage", "apps.DetectWeatherEmergency.isDangerousWeather_WarnMessage", "apps.DetectWeatherEmergency.isDangerousWeather_getTemperatureAndWind" ],
       "sourceHash" : [ null ],
       "sources" : [ "weather" ],
       "systemmodelHash" : [ ],
@@ -144,7 +197,7 @@
     "label" : "DetectWeatherEmergency",
     "name" : "DetectWeatherEmergency",
     "resourceReference" : "/collaborationtypes/DetectWeatherEmergency",
-    "timestamp" : "2021-08-04T17:10:42.139Z",
+    "timestamp" : "2021-08-04T21:12:16.400Z",
     "type" : 12
   }, {
     "inventory" : {
@@ -168,7 +221,7 @@
     "label" : "EvacuateNotification",
     "name" : "EvacuateNotification",
     "resourceReference" : "/collaborationtypes/EvacuateNotification",
-    "timestamp" : "2021-08-04T17:10:42.086Z",
+    "timestamp" : "2021-08-04T21:11:54.228Z",
     "type" : 11
   }, {
     "inventory" : {
@@ -185,14 +238,14 @@
       "systemmodelHash" : [ ],
       "systemmodels" : [ ],
       "topicHash" : [ "out", "in", "in" ],
-      "topics" : [ "/vantiq/systemmodel/ResidentNotificationSystem/submitTopic", "/temperature/warning", "/weather/reading" ],
+      "topics" : [ "/vantiq/systemmodel/ResidentNotificationSystem/submitTopic", "/weather/reading", "/temperature/warning" ],
       "typeHash" : [ ],
       "types" : [ ]
     },
     "label" : "ResidentNotificationSystem",
     "name" : "ResidentNotificationSystem",
     "resourceReference" : "/system.clients/ResidentNotificationSystem",
-    "timestamp" : "2021-08-04T17:10:40.142Z",
+    "timestamp" : "2021-08-04T21:11:51.230Z",
     "type" : 15
   }, {
     "inventory" : {
@@ -216,7 +269,7 @@
     "label" : "WarnNotification",
     "name" : "WarnNotification",
     "resourceReference" : "/collaborationtypes/WarnNotification",
-    "timestamp" : "2021-08-04T17:10:42.096Z",
+    "timestamp" : "2021-08-04T21:11:54.230Z",
     "type" : 11
   }, {
     "inventory" : {
@@ -240,7 +293,7 @@
     "label" : "WeatherService",
     "name" : "WeatherService",
     "resourceReference" : "/system.services/WeatherService",
-    "timestamp" : "2021-08-04T17:10:41.646Z",
+    "timestamp" : "2021-08-04T21:11:52.749Z",
     "type" : 63
   }, {
     "inventory" : {
@@ -261,11 +314,12 @@
       "typeHash" : [ ],
       "types" : [ ]
     },
+    "label" : "WeatherService.convertToFahrenheit",
     "name" : "WeatherService.convertToFahrenheit",
     "procedureName" : "convertToFahrenheit",
     "resourceReference" : "/procedures/WeatherService.convertToFahrenheit",
     "serviceName" : "WeatherService",
-    "timestamp" : "2021-08-04T17:11:13.432Z",
+    "timestamp" : "2021-08-04T21:11:53.209Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -291,7 +345,7 @@
     "procedureName" : "getWeather",
     "resourceReference" : "/procedures/WeatherService.getWeather",
     "serviceName" : "WeatherService",
-    "timestamp" : "2021-08-03T19:09:18.200Z",
+    "timestamp" : "2021-08-04T21:11:53.193Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -317,7 +371,7 @@
     "packageName" : "apps.DetectWeatherEmergency",
     "procedureName" : "NoAlerts_Transformation",
     "resourceReference" : "/procedures/apps.DetectWeatherEmergency.NoAlerts_Transformation",
-    "timestamp" : "2021-08-04T17:10:41.735Z",
+    "timestamp" : "2021-08-04T21:11:53.143Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -343,7 +397,7 @@
     "packageName" : "apps.DetectWeatherEmergency",
     "procedureName" : "isDangerousWeather_EvacuationMessage",
     "resourceReference" : "/procedures/apps.DetectWeatherEmergency.isDangerousWeather_EvacuationMessage",
-    "timestamp" : "2021-08-04T17:10:43.027Z",
+    "timestamp" : "2021-08-04T21:12:16.779Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -369,7 +423,7 @@
     "packageName" : "apps.DetectWeatherEmergency",
     "procedureName" : "isDangerousWeather_WarnMessage",
     "resourceReference" : "/procedures/apps.DetectWeatherEmergency.isDangerousWeather_WarnMessage",
-    "timestamp" : "2021-08-04T17:10:43.041Z",
+    "timestamp" : "2021-08-04T21:12:16.751Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -395,7 +449,7 @@
     "packageName" : "apps.DetectWeatherEmergency",
     "procedureName" : "isDangerousWeather_getTemperatureAndWind",
     "resourceReference" : "/procedures/apps.DetectWeatherEmergency.isDangerousWeather_getTemperatureAndWind",
-    "timestamp" : "2021-08-04T17:10:42.997Z",
+    "timestamp" : "2021-08-04T21:12:16.749Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -419,7 +473,7 @@
     "label" : "apps.services.DetectWeatherEmergency",
     "name" : "apps.services.DetectWeatherEmergency",
     "resourceReference" : "/system.services/apps.services.DetectWeatherEmergency",
-    "timestamp" : "2021-08-04T17:10:42.993Z",
+    "timestamp" : "2021-08-04T21:11:54.796Z",
     "type" : 63
   }, {
     "inventory" : {
@@ -443,7 +497,7 @@
     "label" : "collaborations.WarnNotification.PublishToTopic",
     "name" : "collaborations.WarnNotification.PublishToTopic",
     "resourceReference" : "/system.services/collaborations.WarnNotification.PublishToTopic",
-    "timestamp" : "2021-08-04T17:10:41.639Z",
+    "timestamp" : "2021-08-04T21:11:52.751Z",
     "type" : 63
   }, {
     "inventory" : {
@@ -470,7 +524,7 @@
     "procedureName" : "start",
     "resourceReference" : "/procedures/collaborations.WarnNotification.PublishToTopic.start",
     "serviceName" : "PublishToTopic",
-    "timestamp" : "2021-08-04T17:10:42.688Z",
+    "timestamp" : "2021-08-04T21:11:54.500Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -494,7 +548,7 @@
     "label" : "collaborations.services.EvacuateNotification",
     "name" : "collaborations.services.EvacuateNotification",
     "resourceReference" : "/system.services/collaborations.services.EvacuateNotification",
-    "timestamp" : "2021-08-04T17:10:42.471Z",
+    "timestamp" : "2021-08-04T21:11:54.377Z",
     "type" : 63
   }, {
     "inventory" : {
@@ -518,7 +572,7 @@
     "label" : "collaborations.services.WarnNotification",
     "name" : "collaborations.services.WarnNotification",
     "resourceReference" : "/system.services/collaborations.services.WarnNotification",
-    "timestamp" : "2021-08-04T17:10:42.463Z",
+    "timestamp" : "2021-08-04T21:11:54.448Z",
     "type" : 63
   }, {
     "inventory" : {
@@ -542,7 +596,7 @@
     "label" : "isDangerousWeather",
     "name" : "isDangerousWeather",
     "resourceReference" : "/collaborationtypes/isDangerousWeather",
-    "timestamp" : "2021-08-04T17:10:42.011Z",
+    "timestamp" : "2021-08-04T21:11:53.856Z",
     "type" : 12
   }, {
     "inventory" : {
@@ -566,7 +620,7 @@
     "label" : "localhost_8080_catalog",
     "name" : "localhost_8080_catalog",
     "resourceReference" : "/system.catalogs/localhost_8080_catalog",
-    "timestamp" : "2021-08-04T17:10:40.691Z",
+    "timestamp" : "2021-08-04T19:20:14.846Z",
     "type" : 67
   }, {
     "inventory" : {
@@ -590,7 +644,7 @@
     "label" : "transformedWeather",
     "name" : "transformedWeather",
     "resourceReference" : "/types/transformedWeather",
-    "timestamp" : "2021-08-03T19:09:15.694Z",
+    "timestamp" : "2021-08-04T21:11:50.557Z",
     "type" : 1
   }, {
     "inventory" : {
@@ -614,7 +668,7 @@
     "label" : "weather",
     "name" : "weather",
     "resourceReference" : "/sources/weather",
-    "timestamp" : "2021-08-03T19:10:21.957Z",
+    "timestamp" : "2021-08-04T21:11:51.747Z",
     "type" : 4
   }, {
     "inventory" : {
@@ -638,7 +692,7 @@
     "label" : "weatherReading",
     "name" : "weatherReading",
     "resourceReference" : "/types/weatherReading",
-    "timestamp" : "2021-08-03T19:09:15.694Z",
+    "timestamp" : "2021-08-04T21:11:50.557Z",
     "type" : 1
   } ],
   "tools" : [ {
@@ -667,9 +721,18 @@
     "type" : 2
   }, {
     "isPinned" : false,
-    "name" : "ResidentNotificationSystem",
+    "name" : "Project Description",
     "pane" : {
       "c" : 0,
+      "r" : 0
+    },
+    "state" : 2,
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "ResidentNotificationSystem",
+    "pane" : {
+      "c" : 1,
       "r" : 0
     },
     "resourceKey" : "client/ResidentNotificationSystem",
@@ -689,17 +752,6 @@
     "type" : 120
   }, {
     "isPinned" : false,
-    "name" : "isDangerousWeather",
-    "pane" : {
-      "c" : 1,
-      "r" : 0
-    },
-    "resourceKey" : "app/isDangerousWeather",
-    "state" : 2,
-    "toolOptions" : { },
-    "type" : 15
-  }, {
-    "isPinned" : false,
     "name" : "weather",
     "pane" : {
       "c" : 1,
@@ -712,6 +764,7 @@
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "app/DetectWeatherEmergency", "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "client/ResidentNotificationSystem", "assemblies/WeatherEmergencyProject", "app/isDangerousWeather", "subsourceeditor/weather" ]
-  } ]
+    "projectToolKeys" : [ "app/DetectWeatherEmergency", "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "client/ResidentNotificationSystem", "assemblies/WeatherEmergencyProject", "subsourceeditor/weather" ]
+  } ],
+  "visibleResources" : [ ]
 }

@@ -5,8 +5,8 @@
     "dataVersion" : 5,
     "graph" : {
       "lastZoomRequest" : 0,
-      "scale" : 0.1603244661815579,
-      "translate" : [ 75.33997375641178, 75.54887868304903 ]
+      "scale" : 0.4656171198800518,
+      "translate" : [ 218.82913344237716, 39.383736284331775 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -154,7 +154,6 @@
     }
   },
   "collaboratorRoles" : [ ],
-  "compilerOCC" : 37,
   "currentState" : {
     "code" : "success"
   },
@@ -162,45 +161,5 @@
   "entityRoles" : [ ],
   "isComponent" : false,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "DetectWeatherEmergency",
-  "resourceBinding" : {
-    "optionalResources" : [ ],
-    "requiredResources" : [ {
-      "resource" : "system.eventstreams",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_FireConditionsDetected"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_getTemperatureAndWind"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_EvacuationMessage"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "apps.DetectWeatherEmergency.WeatherReadings"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_WarnMessage"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_isDangerousCondition"
-    }, {
-      "resource" : "procedures",
-      "resourceId" : "apps.DetectWeatherEmergency.NoAlerts_Transformation"
-    }, {
-      "resource" : "procedures",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_getTemperatureAndWind"
-    }, {
-      "resource" : "procedures",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_WarnMessage"
-    }, {
-      "resource" : "procedures",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_EvacuationMessage"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "apps.DetectWeatherEmergency.EvacuateNotification"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "apps.DetectWeatherEmergency.WarnNotification"
-    } ]
-  }
+  "name" : "DetectWeatherEmergency"
 }

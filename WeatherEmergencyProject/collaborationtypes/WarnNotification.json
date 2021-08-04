@@ -77,7 +77,6 @@
     }
   },
   "collaboratorRoles" : [ ],
-  "compilerOCC" : 3,
   "currentState" : {
     "code" : "success"
   },
@@ -85,21 +84,5 @@
   "entityRoles" : [ ],
   "isComponent" : false,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "WarnNotification",
-  "resourceBinding" : {
-    "optionalResources" : [ ],
-    "requiredResources" : [ {
-      "resource" : "procedures",
-      "resourceId" : "collaborations.WarnNotification.PublishToTopic.start"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "collaborations.WarnNotification.Initiate_CloseCollaboration"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "collaborations.WarnNotification.Initiate_NewCollaboration"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "collaborations.WarnNotification.Initiate_DetectCondition"
-    } ]
-  }
+  "name" : "WarnNotification"
 }
