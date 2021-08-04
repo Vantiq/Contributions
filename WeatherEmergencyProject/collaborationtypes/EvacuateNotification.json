@@ -85,21 +85,5 @@
   "entityRoles" : [ ],
   "isComponent" : false,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "EvacuateNotification",
-  "resourceBinding" : {
-    "optionalResources" : [ ],
-    "requiredResources" : [ {
-      "resource" : "procedures",
-      "resourceId" : "collaborations.EvacuateNotification.PublishToTopic.start"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "collaborations.EvacuateNotification.Initiate_NewCollaboration"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "collaborations.EvacuateNotification.Initiate_DetectCondition"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "collaborations.EvacuateNotification.Initiate_CloseCollaboration"
-    } ]
-  }
+  "name" : "EvacuateNotification"
 }

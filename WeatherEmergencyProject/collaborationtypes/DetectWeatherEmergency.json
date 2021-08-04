@@ -154,7 +154,6 @@
     }
   },
   "collaboratorRoles" : [ ],
-  "compilerOCC" : 2,
   "currentState" : {
     "code" : "success"
   },
@@ -162,45 +161,5 @@
   "entityRoles" : [ ],
   "isComponent" : false,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "DetectWeatherEmergency",
-  "resourceBinding" : {
-    "optionalResources" : [ ],
-    "requiredResources" : [ {
-      "resource" : "system.eventstreams",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_isDangerousCondition"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_WarnMessage"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_FireConditionsDetected"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "apps.DetectWeatherEmergency.WeatherReadings"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_getTemperatureAndWind"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_EvacuationMessage"
-    }, {
-      "resource" : "procedures",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_getTemperatureAndWind"
-    }, {
-      "resource" : "procedures",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_EvacuationMessage"
-    }, {
-      "resource" : "procedures",
-      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_WarnMessage"
-    }, {
-      "resource" : "procedures",
-      "resourceId" : "apps.DetectWeatherEmergency.NoAlerts_Transformation"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "apps.DetectWeatherEmergency.EvacuateNotification"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "apps.DetectWeatherEmergency.WarnNotification"
-    } ]
-  }
+  "name" : "DetectWeatherEmergency"
 }
