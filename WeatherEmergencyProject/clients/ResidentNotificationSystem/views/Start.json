@@ -1,0 +1,62 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "12feb04b-1275-4ea7-853d-f9fea0abde60" ],
+    "widgets" : [ {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "children" : [ "94ad6ff0-2540-4bec-8355-5d27b64860b8", "d8ffa60d-743c-43cd-85b7-32926d4df18f" ],
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "innerMargin" : 20,
+      "name" : "HorizontalLayout7",
+      "type" : "HorizontalLayout",
+      "uuid" : "12feb04b-1275-4ea7-853d-f9fea0abde60",
+      "v" : 17,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "borderThickness" : 0,
+      "fontSize" : 20,
+      "foregroundColor" : "#ff0000",
+      "glyphIcon" : "glyphicon-alert",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "StaticIcon3",
+      "type" : "StaticIcon",
+      "uuid" : "94ad6ff0-2540-4bec-8355-5d27b64860b8",
+      "v" : 17,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    }, {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "dataStreamProperty" : "message",
+      "dataStreamUUID" : "702dd17a-1d16-4cbc-83e7-89a995a2a07b",
+      "fontFamily" : "inherit",
+      "fontSize" : 20,
+      "fontStyle" : "normal",
+      "fontWeight" : "normal",
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "isMultiline" : true,
+      "name" : "StaticText11",
+      "text" : "Text",
+      "type" : "StaticText",
+      "uuid" : "d8ffa60d-743c-43cd-85b7-32926d4df18f",
+      "v" : 17,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "mobile",
+  "responseTopic" : "/vantiq/systemmodel/ResidentNotificationSystem/submitTopic"
+}

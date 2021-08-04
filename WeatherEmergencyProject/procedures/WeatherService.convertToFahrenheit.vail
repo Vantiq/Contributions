@@ -1,0 +1,2 @@
+PROCEDURE WeatherService.convertToFahrenheit(temperature Real):Integer
+return ((temperature - 273.15) * 9/5) + 32

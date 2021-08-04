@@ -1,0 +1,206 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "lastZoomRequest" : 0,
+      "scale" : 0.1603244661815579,
+      "translate" : [ 75.33997375641178, 75.54887868304903 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "component" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "modifiers" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    }
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EvacuateNotification" : {
+      "configuration" : {
+        "collaboration" : "EvacuateNotification",
+        "parentStreams" : [ "isDangerousWeather_EvacuationMessage" ]
+      },
+      "pattern" : "StartCollaboration",
+      "uuid" : "cf30977c-2687-497b-8ed3-9147480845e3"
+    },
+    "WarnNotification" : {
+      "configuration" : {
+        "collaboration" : "WarnNotification",
+        "entityConstraint" : "",
+        "parentStreams" : [ "isDangerousWeather_WarnMessage" ]
+      },
+      "pattern" : "StartCollaboration",
+      "uuid" : "247fec4d-7c7d-499c-866d-10925211362f"
+    },
+    "WeatherReadings" : {
+      "configuration" : {
+        "childStreams" : [ "isDangerousWeather" ],
+        "condition" : "",
+        "inboundResource" : "sources",
+        "inboundResourceId" : "weather",
+        "parentStreams" : [ ],
+        "upsert" : false
+      },
+      "pattern" : "EventStream",
+      "uuid" : "c5003d19-1374-48a9-8eca-40abdb54042c"
+    },
+    "isDangerousWeather" : {
+      "configuration" : {
+        "EvacuationRequired" : [ "EvacuateNotification" ],
+        "WarnResidents" : [ "WarnNotification" ],
+        "parentStreams" : [ ]
+      },
+      "downstreamUUIDS" : {
+        "EvacuationRequired" : "e2e95694-b338-430e-8a7b-e640e10564c4",
+        "WarnResidents" : "39b6ea78-225f-4dfb-816a-1aa977148079"
+      },
+      "isComponent" : true,
+      "pattern" : "isDangerousWeather",
+      "rootTask" : "isDangerousWeather_getTemperatureAndWind",
+      "uuid" : "58d0bff0-20ce-4fa7-8a01-35cdb5994516"
+    },
+    "isDangerousWeather_EvacuationMessage" : {
+      "componentReference" : "isDangerousWeather",
+      "configuration" : {
+        "childStreams" : [ "EvacuateNotification" ],
+        "enableBadging" : true,
+        "parentStreams" : [ "isDangerousWeather_FireConditionsDetected" ],
+        "transformation" : {
+          "message" : {
+            "expression" : "now().toString() + \": Fire conditions detected. The temperature is  \"+ toDecimal(event.temperature, 1).toString() + \" and wind speed is \" + event.windSpeed + \" Please evacuate to avoid further danger.\"",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReference" : "EvacuationRequired",
+      "name" : "isDangerousWeather_EvacuationMessage",
+      "pattern" : "Transformation"
+    },
+    "isDangerousWeather_FireConditionsDetected" : {
+      "componentReference" : "isDangerousWeather",
+      "configuration" : {
+        "childStreams" : [ "isDangerousWeather_EvacuationMessage" ],
+        "condition" : "event.temperature > 100 && event.windSpeed > 20",
+        "enableBadging" : true,
+        "parentStreams" : [ "isDangerousWeather_getTemperatureAndWind" ],
+        "upsert" : false
+      },
+      "name" : "isDangerousWeather_FireConditionsDetected",
+      "pattern" : "Filter"
+    },
+    "isDangerousWeather_WarnMessage" : {
+      "componentReference" : "isDangerousWeather",
+      "configuration" : {
+        "childStreams" : [ "WarnNotification" ],
+        "enableBadging" : true,
+        "parentStreams" : [ "isDangerousWeather_isDangerousCondition" ],
+        "transformation" : {
+          "message" : {
+            "expression" : "now().toString() + \": Be careful! Dangerous temperatures have been recorded. It is currently \" + toDecimal(event.temperature, 1).toString() + \" degrees.\"",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReference" : "WarnResidents",
+      "name" : "isDangerousWeather_WarnMessage",
+      "pattern" : "Transformation"
+    },
+    "isDangerousWeather_getTemperatureAndWind" : {
+      "componentReference" : "isDangerousWeather",
+      "configuration" : {
+        "childStreams" : [ "isDangerousWeather_isDangerousCondition", "isDangerousWeather_FireConditionsDetected" ],
+        "enableBadging" : true,
+        "parentStreams" : [ "WeatherReadings" ],
+        "transformation" : {
+          "temperature" : {
+            "expression" : "toReal(event.temp)",
+            "type" : "expression"
+          },
+          "windSpeed" : {
+            "expression" : "toReal(event.wind)",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "isRoot" : true,
+      "name" : "isDangerousWeather_getTemperatureAndWind",
+      "pattern" : "Transformation"
+    },
+    "isDangerousWeather_isDangerousCondition" : {
+      "componentReference" : "isDangerousWeather",
+      "configuration" : {
+        "childStreams" : [ "isDangerousWeather_WarnMessage" ],
+        "condition" : "event.temperature < -10 || event.temperature >  90",
+        "enableBadging" : true,
+        "parentStreams" : [ "isDangerousWeather_getTemperatureAndWind" ],
+        "upsert" : false
+      },
+      "name" : "isDangerousWeather_isDangerousCondition",
+      "pattern" : "Filter"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "compilerOCC" : 37,
+  "currentState" : {
+    "code" : "success"
+  },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "DetectWeatherEmergency",
+  "resourceBinding" : {
+    "optionalResources" : [ ],
+    "requiredResources" : [ {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_FireConditionsDetected"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_getTemperatureAndWind"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_EvacuationMessage"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.DetectWeatherEmergency.WeatherReadings"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_WarnMessage"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_isDangerousCondition"
+    }, {
+      "resource" : "procedures",
+      "resourceId" : "apps.DetectWeatherEmergency.NoAlerts_Transformation"
+    }, {
+      "resource" : "procedures",
+      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_getTemperatureAndWind"
+    }, {
+      "resource" : "procedures",
+      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_WarnMessage"
+    }, {
+      "resource" : "procedures",
+      "resourceId" : "apps.DetectWeatherEmergency.isDangerousWeather_EvacuationMessage"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "apps.DetectWeatherEmergency.EvacuateNotification"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "apps.DetectWeatherEmergency.WarnNotification"
+    } ]
+  }
+}

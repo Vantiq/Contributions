@@ -1,0 +1,38 @@
+{
+  "adminAccessLevel" : "ars_readWrite",
+  "ars_properties" : null,
+  "ars_relationships" : [ ],
+  "audited" : false,
+  "encapsulated" : false,
+  "expiresAfter" : null,
+  "foreignKeys" : null,
+  "groupBy" : "",
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "transformedWeather",
+  "naturalKey" : [ ],
+  "properties" : {
+    "temperature" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Real",
+      "unique" : false
+    },
+    "windSpeed" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Real",
+      "unique" : false
+    }
+  },
+  "role" : "standard",
+  "rulesSuppressed" : false,
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
+}

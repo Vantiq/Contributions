@@ -1,0 +1,8 @@
+{
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
+  "name" : "WeatherService",
+  "partitionedType" : null
+}

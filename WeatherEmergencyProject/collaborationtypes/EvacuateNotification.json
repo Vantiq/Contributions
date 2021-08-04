@@ -1,0 +1,105 @@
+{
+  "active" : true,
+  "appType" : false,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "lastZoomRequest" : 0,
+      "scale" : 0.9215559853857727,
+      "translate" : [ 213.5, 31.33290350311627 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "Initiate" : {
+      "additionalBehaviors" : [ {
+        "behaviors" : [ {
+          "description" : null,
+          "name" : "PublishToTopic",
+          "parameters" : [ {
+            "name" : "collaboration",
+            "type" : "reference",
+            "value" : "collaboration"
+          }, {
+            "name" : "topic",
+            "type" : "String",
+            "value" : "/temperature/warning"
+          }, {
+            "name" : "event",
+            "type" : "expression",
+            "value" : "collaboration.results.Initiate.event"
+          } ],
+          "type" : "activity",
+          "uuid" : null
+        } ],
+        "condition" : "true",
+        "description" : null,
+        "name" : "",
+        "uuid" : "2e9a6af4-caef-43cf-93b5-218076f3b6d6"
+      } ],
+      "cancellationCondition" : [ ],
+      "completionCondition" : [ ],
+      "configuration" : {
+        "condition" : "event.name == \"EvacuateNotification\"",
+        "inboundResource" : "types",
+        "inboundResourceId" : "system.situations",
+        "op" : "INSERT"
+      },
+      "continuationCondition" : [ ],
+      "instanceParameters" : [ ],
+      "pattern" : "InitiateCollaboration",
+      "uuid" : "7442071b-1455-48e6-8be2-a8ec0db9700d"
+    },
+    "PublishToTopic" : {
+      "additionalBehaviors" : [ ],
+      "cancellationCondition" : [ ],
+      "completionCondition" : [ ],
+      "configuration" : { },
+      "continuationCondition" : [ ],
+      "instanceParameters" : [ ],
+      "pattern" : "Collaboration.PublishToTopic",
+      "uuid" : "80a5517d-0fe1-4130-a103-63230c471f8b"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "compilerOCC" : 3,
+  "currentState" : {
+    "code" : "success"
+  },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "EvacuateNotification",
+  "resourceBinding" : {
+    "optionalResources" : [ ],
+    "requiredResources" : [ {
+      "resource" : "procedures",
+      "resourceId" : "collaborations.EvacuateNotification.PublishToTopic.start"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.EvacuateNotification.Initiate_DetectCondition"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.EvacuateNotification.Initiate_CloseCollaboration"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.EvacuateNotification.Initiate_NewCollaboration"
+    } ]
+  }
+}

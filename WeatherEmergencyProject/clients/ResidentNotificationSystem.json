@@ -1,0 +1,108 @@
+{
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : {
+      "TemperatureWarning" : { },
+      "Weather" : { }
+    },
+    "page" : { }
+  },
+  "isComponent" : false,
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "TemperatureWarning",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "topic" : "/temperature/warning",
+      "type" : 2,
+      "updateInterval" : 60,
+      "uuid" : "702dd17a-1d16-4cbc-83e7-89a995a2a07b",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "Weather",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "topic" : "/weather/reading",
+      "type" : 2,
+      "updateInterval" : 60,
+      "uuid" : "c9ad463d-b288-4ee5-a23c-001fb78f004c",
+      "v" : 1
+    } ]
+  },
+  "name" : "ResidentNotificationSystem",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "add",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ ]
+    },
+    "description" : "",
+    "docAssets" : [ ],
+    "productV" : "7.7",
+    "showCategoryButtons" : true,
+    "showCategoryComponent" : false,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : true,
+    "showCategoryLayout" : true,
+    "showGridWhileEditing" : false,
+    "theme" : null,
+    "themeName" : "cornflower",
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "topics",
+      "resourceId" : "/vantiq/systemmodel/ResidentNotificationSystem/submitTopic",
+      "type" : "publishes"
+    }, {
+      "resource" : "topics",
+      "resourceId" : "/temperature/warning",
+      "type" : "subscribes_to"
+    }, {
+      "resource" : "topics",
+      "resourceId" : "/weather/reading",
+      "type" : "subscribes_to"
+    } ]
+  },
+  "targetDevice" : "mobile",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json"
+  }
+}

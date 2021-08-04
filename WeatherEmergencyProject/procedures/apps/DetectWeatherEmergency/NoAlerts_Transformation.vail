@@ -1,0 +1,15 @@
+package apps.DetectWeatherEmergency
+
+PROCEDURE NoAlerts_Transformation(event) HIDDEN WITH ars_dependentResource="/collaborationtypes/DetectWeatherEmergency"
+
+var newEvent = {}
+
+try {
+    newEvent.message = "Conditions are currently safe."
+
+} catch (ex) {
+    exception("io.vantiq.app.DetectWeatherEmergency.NoAlerts_Transformation.NoAlerts_Transformation.transformation.failed",
+              "The generated transformation procedure: {0} failed because: {1}", ["NoAlerts_Transformation", ex.message])
+}
+
+return newEvent
