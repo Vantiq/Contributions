@@ -1,0 +1,15 @@
+package apps.DetectWeatherEmergency
+
+PROCEDURE isDangerousWeather_EvacuationMessage(event) HIDDEN WITH ars_dependentResource="/collaborationtypes/DetectWeatherEmergency"
+
+var newEvent = {}
+
+try {
+    newEvent.message = now().toString() + ": Fire conditions detected. The temperature is  "+ toDecimal(event.temperature, 1).toString() + " and wind speed is " + event.windSpeed + " Please evacuate to avoid further danger."
+
+} catch (ex) {
+    exception("io.vantiq.app.DetectWeatherEmergency.isDangerousWeather_EvacuationMessage.isDangerousWeather_EvacuationMessage.transformation.failed",
+              "The generated transformation procedure: {0} failed because: {1}", ["isDangerousWeather_EvacuationMessage", ex.message])
+}
+
+return newEvent

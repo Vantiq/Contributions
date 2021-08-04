@@ -1,0 +1,10 @@
+{
+  "ars_relationships" : [ ],
+  "eventTypes" : {
+    "Initiate" : {
+      "direction" : "INBOUND",
+      "implementingEventPath" : "/types/system.situations/insert"
+    }
+  },
+  "name" : "collaborations.services.EvacuateNotification"
+}

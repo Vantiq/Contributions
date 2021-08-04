@@ -1,0 +1,16 @@
+package apps.DetectWeatherEmergency
+
+PROCEDURE isDangerousWeather_getTemperatureAndWind(event) HIDDEN WITH ars_dependentResource="/collaborationtypes/DetectWeatherEmergency"
+
+var newEvent = {}
+
+try {
+    newEvent.temperature = toReal(event.temp)
+newEvent.windSpeed = toReal(event.wind)
+
+} catch (ex) {
+    exception("io.vantiq.app.DetectWeatherEmergency.isDangerousWeather_getTemperatureAndWind.isDangerousWeather_getTemperatureAndWind.transformation.failed",
+              "The generated transformation procedure: {0} failed because: {1}", ["isDangerousWeather_getTemperatureAndWind", ex.message])
+}
+
+return newEvent

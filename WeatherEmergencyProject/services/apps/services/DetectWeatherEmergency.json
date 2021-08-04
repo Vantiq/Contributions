@@ -1,0 +1,21 @@
+{
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "EvacuateNotification" : {
+      "direction" : "OUTBOUND",
+      "implementingEventPath" : "/types/system.situations/insert"
+    },
+    "WarnNotification" : {
+      "direction" : "OUTBOUND",
+      "implementingEventPath" : "/types/system.situations/insert"
+    },
+    "WeatherReadings" : {
+      "direction" : "INBOUND",
+      "implementingEventPath" : "/sources/weather"
+    }
+  },
+  "globalType" : null,
+  "name" : "apps.services.DetectWeatherEmergency",
+  "partitionedType" : null
+}
