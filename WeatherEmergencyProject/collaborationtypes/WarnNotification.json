@@ -77,7 +77,7 @@
     }
   },
   "collaboratorRoles" : [ ],
-  "compilerOCC" : 3,
+  "compilerOCC" : 1,
   "currentState" : {
     "code" : "success"
   },
@@ -93,10 +93,10 @@
       "resourceId" : "collaborations.WarnNotification.PublishToTopic.start"
     }, {
       "resource" : "rules",
-      "resourceId" : "collaborations.WarnNotification.Initiate_CloseCollaboration"
+      "resourceId" : "collaborations.WarnNotification.Initiate_NewCollaboration"
     }, {
       "resource" : "rules",
-      "resourceId" : "collaborations.WarnNotification.Initiate_NewCollaboration"
+      "resourceId" : "collaborations.WarnNotification.Initiate_CloseCollaboration"
     }, {
       "resource" : "rules",
       "resourceId" : "collaborations.WarnNotification.Initiate_DetectCondition"
