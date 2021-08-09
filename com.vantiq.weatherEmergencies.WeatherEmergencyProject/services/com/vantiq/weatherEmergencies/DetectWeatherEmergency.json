@@ -1,0 +1,24 @@
+{
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "EvacuateNotification" : {
+      "direction" : "OUTBOUND",
+      "implementingEventPath" : "/types/system.situations/insert",
+      "isReliable" : false
+    },
+    "WarnNotification" : {
+      "direction" : "OUTBOUND",
+      "implementingEventPath" : "/types/system.situations/insert",
+      "isReliable" : false
+    },
+    "WeatherReadings" : {
+      "direction" : "INBOUND",
+      "eventSchema" : "com.vantiq.weatherEmergencies.weatherReading",
+      "implementingEventPath" : "/sources/com.vantiq.weatherEmergencies.weather"
+    }
+  },
+  "globalType" : null,
+  "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+  "partitionedType" : null
+}

@@ -1,0 +1,204 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "lastZoomRequest" : 0,
+      "scale" : 0.19637843761415227,
+      "translate" : [ 74.79103480665867, 69.94934509210458 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "component" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "modifiers" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    }
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EvacuateNotification" : {
+      "configuration" : {
+        "collaboration" : "com.vantiq.weatherEmergencies.EvacuateNotification",
+        "entityConstraint" : "",
+        "parentStreams" : [ "com_vantiq_weatherEmergencies_isDangerousWeather_EvacuationMessage" ]
+      },
+      "pattern" : "StartCollaboration",
+      "uuid" : "cf30977c-2687-497b-8ed3-9147480845e3"
+    },
+    "WarnNotification" : {
+      "configuration" : {
+        "collaboration" : "com.vantiq.weatherEmergencies.WarnNotification",
+        "entityConstraint" : "",
+        "parentStreams" : [ "com_vantiq_weatherEmergencies_isDangerousWeather_WarnMessage" ]
+      },
+      "pattern" : "StartCollaboration",
+      "uuid" : "247fec4d-7c7d-499c-866d-10925211362f"
+    },
+    "WeatherReadings" : {
+      "configuration" : {
+        "childStreams" : [ "com_vantiq_weatherEmergencies_isDangerousWeather" ],
+        "condition" : "",
+        "inboundResource" : "sources",
+        "inboundResourceId" : "com.vantiq.weatherEmergencies.weather",
+        "parentStreams" : [ ],
+        "upsert" : false
+      },
+      "pattern" : "EventStream",
+      "uuid" : "c5003d19-1374-48a9-8eca-40abdb54042c"
+    },
+    "com_vantiq_weatherEmergencies_isDangerousWeather" : {
+      "configuration" : {
+        "EvacuationRequired" : [ "EvacuateNotification" ],
+        "WarnResidents" : [ "WarnNotification" ],
+        "parentStreams" : [ ]
+      },
+      "downstreamUUIDS" : {
+        "EvacuationRequired" : "ced3ec25-bb02-47ac-b9d5-b1674081a946",
+        "WarnResidents" : "ab592163-7e6c-47cf-b393-8b0bf330237e"
+      },
+      "isComponent" : true,
+      "pattern" : "com.vantiq.weatherEmergencies.isDangerousWeather",
+      "rootTask" : "com_vantiq_weatherEmergencies_isDangerousWeather_getTemperatureAndWind",
+      "uuid" : "a01c47f3-6df4-4a74-b807-e3d5fbb1c02b"
+    },
+    "com_vantiq_weatherEmergencies_isDangerousWeather_EvacuationMessage" : {
+      "componentReference" : "com_vantiq_weatherEmergencies_isDangerousWeather",
+      "configuration" : {
+        "childStreams" : [ "EvacuateNotification" ],
+        "enableBadging" : true,
+        "parentStreams" : [ "com_vantiq_weatherEmergencies_isDangerousWeather_FireConditionsDetected" ],
+        "transformation" : {
+          "message" : {
+            "expression" : "now().toString() + \": Fire conditions detected. The temperature is  \"+ toDecimal(event.temperature, 1).toString() + \" and wind speed is \" + event.windSpeed + \" Please evacuate to avoid further danger.\"",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReference" : "EvacuationRequired",
+      "name" : "com_vantiq_weatherEmergencies_isDangerousWeather_EvacuationMessage",
+      "pattern" : "Transformation"
+    },
+    "com_vantiq_weatherEmergencies_isDangerousWeather_FireConditionsDetected" : {
+      "componentReference" : "com_vantiq_weatherEmergencies_isDangerousWeather",
+      "configuration" : {
+        "childStreams" : [ "com_vantiq_weatherEmergencies_isDangerousWeather_EvacuationMessage" ],
+        "condition" : "event.temperature > 100 && event.windSpeed > 20",
+        "enableBadging" : true,
+        "parentStreams" : [ "com_vantiq_weatherEmergencies_isDangerousWeather_getTemperatureAndWind" ],
+        "upsert" : false
+      },
+      "name" : "com_vantiq_weatherEmergencies_isDangerousWeather_FireConditionsDetected",
+      "pattern" : "Filter"
+    },
+    "com_vantiq_weatherEmergencies_isDangerousWeather_WarnMessage" : {
+      "componentReference" : "com_vantiq_weatherEmergencies_isDangerousWeather",
+      "configuration" : {
+        "childStreams" : [ "WarnNotification" ],
+        "enableBadging" : true,
+        "parentStreams" : [ "com_vantiq_weatherEmergencies_isDangerousWeather_isDangerousCondition" ],
+        "transformation" : {
+          "message" : {
+            "expression" : "now().toString() + \": Be careful! Dangerous temperatures have been recorded. It is currently \" + toDecimal(event.temperature, 1).toString() + \" degrees.\"",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReference" : "WarnResidents",
+      "name" : "com_vantiq_weatherEmergencies_isDangerousWeather_WarnMessage",
+      "pattern" : "Transformation"
+    },
+    "com_vantiq_weatherEmergencies_isDangerousWeather_getTemperatureAndWind" : {
+      "componentReference" : "com_vantiq_weatherEmergencies_isDangerousWeather",
+      "configuration" : {
+        "childStreams" : [ "com_vantiq_weatherEmergencies_isDangerousWeather_isDangerousCondition", "com_vantiq_weatherEmergencies_isDangerousWeather_FireConditionsDetected" ],
+        "enableBadging" : true,
+        "parentStreams" : [ "WeatherReadings" ],
+        "transformation" : {
+          "temperature" : {
+            "expression" : "toReal(event.temp)",
+            "type" : "expression"
+          },
+          "windSpeed" : {
+            "expression" : "toReal(event.wind)",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "isRoot" : true,
+      "name" : "com_vantiq_weatherEmergencies_isDangerousWeather_getTemperatureAndWind",
+      "pattern" : "Transformation"
+    },
+    "com_vantiq_weatherEmergencies_isDangerousWeather_isDangerousCondition" : {
+      "componentReference" : "com_vantiq_weatherEmergencies_isDangerousWeather",
+      "configuration" : {
+        "childStreams" : [ "com_vantiq_weatherEmergencies_isDangerousWeather_WarnMessage" ],
+        "condition" : "event.temperature < -10 || event.temperature >  90",
+        "enableBadging" : true,
+        "parentStreams" : [ "com_vantiq_weatherEmergencies_isDangerousWeather_getTemperatureAndWind" ],
+        "upsert" : false
+      },
+      "name" : "com_vantiq_weatherEmergencies_isDangerousWeather_isDangerousCondition",
+      "pattern" : "Filter"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "compilerOCC" : 1,
+  "currentState" : {
+    "code" : "success"
+  },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+  "resourceBinding" : {
+    "optionalResources" : [ ],
+    "requiredResources" : [ {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.com_vantiq_weatherEmergencies_isDangerousWeather_WarnMessage"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.com_vantiq_weatherEmergencies_isDangerousWeather_isDangerousCondition"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.com_vantiq_weatherEmergencies_isDangerousWeather_EvacuationMessage"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.WeatherReadings"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.com_vantiq_weatherEmergencies_isDangerousWeather_FireConditionsDetected"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.com_vantiq_weatherEmergencies_isDangerousWeather_getTemperatureAndWind"
+    }, {
+      "resource" : "procedures",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.com_vantiq_weatherEmergencies_isDangerousWeather_WarnMessage"
+    }, {
+      "resource" : "procedures",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.com_vantiq_weatherEmergencies_isDangerousWeather_getTemperatureAndWind"
+    }, {
+      "resource" : "procedures",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.com_vantiq_weatherEmergencies_isDangerousWeather_EvacuationMessage"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.WarnNotification"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.EvacuateNotification"
+    } ]
+  }
+}
