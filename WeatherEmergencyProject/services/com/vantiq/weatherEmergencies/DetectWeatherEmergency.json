@@ -14,7 +14,6 @@
     },
     "WeatherReadings" : {
       "direction" : "INBOUND",
-      "eventSchema" : "com.vantiq.weatherEmergencies.weatherReading",
       "implementingEventPath" : "/sources/com.vantiq.weatherEmergencies.weather"
     }
   },

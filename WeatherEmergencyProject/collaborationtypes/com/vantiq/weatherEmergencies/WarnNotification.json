@@ -4,9 +4,9 @@
   "ars_properties" : {
     "dataVersion" : 5,
     "graph" : {
-      "lastZoomRequest" : 0,
-      "scale" : 0.6895338833623327,
-      "translate" : [ 132.32891560575302, 66.55378346073542 ]
+      "lastZoomRequest" : 3,
+      "scale" : 0.9219522683293915,
+      "translate" : [ 214.5, 31.353579875295637 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -77,7 +77,7 @@
     }
   },
   "collaboratorRoles" : [ ],
-  "compilerOCC" : 1,
+  "compilerOCC" : 2,
   "currentState" : {
     "code" : "success"
   },
@@ -93,13 +93,13 @@
       "resourceId" : "com.vantiq.weatherEmergencies.WarnNotification.PublishToTopic.start"
     }, {
       "resource" : "rules",
+      "resourceId" : "com.vantiq.weatherEmergencies.WarnNotification.Initiate_DetectCondition"
+    }, {
+      "resource" : "rules",
       "resourceId" : "com.vantiq.weatherEmergencies.WarnNotification.Initiate_CloseCollaboration"
     }, {
       "resource" : "rules",
       "resourceId" : "com.vantiq.weatherEmergencies.WarnNotification.Initiate_NewCollaboration"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "com.vantiq.weatherEmergencies.WarnNotification.Initiate_DetectCondition"
     } ]
   }
 }

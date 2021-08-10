@@ -1,5 +1,4 @@
 {
-  "ars_relationships" : [ ],
   "eventTypes" : {
     "Initiate" : {
       "direction" : "INBOUND",
