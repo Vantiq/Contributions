@@ -57,7 +57,7 @@
   } ],
   "name" : "com.vantiq.weatherEmergencies.WeatherEmergencyProject",
   "options" : {
-    "description" : "This is the Project used as the starting place for the Assembly Tutorial. The weather Source produces temperature and wind speed data which triggers the DetectWhetherEmergencyApp. The App uses the isDangerousWeather App Component to determine whether to issue a warning message or evacuation alert to residents. Each alert type will trigger the start of a CollaborationType which will notify the ResidentNotificationSystem Client.\n\nYou can use this Project as a starting point for an Assembly. To convert this Project into an Assembly, use the Projects button and select *Convert To Assembly*.",
+    "description" : "This is the Project used as the starting place for the Assembly Tutorial. The weather Source produces temperature and wind speed data which triggers the DetectWeatherEmergencyApp. The App uses the isDangerousWeather App Component to determine whether to issue a warning message or evacuation alert to residents. Each alert type will trigger the start of a CollaborationType which will notify the ResidentNotificationSystem Client.\n\nYou can use this Project as a starting point for an Assembly. To convert this Project into an Assembly, use the Projects button and select *Convert To Assembly*.",
     "dockCollapsed" : {
       "bottom" : true,
       "left" : false,
