@@ -1,0 +1,4 @@
+package com.vantiq.weatherEmergencies
+//get the weather for the queried city
+PROCEDURE WeatherService.getWeather(cityName String):weatherReading
+SELECT ONE FROM SOURCE weather WITH query={"q":cityName}
