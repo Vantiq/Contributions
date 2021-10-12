@@ -2,22 +2,35 @@
   "ars_relationships" : [ ],
   "description" : null,
   "eventTypes" : {
-    "EvacuateNotification" : {
+    "EvacuationEvent" : {
       "direction" : "OUTBOUND",
-      "implementingEventPath" : "/types/system.situations/insert",
+      "eventSchema" : "com.vantiq.weatherEmergencies.weatherMessage",
+      "implementingEventPath" : "/topics//evacuation/event",
       "isReliable" : false
     },
-    "WarnNotification" : {
+    "WarningEvent" : {
       "direction" : "OUTBOUND",
-      "implementingEventPath" : "/types/system.situations/insert",
+      "eventSchema" : "com.vantiq.weatherEmergencies.weatherMessage",
+      "implementingEventPath" : "/topics//warning/event",
       "isReliable" : false
     },
     "WeatherReadings" : {
       "direction" : "INBOUND",
+      "eventSchema" : "com.vantiq.weatherEmergencies.weatherReading",
       "implementingEventPath" : "/sources/com.vantiq.weatherEmergencies.weather"
     }
   },
   "globalType" : null,
   "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
-  "partitionedType" : null
+  "partitionedType" : null,
+  "resourceBinding" : {
+    "optionalResources" : [ ],
+    "requiredResources" : [ {
+      "resource" : "topics",
+      "resourceId" : "/evacuation/event"
+    }, {
+      "resource" : "topics",
+      "resourceId" : "/warning/event"
+    } ]
+  }
 }
