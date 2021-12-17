@@ -27,7 +27,7 @@
         });    
     }
 
-    client.select("locations", {}, function(results){
+    client.select("locations", {}, function(results) {
         results.forEach(function(item, index){
             var obj = {name:item.name, id:item.id};
             containsObject(obj, setLocations);
