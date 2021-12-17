@@ -83,7 +83,7 @@ function CanvasState(canvas, backgroundimage, page) {
     var type = myState.page.data.zone;
 
 
-    //fixes a problem where double clicking causes text to get selected on the canvas
+    // Fixes a problem where double clicking causes text to get selected on the canvas
     canvas.addEventListener('selectstart', function(e) { e.preventDefault(); return false; }, false);
     // Up, down, and move are for dragging
     canvas.addEventListener('mousedown', function(e) {
