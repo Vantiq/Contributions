@@ -21,7 +21,7 @@
     });
     
     function loadLocations(setLocations){
-    if(setLocations){
+    if (setLocations) {
         setLocations.forEach(function(item, index){
             $('#setLocations').append('<li class="setList" data-id=' + item.id +'>' + item.name + '</li>');
         });    
