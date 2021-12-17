@@ -46,7 +46,7 @@ function CanvasState(canvas, backgroundimage, page) {
     this.height = canvas.height;
     this.ctx = canvas.getContext('2d');
 
-    // This complicates things a little but but fixes mouse co-ordinate problems
+    // This complicates things a little but fixes mouse coordinate problems
     // when there's a border or padding. See getMouse for more detail
     var stylePaddingLeft, stylePaddingTop, styleBorderLeft, styleBorderTop;
     if (document.defaultView && document.defaultView.getComputedStyle) {
