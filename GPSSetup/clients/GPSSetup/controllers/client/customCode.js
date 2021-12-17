@@ -130,7 +130,7 @@ function CanvasState(canvas, backgroundimage, page) {
 
             for (var i = shapes.length-1; i >= 0; i--) {
                 if ( (shapes[i].x === myState.selection.x) && (shapes[i].y === myState.selection.y) ) {
-                    console.log("You are moving shape: "  + i );
+                    console.log("You are moving shape: "  + i);
                     console.log(type);
                     console.log( i + type);
                     console.log(myState);
