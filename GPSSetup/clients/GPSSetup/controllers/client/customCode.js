@@ -245,7 +245,7 @@ CanvasState.prototype.clear = function() {
 };
 
 // While draw is called as often as the INTERVAL variable demands,
-// It only ever does something if the canvas gets invalidated by our code
+// it only ever does something if the canvas gets invalidated by our code
 CanvasState.prototype.draw = function() {
     // console.log("CALLED: CanvasState.prototype.draw");
     // if our state is invalid, redraw and validate!
