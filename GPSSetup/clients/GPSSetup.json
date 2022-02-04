@@ -114,7 +114,7 @@
     } ],
     "activeTab" : "edit",
     "badgeCount" : 0,
-    "description" : "Use this client to convert 2d image coordinates to lat/lng points for the CovertCoordinates activity pattern.",
+    "description" : "Use this client to convert 2d image coordinates to lat/lng points for the ConvertCoordinates activity pattern.",
     "docAssets" : [ "icons/acousticIcon.png", "icons/cameraIcon.png" ],
     "hasSidebar" : true,
     "productV" : "7.6j",
