@@ -1,0 +1,98 @@
+PROCEDURE Docker.getDiskUsage(containerId String)
+
+var b1 = {
+    "AttachStdin": false,
+    "AttachStdout": true,
+    "AttachStderr": true,
+    "DetachKeys": "ctrl-p,ctrl-q",
+    "Tty": false,
+    "Cmd": 
+[
+    "/bin/bash", "-c", "df -h"
+],
+"Env": 
+    [
+    ]
+}
+
+var b2 = {
+
+    "Detach": false,
+    "Tty": true
+
+}
+
+SELECT ONE FROM SOURCE DockerAPI AS execId WITH path="v1.41/containers/" + containerId +  "/exec", method="POST", body=b1
+SELECT ONE FROM SOURCE DockerAPI AS data WITH path="v1.41/exec/" + execId.Id + "/start", method="POST", body=b2, responseType="text/*"
+var obj = {}
+
+if(data){
+	if(startsWith(data, "OCI")){
+		obj.size = "N/A"
+		obj.used = "N/A"
+		obj.available = "N/A"
+		obj.use = "N/A" 
+	}
+	else {
+        var pattern = regExp("overlay\D*(\d+\.\d+\D|\d+\D)\s+(\d+\.\d+\D|\d+\D)\s+(\d+\.\d+\D|\d+\D)\s+(\d+\.\d+\D|\d+\D)")
+		var matcher = pattern.matcher(data)
+		var i = 0 // you must do this and use intValue
+		var results =matcher[i.intValue()]
+		var obj = {}
+		obj.size = results[1]
+		obj.used = results[2]
+		obj.available = results[3]
+		obj.use = results[4]        
+	}
+}
+else {
+	obj.size = "N/A"
+	obj.used = "N/A"
+	obj.available = "N/A"
+	obj.use = "N/A" 
+}
+
+return obj
+
+/*
+var b1 = {
+    "AttachStdin": false,
+    "AttachStdout": true,
+    "AttachStderr": true,
+    "DetachKeys": "ctrl-p,ctrl-q",
+    "Tty": false,
+    "Cmd": 
+[
+    "/bin/bash", "-c", "df -H | grep overlay | awk '{printf \"%s\", $5}'"
+],
+"Env": 
+    [
+    ]
+}
+
+var b2 = {
+
+    "Detach": false,
+    "Tty": true
+
+}
+
+SELECT ONE FROM SOURCE DockerAPI AS execId WITH path="v1.41/containers/" + containerId +  "/exec", method="POST", body=b1
+SELECT ONE FROM SOURCE DockerAPI AS df WITH path="v1.41/exec/" + execId.Id + "/start", method="POST", body=b2, responseType="text/*"
+
+
+if(df){
+    if(endsWith(df, "%")){
+    	return df        
+	}
+	else {
+    return "N/A"    
+	}
+	
+}
+else {
+    return "N/A"
+}
+
+*/
+

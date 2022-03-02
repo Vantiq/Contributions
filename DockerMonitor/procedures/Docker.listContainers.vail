@@ -1,0 +1,24 @@
+/* Returns the system utilization stats from any running container. 
+*/
+PROCEDURE Docker.listContainers()
+
+SELECT ONE FROM SOURCE DockerAPI AS containers WITH path="v1.41/containers/json?all=false"
+
+var results = []
+
+FOR container IN containers {
+    var obj = {}
+    var stats = Docker.getStats(container.Id)
+	var disk = Docker.getDiskUsage(container.Id)
+    obj.containerId = container.Id
+    obj.containerName = replace(container.Names[0], "/", "")
+	obj.DiskUsage = disk.use
+	obj.DiskSize = disk.size
+	obj.DiskUsed = disk.used
+	obj.DiskAvailable = disk.available
+	obj.cpuPercent = toString(stats.cpuPercent) + "%"
+	obj.memPercent = toString(stats.memPercent) + "%"
+	push(results, obj)	
+}
+
+return results

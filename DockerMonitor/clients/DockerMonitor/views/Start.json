@@ -1,0 +1,88 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "bc83e18c-8f85-4558-8eb1-2d9ad9c57b65" ],
+    "widgets" : [ {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 1,
+      "cellFontColor" : "default",
+      "cellFontFace" : "inherit",
+      "cellFontSize" : 14,
+      "cellFontStyle" : "plain",
+      "clearOnDataArrive" : true,
+      "columnDescriptors" : [ {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "containerName",
+        "selected" : false,
+        "title" : "Name"
+      }, {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "cpuPercent",
+        "selected" : false,
+        "title" : "% CPU"
+      }, {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "memPercent",
+        "selected" : false,
+        "title" : "% Memory"
+      }, {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "DiskSize",
+        "selected" : false,
+        "title" : "DiskSize"
+      }, {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "DiskUsed",
+        "selected" : false,
+        "title" : "DiskUsed"
+      }, {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "DiskAvailable",
+        "selected" : false,
+        "title" : "DiskAvailable"
+      }, {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "DiskUsage",
+        "selected" : false,
+        "title" : "DiskUsage"
+      } ],
+      "columnSort" : true,
+      "dataStreamGroupedByFiltersString" : "",
+      "dataStreamUUID" : "ae09760c-5951-4b37-af1f-eac640873b90",
+      "dataType" : null,
+      "headerFontColor" : "default",
+      "headerFontFace" : "inherit",
+      "headerFontSize" : 14,
+      "headerFontStyle" : "plain",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "DataTable1",
+      "operation" : "insert",
+      "rowsPerPage" : 6,
+      "showPaging" : true,
+      "type" : "DataTable",
+      "uuid" : "bc83e18c-8f85-4558-8eb1-2d9ad9c57b65",
+      "v" : 17,
+      "vertGravity" : "center",
+      "w" : 942,
+      "widthPolicy" : "explicit",
+      "x" : 126,
+      "y" : 63.19999694824219
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "browser",
+  "responseTopic" : "/my/response/topic"
+}
