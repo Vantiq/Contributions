@@ -1,0 +1,20 @@
+{
+  "activationConstraint" : "",
+  "active" : true,
+  "ars_properties" : null,
+  "ars_relationships" : [ ],
+  "config" : {
+    "passwordType" : "string",
+    "pollingInterval" : 0,
+    "query" : { },
+    "requestDefaults" : {
+      "responseType" : "application/json"
+    },
+    "uri" : "http://host.docker.internal:2375/"
+  },
+  "direction" : "BOTH",
+  "messageType" : null,
+  "mockProcedures" : { },
+  "name" : "DockerAPI",
+  "type" : "REMOTE"
+}

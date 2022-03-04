@@ -1,0 +1,27 @@
+PROCEDURE Docker.getStats(containerId String)
+
+//9393a8f1ff7d
+SELECT ONE FROM SOURCE DockerAPI AS stats WITH path="v1.41/containers/" + containerId + "/stats?stream=false"
+
+var obj = {}
+
+//Calculate CPU Stats
+var cpuPercent = 0.0
+var previousCPU = stats.precpu_stats.cpu_usage.total_usage
+var previousSystem = stats.precpu_stats.system_cpu_usage
+var cpuDelta = stats.cpu_stats.cpu_usage.total_usage - previousCPU
+var systemDelta = stats.cpu_stats.system_cpu_usage - previousSystem
+if(systemDelta > 0 AND cpuDelta > 0){
+    cpuPercent = ((cpuDelta/systemDelta) * length(stats.cpu_stats.cpu_usage.percpu_usage)) * 100
+}
+
+obj.cpuPercent = toDecimal(cpuPercent, 2)
+
+//Calculate memory stats
+obj.memPercent = toDecimal(((stats.memory_stats.usage / stats.memory_stats.limit) * 100), 2)
+
+return obj
+
+
+
+
