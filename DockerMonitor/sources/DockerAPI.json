@@ -12,7 +12,6 @@
     },
     "uri" : "http://host.docker.internal:2375/"
   },
-  "direction" : "BOTH",
   "messageType" : null,
   "mockProcedures" : { },
   "name" : "DockerAPI",

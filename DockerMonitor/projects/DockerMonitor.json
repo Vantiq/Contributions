@@ -36,10 +36,13 @@
   }, {
     "source" : "client/DockerMonitor",
     "target" : "topic//my/response/topic"
+  }, {
+    "source" : "client/DockerMonitor",
+    "target" : "document/Docker.js"
   } ],
   "name" : "DockerMonitor",
   "options" : {
-    "description" : "",
+    "description" : "Simple Vantiq Client Builder application that can monitor docker containers resource utilization for the local host system. The utilization data is provided by the docker API. \n\nFull instructions at https://github.com/pburma/vantiqexamples/tree/master/docker_examples/system_monitor\n\nOnce the docker API is active and accessible this project will load usage data from each container. This information can be used to create custom alerts and monitor system health. For example to send a low disk space alert or high CPU utilization notification.",
     "dockCollapsed" : {
       "bottom" : true,
       "left" : false,
@@ -65,7 +68,7 @@
     "tileColumns" : 2,
     "tileRows" : 1,
     "type" : "dev",
-    "v" : 4,
+    "v" : 5,
     "viewUUID" : "MAINVIEW"
   },
   "resources" : [ {
@@ -96,6 +99,11 @@
     "timestamp" : "2022-01-25T19:19:45.025Z",
     "type" : 3
   }, {
+    "name" : "Docker.js",
+    "resourceReference" : "/documents/Docker.js",
+    "timestamp" : "2022-03-04T23:26:44.390Z",
+    "type" : 19
+  }, {
     "label" : "Docker.listContainers",
     "name" : "Docker.listContainers",
     "procedureName" : "listContainers",
@@ -116,11 +124,6 @@
     "timestamp" : "2022-03-02T16:42:18.360Z",
     "type" : 15
   }, {
-    "name" : "internal_vantiq_com_br_cat",
-    "resourceReference" : "/system.catalogs/internal_vantiq_com_br_cat",
-    "timestamp" : "2022-02-02T19:30:03.234Z",
-    "type" : 67
-  }, {
     "label" : "listContainers",
     "name" : "listContainers",
     "resourceReference" : "/types/listContainers",
@@ -131,7 +134,7 @@
     "isPinned" : false,
     "name" : "DockerMonitor",
     "pane" : {
-      "c" : 1,
+      "c" : 0,
       "r" : 0
     },
     "resourceKey" : "client/DockerMonitor",
@@ -154,10 +157,19 @@
     "isPinned" : false,
     "name" : "Project Contents",
     "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "c" : 1,
+      "r" : 0
+    },
+    "state" : 2,
+    "type" : 82
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "client/DockerMonitor", "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents" ]
+    "projectToolKeys" : [ "client/DockerMonitor", "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description" ]
   } ]
 }

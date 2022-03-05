@@ -65,7 +65,7 @@
     "description" : "",
     "docAssets" : [ "Docker.js" ],
     "jsAssets" : [ "../../docs/Docker.js" ],
-    "productV" : "7.7i",
+    "productV" : "7.8e",
     "showCategoryButtons" : true,
     "showCategoryDataDisplay" : true,
     "showCategoryDataInput" : true,
@@ -90,6 +90,9 @@
   },
   "resourceBinding" : {
     "requiredResources" : [ {
+      "resource" : "documents",
+      "resourceId" : "Docker.js"
+    }, {
       "resource" : "topics",
       "resourceId" : "/my/response/topic",
       "type" : "publishes"
