@@ -1,0 +1,76 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "EvacuationEvent" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "EventStream" : {
+          "x" : 0,
+          "y" : 0
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 0.9087781164485198,
+      "translate" : [ 167.72563028342586, 146.89034850929698 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "collab" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : true,
+      "serviceGroupOpenHash" : {
+        "Recommend" : {
+          "events" : true,
+          "procedures" : true
+        }
+      }
+    },
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EvacuationEvent" : {
+      "configuration" : {
+        "eventTypeName" : "EvacuationEvent",
+        "parentStreams" : [ "EventStream" ],
+        "service" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 1,
+      "uuid" : "27488bcb-f3c5-4197-9631-c49f82161e12"
+    },
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "EvacuationEvent" ],
+        "eventTypeName" : "EvacuateNotification",
+        "inboundResource" : "services",
+        "inboundResourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "pattern" : "EventStream",
+      "patternVersion" : 1,
+      "uuid" : "205cae75-88d8-4e52-8e12-5e9b27671afc"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency_EvacuateNotification_EventHandler",
+  "writeFrequency" : "5 minutes"
+}

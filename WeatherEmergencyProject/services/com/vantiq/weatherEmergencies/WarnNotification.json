@@ -1,9 +1,0 @@
-{
-  "eventTypes" : {
-    "Initiate" : {
-      "direction" : "INBOUND",
-      "implementingEventPath" : "/types/system.situations/insert"
-    }
-  },
-  "name" : "com.vantiq.weatherEmergencies.WarnNotification"
-}

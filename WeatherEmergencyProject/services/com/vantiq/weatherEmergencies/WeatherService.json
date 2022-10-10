@@ -1,4 +1,6 @@
 {
+  "active" : true,
   "ars_relationships" : [ ],
-  "name" : "com.vantiq.weatherEmergencies.WeatherService"
+  "name" : "com.vantiq.weatherEmergencies.WeatherService",
+  "replicationFactor" : 1
 }

@@ -1,0 +1,70 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "PublishToWeatherEvent" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "WeatherReadings" : {
+          "x" : 0,
+          "y" : 0
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.0795728263020647,
+      "translate" : [ 114.84112910663805, 103.23684420827999 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    }
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "PublishToWeatherEvent" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "WeatherEvents",
+        "parentStreams" : [ "WeatherReadings" ],
+        "service" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "PublishToService",
+      "patternVersion" : 1,
+      "uuid" : "29b6f912-c11c-4b75-8485-f89f15441c9f"
+    },
+    "WeatherReadings" : {
+      "configuration" : {
+        "childStreams" : [ "PublishToWeatherEvent" ],
+        "condition" : "",
+        "inboundResource" : "sources",
+        "inboundResourceId" : "com.vantiq.weatherEmergencies.weather",
+        "parentStreams" : [ ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "pattern" : "EventStream",
+      "patternVersion" : 1,
+      "uuid" : "c5003d19-1374-48a9-8eca-40abdb54042c"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "ForwardSourceEvents"
+}

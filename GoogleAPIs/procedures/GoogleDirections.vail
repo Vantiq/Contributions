@@ -1,4 +1,4 @@
-PROCEDURE GoogleDirections(origin GeoJSON, destination GeoJson)
+PROCEDURE GoogleDirections(origin GeoJSON, destination GeoJSON)
 
 /**
 	Uses GoogleAPI to take origin and detination latitude and longitudes as GeoJSON and 
