@@ -4,8 +4,7 @@
   "controllers" : {
     "client" : { },
     "dataStream" : {
-      "TemperatureWarning" : { },
-      "Weather" : { }
+      "TemperatureWarning" : { }
     },
     "page" : { }
   },
@@ -23,38 +22,25 @@
     "dataStreams" : [ {
       "advancedWhereClause" : null,
       "dataObjectName" : null,
-      "dataTypeList" : [ ],
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "com.vantiq.weatherEmergencies.weatherMessage"
+      } ],
       "isDeleteOp" : false,
       "isInsertOp" : false,
       "isUpdateOp" : false,
-      "maxRecords" : 0,
+      "maxRecords" : 100,
       "name" : "TemperatureWarning",
       "pauseAtStartup" : false,
-      "property" : null,
+      "property" : "",
+      "service" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+      "serviceEventName" : "WarningEvent",
       "sortByProperty" : null,
       "sortDescending" : false,
       "topic" : "/temperature/warning",
-      "type" : 2,
+      "type" : 8,
       "updateInterval" : 60,
       "uuid" : "702dd17a-1d16-4cbc-83e7-89a995a2a07b",
-      "v" : 1
-    }, {
-      "advancedWhereClause" : null,
-      "dataObjectName" : null,
-      "dataTypeList" : [ ],
-      "isDeleteOp" : false,
-      "isInsertOp" : false,
-      "isUpdateOp" : false,
-      "maxRecords" : 0,
-      "name" : "Weather",
-      "pauseAtStartup" : false,
-      "property" : null,
-      "sortByProperty" : null,
-      "sortDescending" : false,
-      "topic" : "/weather/reading",
-      "type" : 2,
-      "updateInterval" : 60,
-      "uuid" : "c9ad463d-b288-4ee5-a23c-001fb78f004c",
       "v" : 1
     } ]
   },
@@ -74,14 +60,30 @@
     },
     "description" : "",
     "docAssets" : [ ],
-    "productV" : "7.7",
+    "productV" : "7.10",
     "showCategoryButtons" : true,
     "showCategoryComponent" : false,
     "showCategoryDataDisplay" : true,
     "showCategoryDataInput" : true,
     "showCategoryLayout" : true,
     "showGridWhileEditing" : false,
-    "theme" : null,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "bgImgPosition" : "center",
+      "bgImgRepeat" : "no-repeat",
+      "bgImgSize" : "auto",
+      "borderColor" : "#05031f",
+      "cardAccentColor" : "#29438a",
+      "cardColor" : "#637ff0",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#29438a",
+      "label" : "Cornflower",
+      "name" : "cornflower",
+      "titleBarColor" : "#637ff0",
+      "titleForegroundColor" : "#ffffff"
+    },
     "themeName" : "cornflower",
     "v" : 5
   },
@@ -91,12 +93,8 @@
       "resourceId" : "/vantiq/systemmodel/ResidentNotificationSystem/submitTopic",
       "type" : "publishes"
     }, {
-      "resource" : "topics",
-      "resourceId" : "/temperature/warning",
-      "type" : "subscribes_to"
-    }, {
-      "resource" : "topics",
-      "resourceId" : "/weather/reading",
+      "resource" : "services",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
       "type" : "subscribes_to"
     } ]
   },

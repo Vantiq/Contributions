@@ -5,8 +5,8 @@
     "dataVersion" : 5,
     "graph" : {
       "lastZoomRequest" : 3,
-      "scale" : 0.6525642976715873,
-      "translate" : [ 186.02678435550143, 22.19228427940952 ]
+      "scale" : 0.7088257107540173,
+      "translate" : [ 186.44323856613101, 29.776217552533993 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -121,14 +121,11 @@
     "runtimeProperties" : [ ],
     "templates" : [ "AppGeneration.generateComponent" ]
   },
-  "currentState" : {
-    "code" : "success"
-  },
   "description" : "test1",
   "disableBadging" : false,
   "entityRoles" : [ ],
   "isComponent" : true,
+  "isEventHandler" : false,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.weatherEmergencies.isDangerousWeather",
-  "resourceBinding" : null
+  "name" : "com.vantiq.weatherEmergencies.isDangerousWeather"
 }

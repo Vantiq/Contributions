@@ -1,0 +1,88 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "Chat" : {
+          "x" : 97.5,
+          "y" : 80
+        },
+        "EventStream" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "WarningEvent" : {
+          "x" : -97.5,
+          "y" : 80
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 2.9333366386577038,
+      "translate" : [ 563.6214602917838, 226.6588776006875 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "filters" : true,
+        "mobile" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : true,
+      "serviceGroupOpenHash" : { }
+    },
+    "paletteWidth" : 180.98,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "Chat" : {
+      "configuration" : {
+        "chatbotSourceName" : null,
+        "imports" : null,
+        "parentStreams" : [ ],
+        "users" : null
+      },
+      "downstreamReferences" : { },
+      "pattern" : "Chat",
+      "patternVersion" : 1,
+      "uuid" : "f372ce12-0226-46f2-931a-84c87a6c7ca3"
+    },
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "WarningEvent" ],
+        "eventTypeName" : "WarnNotification",
+        "inboundResource" : "services",
+        "inboundResourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "pattern" : "EventStream",
+      "patternVersion" : 1,
+      "uuid" : "8ef2c5bb-ef3b-449c-bbb5-1de48c5bc2e1"
+    },
+    "WarningEvent" : {
+      "configuration" : {
+        "eventTypeName" : "WarningEvent",
+        "parentStreams" : [ "EventStream" ],
+        "service" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 1,
+      "uuid" : "217258e3-6e1b-4c7a-86b3-3fecb8094240"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency_WarnNotification_EventHandler",
+  "writeFrequency" : "5 minutes"
+}

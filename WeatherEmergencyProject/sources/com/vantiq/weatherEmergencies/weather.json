@@ -14,7 +14,6 @@
     "serverURIs" : [ "tcp://public.vantiq.com:1883" ],
     "topics" : [ "com.vantiq.mqtt.weather" ]
   },
-  "direction" : "BOTH",
   "messageType" : null,
   "mockProcedures" : { },
   "name" : "com.vantiq.weatherEmergencies.weather",

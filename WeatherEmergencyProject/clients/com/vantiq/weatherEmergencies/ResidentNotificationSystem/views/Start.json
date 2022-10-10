@@ -58,5 +58,7 @@
   "footerChildren" : [ ],
   "hasFooter" : false,
   "layoutType" : "mobile",
+  "responseResource" : "topics",
+  "responseResourceId" : "/vantiq/systemmodel/ResidentNotificationSystem/submitTopic",
   "responseTopic" : "/vantiq/systemmodel/ResidentNotificationSystem/submitTopic"
 }

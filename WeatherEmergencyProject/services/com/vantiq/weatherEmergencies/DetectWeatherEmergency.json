@@ -1,36 +1,39 @@
 {
+  "active" : true,
   "ars_relationships" : [ ],
   "description" : null,
   "eventTypes" : {
+    "EvacuateNotification" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency_EvacuateNotification_EventHandler/EventStream",
+      "isPrivate" : true
+    },
     "EvacuationEvent" : {
       "direction" : "OUTBOUND",
       "eventSchema" : "com.vantiq.weatherEmergencies.weatherMessage",
-      "implementingEventPath" : "/topics//evacuation/event",
       "isReliable" : false
+    },
+    "WarnNotification" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WarnNotification_EventHandler/EventStream",
+      "isPrivate" : true
     },
     "WarningEvent" : {
       "direction" : "OUTBOUND",
       "eventSchema" : "com.vantiq.weatherEmergencies.weatherMessage",
-      "implementingEventPath" : "/topics//warning/event",
       "isReliable" : false
     },
-    "WeatherReadings" : {
+    "WeatherEvents" : {
       "direction" : "INBOUND",
       "eventSchema" : "com.vantiq.weatherEmergencies.weatherReading",
-      "implementingEventPath" : "/sources/com.vantiq.weatherEmergencies.weather"
+      "implementingResource" : "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WeatherEvents_EventHandler/WeatherReadings"
     }
   },
   "globalType" : null,
+  "interface" : [ ],
+  "internalEventHandlers" : [ "/collaborationtypes/ForwardSourceEvents" ],
   "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
   "partitionedType" : null,
-  "resourceBinding" : {
-    "optionalResources" : [ ],
-    "requiredResources" : [ {
-      "resource" : "topics",
-      "resourceId" : "/evacuation/event"
-    }, {
-      "resource" : "topics",
-      "resourceId" : "/warning/event"
-    } ]
-  }
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
 }
