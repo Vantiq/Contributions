@@ -5,7 +5,7 @@
   "eventTypes" : {
     "EvacuateNotification" : {
       "direction" : "INBOUND",
-      "implementingResource" : "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency_EvacuateNotification_EventHandler/EventStream",
+      "implementingResource" : "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency.EvacuateNotification/EventStream",
       "isPrivate" : true
     },
     "EvacuationEvent" : {
@@ -15,7 +15,7 @@
     },
     "WarnNotification" : {
       "direction" : "INBOUND",
-      "implementingResource" : "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WarnNotification_EventHandler/EventStream",
+      "implementingResource" : "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency.WarnNotification/EventStream",
       "isPrivate" : true
     },
     "WarningEvent" : {
@@ -26,7 +26,7 @@
     "WeatherEvents" : {
       "direction" : "INBOUND",
       "eventSchema" : "com.vantiq.weatherEmergencies.weatherReading",
-      "implementingResource" : "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WeatherEvents_EventHandler/WeatherReadings"
+      "implementingResource" : "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency.WeatherEvents/WeatherReadings"
     }
   },
   "globalType" : null,
