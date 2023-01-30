@@ -200,5 +200,5 @@
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency_WeatherEvents_EventHandler"
+  "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.WeatherEvents"
 }

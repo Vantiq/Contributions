@@ -83,6 +83,6 @@
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency_WarnNotification_EventHandler",
+  "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.WarnNotification",
   "writeFrequency" : "5 minutes"
 }
