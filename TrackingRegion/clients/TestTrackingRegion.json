@@ -1,0 +1,468 @@
+{
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : {
+      "com.vantiq.accelerator.ui.DeviceZone__imageDocumentsStream" : { },
+      "com.vantiq.accelerator.ui.setImageURL__imageDocsDS" : { },
+      "com.vantiq.component.ui.BoundaryEditor__imageDocumentsStream" : { },
+      "com.vantiq.component.ui.ConvertCoordinates__imageDocumentsStream" : { },
+      "com.vantiq.component.ui.DirectionDistanceEditor__imageDocumentsStream" : { },
+      "com.vantiq.component.ui.TrackingRegionEditor__imageDocsStream" : { },
+      "com.vantiq.component.ui.setImageURL__imageDocsDS" : { }
+    },
+    "page" : {
+      "Start" : {
+        "onStart" : "RELOCATED to controllers/page/Start/onStart.js",
+        "widgets" : {
+          "trackingBtn" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/trackingBtn/onClick.js"
+          }
+        }
+      },
+      "com_vantiq_component_ui_BoundaryEditor__chgBG" : {
+        "onStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_BoundaryEditor__chgBG/onStart.js",
+        "widgets" : {
+          "com_vantiq_component_ui_BoundaryEditor__chgBGdt" : {
+            "onSelect" : "RELOCATED to controllers/page/com_vantiq_component_ui_BoundaryEditor__chgBG/widgets/com_vantiq_component_ui_BoundaryEditor__chgBGdt/onSelect.js"
+          },
+          "com_vantiq_component_ui_BoundaryEditor__chgBGok" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_BoundaryEditor__chgBG/widgets/com_vantiq_component_ui_BoundaryEditor__chgBGok/onClick.js"
+          },
+          "com_vantiq_component_ui_BoundaryEditor__chgBGupl" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_BoundaryEditor__chgBG/widgets/com_vantiq_component_ui_BoundaryEditor__chgBGupl/onClick.js"
+          }
+        }
+      },
+      "com_vantiq_component_ui_ConvertCoordinates__chgBG" : {
+        "onStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_ConvertCoordinates__chgBG/onStart.js",
+        "widgets" : {
+          "com_vantiq_component_ui_ConvertCoordinates__chgBGdt" : {
+            "onSelect" : "RELOCATED to controllers/page/com_vantiq_component_ui_ConvertCoordinates__chgBG/widgets/com_vantiq_component_ui_ConvertCoordinates__chgBGdt/onSelect.js"
+          },
+          "com_vantiq_component_ui_ConvertCoordinates__chgBGok" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_ConvertCoordinates__chgBG/widgets/com_vantiq_component_ui_ConvertCoordinates__chgBGok/onClick.js"
+          },
+          "com_vantiq_component_ui_ConvertCoordinates__chgBGupl" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_ConvertCoordinates__chgBG/widgets/com_vantiq_component_ui_ConvertCoordinates__chgBGupl/onClick.js"
+          }
+        }
+      },
+      "com_vantiq_component_ui_DirectionDistanceEditor__chgBG" : {
+        "onStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_DirectionDistanceEditor__chgBG/onStart.js",
+        "widgets" : {
+          "com_vantiq_component_ui_DirectionDistanceEditor__chgBGdt" : {
+            "onSelect" : "RELOCATED to controllers/page/com_vantiq_component_ui_DirectionDistanceEditor__chgBG/widgets/com_vantiq_component_ui_DirectionDistanceEditor__chgBGdt/onSelect.js"
+          },
+          "com_vantiq_component_ui_DirectionDistanceEditor__chgBGok" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_DirectionDistanceEditor__chgBG/widgets/com_vantiq_component_ui_DirectionDistanceEditor__chgBGok/onClick.js"
+          },
+          "com_vantiq_component_ui_DirectionDistanceEditor__chgBGupl" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_DirectionDistanceEditor__chgBG/widgets/com_vantiq_component_ui_DirectionDistanceEditor__chgBGupl/onClick.js"
+          }
+        }
+      },
+      "com_vantiq_component_ui_TrackingRegionEditor__boundaryPage" : {
+        "onStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__boundaryPage/onStart.js",
+        "widgets" : {
+          "com_vantiq_component_ui_TrackingRegionEditor__cameraCanvas_15268" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__boundaryPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__cameraCanvas_15268/onClick.js",
+            "onPaint" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__boundaryPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__cameraCanvas_15268/onPaint.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__cameraZoneComp" : {
+            "onComponentStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__boundaryPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__cameraZoneComp/onComponentStart.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__loadImageButton_15268" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__boundaryPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__loadImageButton_15268/onClick.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__zoneToolOKbutton" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__boundaryPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__zoneToolOKbutton/onClick.js"
+          }
+        }
+      },
+      "com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage" : {
+        "onStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/onStart.js",
+        "widgets" : {
+          "com_vantiq_component_ui_TrackingRegionEditor__DL_CoorType_58245" : {
+            "onChange" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__DL_CoorType_58245/onChange.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__clearMarkersBtn_58245" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__clearMarkersBtn_58245/onClick.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__convertCoorChgBgBtn_58245" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__convertCoorChgBgBtn_58245/onClick.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__convertCoorComp" : {
+            "onComponentStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__convertCoorComp/onComponentStart.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__floorZoneCanvas_58245" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__floorZoneCanvas_58245/onClick.js",
+            "onPaint" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__floorZoneCanvas_58245/onPaint.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__okConvertCoorBtn" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__okConvertCoorBtn/onClick.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__targetMap_58245" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__targetMap_58245/onClick.js"
+          }
+        }
+      },
+      "com_vantiq_component_ui_TrackingRegionEditor__directionDistancePage" : {
+        "onStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__directionDistancePage/onStart.js",
+        "widgets" : {
+          "com_vantiq_component_ui_TrackingRegionEditor__changeBGBtn_80286" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__directionDistancePage/widgets/com_vantiq_component_ui_TrackingRegionEditor__changeBGBtn_80286/onClick.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__dirdisBtnCancel" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__directionDistancePage/widgets/com_vantiq_component_ui_TrackingRegionEditor__dirdisBtnCancel/onClick.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__dirdisBtnOK" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__directionDistancePage/widgets/com_vantiq_component_ui_TrackingRegionEditor__dirdisBtnOK/onClick.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__dirdisComp" : {
+            "onComponentStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__directionDistancePage/widgets/com_vantiq_component_ui_TrackingRegionEditor__dirdisComp/onComponentStart.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__imageCanvas_80286" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__directionDistancePage/widgets/com_vantiq_component_ui_TrackingRegionEditor__imageCanvas_80286/onClick.js",
+            "onPaint" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__directionDistancePage/widgets/com_vantiq_component_ui_TrackingRegionEditor__imageCanvas_80286/onPaint.js"
+          }
+        }
+      },
+      "com_vantiq_component_ui_TrackingRegionEditor__selectRegionPage" : {
+        "onStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__selectRegionPage/onStart.js",
+        "widgets" : {
+          "com_vantiq_component_ui_TrackingRegionEditor__Button97690" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__selectRegionPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__Button97690/onClick.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__regionsTable" : {
+            "onSelect" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__selectRegionPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__regionsTable/onSelect.js"
+          }
+        }
+      },
+      "com_vantiq_component_ui_TrackingRegionEditor__showJSONPage" : {
+        "onStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__showJSONPage/onStart.js",
+        "widgets" : {
+          "com_vantiq_component_ui_TrackingRegionEditor__Button90853" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__showJSONPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__Button90853/onClick.js"
+          },
+          "com_vantiq_component_ui_TrackingRegionEditor__Button90932" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__showJSONPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__Button90932/onClick.js"
+          }
+        }
+      },
+      "trackingPage" : {
+        "onStart" : "RELOCATED to controllers/page/trackingPage/onStart.js",
+        "widgets" : {
+          "iconBoundaryTool_15453" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/iconBoundaryTool_15453/onClick.js"
+          },
+          "iconConvestionTool_15453" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/iconConvestionTool_15453/onClick.js"
+          },
+          "iconDirectionTool_15453" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/iconDirectionTool_15453/onClick.js"
+          },
+          "iconDistanceTool_15453" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/iconDistanceTool_15453/onClick.js"
+          },
+          "loadTrackingRegionBtn_15453" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/loadTrackingRegionBtn_15453/onClick.js"
+          },
+          "newTrackingRegionBtn_15453" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/newTrackingRegionBtn_15453/onClick.js"
+          },
+          "regionBoundaryInput_15453" : {
+            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionBoundaryInput_15453/onChange.js"
+          },
+          "regionConversionInput_15453" : {
+            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionConversionInput_15453/onChange.js"
+          },
+          "regionConversionOnly_15453" : {
+            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionConversionOnly_15453/onChange.js"
+          },
+          "regionDirectionInput_15453" : {
+            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionDirectionInput_15453/onChange.js"
+          },
+          "regionDistanceInput_15453" : {
+            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionDistanceInput_15453/onChange.js"
+          },
+          "regionNameInput_15453" : {
+            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionNameInput_15453/onChange.js"
+          },
+          "saveTrackingRegionBtn_15453" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/saveTrackingRegionBtn_15453/onClick.js"
+          },
+          "showValueBtn" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/showValueBtn/onClick.js"
+          },
+          "trackingRegionComp" : {
+            "onComponentStart" : "RELOCATED to controllers/page/trackingPage/widgets/trackingRegionComp/onComponentStart.js"
+          },
+          "viewTrackingRegionBtn_15453" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/viewTrackingRegionBtn_15453/onClick.js"
+          }
+        }
+      }
+    }
+  },
+  "isComponent" : false,
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : "{\n\"fileType\": {\"$regex\": \"^image\"}\n}    \n    \n\n",
+      "componentName" : "com.vantiq.component.ui.BoundaryEditor",
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isAdvancedQuery" : true,
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "com.vantiq.component.ui.BoundaryEditor__imageDocumentsStream",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "5e3c3a4a-302f-4cb4-9e98-5b3bbb232bf6",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "componentName" : "com.vantiq.component.ui.ConvertCoordinates",
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 100,
+      "name" : "com.vantiq.component.ui.ConvertCoordinates__imageDocumentsStream",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "0bcea499-ece7-470a-8067-0f357b963f4e",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "componentName" : "com.vantiq.component.ui.DirectionDistanceEditor",
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 100,
+      "name" : "com.vantiq.component.ui.DirectionDistanceEditor__imageDocumentsStream",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "4d762393-9603-4fa9-8401-c9b7672d72d2",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "componentName" : "com.vantiq.accelerator.ui.setImageURL",
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "com.vantiq.accelerator.ui.setImageURL__imageDocsDS",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "9997c6f4-fc50-4344-9163-37cce4b1127a",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "componentName" : "com.vantiq.accelerator.ui.setImageURL",
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "com.vantiq.accelerator.ui.setImageURL__imageDocsDS",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "d778bb87-b88c-4856-818b-1977ef46c774",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : "{\n\"fileType\": {\"$regex\": \"^image\"}\n}    \n    \n\n",
+      "componentName" : "com.vantiq.accelerator.ui.DeviceZone",
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isAdvancedQuery" : true,
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "com.vantiq.accelerator.ui.DeviceZone__imageDocumentsStream",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "57edf50f-97a7-4a92-80ce-34d7e56860d9",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "componentName" : "com.vantiq.component.ui.setImageURL",
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "com.vantiq.component.ui.setImageURL__imageDocsDS",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "791a2c00-39d8-4450-80f8-abaa218c6f12",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "componentName" : "com.vantiq.component.ui.TrackingRegionEditor",
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "com.vantiq.component.ui.TrackingRegionEditor__imageDocsStream",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "b40cd2a9-c300-4ce6-82ee-4c91448a8eef",
+      "v" : 1
+    } ]
+  },
+  "name" : "TestTrackingRegion",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "edit",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ ]
+    },
+    "defaultGlobalMsgHash" : "{\"@com.vantiq.component.ui.BoundaryEditor__btn.add.zone\":\"Add Zone\",\"@com.vantiq.component.ui.BoundaryEditor__btn.Cancel\":\"Cancel\",\"@com.vantiq.component.ui.BoundaryEditor__btn.change.image\":\"Change Image\",\"@com.vantiq.component.ui.BoundaryEditor__btn.OK\":\"OK\",\"@com.vantiq.component.ui.BoundaryEditor__btn.upload.doc\":\"Upload Document\",\"@com.vantiq.component.ui.BoundaryEditor__error.zone.name.missing\":\"Zone name can not be empty.\",\"@com.vantiq.component.ui.BoundaryEditor__error.zone.name.used\":\"The name '{0}' has already been used, please enter a different zone name.\",\"@com.vantiq.component.ui.BoundaryEditor__error.zone.not.found\":\"The Zone '{0}' could not be found.\",\"@com.vantiq.component.ui.BoundaryEditor__label.genra\":\"Genre:\",\"@com.vantiq.component.ui.BoundaryEditor__label.name\":\"Name:\",\"@com.vantiq.component.ui.BoundaryEditor__label.url\":\"URL:\",\"@com.vantiq.component.ui.BoundaryEditor__text.enter.url.or.choose.doc\":\"Enter an URL above or choose an image document below:\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.add.new.metadata.type\":\"Add New MetadataType\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.add.new.record\":\"Add New Record\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.apply\":\"Apply\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.Cancel\":\"Cancel\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.change.image\":\"Change Image\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.choose.existing.metadata.types\":\"Choose Existing MetadataTypes\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.clear.map\":\"Clear Map\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.create.new\":\"Create New\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.create.view\":\"Create View\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.delete.type\":\"Delete Type\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.OK\":\"OK\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.reset\":\"Reset\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.Save\":\"Save\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.show.all.records\":\"Show All Records\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.update.record\":\"Update Record\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.upload.doc\":\"Upload Document\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.use.metadata.type\":\"Use selected MetadataType\",\"@com.vantiq.component.ui.ConvertCoordinates__error.array.input\":\"Input value for {0} must be an array.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.calling.procedure\":\"Error calling {0} :\",\"@com.vantiq.component.ui.ConvertCoordinates__error.close.polygon\":\"Please define a closed polygon.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.convert.coordinates.need.url\":\"Please specify a url for the view before convert its coordinates.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.device.not.found\":\"Device with id '{0}' not found.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.dimension.need.view.url\":\"View Dimension requires a view with URL defined.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.fetch.type\":\"Unable to fetch type '{0}' from database.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.name.empty\":\"Name can not be empty.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.name.used\":\"The name '{0}' has already been used.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.no.type.defined\":\"No type has been defined for {0}.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.pin.marker\":\"Please pin a marker on the map.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.provide.url\":\"Please provide an URL.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.sensor.already.attached\":\"Selected sensor is already attached to device {0}\",\"@com.vantiq.component.ui.ConvertCoordinates__error.space.need.view.id\":\"Please specify viewId for this Space before editing viewDimension.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.tppe.not.support.convert.coord\":\"Internal Metadata convertCoordinates can only be used by types of View or Device.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.type.instance.not.found\":\"{0} '{1}' not found.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.type.not.supported\":\"Unsupported type: {0}\",\"@com.vantiq.component.ui.ConvertCoordinates__error.upload.file\":\"Upload failed with error: {0}\",\"@com.vantiq.component.ui.ConvertCoordinates__error.view.coordinates.need.space\":\"Please assign an owning space for this device before setting view coordinates.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.view.coordinates.need.url\":\"Please assign an url to view '{0}' before setting view coordinates.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.view.coordinates.need.view\":\"Please assign a view to owner space '\\\" + ownerSpace.name + \\\"' before setting view coordinates.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.view.info.missing\":\"Please provide a view name and URL.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.view.name.used\":\"View with name '{0}' already exist. Please use a different name.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.view.need.type\":\"Please define a View Type before creating a new view.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.zone.name.missing\":\"Zone name can not be empty.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.zone.name.used\":\"The name '{0}' has already been used, please enter a different zone name.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.zone.not.found\":\"The Zone '{0}' could not be found.\",\"@com.vantiq.component.ui.ConvertCoordinates__label.delete.definition.yes\":\"Delete Metadata Type '{0}'\",\"@com.vantiq.component.ui.ConvertCoordinates__label.delete.record.yes\":\"Delete {0}\",\"@com.vantiq.component.ui.ConvertCoordinates__label.delete.type.yes\":\"Delete type {0}\",\"@com.vantiq.component.ui.ConvertCoordinates__label.desc\":\"Description\",\"@com.vantiq.component.ui.ConvertCoordinates__label.device\":\"Device:\",\"@com.vantiq.component.ui.ConvertCoordinates__label.metadata.types\":\"Metadata Types\",\"@com.vantiq.component.ui.ConvertCoordinates__label.Name\":\"Name\",\"@com.vantiq.component.ui.ConvertCoordinates__label.remove.definition.yes\":\"Remove Metadata Type '{0}'\",\"@com.vantiq.component.ui.ConvertCoordinates__label.space\":\"Space:\",\"@com.vantiq.component.ui.ConvertCoordinates__label.Type\":\"Type\",\"@com.vantiq.component.ui.ConvertCoordinates__label.type.name\":\"Type Name:\",\"@com.vantiq.component.ui.ConvertCoordinates__label.view\":\"View:\",\"@com.vantiq.component.ui.ConvertCoordinates__label.view.name\":\"View Name\",\"@com.vantiq.component.ui.ConvertCoordinates__label.view.type\":\"View Type\",\"@com.vantiq.component.ui.ConvertCoordinates__label.view.url\":\"View URL\",\"@com.vantiq.component.ui.ConvertCoordinates__text.assets.intro\":\"Assets represent physical things that are either associated with a space or freeform. Assets have a location within the context of their parent space or in the case of freeform assets have a GPS location. Assets can also be hierarchical and one asset can contain multiple assets. A meeting room could be an asset with chairs, tables etc as child assets.\",\"@com.vantiq.component.ui.ConvertCoordinates__text.delete.definition.confirmation\":\"Metadata Definition is shared by multiple Types.  Are you sure to delete it?\",\"@com.vantiq.component.ui.ConvertCoordinates__text.delete.record.confirmation\":\"Are you sure to delete the {0} named '{1}'?\",\"@com.vantiq.component.ui.ConvertCoordinates__text.delete.type.confirmatiion\":\"Are you sure to delete type {0}?\",\"@com.vantiq.component.ui.ConvertCoordinates__text.devices.intro\":\"A device represents some physical device that is associated with an asset. A meeting room could have an AC unit as a device. Devices also contain sensors as some devices may contain multiple sensors. Devices and Sensors generate events.\",\"@com.vantiq.component.ui.ConvertCoordinates__text.hierarchy.intro\":\"Spatial hierarchy view of your Spaces, Assets and Devices.\\\\nTypes are required before defining the various instance of Spaces, etc as each must be associated with a Type.\",\"@com.vantiq.component.ui.ConvertCoordinates__text.metadatatypes.intro\":\"Metadata Type allows you to define additional properties for a specific Entity Type that you define. For instance you may define a ‘floor’ Space Type and define a ‘Floor Number’ meta data property. Whenever you create a Space of Type ‘floor’ you will have the ability to define the floor number.\",\"@com.vantiq.component.ui.ConvertCoordinates__text.remove.definition.confirmation\":\"There maybe instances of {0} with specified values of {1}.  Are you sure to remove this Metadata Definition from {0}?\",\"@com.vantiq.component.ui.ConvertCoordinates__text.sensors.intro\":\"Devices also have to have sensors, some devices will have multiple sensors. It is becoming more common for a single device to have multiple sensors integrated into it such as a soil device/sensor could have a pH Sensor, a moisture sensor and a light sensor for example. Each sensor will have a fixed reading type and only ever be associated with a single device.\",\"@com.vantiq.component.ui.ConvertCoordinates__text.spaces.intro\":\"A space represents a physical space, the space could be a country, region, building, a floor or area within a floor such as a bathroom. Spaces are hierarchical in nature and therefore a region could contain multiple buildings and each building could contain multiple floors etc.\\\\nSpaces also have an associated View.\",\"@com.vantiq.component.ui.ConvertCoordinates__text.types.intro\":\"The Model is made up of four main entities: Spaces, Assets and Devices and Sensors.\\\\nThere are two other supporting entities: Views and Metadata types.\\\\nEach of the entities have a fixed set of properties. To provide flexibility in terms of defining and adding additional meta data to each of the entities, each entity has a metadata ‘type’. This allows you to define additional properties that will be associated with a specific entity type of Space, Asset etc.\",\"@com.vantiq.component.ui.ConvertCoordinates__text.use.google.map.drawing\":\"User Google map drawing tool to define a polygon on map\",\"@com.vantiq.component.ui.ConvertCoordinates__text.views.intro\":\"Views represent a graphical view of a space, they have an image associated with the spaces and also dimensions. The dimensions are used when a Space is a sub space of a larger space and the dimension represent a polygon within the parent space. It also helps define the coordinate space for a given Space.\",\"@com.vantiq.component.ui.ConvertCoordinates__title.change.image\":\"Choose image\",\"@com.vantiq.component.ui.ConvertCoordinates__title.choose.doc\":\"Choose a document\",\"@com.vantiq.component.ui.ConvertCoordinates__title.create.new.type.instance\":\"Create New {0} Type\",\"@com.vantiq.component.ui.ConvertCoordinates__title.create.new.view\":\"Create New View\",\"@com.vantiq.component.ui.ConvertCoordinates__title.define.asset.location\":\"Define Asset Location\",\"@com.vantiq.component.ui.ConvertCoordinates__title.define.camera.zones\":\"Define Camera Zones\",\"@com.vantiq.component.ui.ConvertCoordinates__title.define.view.dimension\":\"Define View Dimension\",\"@com.vantiq.component.ui.ConvertCoordinates__title.device.convert.coordinates\":\"Convert Device Frame to View Coordinates\",\"@com.vantiq.component.ui.ConvertCoordinates__title.edit.geojson\":\"Edit GeoJSON\",\"@com.vantiq.component.ui.ConvertCoordinates__title.edit.metadata.type\":\"Edit Metadata Type\",\"@com.vantiq.component.ui.ConvertCoordinates__title.edit.record\":\"Edit Record\",\"@com.vantiq.component.ui.ConvertCoordinates__title.view.convert.coordinates\":\"Convert view to GEO Coordinates\",\"@com.vantiq.component.ui.DirectionDistanceEditor__label.direction\":\"Direction:\",\"@com.vantiq.component.ui.DirectionDistanceEditor__label.distance\":\"Distance:\",\"@com.vantiq.component.ui.ConvertCoordinates__label.url\":\"URL:\",\"@com.vantiq.component.ui.ConvertCoordinates__text.enter.url.or.choose.doc\":\"Enter an URL above or choose an image document below:\",\"@com.vantiq.component.ui.DirectionDistanceEditor__btn.change.image\":\"Change Image\",\"@com.vantiq.component.ui.DirectionDistanceEditor__label.url\":\"URL:\",\"@com.vantiq.component.ui.DirectionDistanceEditor__text.enter.url.or.choose.doc\":\"Enter an URL above or choose an image document below:\",\"@com.vantiq.component.ui.DirectionDistanceEditor__btn.upload.doc\":\"Upload Document\",\"@com.vantiq.component.ui.DirectionDistanceEditor__btn.Cancel\":\"Cancel\",\"@com.vantiq.component.ui.DirectionDistanceEditor__btn.OK\":\"OK\",\"@com.vantiq.component.ui.ConvertCoordinates__label.map\":\"Map\",\"@com.vantiq.component.ui.ConvertCoordinates__label.image\":\"Image\",\"@com.vantiq.component.ui.TrackingRegionEditor__btn.add.new.record\":\"Add New Record\",\"@com.vantiq.component.ui.TrackingRegionEditor__btn.apply\":\"Apply\",\"@com.vantiq.component.ui.TrackingRegionEditor__btn.Cancel\":\"Cancel\",\"@com.vantiq.component.ui.TrackingRegionEditor__btn.change.image\":\"Change Image\",\"@com.vantiq.component.ui.TrackingRegionEditor__btn.load\":\"Load\",\"@com.vantiq.component.ui.TrackingRegionEditor__btn.New\":\"New\",\"@com.vantiq.component.ui.TrackingRegionEditor__btn.OK\":\"OK\",\"@com.vantiq.component.ui.TrackingRegionEditor__btn.reset\":\"Reset\",\"@com.vantiq.component.ui.TrackingRegionEditor__btn.Save\":\"Save\",\"@com.vantiq.component.ui.TrackingRegionEditor__btn.upload.doc\":\"Upload Document\",\"@com.vantiq.component.ui.TrackingRegionEditor__btn.View.JSON\":\"View JSON\",\"@com.vantiq.component.ui.TrackingRegionEditor__error.name.empty\":\"Name can not be empty.\",\"@com.vantiq.component.ui.TrackingRegionEditor__error.name.used\":\"The name '{0}' has already been used.\",\"@com.vantiq.component.ui.TrackingRegionEditor__label.boundary\":\"Boundary\",\"@com.vantiq.component.ui.TrackingRegionEditor__label.conversionOnly\":\"ConversionOnly\",\"@com.vantiq.component.ui.TrackingRegionEditor__label.conversionSpecification\":\"ConversionSpecification\",\"@com.vantiq.component.ui.TrackingRegionEditor__label.desc\":\"Description\",\"@com.vantiq.component.ui.TrackingRegionEditor__label.direction\":\"Direction\",\"@com.vantiq.component.ui.TrackingRegionEditor__label.distance\":\"Distance\",\"@com.vantiq.component.ui.TrackingRegionEditor__label.Name\":\"Name\",\"@com.vantiq.component.ui.TrackingRegionEditor__label.view.url\":\"View URL\",\"@com.vantiq.component.ui.TrackingRegionEditor__text.use.google.map.drawing\":\"User Google map drawing tool to define a polygon on map\",\"@com.vantiq.component.ui.TrackingRegionEditor__title.change.image\":\"Choose image\",\"@com.vantiq.component.ui.TrackingRegionEditor__title.choose.doc\":\"Choose a document\",\"@com.vantiq.component.ui.TrackingRegionEditor__title.device.convert.coordinates\":\"Convert Device Frame to View Coordinates\",\"@com.vantiq.component.ui.TrackingRegionEditor__title.edit.geojson\":\"Edit GeoJSON\",\"@com.vantiq.component.ui.TrackingRegionEditor__title.view.convert.coordinates\":\"Convert view to GEO Coordinates\",\"@com.vantiq.component.ui.TrackingRegionEditor__label.select.region\":\"Select a tracking region to edit:\"}",
+    "description" : "Demo client component com.vantiq.component.ui.ConvertCoordinates.",
+    "docAssets" : [ "com.vantiq.component.ui.utils.js", "entranceSample.png", "floorplanSample.png" ],
+    "documentAssetLabels" : [ "", "", "" ],
+    "documentAssets" : [ "../../docs/entranceSample.png", "../../docs/floorplanSample.png", "../../docs/com.vantiq.component.ui.utils.js" ],
+    "jsAssets" : [ {
+      "type" : "text/javascript",
+      "url" : "../../docs/com.vantiq.component.ui.utils.js"
+    } ],
+    "productV" : "7.13",
+    "showCategoryButtons" : true,
+    "showCategoryComponent" : true,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : true,
+    "showCategoryLayout" : false,
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "bgImgPosition" : "center",
+      "bgImgRepeat" : "no-repeat",
+      "bgImgSize" : "auto",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17"
+    },
+    "themeName" : "light",
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "documents",
+      "resourceId" : "com.vantiq.component.ui.utils.js"
+    }, {
+      "resource" : "documents",
+      "resourceId" : "entranceSample.png"
+    }, {
+      "resource" : "documents",
+      "resourceId" : "floorplanSample.png"
+    } ]
+  },
+  "targetDevice" : "all",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json",
+    "com_vantiq_component_ui_BoundaryEditor__chgBG" : "RELOCATED to views/com_vantiq_component_ui_BoundaryEditor__chgBG.json",
+    "com_vantiq_component_ui_ConvertCoordinates__chgBG" : "RELOCATED to views/com_vantiq_component_ui_ConvertCoordinates__chgBG.json",
+    "com_vantiq_component_ui_DirectionDistanceEditor__chgBG" : "RELOCATED to views/com_vantiq_component_ui_DirectionDistanceEditor__chgBG.json",
+    "com_vantiq_component_ui_TrackingRegionEditor__boundaryPage" : "RELOCATED to views/com_vantiq_component_ui_TrackingRegionEditor__boundaryPage.json",
+    "com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage" : "RELOCATED to views/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage.json",
+    "com_vantiq_component_ui_TrackingRegionEditor__directionDistancePage" : "RELOCATED to views/com_vantiq_component_ui_TrackingRegionEditor__directionDistancePage.json",
+    "com_vantiq_component_ui_TrackingRegionEditor__selectRegionPage" : "RELOCATED to views/com_vantiq_component_ui_TrackingRegionEditor__selectRegionPage.json",
+    "com_vantiq_component_ui_TrackingRegionEditor__showJSONPage" : "RELOCATED to views/com_vantiq_component_ui_TrackingRegionEditor__showJSONPage.json",
+    "trackingPage" : "RELOCATED to views/trackingPage.json"
+  }
+}

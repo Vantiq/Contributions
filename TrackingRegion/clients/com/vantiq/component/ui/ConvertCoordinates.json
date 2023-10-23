@@ -1,0 +1,231 @@
+{
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : {
+      "imageDocumentsStream" : { }
+    },
+    "page" : {
+      "Start" : {
+        "widgets" : {
+          "ConvertCoordinates" : {
+            "onComponentStart" : "RELOCATED to controllers/page/Start/widgets/ConvertCoordinates/onComponentStart.js"
+          },
+          "DL_CoorType" : {
+            "onChange" : "RELOCATED to controllers/page/Start/widgets/DL_CoorType/onChange.js"
+          },
+          "clearMarkersBtn" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/clearMarkersBtn/onClick.js"
+          },
+          "convertCoorChgBgBtn" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/convertCoorChgBgBtn/onClick.js"
+          },
+          "floorZoneCanvas" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/floorZoneCanvas/onClick.js",
+            "onPaint" : "RELOCATED to controllers/page/Start/widgets/floorZoneCanvas/onPaint.js"
+          },
+          "targetMap" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/targetMap/onClick.js"
+          }
+        }
+      },
+      "chgBG" : {
+        "onStart" : "RELOCATED to controllers/page/chgBG/onStart.js",
+        "widgets" : {
+          "chgBGdt" : {
+            "onSelect" : "RELOCATED to controllers/page/chgBG/widgets/chgBGdt/onSelect.js"
+          },
+          "chgBGok" : {
+            "onClick" : "RELOCATED to controllers/page/chgBG/widgets/chgBGok/onClick.js"
+          },
+          "chgBGupl" : {
+            "onClick" : "RELOCATED to controllers/page/chgBG/widgets/chgBGupl/onClick.js"
+          }
+        }
+      },
+      "com_vantiq_component_ui_ConvertCoordinates__chgBG" : {
+        "onStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_ConvertCoordinates__chgBG/onStart.js",
+        "widgets" : {
+          "com_vantiq_component_ui_ConvertCoordinates__chgBGdt" : {
+            "onSelect" : "RELOCATED to controllers/page/com_vantiq_component_ui_ConvertCoordinates__chgBG/widgets/com_vantiq_component_ui_ConvertCoordinates__chgBGdt/onSelect.js"
+          },
+          "com_vantiq_component_ui_ConvertCoordinates__chgBGok" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_ConvertCoordinates__chgBG/widgets/com_vantiq_component_ui_ConvertCoordinates__chgBGok/onClick.js"
+          },
+          "com_vantiq_component_ui_ConvertCoordinates__chgBGupl" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_ConvertCoordinates__chgBG/widgets/com_vantiq_component_ui_ConvertCoordinates__chgBGupl/onClick.js"
+          }
+        }
+      }
+    }
+  },
+  "isComponent" : true,
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : {
+          "targetCoorType" : {
+            "defaultLabel" : "targetCoorType",
+            "defaultValue" : "Image",
+            "type" : "String"
+          }
+        }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 100,
+      "name" : "imageDocumentsStream",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "0bcea499-ece7-470a-8067-0f357b963f4e",
+      "v" : 1
+    } ]
+  },
+  "name" : "com.vantiq.component.ui.ConvertCoordinates",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "edit",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ {
+        "defaultValue" : null,
+        "hidden" : true,
+        "propertyLabel" : "convertExpression",
+        "propertyType" : 60,
+        "type" : 1
+      }, {
+        "defaultValue" : "\tvar layoutWidget = client.getComponentWidget(configuration, \"cFrameLayout\");\n    var frameWidth = layoutWidget.trueImageWidth;\n    var frameHeight = layoutWidget.trueImageHeight;\n    var convertExpression = {\n        \n    \timageCoordinates : [\n            {x: 0, y: 0},\n            {x: frameWidth, y: 0},\n            {x: frameWidth, y: frameHeight},\n            {x:0, y: frameHeight}\n    \t]\n    };\n    // convert zonePoints (based on scaled image size) to real image size.\n    var floorplanWidget = client.getComponentWidget(configuration, \"floorplanLayout\");\n    var widthRatio = floorplanWidget.scaledImageWidth / floorplanWidget.trueImageWidth;\n    var heightRadio = floorplanWidget.scaledImageHeight / floorplanWidget.trueImageHeight;\n    var convertedPoints = [];\n    if (client.data.targetCoorType == \"Image\") {\n        for (var i=0; i<floorplanWidget.configuration.zonePoints.length; i++) {\n            convertedPoints.push({\n                x:floorplanWidget.configuration.zonePoints[i].x/widthRatio,\n                y:floorplanWidget.configuration.zonePoints[i].y/heightRadio\n            });\n        }\n    } else {\n        // Map\n        var mapWidget = client.getComponentWidget(configuration, \"targetMap\");\n        var map = mapWidget.map;\n        convertExpression.zoom = map.zoom;\n        var markerArray = map.markers;\n        if (markerArray && (markerArray.length == 4)) {\n            for (var i=0; i<markerArray.length; i++) {\n                var position = markerArray[i].position;\n                convertedPoints.push({\n                    lat: position.lat(),\n                    lon: position.lng()\n                });\n            }\n        }\n    }\n    convertExpression.convertedCoordinates = convertedPoints;\n\n    return convertExpression;",
+        "description" : "Return the convertion expression.",
+        "hidden" : false,
+        "propertyLabel" : "getConvertExperssion",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : "\tconfiguration.isLoadingZones = true;\n    if (expressionObj) {\n        configuration.convertExpression = expressionObj;  \n    }  \n    //console.log(\"loading convertExpression: \"+JSON.stringify(configuration.convertExpression, null, 3));\n    var cameraLayout = client.getComponentWidget(configuration, \"cFrameLayout\");\n    var layoutWidget = client.getComponentWidget(configuration, \"floorplanLayout\");\n    var canvasWidget = client.getComponentWidget(configuration, \"floorZoneCanvas\");\n\n    if (configuration.imageUrl) {\n        cameraLayout.url = configuration.imageUrl;\n    } else {\n        configuration.imageUrl = cameraLayout.url;\n    }\n    if (configuration.convertedUrl) {\n        layoutWidget.url = configuration.convertedUrl;\n    } else {\n        configuration.convertedUrl = layoutWidget.url;\n    }\n\n    var savedPoints = [];\n    if (layoutWidget.configuration.convertExpression ) {\n        savedPoints = layoutWidget.configuration.convertExpression.convertedCoordinates;\n    }\n    client.data.mapSeted = false;\n    if (savedPoints && (savedPoints.length > 0) && (savedPoints[0].lat !== undefined)) {\n        // this is a map coordinates\n        client.data.targetCoorType = \"Map\";  \n        client.getComponentWidget(configuration, \"DL_CoorType\").boundValue = client.data.targetCoorType;\n\n        var mapWidget = client.getComponentWidget(configuration, \"targetMap\");\n        client.getComponentWidget(configuration, \"floorplanLayout\").isVisible = false;\n        client.getComponentWidget(configuration, \"convertCoorChgBgBtn\").isVisible = false;\n        mapWidget.isVisible = true;\n        client.getComponentWidget(configuration, \"mapIntroText\").isVisible = false;\n        client.getComponentWidget(configuration, \"clearMarkersBtn\").isVisible = true;\n        var map = mapWidget.map;\n        if (configuration.zoom) {\n            map.zoom = configuration.zoom;\n        }\n        // load markers to Map\n        var bounds = new google.maps.LatLngBounds();        \n        map.markers = [];\n        var markerArray = [];\n        var labelsArray = [\"A\", \"B\", \"C\", \"D\"];\n        for (var i = 0; i < savedPoints.length; i++) {\n            var marker = new google.maps.Marker({\n                position: { lat: savedPoints[i].lat, lng: savedPoints[i].lon },\n                label: labelsArray[i],\n                map: map,\n                draggable:true\n            });\n            markerArray.push(marker);\n            bounds.extend(marker.position);\n        }\n        map.markers = markerArray;\n        map.fitBounds(bounds);\n        client.data.mapSeted = true;\n    } else {\n        client.data.targetCoorType = \"Image\";     \n        var mapWidget = client.getComponentWidget(configuration, \"targetMap\");\n        client.getComponentWidget(configuration, \"floorplanLayout\").isVisible = true;\n        client.getComponentWidget(configuration, \"convertCoorChgBgBtn\").isVisible = true;\n        mapWidget.isVisible = false;\n        client.getComponentWidget(configuration, \"mapIntroText\").isVisible = false;\n        client.getComponentWidget(configuration, \"clearMarkersBtn\").isVisible = false;  \n        client.setTimeout(function() {\n            com.vantiq.component.ui.resizeToNewBackground(client, layoutWidget, canvasWidget, 1,\n                function(client) {\n                    if (client.data.targetCoorType == \"Image\") {\n                        // calcuate the zone points based on scaled image\n                        var widthRatio = layoutWidget.scaledImageWidth / layoutWidget.trueImageWidth;\n                        var heightRadio = layoutWidget.scaledImageHeight / layoutWidget.trueImageHeight;\n\n                        var zonePoints = [];\n                        var savedPoints = [];\n                        if (layoutWidget.configuration.convertExpression ) {\n                            savedPoints = layoutWidget.configuration.convertExpression.convertedCoordinates;\n                        }\n                        if (!savedPoints || (savedPoints.length < 3)) {\n                            client.data.targetCoorType = \"Image\";\n                            // create a default zone at the enter of view\n                            var zoneWidth = layoutWidget.scaledImageWidth/4;\n                            var zoneHeight = layoutWidget.scaledImageHeight/4;\n                            var x = layoutWidget.scaledImageWidth/2 - zoneWidth/2;\n                            var y =  layoutWidget.scaledImageHeight/2 - zoneHeight/2;\n                            zonePoints.push({x: x, y: y});\n                            zonePoints.push({x: x + zoneWidth, y: y});\n                            zonePoints.push({x: x + zoneWidth, y: y + zoneHeight});\n                            zonePoints.push({x: x, y: y + zoneHeight});\n\n                            layoutWidget.configuration.zonePoints = zonePoints;                    \n                        } else {\n                            if (savedPoints[0].x !== undefined) {\n                                // convert region points into the scalled image coord\n                                for (var i = 0; i < savedPoints.length; i++) {\n                                    zonePoints.push({\n                                        x: savedPoints[i].x * widthRatio,\n                                        y: savedPoints[i].y * heightRadio\n                                    });\n                                }\n                            }\n                        }            \n\n                        // display the zone.\n                        layoutWidget.configuration.zonePoints = zonePoints;\n                        canvasWidget.repaint();\n                        layoutWidget.configuration.setupDnD();\n                    }                \n            });                       \n        }, 200);\n    }\n\n\n        \n",
+        "description" : "Display the given conversion expression in this component.",
+        "functionParameters" : [ "expressionObj" ],
+        "hidden" : false,
+        "propertyLabel" : "loadConvertExpression",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : null,
+        "description" : "URL of image used by boundary, distance and direction.",
+        "hidden" : false,
+        "propertyLabel" : "imageUrl",
+        "propertyType" : 50,
+        "type" : 1
+      }, {
+        "defaultValue" : null,
+        "description" : "URL of the image used for converted coordinates.",
+        "hidden" : false,
+        "propertyLabel" : "convertedUrl",
+        "propertyType" : 50,
+        "type" : 1
+      }, {
+        "defaultValue" : null,
+        "hidden" : true,
+        "propertyLabel" : "zonePoints",
+        "propertyType" : 60,
+        "type" : 1
+      }, {
+        "defaultValue" : false,
+        "hidden" : true,
+        "propertyLabel" : "isLoadingZones",
+        "propertyType" : 4,
+        "type" : 1
+      }, {
+        "defaultValue" : "    var layoutWidget = client.getComponentWidget(configuration, \"floorplanLayout\");\n    var canvasWidget = client.getComponentWidget(configuration, \"floorZoneCanvas\");\n\n    //console.log(\"setup drag & drop in convertCoordinatesPage for the first time.\");\n    var nativeCanvas = document.getElementById(canvasWidget.name).children[0];\n    nativeCanvas.addEventListener('mousedown', function(e) {\n        // check if clicked on one of the boundary points\n        layoutWidget.configuration.draggingPointIndex = -1;\n        for (var i = 0; i < layoutWidget.configuration.zonePoints.length; i++) {\n            var p = layoutWidget.configuration.zonePoints[i];\n            // calculate the distance between mouse click to point center\n            if (com.vantiq.component.ui.isClickedOnDNDPoint(nativeCanvas, p, e)) {\n                // start dragging\n                layoutWidget.configuration.draggingPointIndex = i;\n                p.x = e.offsetX;\n                p.y = e.offsetY;\n                canvasWidget.repaint();\n                break;\n            }\n        }\n    });\n    nativeCanvas.addEventListener('mousemove', function(e) {\n        if ((e.offsetX < 1) || (e.offsetX > (layoutWidget.scaledImageWidth-1)) ||\n            (e.offsetY < 1) || (e.offsetY > (layoutWidget.scaledImageHeight-1))) {\n            // stop the drag&drop after touching the edge of background image.\n            layoutWidget.configuration.draggingPointIndex = -1;\n        } else if (layoutWidget.configuration.draggingPointIndex >= 0) {\n            var p = layoutWidget.configuration.zonePoints[layoutWidget.configuration.draggingPointIndex];\n            // update the point and redraw\n            p.x = e.offsetX;\n            p.y = e.offsetY;\n            canvasWidget.repaint();\n        }\n    });\n    nativeCanvas.addEventListener('mouseup', function(e) {\n        layoutWidget.configuration.draggingPointIndex = -1;\n    });   \n",
+        "hidden" : true,
+        "propertyLabel" : "setupDnD",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : 6,
+        "hidden" : false,
+        "propertyLabel" : "zoom",
+        "propertyType" : 37,
+        "type" : 1
+      } ],
+      "originalWidgetName" : "ConvertCoordinates"
+    },
+    "defaultGlobalMsgHash" : "{\"@btn.apply\":\"Apply\",\"@btn.Cancel\":\"Cancel\",\"@btn.change.image\":\"Change Image\",\"@btn.OK\":\"OK\",\"@btn.reset\":\"Reset\",\"@btn.Save\":\"Save\",\"@btn.upload.doc\":\"Upload Document\",\"@error.convert.coordinates.need.url\":\"Please specify a url for the view before convert its coordinates.\",\"@error.name.empty\":\"Name can not be empty.\",\"@error.name.used\":\"The name '{0}' has already been used.\",\"@error.provide.url\":\"Please provide an URL.\",\"@label.map\":\"Map\",\"@label.image\":\"Image\",\"@label.Name\":\"Name\",\"@label.url\":\"URL:\",\"@text.enter.url.or.choose.doc\":\"Enter an URL above or choose an image document below:\",\"@title.change.image\":\"Choose image\",\"@title.choose.doc\":\"Choose a document\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.apply\":\"Apply\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.Cancel\":\"Cancel\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.change.image\":\"Change Image\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.OK\":\"OK\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.reset\":\"Reset\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.Save\":\"Save\",\"@com.vantiq.component.ui.ConvertCoordinates__btn.upload.doc\":\"Upload Document\",\"@com.vantiq.component.ui.ConvertCoordinates__error.convert.coordinates.need.url\":\"Please specify a url for the view before convert its coordinates.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.name.empty\":\"Name can not be empty.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.name.used\":\"The name '{0}' has already been used.\",\"@com.vantiq.component.ui.ConvertCoordinates__error.provide.url\":\"Please provide an URL.\",\"@com.vantiq.component.ui.ConvertCoordinates__label.map\":\"Map\",\"@com.vantiq.component.ui.ConvertCoordinates__label.image\":\"Image\",\"@com.vantiq.component.ui.ConvertCoordinates__label.Name\":\"Name\",\"@com.vantiq.component.ui.ConvertCoordinates__label.url\":\"URL:\",\"@com.vantiq.component.ui.ConvertCoordinates__text.enter.url.or.choose.doc\":\"Enter an URL above or choose an image document below:\",\"@com.vantiq.component.ui.ConvertCoordinates__title.change.image\":\"Choose image\",\"@com.vantiq.component.ui.ConvertCoordinates__title.choose.doc\":\"Choose a document\"}",
+    "description" : "",
+    "docAssets" : [ "com.vantiq.component.ui.utils.js", "entranceSample.png", "floorplanSample.png" ],
+    "documentAssetLabels" : [ "", "", "" ],
+    "documentAssets" : [ "../../docs/entranceSample.png", "../../docs/floorplanSample.png", "../../docs/com.vantiq.component.ui.utils.js" ],
+    "jsAssets" : [ {
+      "type" : "text/javascript",
+      "url" : "../../docs/com.vantiq.component.ui.utils.js"
+    } ],
+    "productV" : "7.13",
+    "showCategoryButtons" : true,
+    "showCategoryComponent" : true,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : true,
+    "showCategoryLayout" : true,
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "bgImgPosition" : "center",
+      "bgImgRepeat" : "no-repeat",
+      "bgImgSize" : "auto",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17"
+    },
+    "themeName" : "light",
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "documents",
+      "resourceId" : "com.vantiq.component.ui.utils.js"
+    }, {
+      "resource" : "documents",
+      "resourceId" : "entranceSample.png"
+    }, {
+      "resource" : "documents",
+      "resourceId" : "floorplanSample.png"
+    } ]
+  },
+  "targetDevice" : "browser",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json",
+    "chgBG" : "RELOCATED to views/chgBG.json",
+    "com_vantiq_component_ui_ConvertCoordinates__chgBG" : "RELOCATED to views/com_vantiq_component_ui_ConvertCoordinates__chgBG.json"
+  }
+}

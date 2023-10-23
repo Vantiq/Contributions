@@ -1,0 +1,190 @@
+{
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : {
+      "imageDocumentsStream" : { }
+    },
+    "page" : {
+      "Start" : {
+        "widgets" : {
+          "DirectionDistanceEditor" : {
+            "onComponentStart" : "RELOCATED to controllers/page/Start/widgets/DirectionDistanceEditor/onComponentStart.js"
+          },
+          "changeBGBtn" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/changeBGBtn/onClick.js"
+          },
+          "imageCanvas" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/imageCanvas/onClick.js",
+            "onPaint" : "RELOCATED to controllers/page/Start/widgets/imageCanvas/onPaint.js"
+          }
+        }
+      },
+      "chgBG" : {
+        "onStart" : "RELOCATED to controllers/page/chgBG/onStart.js",
+        "widgets" : {
+          "chgBGdt" : {
+            "onSelect" : "RELOCATED to controllers/page/chgBG/widgets/chgBGdt/onSelect.js"
+          },
+          "chgBGok" : {
+            "onClick" : "RELOCATED to controllers/page/chgBG/widgets/chgBGok/onClick.js"
+          },
+          "chgBGupl" : {
+            "onClick" : "RELOCATED to controllers/page/chgBG/widgets/chgBGupl/onClick.js"
+          }
+        }
+      }
+    }
+  },
+  "isComponent" : true,
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : {
+          "currentUrl" : {
+            "defaultLabel" : "currentUrl",
+            "defaultValue" : "",
+            "type" : "String"
+          }
+        }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 100,
+      "name" : "imageDocumentsStream",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "4d762393-9603-4fa9-8401-c9b7672d72d2",
+      "v" : 1
+    } ]
+  },
+  "name" : "com.vantiq.component.ui.DirectionDistanceEditor",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "edit",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ {
+        "defaultValue" : null,
+        "hidden" : true,
+        "propertyLabel" : "editingObject",
+        "propertyType" : 60,
+        "type" : 1
+      }, {
+        "defaultValue" : "distance",
+        "description" : "possible values are \"distance\" and \"direction\".",
+        "hidden" : true,
+        "propertyLabel" : "objectType",
+        "propertyType" : 50,
+        "type" : 1
+      }, {
+        "defaultValue" : null,
+        "hidden" : false,
+        "propertyLabel" : "imageUrl",
+        "propertyType" : 50,
+        "type" : 1
+      }, {
+        "defaultValue" : [ ],
+        "hidden" : true,
+        "propertyLabel" : "zonePoints",
+        "propertyType" : 60,
+        "type" : 1
+      }, {
+        "defaultValue" : "    configuration.editingObject = obj;\n    configuration.isLoadingZones = true;\n\n    var cameraLayout = client.getComponentWidget(configuration, \"imageLayout\");\n    var cameraCanvas = client.getComponentWidget(configuration, \"imageCanvas\");\n\n    if (configuration.imageUrl) {\n        // use the user defined url\n        cameraLayout.url = configuration.imageUrl;\n    }\n\n    configuration.objectType = \"distance\";\n    var labelWidget = client.getComponentWidget(configuration, \"valueLabel\");\n    labelWidget.text = client.formatMsg(\"@label.distance\");\n    var inputWidget = client.getComponentWidget(configuration, \"valueInput\");\n    if (cameraLayout.configuration.editingObject.direction !== undefined) {\n        configuration.objectType = \"direction\";\n        labelWidget.text = client.formatMsg(\"@label.direction\");\n        inputWidget.boundValue = cameraLayout.configuration.editingObject.direction;\n    } else if (cameraLayout.configuration.editingObject.distance) {\n        inputWidget.boundValue = cameraLayout.configuration.editingObject.distance;\n    }\n    // In order to get background image size  of the CameraLayout, need to have a timeout.\n    client.setTimeout(function()\n    {\n        // Resize the canvas to match the image.\n        var widthRatio = cameraLayout.scaledImageWidth/cameraLayout.trueImageWidth;\n        var heightRadio = cameraLayout.scaledImageHeight/cameraLayout.trueImageHeight;\n\n        cameraCanvas.w = Math.min(cameraLayout.w, cameraLayout.scaledImageWidth);\n        cameraCanvas.h = Math.min(cameraLayout.h, cameraLayout.scaledImageHeight);\n\n        cameraLayout.configuration.zonePoints = [];\n        if (!cameraLayout.configuration.editingObject.points || (cameraLayout.configuration.editingObject.points.length == 0)) {\n            // create a default line\n            var w = cameraLayout.trueImageWidth || 200;\n            var h = cameraLayout.trueImageHeight || 200;\n            var x = w/4;\n            var y = h/2;\n            var zoneWidth = w/2;\n\n            // create a resion with 4 corer points.\n            cameraLayout.configuration.editingObject.points = [{x: x, y: y},\n                {x:x+zoneWidth, y:y}\n            ];\n\n            if (configuration.objectType == \"direction\") {\n                inputWidget.boundValue = 0; // 0 degree for horizontal line\n            } else {\n                inputWidget.boundValue = zoneWidth; // use pixels for default.\n            }\n        }\n        // conver to zonePoints for display\n        cameraLayout.configuration.zonePoints = [];\n\n        // convert region points into the scaled image coordinates\n        for (var i = 0; i < cameraLayout.configuration.editingObject.points.length; i++) {\n            cameraLayout.configuration.zonePoints.push({\n                x: cameraLayout.configuration.editingObject.points[i].x * widthRatio,\n                y: cameraLayout.configuration.editingObject.points[i].y * heightRadio\n            });\n        }\n        // display the line\n        cameraCanvas.repaint();\n\n        // Setup Drag&Drop\n        var nativeCanvas = document.getElementById(cameraCanvas.name).children[0];\n\n        nativeCanvas.addEventListener('mousedown', function(e) {\n            console.log(\"mouse down on canvas\");\n            // check if clicked on one of the boundary points\n            cameraLayout.configuration.draggingPointIndex = -1;\n            for (var i = 0; i < cameraLayout.configuration.zonePoints.length; i++) {\n                var p = cameraLayout.configuration.zonePoints[i];\n                // calculate the distance between mouse click to point center\n                if (com.vantiq.component.ui.isClickedOnDNDPoint(nativeCanvas, p, e)) {\n                    // start dragging\n                    cameraLayout.configuration.draggingPointIndex = i;\n                    p.x = e.offsetX;\n                    p.y = e.offsetY;\n                    cameraCanvas.repaint();\n                    break;\n                }\n            }\n        });\n        nativeCanvas.addEventListener('mousemove', function(e) {\n            if ((e.offsetX < 1) || (e.offsetX > (cameraLayout.scaledImageWidth-1)) ||\n                (e.offsetY < 1) || (e.offsetY > (cameraLayout.scaledImageHeight-1))) {\n                // stop the drag&drop after touching the edge of background image.\n                cameraLayout.configuration.draggingPointIndex = -1;\n            } else if (cameraLayout.configuration.draggingPointIndex >=0 ) {\n                var p = cameraLayout.configuration.zonePoints[cameraLayout.configuration.draggingPointIndex];\n                // update the point and redraw\n                p.x = e.offsetX;\n                p.y = e.offsetY;\n                cameraCanvas.repaint();\n            }\n        });\n        nativeCanvas.addEventListener('mouseup', function(e) {\n            cameraLayout.configuration.draggingPointIndex = -1;\n        });   \n       \n        cameraLayout.configuration.isLoadingZones = false;\n    },500);    \n    ",
+        "functionParameters" : [ "obj" ],
+        "hidden" : false,
+        "propertyLabel" : "loadObject",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : "    var cameraLayout = client.getComponentWidget(configuration, \"imageLayout\");\n    var inputWidget = client.getComponentWidget(configuration, \"valueInput\");    \n    var widthRatio = cameraLayout.scaledImageWidth/cameraLayout.trueImageWidth;\n    var heightRadio = cameraLayout.scaledImageHeight/cameraLayout.trueImageHeight;\n    var savedPoints = [];\n    for (var i = 0; i < configuration.zonePoints.length; i++) {\n        savedPoints.push({\n            x: configuration.zonePoints[i].x / widthRatio,\n            y: configuration.zonePoints[i].y / heightRadio\n        });\n    }\n    configuration.editingObject.points = savedPoints;\n\n    if (configuration.objectType == \"direction\") {\n        configuration.editingObject.direction = inputWidget.boundValue;\n    } else {\n        // distance\n        configuration.editingObject.distance = inputWidget.boundValue;\n        if (!configuration.editingObject.distance || (configuration.editingObject.distance <0)) {\n            client.errorDialog(\"Distance must be a positive number.\");\n            return null;\n        }\n    }\n    return configuration.editingObject;",
+        "description" : "Return the editing object if input is valid. Return null if error found in dialog.",
+        "hidden" : false,
+        "propertyLabel" : "getObject",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : -1,
+        "hidden" : true,
+        "propertyLabel" : "draggingPointIndex",
+        "propertyType" : 37,
+        "type" : 1
+      } ],
+      "originalWidgetName" : "DirectionDistanceEditor"
+    },
+    "defaultGlobalMsgHash" : "{\"@btn.change.image\":\"Change Image\",\"@label.direction\":\"Direction:\",\"@label.distance\":\"Distance:\",\"@label.url\":\"URL:\",\"@text.enter.url.or.choose.doc\":\"Enter an URL above or choose an image document below:\",\"@btn.upload.doc\":\"Upload Document\",\"@btn.Cancel\":\"Cancel\",\"@btn.OK\":\"OK\"}",
+    "description" : "",
+    "docAssets" : [ "com.vantiq.component.ui.utils.js", "entranceSample.png" ],
+    "documentAssetLabels" : [ "" ],
+    "documentAssets" : [ "../../docs/entranceSample.png" ],
+    "jsAssets" : [ {
+      "type" : "text/javascript",
+      "url" : "../../docs/com.vantiq.component.ui.utils.js"
+    } ],
+    "productV" : "7.13",
+    "showCategoryButtons" : true,
+    "showCategoryComponent" : false,
+    "showCategoryDataDisplay" : false,
+    "showCategoryDataInput" : true,
+    "showCategoryLayout" : true,
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "bgImgPosition" : "center",
+      "bgImgRepeat" : "no-repeat",
+      "bgImgSize" : "auto",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17"
+    },
+    "themeName" : "light",
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "documents",
+      "resourceId" : "com.vantiq.component.ui.utils.js"
+    }, {
+      "resource" : "documents",
+      "resourceId" : "entranceSample.png"
+    } ]
+  },
+  "targetDevice" : "browser",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json",
+    "chgBG" : "RELOCATED to views/chgBG.json"
+  }
+}
