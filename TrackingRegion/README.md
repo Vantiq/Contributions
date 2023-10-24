@@ -27,4 +27,5 @@ first point to the second represents.
 
 ### Using the Tracking Region Editor ###
 You can run com.vantiq.component.ui.TrackingRegionEditor as a normal Client to create/edit/view tracking regions.
-You can also embed the editor as a component to your Client. See TestTrackingRegion as an example. The TrackingRegionEditor component's toolbar buttons are hidden by setting its hideToolbar property to true.
+
+You can also embed the editor as a component to your Client. See _TestTrackingRegion_ as an example. The TrackingRegionEditor component's toolbar buttons are hidden by setting its _hideToolbar_ property to `true`.
