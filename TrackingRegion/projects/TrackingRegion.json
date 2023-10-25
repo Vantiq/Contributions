@@ -1,0 +1,190 @@
+{
+  "ars_relationships" : [ ],
+  "links" : [ {
+    "source" : "client/TestTrackingRegion",
+    "target" : "document/com.vantiq.component.ui.utils.js"
+  }, {
+    "source" : "client/TestTrackingRegion",
+    "target" : "document/entranceSample.png"
+  }, {
+    "source" : "client/TestTrackingRegion",
+    "target" : "document/floorplanSample.png"
+  }, {
+    "source" : "client/com.vantiq.component.ui.BoundaryEditor",
+    "target" : "document/com.vantiq.component.ui.utils.js"
+  }, {
+    "source" : "client/com.vantiq.component.ui.BoundaryEditor",
+    "target" : "document/entranceSample.png"
+  }, {
+    "source" : "client/com.vantiq.component.ui.BoundaryEditor",
+    "target" : "document/floorplanSample.png"
+  }, {
+    "source" : "client/com.vantiq.component.ui.BoundaryEditor",
+    "target" : "topic//my/response/topic"
+  }, {
+    "source" : "client/com.vantiq.component.ui.ConvertCoordinates",
+    "target" : "document/com.vantiq.component.ui.utils.js"
+  }, {
+    "source" : "client/com.vantiq.component.ui.ConvertCoordinates",
+    "target" : "document/entranceSample.png"
+  }, {
+    "source" : "client/com.vantiq.component.ui.ConvertCoordinates",
+    "target" : "document/floorplanSample.png"
+  }, {
+    "source" : "client/com.vantiq.component.ui.DirectionDistanceEditor",
+    "target" : "document/com.vantiq.component.ui.utils.js"
+  }, {
+    "source" : "client/com.vantiq.component.ui.DirectionDistanceEditor",
+    "target" : "document/entranceSample.png"
+  }, {
+    "source" : "client/com.vantiq.component.ui.TrackingRegionEditor",
+    "target" : "document/com.vantiq.component.ui.utils.js"
+  }, {
+    "source" : "client/com.vantiq.component.ui.TrackingRegionEditor",
+    "target" : "document/entranceSample.png"
+  }, {
+    "source" : "client/com.vantiq.component.ui.TrackingRegionEditor",
+    "target" : "document/floorplanSample.png"
+  } ],
+  "name" : "TrackingRegion",
+  "options" : {
+    "description" : "This project  contains 4 client components that provides a grapical interface for editing a Tracking Region.\n\n### About Tracking Region ###\nA tracking region represents a named area in a coordinate space.\nTracking regions have the following properties:\n\n* **name** -- this is the name of the tracking region.\n* **boundary** -- this is an Object that contains a list of (at most 4) points that comprise the boundary of the region.\n* **distance** -- this is an Object containing the following properties:\n    * **points** -- a list of two points\n    * **distance** -- the distance between these two points\n* **direction** -- this is an Object containing the following properties\n    * **points** -- a list of two points\n    * **direction** -- the direction (compass degrees between 0 and 360) that movement from the\nfirst point to the second represents.\n* **conversionOnly** -- a boolean \n* **conversionSpecification** -- this is an Object defines the conversion between 2 coordinates. It containing the following properties\n    * **imageCoordinates** -- A set of 4 points in input coordinates with are 4 corners of image used by **boundary**, **distance**, and **direction**.\n    * **convertedCoordinates** -- A set of 4 points converted from 4 points of **imageCoordinates\" on the output coordinates.  Output coordinates can be a set of latitude and longitude coordinates on a map.\n\n### Client Components: ###\n* **com.vantiq.component.ui.BoundaryEditor** - An editor for specifying boundary (an array of 4 points) over an selected image.\n\n![Boundary Editor](docs/boundary_editor.JPG)\n\n* **com.vantiq.component.ui.DirectionDistanceEditor** - An editor for editing \"distance\" or \"direction\" property of a TrackingRegion.\n\n![Distance/Direction Editor](docs/distance_editor.JPG)\n* **com.vantiq.component.ui.ConvertCoordinates** - An editor for editing \"convertionSepcification\" property of a TrackingRegion.\n\n![ConvertCoordinates Editor](docs/convert_editor.JPG)\n\n* **com.vantiq.component.ui.TrackingRegionEditor** - A Client component to create/view/edit a tracking region. It use above three client components to edit its properties.  \n\n\n![TrackingRegion Editor](docs/region_editor.JPG)\n\n### Using the Tracking Region Editor ###\nYou can run com.vantiq.component.ui.TrackingRegionEditor as a normal Client to create/edit/view tracking regions.\n\nYou can also embed the editor as a component to your Client. See _TestTrackingRegion_ as an example. The TrackingRegionEditor component's toolbar buttons are hidden by setting its _hideToolbar_ property to `true`.",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 311,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
+    "exclusionList" : [ "client/mapTest" ],
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "flex",
+    "openFolders" : [ "client", "com.vantiq.component.ui", "com.vantiq.component.ui/client" ],
+    "rootViewFlavor" : 5,
+    "showGrid" : true,
+    "structure" : {
+      "fraction" : 1,
+      "type" : "R[1]"
+    },
+    "type" : "dev",
+    "v" : 5,
+    "viewUUID" : "MAINVIEW"
+  },
+  "partitions" : [ ],
+  "resources" : [ {
+    "label" : "/my/response/topic",
+    "name" : "/my/response/topic",
+    "resourceReference" : "/topics//my/response/topic",
+    "type" : 10
+  }, {
+    "label" : "TestTrackingRegion",
+    "name" : "TestTrackingRegion",
+    "resourceReference" : "/system.clients/TestTrackingRegion",
+    "timestamp" : "2023-10-25T17:37:07.959Z",
+    "type" : 15
+  }, {
+    "label" : "boundary_editor.JPG",
+    "name" : "boundary_editor.JPG",
+    "resourceReference" : "/documents/boundary_editor.JPG",
+    "timestamp" : "2023-10-25T17:37:08.094Z",
+    "type" : 19
+  }, {
+    "label" : "com.vantiq.component.ui.BoundaryEditor",
+    "name" : "com.vantiq.component.ui.BoundaryEditor",
+    "resourceReference" : "/system.clients/com.vantiq.component.ui.BoundaryEditor",
+    "timestamp" : "2023-10-25T17:37:07.955Z",
+    "type" : 15
+  }, {
+    "label" : "com.vantiq.component.ui.ConvertCoordinates",
+    "name" : "com.vantiq.component.ui.ConvertCoordinates",
+    "resourceReference" : "/system.clients/com.vantiq.component.ui.ConvertCoordinates",
+    "timestamp" : "2023-10-25T17:37:07.924Z",
+    "type" : 15
+  }, {
+    "label" : "com.vantiq.component.ui.DirectionDistanceEditor",
+    "name" : "com.vantiq.component.ui.DirectionDistanceEditor",
+    "resourceReference" : "/system.clients/com.vantiq.component.ui.DirectionDistanceEditor",
+    "timestamp" : "2023-10-25T17:37:07.924Z",
+    "type" : 15
+  }, {
+    "label" : "com.vantiq.component.ui.TrackingRegionEditor",
+    "name" : "com.vantiq.component.ui.TrackingRegionEditor",
+    "resourceReference" : "/system.clients/com.vantiq.component.ui.TrackingRegionEditor",
+    "timestamp" : "2023-10-25T17:37:07.930Z",
+    "type" : 15
+  }, {
+    "label" : "com.vantiq.component.ui.utils.js",
+    "name" : "com.vantiq.component.ui.utils.js",
+    "resourceReference" : "/documents/com.vantiq.component.ui.utils.js",
+    "timestamp" : "2023-10-25T17:37:08.071Z",
+    "type" : 19
+  }, {
+    "label" : "convert_editor.JPG",
+    "name" : "convert_editor.JPG",
+    "resourceReference" : "/documents/convert_editor.JPG",
+    "timestamp" : "2023-10-25T17:37:08.093Z",
+    "type" : 19
+  }, {
+    "label" : "distance_editor.JPG",
+    "name" : "distance_editor.JPG",
+    "resourceReference" : "/documents/distance_editor.JPG",
+    "timestamp" : "2023-10-25T17:37:08.118Z",
+    "type" : 19
+  }, {
+    "label" : "entranceSample.png",
+    "name" : "entranceSample.png",
+    "resourceReference" : "/documents/entranceSample.png",
+    "timestamp" : "2023-10-25T17:37:08.241Z",
+    "type" : 19
+  }, {
+    "label" : "floorplanSample.png",
+    "name" : "floorplanSample.png",
+    "resourceReference" : "/documents/floorplanSample.png",
+    "timestamp" : "2023-10-25T17:37:08.129Z",
+    "type" : 19
+  }, {
+    "label" : "region_editor.JPG",
+    "name" : "region_editor.JPG",
+    "resourceReference" : "/documents/region_editor.JPG",
+    "timestamp" : "2023-10-25T17:37:08.195Z",
+    "type" : 19
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "address" : "R[0]",
+      "isActive" : true,
+      "isActiveTool" : true
+    },
+    "state" : 8,
+    "type" : 82
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description" ]
+  } ]
+}

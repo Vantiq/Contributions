@@ -1,0 +1,216 @@
+{
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : {
+      "com.vantiq.accelerator.ui.setImageURL__imageDocsDS" : { },
+      "imageDocumentsStream" : { }
+    },
+    "page" : {
+      "Start" : {
+        "widgets" : {
+          "DeviceZone" : {
+            "onComponentStart" : "RELOCATED to controllers/page/Start/widgets/DeviceZone/onComponentStart.js"
+          },
+          "cameraCanvas" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/cameraCanvas/onClick.js",
+            "onPaint" : "RELOCATED to controllers/page/Start/widgets/cameraCanvas/onPaint.js"
+          },
+          "loadImageButton" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/loadImageButton/onClick.js"
+          }
+        }
+      },
+      "chgBG" : {
+        "onStart" : "RELOCATED to controllers/page/chgBG/onStart.js",
+        "widgets" : {
+          "chgBGdt" : {
+            "onSelect" : "RELOCATED to controllers/page/chgBG/widgets/chgBGdt/onSelect.js"
+          },
+          "chgBGok" : {
+            "onClick" : "RELOCATED to controllers/page/chgBG/widgets/chgBGok/onClick.js"
+          },
+          "chgBGupl" : {
+            "onClick" : "RELOCATED to controllers/page/chgBG/widgets/chgBGupl/onClick.js"
+          }
+        }
+      }
+    }
+  },
+  "isComponent" : true,
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : {
+          "currentUrl" : {
+            "defaultLabel" : "currentUrl",
+            "defaultValue" : "",
+            "type" : "String"
+          }
+        }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : "{\n\"fileType\": {\"$regex\": \"^image\"}\n}    \n    \n\n",
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isAdvancedQuery" : true,
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "imageDocumentsStream",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "5e3c3a4a-302f-4cb4-9e98-5b3bbb232bf6",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "componentName" : "com.vantiq.accelerator.ui.setImageURL",
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.documents"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "com.vantiq.accelerator.ui.setImageURL__imageDocsDS",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "d778bb87-b88c-4856-818b-1977ef46c774",
+      "v" : 1
+    } ]
+  },
+  "name" : "com.vantiq.component.ui.BoundaryEditor",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "edit",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ {
+        "defaultValue" : "    configuration.isLoadingZones = true;\n\n    var cameraLayout = client.getComponentWidget(configuration, \"cameraLayout\");\n    var cameraCanvas = client.getComponentWidget(configuration, \"cameraCanvas\");\n\n    if (configuration.imageUrl) {\n        cameraLayout.url = configuration.imageUrl;\n    }\n\n    // In order to get background image size  of the CameraLayout, need to have a timeout.\n    client.setTimeout(function()\n    {\n        // Resize the canvas to match the image.\n        var widthRatio = cameraLayout.scaledImageWidth/cameraLayout.trueImageWidth;\n        var heightRadio = cameraLayout.scaledImageHeight/cameraLayout.trueImageHeight;\n\n        cameraCanvas.w = Math.min(cameraLayout.w, cameraLayout.scaledImageWidth);\n        cameraCanvas.h = Math.min(cameraLayout.h, cameraLayout.scaledImageHeight);\n\n        cameraLayout.configuration.zonePoints = [];\n        if (boundary) {\n            cameraLayout.configuration.boundary = boundary;\n        } else if (!cameraLayout.configuration.boundary || (cameraLayout.configuration.boundary.length == 0)) {\n            // create a default boundary\n            cameraLayout.configuration.boundary = [];\n\n            var w = cameraLayout.trueImageWidth || 200;\n            var h = cameraLayout.trueImageHeight || 200;\n            var x = w/4;\n            var y = h/4;\n            var zoneWidth = w/2;\n            var zoneHeight = h/2;\n            // create a resion with 4 corer points.\n            cameraLayout.configuration.boundary = [{x: x, y: y},\n                {x:x+zoneWidth, y},\n                {x:x+zoneWidth, y:y+zoneHeight},\n                {x: x, y: y+zoneHeight}\n            ];\n        }\n        // display the boundary\n        // convert region points into the scalled image coord\n        cameraLayout.configuration.zonePoints = [];\n        for (var i = 0; i < cameraLayout.configuration.boundary.length; i++) {\n            cameraLayout.configuration.zonePoints.push({\n                x: cameraLayout.configuration.boundary[i].x * widthRatio,\n                y: cameraLayout.configuration.boundary[i].y * heightRadio\n            });\n        }\n        cameraCanvas.repaint();        \n\n        var nativeCanvas = document.getElementById(cameraCanvas.name).children[0];\n        nativeCanvas.addEventListener('mousedown', function(e) {\n            // check if clicked on one of the boundary points\n            cameraLayout.configuration.draggingPointIndex = -1;\n            for (var i = 0; i < cameraLayout.configuration.zonePoints.length; i++) {\n                var p = cameraLayout.configuration.zonePoints[i];\n                // calculate the distance between mouse click to point center\n                if (com.vantiq.component.ui.isClickedOnDNDPoint(nativeCanvas, p, e)) {\n                    // start dragging\n                    cameraLayout.configuration.draggingPointIndex = i;\n                    p.x = e.offsetX;\n                    p.y = e.offsetY;\n                    cameraCanvas.repaint();\n                    break;\n                }\n            }\n        });\n        nativeCanvas.addEventListener('mousemove', function(e) {\n            if ((e.offsetX < 1) || (e.offsetX > (cameraLayout.scaledImageWidth-1)) ||\n                (e.offsetY < 1) || (e.offsetY > (cameraLayout.scaledImageHeight-1))) {\n                // stop the drag&drop after touching the edge of background image.\n                cameraLayout.configuration.draggingPointIndex = -1;\n            } else if (cameraLayout.configuration.draggingPointIndex >=0 ) {\n                var p = cameraLayout.configuration.zonePoints[cameraLayout.configuration.draggingPointIndex];\n                // update the point and redraw\n                p.x = e.offsetX;\n                p.y = e.offsetY;\n                cameraCanvas.repaint();\n            }\n        });\n        nativeCanvas.addEventListener('mouseup', function(e) {\n            cameraLayout.configuration.draggingPointIndex = -1;\n        });        \n        cameraLayout.configuration.isLoadingZones = false;\n    },500);",
+        "description" : "load boundary to be shown.",
+        "functionParameters" : [ "boundary" ],
+        "hidden" : false,
+        "propertyLabel" : "loadBoundary",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : "    var cameraLayout = client.getComponentWidget(configuration, \"cameraLayout\");\n    \n    var widthRatio = cameraLayout.scaledImageWidth / cameraLayout.trueImageWidth;\n    var heightRadio = cameraLayout.scaledImageHeight / cameraLayout.trueImageHeight;\n    var savedPoints = [];\n    for (var i = 0; i < configuration.zonePoints.length; i++) {\n\t\tsavedPoints.push({\n\t\t    x: configuration.zonePoints[i].x / widthRatio,\n\t\t    y: configuration.zonePoints[i].y / heightRadio\n\t\t});\n    }\n    configuration.boundary = savedPoints;    \n\n    // For regions to work, points must be saved in clockwise order.\n    if (configuration.boundary && (configuration.boundary.length > 0)) {\n        const points = configuration.boundary;\n\n        // Find min max to get center, Sort from top to bottom\n        points.sort((a, b) => a.y - b.y);\n\n        // Get center y\n        const cy = (points[0].y + points[points.length - 1].y) / 2;\n\n        // Sort from right to left\n        points.sort((a, b) => b.x - a.x);\n\n        // Get center x\n        const cx = (points[0].x + points[points.length - 1].x) / 2;\n\n        // Center point\n        const center = {x: cx, y: cy};\n\n        // Pre calculate the angles as it will be slow in the sort\n        // As the points are sorted from right to left the first point\n        // is the rightmost\n\n        // Starting angle used to reference other angles\n        var startAng;\n        points.forEach(point => {\n            var ang = Math.atan2(point.y - center.y, point.x - center.x);\n            if (!startAng) {\n                startAng = ang;\n            } else {\n                if (ang < startAng) {  // ensure that all points are clockwise of the start point\n                    ang += Math.PI * 2;\n                }\n            }\n            point.angle = ang; // add the angle to the point\n        });\n\n\n        // Sort clockwise;\n        points.sort((a, b) => a.angle - b.angle);\n\n        // save the new points' x and y only.\n        configuration.boundary = [];\n        points.forEach(point => {\n            configuration.boundary.push({x: point.x, y: point.y});\n        });\n    }\n    \n    return configuration.boundary;\n",
+        "description" : "Return the boundary user defined using the component.",
+        "functionParameters" : [ "zones" ],
+        "hidden" : false,
+        "propertyLabel" : "getBoundary",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : null,
+        "description" : "Internal object that stores the coordinates used for painting a polygon on screen. it's using the scaled image coordinates.",
+        "hidden" : true,
+        "propertyLabel" : "zonePoints",
+        "propertyType" : 60,
+        "type" : 1
+      }, {
+        "defaultValue" : "../../docs/entranceSample.png",
+        "description" : "URL of the image used in defining boundaries.",
+        "hidden" : false,
+        "propertyLabel" : "imageUrl",
+        "propertyType" : 50,
+        "type" : 1
+      }, {
+        "defaultValue" : false,
+        "hidden" : true,
+        "propertyLabel" : "isLoadingZones",
+        "propertyType" : 4,
+        "type" : 1
+      }, {
+        "defaultValue" : null,
+        "hidden" : true,
+        "propertyLabel" : "boundary",
+        "propertyType" : 60,
+        "type" : 1
+      } ],
+      "originalWidgetName" : "DeviceZone"
+    },
+    "defaultGlobalMsgHash" : "{\"@btn.Cancel\":\"Cancel\",\"@btn.change.image\":\"Change Image\",\"@btn.OK\":\"OK\",\"@btn.upload.doc\":\"Upload Document\",\"@label.name\":\"Name:\",\"@label.url\":\"URL:\",\"@text.enter.url.or.choose.doc\":\"Enter an URL above or choose an image document below:\"}",
+    "description" : "A component that helps define a boundary over an image.",
+    "docAssets" : [ "com.vantiq.component.ui.utils.js", "entranceSample.png", "floorplanSample.png" ],
+    "documentAssetLabels" : [ "", "" ],
+    "documentAssets" : [ "../../docs/entranceSample.png", "../../docs/floorplanSample.png" ],
+    "jsAssets" : [ {
+      "type" : "text/javascript",
+      "url" : "../../docs/com.vantiq.component.ui.utils.js"
+    } ],
+    "productV" : "7.12",
+    "showCategoryButtons" : true,
+    "showCategoryComponent" : true,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : true,
+    "showCategoryLayout" : true,
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "bgImgPosition" : "center",
+      "bgImgRepeat" : "no-repeat",
+      "bgImgSize" : "auto",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17"
+    },
+    "themeName" : "light",
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "documents",
+      "resourceId" : "com.vantiq.component.ui.utils.js"
+    }, {
+      "resource" : "documents",
+      "resourceId" : "entranceSample.png"
+    }, {
+      "resource" : "documents",
+      "resourceId" : "floorplanSample.png"
+    }, {
+      "resource" : "topics",
+      "resourceId" : "/my/response/topic"
+    } ]
+  },
+  "targetDevice" : "browser",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json",
+    "chgBG" : "RELOCATED to views/chgBG.json"
+  }
+}
