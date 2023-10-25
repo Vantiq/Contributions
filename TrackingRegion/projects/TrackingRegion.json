@@ -49,7 +49,7 @@
   "name" : "TrackingRegion",
   "options" : {
     "VCSFriendly" : 1,
-    "description" : "This project  contains 4 client components that provides a grapical interface for editing a Tracking Region.\n\n### About Tracking Region ###\nA tracking region represents a named area in a coordinate space.\nTracking regions have the following properties:\n\n* **name** -- this is the name of the tracking region.\n* **boundary** -- this is an Object that contains a list of (at most 4) points that comprise the boundary of the region.\n* **distance** -- this is an Object containing the following properties:\n    * **points** -- a list of two points\n    * **distance** -- the distance between these two points\n* **direction** -- this is an Object containing the following properties\n    * **points** -- a list of two points\n    * **direction** -- the direction (compass degrees between 0 and 360) that movement from the\nfirst point to the second represents.\n* **converstionOnly** -- a boolean \n* **conversionSpecification** -- this is an Object defines the conversion between 2 coordinates. It containing the following properties\n    * **imageCoordinates** -- A set of 4 points in input coordinates with are 4 corners of image used by **boundary**, **distance**, and **direction**.\n    * **convertedCoordinates** -- A set of 4 porints converted from 4 points of **imageCoordinates\" on the output coordinates.  Output coordinates can be set of latitude and longitude coordinates on a map.\n\n### Client Components: ###\n* **com.vantiq.component.ui.BoundaryEditor** - An editor for specifying boundary (an array of 4 points) over an selected image.\n\n![Boundary Editor](docs/boundary_editor.JPG)\n\n* **com.vantiq.component.ui.DirectionDistanceEditor** - An editor for editing \"distance\" or \"direction\" property of a TrackingRegion.\n\n![Distance/Direction Editor](docs/distance_editor.JPG)\n* **com.vantiq.component.ui.ConvertCoordinates** - An editor for editing \"convertionSepcification\" property of a TrackingRegion.\n\n![ConvertCoordinates Editor](docs/convert_editor.JPG)\n\n* **com.vantiq.component.ui.TrackingRegionEditor** - A Client component to create/view/edit a tracking region. It use above three client components to edit its properties.  \n\n\n![TrackingRegion Editor](docs/region_editor.JPG)\n\n### Using the Tracking Region Editor ###\nYou can run com.vantiq.component.ui.TrackingRegionEditor as a normal Client to create/edit/view tracking regions.\n\nYou can also embed the editor as a component to your Client. See _TestTrackingRegion_ as an example. The TrackingRegionEditor component's toolbar buttons are hidden by setting its _hideToolbar_ property to `true`.",
+    "description" : "This project  contains 4 client components that provides a grapical interface for editing a Tracking Region.\n\n### About Tracking Region ###\nA tracking region represents a named area in a coordinate space.\nTracking regions have the following properties:\n\n* **name** -- this is the name of the tracking region.\n* **boundary** -- this is an Object that contains a list of (at most 4) points that comprise the boundary of the region.\n* **distance** -- this is an Object containing the following properties:\n    * **points** -- a list of two points\n    * **distance** -- the distance between these two points\n* **direction** -- this is an Object containing the following properties\n    * **points** -- a list of two points\n    * **direction** -- the direction (compass degrees between 0 and 360) that movement from the\nfirst point to the second represents.\n* **conversionOnly** -- a boolean \n* **conversionSpecification** -- this is an Object defines the conversion between 2 coordinates. It containing the following properties\n    * **imageCoordinates** -- A set of 4 points in input coordinates with are 4 corners of image used by **boundary**, **distance**, and **direction**.\n    * **convertedCoordinates** -- A set of 4 points converted from 4 points of **imageCoordinates\" on the output coordinates.  Output coordinates can be a set of latitude and longitude coordinates on a map.\n\n### Client Components: ###\n* **com.vantiq.component.ui.BoundaryEditor** - An editor for specifying boundary (an array of 4 points) over an selected image.\n\n![Boundary Editor](docs/boundary_editor.JPG)\n\n* **com.vantiq.component.ui.DirectionDistanceEditor** - An editor for editing \"distance\" or \"direction\" property of a TrackingRegion.\n\n![Distance/Direction Editor](docs/distance_editor.JPG)\n* **com.vantiq.component.ui.ConvertCoordinates** - An editor for editing \"convertionSepcification\" property of a TrackingRegion.\n\n![ConvertCoordinates Editor](docs/convert_editor.JPG)\n\n* **com.vantiq.component.ui.TrackingRegionEditor** - A Client component to create/view/edit a tracking region. It use above three client components to edit its properties.  \n\n\n![TrackingRegion Editor](docs/region_editor.JPG)\n\n### Using the Tracking Region Editor ###\nYou can run com.vantiq.component.ui.TrackingRegionEditor as a normal Client to create/edit/view tracking regions.\n\nYou can also embed the editor as a component to your Client. See _TestTrackingRegion_ as an example. The TrackingRegionEditor component's toolbar buttons are hidden by setting its _hideToolbar_ property to `true`.",
     "dockCollapsed" : {
       "bottom" : true,
       "left" : false,
@@ -91,6 +91,7 @@
     "resourceReference" : "/system.clients/TestTrackingRegion",
     "type" : 15
   }, {
+    "label" : "boundary_editor.JPG",
     "name" : "boundary_editor.JPG",
     "resourceReference" : "/documents/boundary_editor.JPG",
     "type" : 19
@@ -120,10 +121,12 @@
     "resourceReference" : "/documents/com.vantiq.component.ui.utils.js",
     "type" : 19
   }, {
+    "label" : "convert_editor.JPG",
     "name" : "convert_editor.JPG",
     "resourceReference" : "/documents/convert_editor.JPG",
     "type" : 19
   }, {
+    "label" : "distance_editor.JPG",
     "name" : "distance_editor.JPG",
     "resourceReference" : "/documents/distance_editor.JPG",
     "type" : 19
@@ -138,6 +141,7 @@
     "resourceReference" : "/documents/floorplanSample.png",
     "type" : 19
   }, {
+    "label" : "region_editor.JPG",
     "name" : "region_editor.JPG",
     "resourceReference" : "/documents/region_editor.JPG",
     "type" : 19

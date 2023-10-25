@@ -13,10 +13,10 @@ Tracking regions have the following properties:
     * **points** -- a list of two points
     * **direction** -- the direction (compass degrees between 0 and 360) that movement from the
 first point to the second represents.
-* **converstionOnly** -- a boolean 
+* **conversionOnly** -- a boolean.
 * **conversionSpecification** -- this is an Object defines the conversion between 2 coordinates. It containing the following properties
     * **imageCoordinates** -- A set of 4 points in input coordinates with are 4 corners of image used by **boundary**, **distance**, and **direction**.
-    * **convertedCoordinates** -- A set of 4 porints converted from 4 points of **imageCoordinates" on the output coordinates.  Output coordinates can be set of latitude and longitude coordinates on a map.
+    * **convertedCoordinates** -- A set of 4 points converted from 4 points of **imageCoordinates" on the output coordinates.  Output coordinates can be a set of latitude and longitude coordinates on a map.
 
 ### Client Components: ###
 * **com.vantiq.component.ui.BoundaryEditor** - An editor for specifying boundary (an array of 4 points) over an selected image.
