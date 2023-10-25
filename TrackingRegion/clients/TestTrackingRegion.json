@@ -84,27 +84,27 @@
       "com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage" : {
         "onStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/onStart.js",
         "widgets" : {
-          "com_vantiq_component_ui_TrackingRegionEditor__DL_CoorType_58245" : {
-            "onChange" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__DL_CoorType_58245/onChange.js"
+          "com_vantiq_component_ui_TrackingRegionEditor__DL_CoorType_20246" : {
+            "onChange" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__DL_CoorType_20246/onChange.js"
           },
-          "com_vantiq_component_ui_TrackingRegionEditor__clearMarkersBtn_58245" : {
-            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__clearMarkersBtn_58245/onClick.js"
+          "com_vantiq_component_ui_TrackingRegionEditor__clearMarkersBtn_20246" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__clearMarkersBtn_20246/onClick.js"
           },
-          "com_vantiq_component_ui_TrackingRegionEditor__convertCoorChgBgBtn_58245" : {
-            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__convertCoorChgBgBtn_58245/onClick.js"
+          "com_vantiq_component_ui_TrackingRegionEditor__convertCoorChgBgBtn_20246" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__convertCoorChgBgBtn_20246/onClick.js"
           },
           "com_vantiq_component_ui_TrackingRegionEditor__convertCoorComp" : {
             "onComponentStart" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__convertCoorComp/onComponentStart.js"
           },
-          "com_vantiq_component_ui_TrackingRegionEditor__floorZoneCanvas_58245" : {
-            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__floorZoneCanvas_58245/onClick.js",
-            "onPaint" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__floorZoneCanvas_58245/onPaint.js"
+          "com_vantiq_component_ui_TrackingRegionEditor__floorZoneCanvas_20246" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__floorZoneCanvas_20246/onClick.js",
+            "onPaint" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__floorZoneCanvas_20246/onPaint.js"
           },
           "com_vantiq_component_ui_TrackingRegionEditor__okConvertCoorBtn" : {
             "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__okConvertCoorBtn/onClick.js"
           },
-          "com_vantiq_component_ui_TrackingRegionEditor__targetMap_58245" : {
-            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__targetMap_58245/onClick.js"
+          "com_vantiq_component_ui_TrackingRegionEditor__targetMap_20246" : {
+            "onClick" : "RELOCATED to controllers/page/com_vantiq_component_ui_TrackingRegionEditor__convertCoordinatesPage/widgets/com_vantiq_component_ui_TrackingRegionEditor__targetMap_20246/onClick.js"
           }
         }
       },
@@ -154,44 +154,44 @@
       "trackingPage" : {
         "onStart" : "RELOCATED to controllers/page/trackingPage/onStart.js",
         "widgets" : {
-          "iconBoundaryTool_15453" : {
-            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/iconBoundaryTool_15453/onClick.js"
+          "iconBoundaryTool_37864" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/iconBoundaryTool_37864/onClick.js"
           },
-          "iconConvestionTool_15453" : {
-            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/iconConvestionTool_15453/onClick.js"
+          "iconConvestionTool_37864" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/iconConvestionTool_37864/onClick.js"
           },
-          "iconDirectionTool_15453" : {
-            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/iconDirectionTool_15453/onClick.js"
+          "iconDirectionTool_37864" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/iconDirectionTool_37864/onClick.js"
           },
-          "iconDistanceTool_15453" : {
-            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/iconDistanceTool_15453/onClick.js"
+          "iconDistanceTool_37864" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/iconDistanceTool_37864/onClick.js"
           },
-          "loadTrackingRegionBtn_15453" : {
-            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/loadTrackingRegionBtn_15453/onClick.js"
+          "loadTrackingRegionBtn_37864" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/loadTrackingRegionBtn_37864/onClick.js"
           },
-          "newTrackingRegionBtn_15453" : {
-            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/newTrackingRegionBtn_15453/onClick.js"
+          "newTrackingRegionBtn_37864" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/newTrackingRegionBtn_37864/onClick.js"
           },
-          "regionBoundaryInput_15453" : {
-            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionBoundaryInput_15453/onChange.js"
+          "regionBoundaryInput_37864" : {
+            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionBoundaryInput_37864/onChange.js"
           },
-          "regionConversionInput_15453" : {
-            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionConversionInput_15453/onChange.js"
+          "regionConversionInput_37864" : {
+            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionConversionInput_37864/onChange.js"
           },
-          "regionConversionOnly_15453" : {
-            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionConversionOnly_15453/onChange.js"
+          "regionConversionOnly_37864" : {
+            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionConversionOnly_37864/onChange.js"
           },
-          "regionDirectionInput_15453" : {
-            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionDirectionInput_15453/onChange.js"
+          "regionDirectionInput_37864" : {
+            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionDirectionInput_37864/onChange.js"
           },
-          "regionDistanceInput_15453" : {
-            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionDistanceInput_15453/onChange.js"
+          "regionDistanceInput_37864" : {
+            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionDistanceInput_37864/onChange.js"
           },
-          "regionNameInput_15453" : {
-            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionNameInput_15453/onChange.js"
+          "regionNameInput_37864" : {
+            "onChange" : "RELOCATED to controllers/page/trackingPage/widgets/regionNameInput_37864/onChange.js"
           },
-          "saveTrackingRegionBtn_15453" : {
-            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/saveTrackingRegionBtn_15453/onClick.js"
+          "saveTrackingRegionBtn_37864" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/saveTrackingRegionBtn_37864/onClick.js"
           },
           "showValueBtn" : {
             "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/showValueBtn/onClick.js"
@@ -199,8 +199,8 @@
           "trackingRegionComp" : {
             "onComponentStart" : "RELOCATED to controllers/page/trackingPage/widgets/trackingRegionComp/onComponentStart.js"
           },
-          "viewTrackingRegionBtn_15453" : {
-            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/viewTrackingRegionBtn_15453/onClick.js"
+          "viewTrackingRegionBtn_37864" : {
+            "onClick" : "RELOCATED to controllers/page/trackingPage/widgets/viewTrackingRegionBtn_37864/onClick.js"
           }
         }
       }

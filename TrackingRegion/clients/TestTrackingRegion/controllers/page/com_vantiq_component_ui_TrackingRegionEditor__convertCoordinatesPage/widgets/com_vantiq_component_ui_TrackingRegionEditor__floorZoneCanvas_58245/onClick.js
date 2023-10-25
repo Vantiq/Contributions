@@ -1,1 +1,0 @@
-    // must have this line for mouse click to work on the canvas.

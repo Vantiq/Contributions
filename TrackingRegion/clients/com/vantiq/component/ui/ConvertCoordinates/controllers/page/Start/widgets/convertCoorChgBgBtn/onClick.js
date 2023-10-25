@@ -11,6 +11,9 @@
         });
     }    
     if (savedPoints) {   
+        if (!layoutWidget.configuration.convertExpression) {
+            layoutWidget.configuration.convertExpression = {};
+        }
         layoutWidget.configuration.convertExpression.convertedCoordinates = savedPoints; 
         layoutWidget.configuration.convertedUrl = layoutWidget.url;
 

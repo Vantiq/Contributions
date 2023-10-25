@@ -125,27 +125,27 @@
       "convertCoordinatesPage" : {
         "onStart" : "RELOCATED to controllers/page/convertCoordinatesPage/onStart.js",
         "widgets" : {
-          "DL_CoorType_58245" : {
-            "onChange" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/DL_CoorType_58245/onChange.js"
+          "DL_CoorType_20246" : {
+            "onChange" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/DL_CoorType_20246/onChange.js"
           },
-          "clearMarkersBtn_58245" : {
-            "onClick" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/clearMarkersBtn_58245/onClick.js"
+          "clearMarkersBtn_20246" : {
+            "onClick" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/clearMarkersBtn_20246/onClick.js"
           },
-          "convertCoorChgBgBtn_58245" : {
-            "onClick" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/convertCoorChgBgBtn_58245/onClick.js"
+          "convertCoorChgBgBtn_20246" : {
+            "onClick" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/convertCoorChgBgBtn_20246/onClick.js"
           },
           "convertCoorComp" : {
             "onComponentStart" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/convertCoorComp/onComponentStart.js"
           },
-          "floorZoneCanvas_58245" : {
-            "onClick" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/floorZoneCanvas_58245/onClick.js",
-            "onPaint" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/floorZoneCanvas_58245/onPaint.js"
+          "floorZoneCanvas_20246" : {
+            "onClick" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/floorZoneCanvas_20246/onClick.js",
+            "onPaint" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/floorZoneCanvas_20246/onPaint.js"
           },
           "okConvertCoorBtn" : {
             "onClick" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/okConvertCoorBtn/onClick.js"
           },
-          "targetMap_58245" : {
-            "onClick" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/targetMap_58245/onClick.js"
+          "targetMap_20246" : {
+            "onClick" : "RELOCATED to controllers/page/convertCoordinatesPage/widgets/targetMap_20246/onClick.js"
           }
         }
       },
@@ -395,7 +395,7 @@
       "path" : "views",
       "type" : "json"
     } ],
-    "activeTab" : "add",
+    "activeTab" : "edit",
     "badgeCount" : 0,
     "componentConfiguration" : {
       "configurationProperties" : [ {
