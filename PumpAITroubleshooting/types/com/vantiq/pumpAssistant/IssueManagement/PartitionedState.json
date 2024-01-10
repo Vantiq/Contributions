@@ -1,0 +1,6 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "com.vantiq.pumpAssistant.IssueManagement.PartitionedState",
+  "properties" : { },
+  "role" : "schema"
+}

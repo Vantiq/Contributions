@@ -1,0 +1,14 @@
+package com.vantiq.pumpAssistant
+import service io.vantiq.text.Template
+
+stateless PROCEDURE IssueManagement.generate1stPrompt(event Object)
+
+var record = select one from com.vantiq.pumpAssistant.device where deviceId == event.deviceID
+
+var config ={}
+config.payload = stringify(event, true)
+config.Manufacturer = record.Manufacturer
+config.Model = record.Model
+
+var template = Template.documentReference("templates/pumprepair.txt")
+Template.format(template, config)

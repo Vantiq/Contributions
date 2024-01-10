@@ -1,0 +1,8 @@
+[ {
+  "Manufacturer" : "PumpWorks",
+  "Model" : "PumpWorks 610 PWI",
+  "deviceId" : "abc123",
+  "id" : "myId",
+  "temperatureRange" : [ 0, 75 ],
+  "vibrationRange" : [ 0, 0.5 ]
+} ]

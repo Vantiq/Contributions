@@ -1,0 +1,251 @@
+{
+  "ars_properties" : {
+    "lpPct" : 15,
+    "paletteWidth" : 150,
+    "rpPct" : 30
+  },
+  "ars_relationships" : [ ],
+  "contents" : {
+    "connectors" : [ {
+      "key" : "76bc327f-91b0-4c26-8afd-bc8003430669&EXTERNALIN1",
+      "name" : "NEW-EXT-IN",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 13
+    }, {
+      "key" : "76bc327f-91b0-4c26-8afd-bc8003430669&EXTERNALOUT1",
+      "name" : "NEW-EXT-OUT",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 8
+    }, {
+      "key" : "1f67e9c8-1a79-493a-bade-743c7aff4512&EXTERNALIN1",
+      "name" : "NEW-EXT-IN",
+      "parent" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "type" : 13
+    }, {
+      "key" : "1f67e9c8-1a79-493a-bade-743c7aff4512&EXTERNALOUT1",
+      "name" : "NEW-EXT-OUT",
+      "parent" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "type" : 8
+    }, {
+      "key" : "76bc327f-91b0-4c26-8afd-bc8003430669&INPUT1",
+      "name" : "NEW-IN",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 3
+    }, {
+      "key" : "76bc327f-91b0-4c26-8afd-bc8003430669&OUTPUT1",
+      "name" : "NEW-OUT",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 4
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&INPUT1",
+      "name" : "InboundIssue",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 1
+    }, {
+      "key" : "1f67e9c8-1a79-493a-bade-743c7aff4512&INPUT1",
+      "name" : "NEW-IN",
+      "parent" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "type" : 3
+    }, {
+      "key" : "1f67e9c8-1a79-493a-bade-743c7aff4512&OUTPUT1",
+      "name" : "NEW-OUT",
+      "parent" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "type" : 4
+    }, {
+      "key" : "51&1f67e9c8-1a79-493a-bade-743c7aff4512&INPUT1",
+      "name" : "DeviceInbound",
+      "parent" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "type" : 1
+    }, {
+      "key" : "51&1f67e9c8-1a79-493a-bade-743c7aff4512&CALLIN1",
+      "name" : "processRule",
+      "parent" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "type" : 5
+    }, {
+      "key" : "51&1f67e9c8-1a79-493a-bade-743c7aff4512&OUTPUT1",
+      "name" : "OutboundIssue",
+      "parent" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "type" : 2
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN1",
+      "name" : "ActiveCollabsGetByEntityId_InboundIssue",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "04f9298c-00bf-4885-a213-79c751517f66&DATASTREAM1",
+      "name" : "NEW-DS",
+      "parent" : "04f9298c-00bf-4885-a213-79c751517f66",
+      "type" : 11
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&OUTPUT1",
+      "name" : "OutboundIssueResolution",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 2
+    }, {
+      "key" : "52&04f9298c-00bf-4885-a213-79c751517f66&DATASTREAM1",
+      "name" : "DataStreamIssueResolution",
+      "parent" : "04f9298c-00bf-4885-a213-79c751517f66",
+      "type" : 10
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN10",
+      "name" : "Resolution",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&INPUT2",
+      "name" : "UserResponse",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 1
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN2",
+      "name" : "generate1stPrompt",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN3",
+      "name" : "generateUpdatePrompt",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN4",
+      "name" : "getConversationForDevice",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN5",
+      "name" : "getEntityIdMap",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN6",
+      "name" : "ActiveCollabsCloseAll",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN7",
+      "name" : "ActiveCollabsGetAll",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN8",
+      "name" : "ActiveCollabsGetByEntityId_UserResponse",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN9",
+      "name" : "ActiveCollabsGetById",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN11",
+      "name" : "ActiveCollabsReset",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN12",
+      "name" : "ActiveCollabsSetEntity_InboundIssue",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN13",
+      "name" : "ActiveCollabsSetEntity_UserResponse",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN14",
+      "name" : "ActiveCollabsUpdateStatus",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&CALLIN15",
+      "name" : "ActiveCollabsWriteAll",
+      "parent" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "type" : 5
+    }, {
+      "key" : "51&1f67e9c8-1a79-493a-bade-743c7aff4512&CALLIN2",
+      "name" : "DeviceStatusGet",
+      "parent" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "type" : 5
+    }, {
+      "key" : "51&1f67e9c8-1a79-493a-bade-743c7aff4512&CALLIN3",
+      "name" : "DeviceStatusGetAll",
+      "parent" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "type" : 5
+    }, {
+      "key" : "51&1f67e9c8-1a79-493a-bade-743c7aff4512&CALLIN4",
+      "name" : "DeviceStatusReset",
+      "parent" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "type" : 5
+    }, {
+      "key" : "51&1f67e9c8-1a79-493a-bade-743c7aff4512&CALLIN5",
+      "name" : "DeviceStatusUpdate",
+      "parent" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "type" : 5
+    }, {
+      "key" : "51&1f67e9c8-1a79-493a-bade-743c7aff4512&CALLIN6",
+      "name" : "StateChange",
+      "parent" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "type" : 5
+    } ],
+    "links" : [ {
+      "isBidirectional" : false,
+      "source" : "51&1f67e9c8-1a79-493a-bade-743c7aff4512&OUTPUT1",
+      "target" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&INPUT1"
+    }, {
+      "isBidirectional" : false,
+      "source" : "51&76bc327f-91b0-4c26-8afd-bc8003430669&OUTPUT1",
+      "target" : "52&04f9298c-00bf-4885-a213-79c751517f66&DATASTREAM1"
+    } ],
+    "objects" : [ {
+      "h" : 100,
+      "label" : "IssueManagement",
+      "resourceName" : "com.vantiq.pumpAssistant.IssueManagement",
+      "resourceType" : "system.services",
+      "type" : 51,
+      "uuid" : "76bc327f-91b0-4c26-8afd-bc8003430669",
+      "w" : 129.5078125,
+      "x" : 272,
+      "y" : 159.98843383789062
+    }, {
+      "h" : 100,
+      "label" : "IssueDetection",
+      "resourceName" : "com.vantiq.pumpAssistant.IssueDetection",
+      "resourceType" : "system.services",
+      "type" : 51,
+      "uuid" : "1f67e9c8-1a79-493a-bade-743c7aff4512",
+      "w" : 129.5078125,
+      "x" : 0,
+      "y" : 99.98843383789062
+    }, {
+      "h" : 100,
+      "label" : "DeviceIssue",
+      "resourceName" : "com.vantiq.pumpAssistant.DeviceIssue",
+      "resourceType" : "system.clients",
+      "type" : 52,
+      "uuid" : "04f9298c-00bf-4885-a213-79c751517f66",
+      "w" : 132.34375,
+      "x" : 519.12109375,
+      "y" : 298.9884338378906
+    } ],
+    "prefs" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 3,
+        "scale" : 0.924197916869893,
+        "translate" : [ 103.87118150070532, 271.1011216821797 ]
+      }
+    },
+    "v" : 1
+  },
+  "description" : "No description given",
+  "name" : "com.vantiq.pumpAssistant.PumpAITroubleshooting",
+  "serviceEventRoutes" : [ {
+    "eventSource" : {
+      "eventTypeName" : "OutboundIssue",
+      "serviceName" : "com.vantiq.pumpAssistant.IssueDetection"
+    },
+    "eventTarget" : {
+      "eventTypeName" : "InboundIssue",
+      "serviceName" : "com.vantiq.pumpAssistant.IssueManagement"
+    }
+  } ]
+}

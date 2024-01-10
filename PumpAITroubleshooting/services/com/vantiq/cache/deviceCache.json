@@ -1,0 +1,30 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterGenerated" : false
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "GetBy_deviceId",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "deviceId",
+      "required" : false,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "com.vantiq.pumpAssistant.device"
+    }
+  } ],
+  "internalEventHandlers" : [ ],
+  "name" : "com.vantiq.cache.deviceCache",
+  "partitionedType" : "com.vantiq.cache.deviceCache.PartitionedState",
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

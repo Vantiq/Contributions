@@ -1,0 +1,26 @@
+PACKAGE com.vantiq.cache
+import type com.vantiq.pumpAssistant.device
+PROCEDURE deviceCache.GetBy_deviceId(deviceId String): com.vantiq.pumpAssistant.device 
+    WITH ars_dependentResource="/types/com.vantiq.pumpAssistant.device", updateInterface = true
+
+// Compute key used to access cached instance
+var key = deviceId
+
+// First, check the cache for the key
+var result = InstancesBy_deviceId.get(key)
+if (!result) {
+    // If the instance was not found in service state, try fetching the instance from the database
+    log.debug("Fetching device {} from the database.", [key])
+    SELECT ONE * FROM device as fromDB WHERE deviceId == deviceId
+    if (fromDB) {
+        // If a matching instance was found, add it to the stateful cache
+        log.debug("Adding device {} to the service cache.", [result])
+        result = InstancesBy_deviceId.computeIfAbsent(key, (partitionKey) => {
+            
+            return fromDB
+        })
+    }
+} else {
+    log.debug("device {} found in Service State.", [key])
+}
+return Object.clone(result)

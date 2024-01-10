@@ -1,0 +1,93 @@
+{
+  "ars_properties" : {
+    "tags" : [ "#launchable" ]
+  },
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : { },
+    "page" : {
+      "Start" : {
+        "widgets" : {
+          "Button10" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/Button10/onClick.js"
+          },
+          "Button7" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/Button7/onClick.js"
+          },
+          "Button8" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/Button8/onClick.js"
+          },
+          "Button9" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/Button9/onClick.js"
+          }
+        }
+      }
+    }
+  },
+  "isComponent" : false,
+  "isLaunchable" : true,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ ]
+  },
+  "name" : "com.vantiq.pumpAssistant.Sim",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "edit",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ ]
+    },
+    "description" : "",
+    "displayName" : "Sim",
+    "docAssets" : [ ],
+    "productV" : "7.11c",
+    "showCategoryButtons" : true,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : false,
+    "showCategoryLayout" : false,
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "bgImgPosition" : "center",
+      "bgImgRepeat" : "no-repeat",
+      "bgImgSize" : "auto",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17"
+    },
+    "themeName" : "light",
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ ]
+  },
+  "targetDevice" : "mobile",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json"
+  }
+}

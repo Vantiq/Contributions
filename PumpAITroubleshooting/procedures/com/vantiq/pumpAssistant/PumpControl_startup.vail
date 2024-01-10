@@ -1,0 +1,17 @@
+// Start the specified pump
+package com.vantiq.pumpAssistant
+PROCEDURE PumpControl.startup(deviceId String Description "The id of the pump."): Object
+
+return pumpsById.computeIfPresent(deviceId, (id, cur) => {
+    return {
+   		"deviceID": id,
+   		"timestamp": "now()",
+   		"sensorData": {
+      		"temperature": 70.5,
+      		"vibration": 0.25,
+      		"pressure": 10.40,
+      		"flowRate": 11.70
+        },
+   		"status": "operational"
+	}
+})

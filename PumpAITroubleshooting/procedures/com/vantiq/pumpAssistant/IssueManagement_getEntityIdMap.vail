@@ -1,0 +1,4 @@
+package com.vantiq.pumpAssistant
+multi partition PROCEDURE IssueManagement.getEntityIdMap()
+
+return CollabIdsByEntity.entrySet()

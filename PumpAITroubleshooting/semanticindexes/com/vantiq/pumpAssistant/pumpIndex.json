@@ -1,0 +1,7 @@
+{
+  "ars_relationships" : [ ],
+  "databaseConfig" : { },
+  "defaultQAModel" : "com.vantiq.pumpAssistant.GPT-3-Turbo",
+  "embeddingModel" : "com.vantiq.pumpAssistant.SentenceTransformers",
+  "name" : "com.vantiq.pumpAssistant.pumpIndex"
+}

@@ -1,0 +1,11 @@
+package com.vantiq.pumpAssistant
+multi partition PROCEDURE IssueDetection.DeviceStatusGetAll()
+
+var result = DeviceStatus
+var stateItems = {}
+for (key in DeviceStatus.keySet()) {
+    var item = DeviceStatus.get(key)
+    stateItems[key] = item
+}
+
+return stateItems

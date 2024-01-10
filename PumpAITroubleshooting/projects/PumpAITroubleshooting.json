@@ -1,0 +1,1343 @@
+{
+  "ars_relationships" : [ ],
+  "links" : [ {
+    "source" : "services/com.vantiq.pumpAssistant.sim",
+    "target" : "procedure/com.vantiq.pumpAssistant.sim.deviceReadingNormal"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.sim.deviceReadingNormal",
+    "target" : "services/com.vantiq.pumpAssistant.sim"
+  }, {
+    "source" : "services/com.vantiq.cache.deviceCache",
+    "target" : "procedure/com.vantiq.cache.deviceCache.GetBy_deviceId"
+  }, {
+    "source" : "procedure/com.vantiq.cache.deviceCache.GetBy_deviceId",
+    "target" : "services/com.vantiq.cache.deviceCache"
+  }, {
+    "source" : "procedure/com.vantiq.cache.deviceCache.GetBy_deviceId",
+    "target" : "type/com.vantiq.pumpAssistant.device"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "app/com.vantiq.pumpAssistant.IssueManagement.InboundIssue"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.sim.deviceReadingHighTemp",
+    "target" : "services/com.vantiq.pumpAssistant.sim"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.sim",
+    "target" : "procedure/com.vantiq.pumpAssistant.sim.deviceReadingHighTemp"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.sim",
+    "target" : "procedure/com.vantiq.pumpAssistant.sim.deviceReadingHighVibration"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.sim.deviceReadingHighVibration",
+    "target" : "services/com.vantiq.pumpAssistant.sim"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.sim",
+    "target" : "procedure/com.vantiq.pumpAssistant.sim.deviceReadingHighTempandVibration"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.sim.deviceReadingHighTempandVibration",
+    "target" : "services/com.vantiq.pumpAssistant.sim"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "type/com.vantiq.pumpAssistant.IssueManagement.PartitionedState"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.Resolution"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.Resolution"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.Resolution",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.generate1stPrompt"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.generate1stPrompt",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.generate1stPrompt",
+    "target" : "type/com.vantiq.pumpAssistant.device"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.generateUpdatePrompt"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.generateUpdatePrompt",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.generateUpdatePrompt",
+    "target" : "type/com.vantiq.pumpAssistant.device"
+  }, {
+    "source" : "services/com.vantiq.cache.deviceCache",
+    "target" : "type/com.vantiq.cache.deviceCache.PartitionedState"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.getConversationForDevice"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.getConversationForDevice",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "semanticindex/com.vantiq.pumpAssistant.pumpIndex",
+    "target" : "llm/com.vantiq.pumpAssistant.SentenceTransformers"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.getEntityIdMap"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.getEntityIdMap",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "rule/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.CloseCollab",
+    "target" : "topic//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/CloseCollab"
+  }, {
+    "source" : "rule/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.CloseCollab",
+    "target" : "topic//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/debug"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_InboundIssue"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsSetEntity_InboundIssue"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_InboundIssue",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_InboundIssue"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsSetEntity_InboundIssue"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsSetEntity_InboundIssue",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateNotifyUser_InboundIssue"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateNotifyUser_InboundIssue",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateNotifyUser_InboundIssue"
+  }, {
+    "source" : "services/com.vantiq.cache.deviceCache",
+    "target" : "document/com.vantiq.cache.deviceCache.js"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "document/com.vantiq.pumpAssistant.IssueManagement.js"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.sim",
+    "target" : "document/com.vantiq.pumpAssistant.sim.js"
+  }, {
+    "source" : "client/com.vantiq.pumpAssistant.DeviceIssue",
+    "target" : "document/public/component/images/spinner.gif"
+  }, {
+    "source" : "rule/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.EstablishToClose",
+    "target" : "topic//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/EstablishToClose"
+  }, {
+    "source" : "rule/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.EstablishToClose",
+    "target" : "topic//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/debug"
+  }, {
+    "source" : "topic//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/issueResolved",
+    "target" : "rule/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.EstablishToClose"
+  }, {
+    "source" : "rule/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.EstablishToClose",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_InboundIssue"
+  }, {
+    "source" : "topic//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/Resolution",
+    "target" : "rule/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.CloseCollab"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "app/com.vantiq.pumpAssistant.IssueManagement.UserResponse"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.PumpControl",
+    "target" : "document/com.vantiq.pumpAssistant.PumpControl.js"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.PumpControl",
+    "target" : "type/com.vantiq.pumpAssistant.PumpControl.PartitionedState"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.PumpControl.getCurrentStatus",
+    "target" : "services/com.vantiq.pumpAssistant.PumpControl"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.PumpControl",
+    "target" : "procedure/com.vantiq.pumpAssistant.PumpControl.getCurrentStatus"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.PumpControl",
+    "target" : "procedure/com.vantiq.pumpAssistant.PumpControl.initializePartitionedState"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.PumpControl.initializePartitionedState",
+    "target" : "services/com.vantiq.pumpAssistant.PumpControl"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsSetEntity_UserResponse"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_UserResponse"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsSetEntity_UserResponse",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_UserResponse",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsSetEntity_UserResponse"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_UserResponse",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueManagement.UserResponse",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_UserResponse"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.PumpControl",
+    "target" : "procedure/com.vantiq.pumpAssistant.PumpControl.shutdown"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.PumpControl.shutdown",
+    "target" : "services/com.vantiq.pumpAssistant.PumpControl"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.PumpControl",
+    "target" : "procedure/com.vantiq.pumpAssistant.PumpControl.startup"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.PumpControl.startup",
+    "target" : "services/com.vantiq.pumpAssistant.PumpControl"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnClose"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnLoad"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateStatus"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsCloseAll"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestion_InboundIssue"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsReset"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetAll"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnStore"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsWriteAll"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestionUpd_InboundIssue"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.CollabIdsByEntityStoreId"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateSubmitPrompt_UserResponse"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "type/com.vantiq.pumpAssistant.device"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateStatus"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestionUpd_InboundIssue"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestion_InboundIssue"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_UserResponse",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnClose",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsWriteAll"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsCloseAll",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueManagement.UserResponse",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueManagement.UserResponse",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateSubmitPrompt_UserResponse"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnLoad",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateSubmitPrompt_UserResponse",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateSubmitPrompt_UserResponse",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetAll",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnLoad"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateStatus",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateNotifyUser_InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsReset",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnStore",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsWriteAll",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestionUpd_InboundIssue",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestionUpd_InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestion_InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestion_InboundIssue",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.CollabIdsByEntityStoreId",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "rule/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.EstablishToClose",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById"
+  }, {
+    "source" : "rule/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.CloseCollab",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateStatus"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusGet",
+    "target" : "services/com.vantiq.pumpAssistant.IssueDetection"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueDetection",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusGet"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.sim.deviceReadingNormal",
+    "target" : "services/com.vantiq.pumpAssistant.IssueDetection"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueDetection",
+    "target" : "type/com.vantiq.pumpAssistant.IssueDetection.PartitionedState"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueDetection",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusGetAll"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueDetection",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusReset"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueDetection",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusUpdate"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueDetection",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueDetection.processRule"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueDetection",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueDetection.StateChange"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueDetection",
+    "target" : "document/com.vantiq.pumpAssistant.IssueDetection.js"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.sim.deviceReadingHighTemp",
+    "target" : "services/com.vantiq.pumpAssistant.IssueDetection"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.sim.deviceReadingHighVibration",
+    "target" : "services/com.vantiq.pumpAssistant.IssueDetection"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueDetection.DeviceInbound",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueDetection.processRule"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueDetection.DeviceInbound",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueDetection.StateChange"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueDetection",
+    "target" : "app/com.vantiq.pumpAssistant.IssueDetection.DeviceInbound"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueDetection.processRule",
+    "target" : "services/com.vantiq.pumpAssistant.IssueDetection"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueDetection.processRule",
+    "target" : "procedure/com.vantiq.cache.deviceCache.GetBy_deviceId"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueDetection.StateChange",
+    "target" : "services/com.vantiq.pumpAssistant.IssueDetection"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueDetection.StateChange",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusGet"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueDetection.StateChange",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusUpdate"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusReset",
+    "target" : "services/com.vantiq.pumpAssistant.IssueDetection"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.sim.deviceReadingHighTempandVibration",
+    "target" : "services/com.vantiq.pumpAssistant.IssueDetection"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusUpdate",
+    "target" : "services/com.vantiq.pumpAssistant.IssueDetection"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusGetAll",
+    "target" : "services/com.vantiq.pumpAssistant.IssueDetection"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueDetection.DeviceInbound",
+    "target" : "services/com.vantiq.pumpAssistant.IssueDetection"
+  }, {
+    "source" : "client/com.vantiq.pumpAssistant.DeviceIssue",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "app/com.vantiq.pumpAssistant.IssueManagement.UserResponse",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "rule/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.CloseCollab",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "rule/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.EstablishToClose",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.UpdatePrompt_InboundIssue",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.UpdatePrompt_InboundIssue"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.UpdatePrompt_InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.generateUpdatePrompt"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.InitialPrompt_InboundIssue",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.InitialPrompt_InboundIssue"
+  }, {
+    "source" : "procedure/com.vantiq.pumpAssistant.IssueManagement.InitialPrompt_InboundIssue",
+    "target" : "procedure/com.vantiq.pumpAssistant.IssueManagement.generate1stPrompt"
+  }, {
+    "source" : "designmodel/com.vantiq.pumpAssistant.PumpAITroubleshooting",
+    "target" : "services/com.vantiq.pumpAssistant.IssueManagement"
+  }, {
+    "source" : "designmodel/com.vantiq.pumpAssistant.PumpAITroubleshooting",
+    "target" : "services/com.vantiq.pumpAssistant.IssueDetection"
+  }, {
+    "source" : "designmodel/com.vantiq.pumpAssistant.PumpAITroubleshooting",
+    "target" : "client/com.vantiq.pumpAssistant.DeviceIssue"
+  } ],
+  "name" : "PumpAITroubleshooting",
+  "options" : {
+    "description" : "## Introduction and Goals\n\nThis project serves as an illustration of how to leverage the Generative AI features offered by the Vantiq platform in your applications.  Note that it is not intended to be used as is and serveral shortcuts have been taken in order to highlight the use of semantic search and direct LLM interactions.\n\n## Application Overview\n\nThe application is modeled after a monitoring and field service application for industrial pumps.  It has a browser based client (`Sim`) which is used to simulate production of out of range values for either pump temperature or vibration (or both).  These values are processed by the `IssueDetection` service and if the pump's overall status has changed, an event is sent to the `IssueManagement` service for processing.  This event is processed by the `InboundIssue` event handler which uses a collaboration to manage resolution of the pump's issues.  This handler leverages semantic search to query the pump's documentation and determine what steps should be taken by the technician.  Communication with the technition is handled by the `DeviceIssue` client (sent via a notification in the Vantiq mobile app).  This client also allows the technician to submit follow-up questions and request status updates from the `PumpControl` service.  All of the application's resources are defined in the `com.vantiq.pumpAssitant` package.\n\n## Running the Application\n\n### Initial Setup\n\nThere are a couple of tasks to complete before using the application.  The document *PWI_IOM.pdf* must be loaded into the `pumpIndex` semantic index.  This document is included as a Vantiq resource, so it can be loaded using the *Resource* entry type.  This provides the context needed to troubleshoot the predefined pump instance.  In order to send the `DeviceIssues` client via a notification, the **NotifyUser** task in the `InboundIssue` event handler will need to be updated.  You want to set the target user id to be the one for the user running the demo (this can be found in the \"user info\" dialog in the upper right hand corner of Modelo).\n\nOnce these changes are made, the application is ready to be used.",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 223,
+      "debug" : [ 366.5682736225298, 1478.43172637747 ],
+      "left" : 279,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "flex",
+    "openFolders" : [ "VIEWROOT/com.vantiq", "VIEWROOT/com.vantiq.cache", "VIEWROOT/com.vantiq.pumpAssistant", "VIEWROOT/com.vantiq.pumpAssistant/client", "VIEWROOT/com.vantiq.pumpAssistant/designmodel", "VIEWROOT/com.vantiq.pumpAssistant/services", "VIEWROOT/com.vantiq.pumpAssistant/type", "document" ],
+    "rootViewFlavor" : 5,
+    "showGrid" : true,
+    "structure" : {
+      "fraction" : 1,
+      "groups" : [ {
+        "fraction" : 0.47295117342551257,
+        "groups" : [ {
+          "fraction" : 0.6741452991452992,
+          "type" : "L[4]"
+        }, {
+          "fraction" : 0.3258547008547008,
+          "type" : "L[2]"
+        } ],
+        "type" : "DV"
+      }, {
+        "fraction" : 0.5280647248003013,
+        "type" : "L[6]"
+      } ],
+      "type" : "RH"
+    },
+    "type" : "dev",
+    "v" : 5,
+    "viewUUID" : "MAINVIEW"
+  },
+  "partitions" : [ ],
+  "resources" : [ {
+    "label" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/debug",
+    "name" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/debug",
+    "node" : {
+      "x" : -345.3,
+      "y" : 106.9
+    },
+    "resourceReference" : "/topics//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/debug",
+    "type" : 10
+  }, {
+    "label" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/ChatHistory",
+    "name" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/ChatHistory",
+    "node" : {
+      "x" : -283.4,
+      "y" : 263.8
+    },
+    "resourceReference" : "/topics//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/ChatHistory",
+    "type" : 10
+  }, {
+    "label" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/CloseCollab",
+    "name" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/CloseCollab",
+    "node" : {
+      "x" : -355.3,
+      "y" : 574.3
+    },
+    "resourceReference" : "/topics//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/CloseCollab",
+    "type" : 10
+  }, {
+    "label" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/EstablishToClose",
+    "name" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/EstablishToClose",
+    "node" : {
+      "x" : -483,
+      "y" : 359.7
+    },
+    "resourceReference" : "/topics//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/EstablishToClose",
+    "type" : 10
+  }, {
+    "label" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/InitialPrompt",
+    "name" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/InitialPrompt",
+    "node" : {
+      "x" : -226.7,
+      "y" : 52.8
+    },
+    "resourceReference" : "/topics//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/InitialPrompt",
+    "type" : 10
+  }, {
+    "label" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/OpenCollaboration",
+    "name" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/OpenCollaboration",
+    "node" : {
+      "x" : -347,
+      "y" : 409.5
+    },
+    "resourceReference" : "/topics//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/OpenCollaboration",
+    "type" : 10
+  }, {
+    "label" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/Resolution",
+    "name" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/Resolution",
+    "resourceReference" : "/topics//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/Resolution",
+    "type" : 10
+  }, {
+    "label" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/issueExists",
+    "name" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/issueExists",
+    "node" : {
+      "x" : -475.2,
+      "y" : 550.9
+    },
+    "resourceReference" : "/topics//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/issueExists",
+    "type" : 10
+  }, {
+    "label" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/issueResolved",
+    "name" : "/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/issueResolved",
+    "resourceReference" : "/topics//com.vantiq.pumpAssistant.IssueManagement.InboundIssue/tasks/issueResolved",
+    "type" : 10
+  }, {
+    "label" : "/data",
+    "name" : "/data",
+    "node" : {
+      "x" : 554.1,
+      "y" : -103.7
+    },
+    "resourceReference" : "/topics//data",
+    "type" : 10
+  }, {
+    "label" : "ArsPushTarget",
+    "name" : "ArsPushTarget",
+    "resourceReference" : "/types/ArsPushTarget",
+    "timestamp" : "2024-01-04T20:07:05.211Z",
+    "type" : 1
+  }, {
+    "name" : "PWI_IOM.pdf",
+    "resourceReference" : "/documents/PWI_IOM.pdf",
+    "timestamp" : "2024-01-10T18:24:40.910Z",
+    "type" : 19
+  }, {
+    "label" : "com.vantiq.cache.deviceCache",
+    "name" : "com.vantiq.cache.deviceCache",
+    "node" : {
+      "x" : 743.8,
+      "y" : 263.3
+    },
+    "resourceReference" : "/system.services/com.vantiq.cache.deviceCache",
+    "timestamp" : "2024-01-10T00:13:23.923Z",
+    "type" : 63
+  }, {
+    "label" : "com.vantiq.cache.deviceCache.GetBy_deviceId",
+    "name" : "com.vantiq.cache.deviceCache.GetBy_deviceId",
+    "node" : {
+      "x" : 628.4,
+      "y" : 384.2
+    },
+    "packageName" : "com.vantiq.cache",
+    "procedureName" : "GetBy_deviceId",
+    "resourceReference" : "/procedures/com.vantiq.cache.deviceCache.GetBy_deviceId",
+    "serviceName" : "deviceCache",
+    "timestamp" : "2024-01-10T00:17:00.189Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.cache.deviceCache.PartitionedState",
+    "name" : "com.vantiq.cache.deviceCache.PartitionedState",
+    "node" : {
+      "x" : 836.3,
+      "y" : 135.6
+    },
+    "resourceReference" : "/types/com.vantiq.cache.deviceCache.PartitionedState",
+    "timestamp" : "2024-01-10T00:13:22.351Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.cache.deviceCache.js",
+    "name" : "com.vantiq.cache.deviceCache.js",
+    "resourceReference" : "/documents/com.vantiq.cache.deviceCache.js",
+    "timestamp" : "2024-01-10T00:13:24.362Z",
+    "type" : 19
+  }, {
+    "label" : "com.vantiq.pumpAssistant.DeviceIssue",
+    "name" : "com.vantiq.pumpAssistant.DeviceIssue",
+    "node" : {
+      "x" : 621.5,
+      "y" : 513
+    },
+    "resourceReference" : "/system.clients/com.vantiq.pumpAssistant.DeviceIssue",
+    "timestamp" : "2024-01-10T00:16:55.114Z",
+    "type" : 15
+  }, {
+    "label" : "com.vantiq.pumpAssistant.GPT-3-Turbo",
+    "name" : "com.vantiq.pumpAssistant.GPT-3-Turbo",
+    "resourceReference" : "/system.llms/com.vantiq.pumpAssistant.GPT-3-Turbo",
+    "timestamp" : "2024-01-10T00:13:22.460Z",
+    "type" : 80
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueDetection",
+    "name" : "com.vantiq.pumpAssistant.IssueDetection",
+    "resourceReference" : "/system.services/com.vantiq.pumpAssistant.IssueDetection",
+    "timestamp" : "2024-01-10T00:13:23.957Z",
+    "type" : 63
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueDetection.DeviceInbound",
+    "name" : "com.vantiq.pumpAssistant.IssueDetection.DeviceInbound",
+    "resourceReference" : "/collaborationtypes/com.vantiq.pumpAssistant.IssueDetection.DeviceInbound",
+    "timestamp" : "2024-01-10T00:17:02.584Z",
+    "type" : 12
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueDetection.DeviceStatusGet",
+    "name" : "com.vantiq.pumpAssistant.IssueDetection.DeviceStatusGet",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "DeviceStatusGet",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusGet",
+    "serviceName" : "IssueDetection",
+    "timestamp" : "2024-01-10T00:13:25.662Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueDetection.DeviceStatusGetAll",
+    "name" : "com.vantiq.pumpAssistant.IssueDetection.DeviceStatusGetAll",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "DeviceStatusGetAll",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusGetAll",
+    "serviceName" : "IssueDetection",
+    "timestamp" : "2024-01-10T00:13:25.661Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueDetection.DeviceStatusReset",
+    "name" : "com.vantiq.pumpAssistant.IssueDetection.DeviceStatusReset",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "DeviceStatusReset",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusReset",
+    "serviceName" : "IssueDetection",
+    "timestamp" : "2024-01-10T00:13:25.662Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueDetection.DeviceStatusUpdate",
+    "name" : "com.vantiq.pumpAssistant.IssueDetection.DeviceStatusUpdate",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "DeviceStatusUpdate",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueDetection.DeviceStatusUpdate",
+    "serviceName" : "IssueDetection",
+    "timestamp" : "2024-01-10T00:13:25.663Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueDetection.PartitionedState",
+    "name" : "com.vantiq.pumpAssistant.IssueDetection.PartitionedState",
+    "resourceReference" : "/types/com.vantiq.pumpAssistant.IssueDetection.PartitionedState",
+    "timestamp" : "2024-01-10T00:13:22.372Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueDetection.StateChange",
+    "name" : "com.vantiq.pumpAssistant.IssueDetection.StateChange",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "StateChange",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueDetection.StateChange",
+    "serviceName" : "IssueDetection",
+    "timestamp" : "2024-01-10T00:13:25.870Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueDetection.js",
+    "name" : "com.vantiq.pumpAssistant.IssueDetection.js",
+    "resourceReference" : "/documents/com.vantiq.pumpAssistant.IssueDetection.js",
+    "timestamp" : "2024-01-10T00:13:25.102Z",
+    "type" : 19
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueDetection.processRule",
+    "name" : "com.vantiq.pumpAssistant.IssueDetection.processRule",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "processRule",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueDetection.processRule",
+    "serviceName" : "IssueDetection",
+    "timestamp" : "2024-01-10T00:13:25.668Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement",
+    "node" : {
+      "x" : 637,
+      "y" : 686.5
+    },
+    "resourceReference" : "/system.services/com.vantiq.pumpAssistant.IssueManagement",
+    "timestamp" : "2024-01-10T00:16:57.360Z",
+    "type" : 63
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsCloseAll",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsCloseAll",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsCloseAll",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsCloseAll",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:13:29.042Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetAll",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetAll",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsGetAll",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetAll",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:13:28.091Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_InboundIssue",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_InboundIssue",
+    "node" : {
+      "x" : 619.6,
+      "y" : 852.1
+    },
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsGetByEntityId_InboundIssue",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_InboundIssue",
+    "serviceName" : "issue",
+    "timestamp" : "2024-01-10T00:17:06.581Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_UserResponse",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_UserResponse",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsGetByEntityId_UserResponse",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetByEntityId_UserResponse",
+    "serviceName" : "issue",
+    "timestamp" : "2024-01-10T00:13:32.297Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsGetById",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsGetById",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:13:28.254Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnClose",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnClose",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsOnClose",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnClose",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:13:28.242Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnLoad",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnLoad",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsOnLoad",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnLoad",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:13:28.279Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnStore",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnStore",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsOnStore",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsOnStore",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:13:28.075Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsReset",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsReset",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsReset",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsReset",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:13:28.564Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsSetEntity_InboundIssue",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsSetEntity_InboundIssue",
+    "node" : {
+      "x" : 768.2,
+      "y" : 751.8
+    },
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsSetEntity_InboundIssue",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsSetEntity_InboundIssue",
+    "serviceName" : "issue",
+    "timestamp" : "2024-01-10T00:17:09.249Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsSetEntity_UserResponse",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsSetEntity_UserResponse",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsSetEntity_UserResponse",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsSetEntity_UserResponse",
+    "serviceName" : "issue",
+    "timestamp" : "2024-01-10T00:13:40.331Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestionUpd_InboundIssue",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestionUpd_InboundIssue",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsUpdateAnswerQuestionUpd_InboundIssue",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestionUpd_InboundIssue",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:17:09.244Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestion_InboundIssue",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestion_InboundIssue",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsUpdateAnswerQuestion_InboundIssue",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateAnswerQuestion_InboundIssue",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:17:06.319Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateNotifyUser_InboundIssue",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateNotifyUser_InboundIssue",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsUpdateNotifyUser_InboundIssue",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateNotifyUser_InboundIssue",
+    "serviceName" : "issue",
+    "timestamp" : "2024-01-10T00:17:08.140Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateStatus",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateStatus",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsUpdateStatus",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateStatus",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:13:29.786Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateSubmitPrompt_UserResponse",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateSubmitPrompt_UserResponse",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsUpdateSubmitPrompt_UserResponse",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsUpdateSubmitPrompt_UserResponse",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:13:32.232Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsWriteAll",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsWriteAll",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "ActiveCollabsWriteAll",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.ActiveCollabsWriteAll",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:13:30.444Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.CollabIdsByEntityStoreId",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.CollabIdsByEntityStoreId",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "CollabIdsByEntityStoreId",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.CollabIdsByEntityStoreId",
+    "serviceName" : "IssueManagement",
+    "timestamp" : "2024-01-10T00:13:32.232Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "node" : {
+      "x" : 744,
+      "y" : 1091
+    },
+    "resourceReference" : "/collaborationtypes/com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "timestamp" : "2024-01-10T00:17:05.001Z",
+    "type" : 12
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.InboundIssue.CloseCollab",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.InboundIssue.CloseCollab",
+    "resourceReference" : "/rules/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.CloseCollab",
+    "timestamp" : "2024-01-10T00:17:09.013Z",
+    "type" : 2
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.InboundIssue.EstablishToClose",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.InboundIssue.EstablishToClose",
+    "resourceReference" : "/rules/com.vantiq.pumpAssistant.IssueManagement.InboundIssue.EstablishToClose",
+    "timestamp" : "2024-01-10T00:17:09.246Z",
+    "type" : 2
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.PartitionedState",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.PartitionedState",
+    "node" : {
+      "x" : 811.4,
+      "y" : 570.5
+    },
+    "resourceReference" : "/types/com.vantiq.pumpAssistant.IssueManagement.PartitionedState",
+    "timestamp" : "2024-01-10T00:16:57.422Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.Resolution",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.Resolution",
+    "node" : {
+      "x" : 689.9,
+      "y" : 849.9
+    },
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "Resolution",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.Resolution",
+    "serviceName" : "issue",
+    "timestamp" : "2024-01-10T00:13:26.020Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.UserResponse",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.UserResponse",
+    "resourceReference" : "/collaborationtypes/com.vantiq.pumpAssistant.IssueManagement.UserResponse",
+    "timestamp" : "2024-01-10T00:17:05.001Z",
+    "type" : 12
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.generate1stPrompt",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.generate1stPrompt",
+    "node" : {
+      "x" : 708.7,
+      "y" : 541.5
+    },
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "generate1stPrompt",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.generate1stPrompt",
+    "serviceName" : "issue",
+    "timestamp" : "2024-01-10T00:13:25.905Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.generateUpdatePrompt",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.generateUpdatePrompt",
+    "node" : {
+      "x" : 673.9,
+      "y" : 519.7
+    },
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "generateUpdatePrompt",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.generateUpdatePrompt",
+    "serviceName" : "issue",
+    "timestamp" : "2024-01-10T00:13:25.913Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.getConversationForDevice",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.getConversationForDevice",
+    "node" : {
+      "x" : 458.1,
+      "y" : 698.2
+    },
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "getConversationForDevice",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.getConversationForDevice",
+    "serviceName" : "issue",
+    "timestamp" : "2024-01-10T00:13:25.940Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.getEntityIdMap",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.getEntityIdMap",
+    "node" : {
+      "x" : 740.3,
+      "y" : 573.7
+    },
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "getEntityIdMap",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.IssueManagement.getEntityIdMap",
+    "serviceName" : "issue",
+    "timestamp" : "2024-01-10T00:13:25.978Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.IssueManagement.js",
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.js",
+    "resourceReference" : "/documents/com.vantiq.pumpAssistant.IssueManagement.js",
+    "timestamp" : "2024-01-10T00:17:00.087Z",
+    "type" : 19
+  }, {
+    "name" : "com.vantiq.pumpAssistant.PumpAITroubleshooting",
+    "resourceReference" : "/system.designmodels/com.vantiq.pumpAssistant.PumpAITroubleshooting",
+    "timestamp" : "2024-01-10T00:22:52.215Z",
+    "type" : 75
+  }, {
+    "label" : "com.vantiq.pumpAssistant.PumpControl",
+    "name" : "com.vantiq.pumpAssistant.PumpControl",
+    "resourceReference" : "/system.services/com.vantiq.pumpAssistant.PumpControl",
+    "timestamp" : "2024-01-10T00:13:23.922Z",
+    "type" : 63
+  }, {
+    "label" : "com.vantiq.pumpAssistant.PumpControl.PartitionedState",
+    "name" : "com.vantiq.pumpAssistant.PumpControl.PartitionedState",
+    "resourceReference" : "/types/com.vantiq.pumpAssistant.PumpControl.PartitionedState",
+    "timestamp" : "2024-01-10T00:13:22.351Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.pumpAssistant.PumpControl.getCurrentStatus",
+    "name" : "com.vantiq.pumpAssistant.PumpControl.getCurrentStatus",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "getCurrentStatus",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.PumpControl.getCurrentStatus",
+    "serviceName" : "PumpControl",
+    "timestamp" : "2024-01-10T00:13:26.066Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.PumpControl.initializePartitionedState",
+    "name" : "com.vantiq.pumpAssistant.PumpControl.initializePartitionedState",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "initializePartitionedState",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.PumpControl.initializePartitionedState",
+    "serviceName" : "PumpControl",
+    "timestamp" : "2024-01-10T00:13:26.072Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.PumpControl.js",
+    "name" : "com.vantiq.pumpAssistant.PumpControl.js",
+    "resourceReference" : "/documents/com.vantiq.pumpAssistant.PumpControl.js",
+    "timestamp" : "2024-01-10T00:13:24.605Z",
+    "type" : 19
+  }, {
+    "label" : "com.vantiq.pumpAssistant.PumpControl.shutdown",
+    "name" : "com.vantiq.pumpAssistant.PumpControl.shutdown",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "shutdown",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.PumpControl.shutdown",
+    "serviceName" : "PumpControl",
+    "timestamp" : "2024-01-10T00:13:26.112Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.PumpControl.startup",
+    "name" : "com.vantiq.pumpAssistant.PumpControl.startup",
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "startup",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.PumpControl.startup",
+    "serviceName" : "PumpControl",
+    "timestamp" : "2024-01-10T00:13:26.154Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.SentenceTransformers",
+    "name" : "com.vantiq.pumpAssistant.SentenceTransformers",
+    "resourceReference" : "/system.llms/com.vantiq.pumpAssistant.SentenceTransformers",
+    "timestamp" : "2024-01-10T00:13:22.460Z",
+    "type" : 80
+  }, {
+    "label" : "com.vantiq.pumpAssistant.Sim",
+    "name" : "com.vantiq.pumpAssistant.Sim",
+    "node" : {
+      "x" : 151.8,
+      "y" : 998
+    },
+    "resourceReference" : "/system.clients/com.vantiq.pumpAssistant.Sim",
+    "timestamp" : "2024-01-10T00:16:55.114Z",
+    "type" : 15
+  }, {
+    "label" : "com.vantiq.pumpAssistant.device",
+    "name" : "com.vantiq.pumpAssistant.device",
+    "node" : {
+      "x" : 562.8,
+      "y" : 602.2
+    },
+    "resourceReference" : "/types/com.vantiq.pumpAssistant.device",
+    "timestamp" : "2024-01-10T00:13:22.392Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.pumpAssistant.pumpIndex",
+    "name" : "com.vantiq.pumpAssistant.pumpIndex",
+    "resourceReference" : "/system.semanticindexes/com.vantiq.pumpAssistant.pumpIndex",
+    "timestamp" : "2024-01-10T00:13:23.483Z",
+    "type" : 79
+  }, {
+    "label" : "com.vantiq.pumpAssistant.sim",
+    "name" : "com.vantiq.pumpAssistant.sim",
+    "node" : {
+      "x" : 576,
+      "y" : 40.3
+    },
+    "resourceReference" : "/system.services/com.vantiq.pumpAssistant.sim",
+    "timestamp" : "2024-01-10T00:13:23.923Z",
+    "type" : 63
+  }, {
+    "label" : "com.vantiq.pumpAssistant.sim.deviceReadingHighTemp",
+    "name" : "com.vantiq.pumpAssistant.sim.deviceReadingHighTemp",
+    "node" : {
+      "x" : 545.8,
+      "y" : 196.9
+    },
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "deviceReadingHighTemp",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.sim.deviceReadingHighTemp",
+    "serviceName" : "sim",
+    "timestamp" : "2024-01-10T00:13:26.200Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.sim.deviceReadingHighTempandVibration",
+    "name" : "com.vantiq.pumpAssistant.sim.deviceReadingHighTempandVibration",
+    "node" : {
+      "x" : 497.2,
+      "y" : 173.2
+    },
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "deviceReadingHighTempandVibration",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.sim.deviceReadingHighTempandVibration",
+    "serviceName" : "sim",
+    "timestamp" : "2024-01-10T00:13:26.248Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.sim.deviceReadingHighVibration",
+    "name" : "com.vantiq.pumpAssistant.sim.deviceReadingHighVibration",
+    "node" : {
+      "x" : 455.6,
+      "y" : 142.2
+    },
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "deviceReadingHighVibration",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.sim.deviceReadingHighVibration",
+    "serviceName" : "sim",
+    "timestamp" : "2024-01-10T00:13:26.258Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.sim.deviceReadingNormal",
+    "name" : "com.vantiq.pumpAssistant.sim.deviceReadingNormal",
+    "node" : {
+      "x" : 424.8,
+      "y" : 106.8
+    },
+    "packageName" : "com.vantiq.pumpAssistant",
+    "procedureName" : "deviceReadingNormal",
+    "resourceReference" : "/procedures/com.vantiq.pumpAssistant.sim.deviceReadingNormal",
+    "serviceName" : "sim",
+    "timestamp" : "2024-01-10T00:13:26.259Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pumpAssistant.sim.js",
+    "name" : "com.vantiq.pumpAssistant.sim.js",
+    "resourceReference" : "/documents/com.vantiq.pumpAssistant.sim.js",
+    "timestamp" : "2024-01-10T00:13:24.364Z",
+    "type" : 19
+  }, {
+    "label" : "public/component/images/spinner.gif",
+    "name" : "public/component/images/spinner.gif",
+    "resourceReference" : "/documents/public/component/images/spinner.gif",
+    "timestamp" : "2024-01-10T00:17:12.367Z",
+    "type" : 19
+  }, {
+    "label" : "public/css/mobile.css",
+    "name" : "public/css/mobile.css",
+    "resourceReference" : "/documents/public/css/mobile.css",
+    "timestamp" : "2024-01-10T00:17:12.355Z",
+    "type" : 19
+  }, {
+    "label" : "public/images/typing-texting.gif",
+    "name" : "public/images/typing-texting.gif",
+    "resourceReference" : "/documents/public/images/typing-texting.gif",
+    "timestamp" : "2024-01-10T00:17:12.362Z",
+    "type" : 19
+  }, {
+    "label" : "templates/pumprepair.txt",
+    "name" : "templates/pumprepair.txt",
+    "resourceReference" : "/documents/templates/pumprepair.txt",
+    "timestamp" : "2024-01-10T00:17:12.355Z",
+    "type" : 19
+  }, {
+    "label" : "templates/updatePrompt.txt",
+    "name" : "templates/updatePrompt.txt",
+    "resourceReference" : "/documents/templates/updatePrompt.txt",
+    "timestamp" : "2024-01-10T00:17:12.355Z",
+    "type" : 19
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "LLMs",
+    "pane" : {
+      "address" : "RH[0]/DV[0]/L[1]"
+    },
+    "state" : 8,
+    "type" : 127
+  }, {
+    "isPinned" : false,
+    "name" : "Log Messages",
+    "type" : 12
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "address" : "RH[0]/DV[0]/L[0]",
+      "isActive" : true,
+      "isActiveTool" : true
+    },
+    "state" : 8,
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "Semantic Indexes",
+    "pane" : {
+      "address" : "RH[0]/DV[0]/L[2]"
+    },
+    "state" : 8,
+    "type" : 126
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.pumpAssistant.DeviceIssue",
+    "pane" : {
+      "address" : "RH[0]/DV[0]/L[3]"
+    },
+    "resourceKey" : "client/com.vantiq.pumpAssistant.DeviceIssue",
+    "state" : 8,
+    "type" : 63
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.pumpAssistant.IssueDetection",
+    "pane" : {
+      "address" : "RH[1]/L[1]"
+    },
+    "resourceKey" : "services/com.vantiq.pumpAssistant.IssueDetection",
+    "state" : 8,
+    "type" : 109
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.pumpAssistant.IssueManagement",
+    "pane" : {
+      "address" : "RH[1]/L[2]"
+    },
+    "resourceKey" : "services/com.vantiq.pumpAssistant.IssueManagement",
+    "state" : 8,
+    "type" : 109
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "pane" : {
+      "address" : "RH[1]/L[3]",
+      "isActive" : true
+    },
+    "resourceKey" : "app/com.vantiq.pumpAssistant.IssueManagement.InboundIssue",
+    "state" : 8,
+    "toolOptions" : { },
+    "type" : 15
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.pumpAssistant.IssueManagement.UserResponse",
+    "pane" : {
+      "address" : "RH[1]/L[4]"
+    },
+    "resourceKey" : "app/com.vantiq.pumpAssistant.IssueManagement.UserResponse",
+    "state" : 8,
+    "toolOptions" : { },
+    "type" : 15
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.pumpAssistant.PumpAITroubleshooting",
+    "pane" : {
+      "address" : "RH[1]/L[0]"
+    },
+    "resourceKey" : "designmodel/com.vantiq.pumpAssistant.PumpAITroubleshooting",
+    "state" : 8,
+    "type" : 121
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.pumpAssistant.PumpControl",
+    "pane" : {
+      "address" : "RH[1]/L[5]"
+    },
+    "resourceKey" : "services/com.vantiq.pumpAssistant.PumpControl",
+    "state" : 8,
+    "type" : 109
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.pumpAssistant.Sim",
+    "pane" : {
+      "address" : "RH[0]/DV[1]/L[1]",
+      "isActive" : true
+    },
+    "resourceKey" : "client/com.vantiq.pumpAssistant.Sim",
+    "state" : 8,
+    "toolOptions" : {
+      "isRunning" : true
+    },
+    "type" : 63
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.pumpAssistant.sim",
+    "pane" : {
+      "address" : "RH[0]/DV[1]/L[0]"
+    },
+    "resourceKey" : "services/com.vantiq.pumpAssistant.sim",
+    "state" : 8,
+    "type" : 109
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "llm/LLMs", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description", "semanticindex/Semantic Indexes", "client/com.vantiq.pumpAssistant.DeviceIssue", "services/com.vantiq.pumpAssistant.IssueDetection", "services/com.vantiq.pumpAssistant.IssueManagement", "app/com.vantiq.pumpAssistant.IssueManagement.InboundIssue", "app/com.vantiq.pumpAssistant.IssueManagement.UserResponse", "designmodel/com.vantiq.pumpAssistant.PumpAITroubleshooting", "services/com.vantiq.pumpAssistant.PumpControl", "client/com.vantiq.pumpAssistant.Sim", "services/com.vantiq.pumpAssistant.sim" ]
+  } ]
+}

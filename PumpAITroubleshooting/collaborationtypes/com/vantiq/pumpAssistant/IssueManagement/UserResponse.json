@@ -1,0 +1,121 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "01985d55-03ab-40a1-8b19-932d0c6e15c6" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "702a4ead-0613-45e7-9c59-b2198d4e4549" : {
+          "x" : 0,
+          "y" : 240
+        },
+        "88a499f8-9fac-4ad2-8823-a621040948c7" : {
+          "x" : 0,
+          "y" : 160
+        },
+        "df08f17a-848c-4880-8319-cd188d914c4d" : {
+          "x" : 0,
+          "y" : 80
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.8952723686222857,
+      "translate" : [ 350, 160.5673085354354 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "ai" : true,
+        "collab" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "serviceevents" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "GetCollaborationForDevice" ],
+        "eventTypeName" : "UserResponse",
+        "inboundResource" : "services",
+        "inboundResourceId" : "com.vantiq.pumpAssistant.IssueManagement",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 4,
+      "uuid" : "01985d55-03ab-40a1-8b19-932d0c6e15c6"
+    },
+    "GetCollaborationForDevice" : {
+      "configuration" : {
+        "behavior" : "Establish existing collaboration",
+        "childStreams" : [ "SubmitPrompt" ],
+        "collaborationId" : "event.collaborationId",
+        "entityId" : "event.deviceId",
+        "parentStreams" : [ "EventStream" ],
+        "roleName" : "device"
+      },
+      "downstreamReferences" : { },
+      "name" : "GetCollaborationForDevice",
+      "pattern" : "EstablishCollaboration",
+      "patternVersion" : 8,
+      "uuid" : "df08f17a-848c-4880-8319-cd188d914c4d"
+    },
+    "OutboundUpdate" : {
+      "configuration" : {
+        "eventTypeName" : "OutboundIssueResolution",
+        "parentStreams" : [ "SubmitPrompt" ],
+        "service" : "com.vantiq.pumpAssistant.IssueManagement"
+      },
+      "downstreamReferences" : { },
+      "name" : "OutboundUpdate",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 2,
+      "uuid" : "702a4ead-0613-45e7-9c59-b2198d4e4549"
+    },
+    "SubmitPrompt" : {
+      "configuration" : {
+        "childStreams" : [ "OutboundUpdate" ],
+        "conversationName" : null,
+        "functions" : "[\"services/com.vantiq.pumpAssistant.PumpControl\"]",
+        "imports" : [ {
+          "type" : "Import",
+          "value" : "service io.vantiq.ai.ChatMessage"
+        } ],
+        "llm" : "com.vantiq.pumpAssistant.GPT-3-Turbo",
+        "parentStreams" : [ "GetCollaborationForDevice" ],
+        "prompt" : "[ChatMessage.buildHumanMessage(event.prompt, {isVisible: true})]",
+        "responseProperties" : "{isVisible: true}",
+        "returnProperty" : null,
+        "useConversation" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "SubmitPrompt",
+      "pattern" : "SubmitPrompt",
+      "patternVersion" : 4,
+      "uuid" : "88a499f8-9fac-4ad2-8823-a621040948c7"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.pumpAssistant.IssueManagement.UserResponse"
+}

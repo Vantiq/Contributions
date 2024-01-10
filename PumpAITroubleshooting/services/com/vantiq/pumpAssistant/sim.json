@@ -1,0 +1,29 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "deviceReadingHighTemp",
+    "parameters" : [ ]
+  }, {
+    "name" : "deviceReadingHighTempandVibration",
+    "parameters" : [ ]
+  }, {
+    "name" : "deviceReadingHighVibration",
+    "parameters" : [ ]
+  }, {
+    "name" : "deviceReadingNormal",
+    "parameters" : [ ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "name" : "com.vantiq.pumpAssistant.sim",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

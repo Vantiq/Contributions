@@ -1,0 +1,5 @@
+// Returns the most recent sensor readings for the pump with the given id.
+package com.vantiq.pumpAssistant
+PROCEDURE PumpControl.getCurrentStatus(deviceId String Description "The id of the pump.")
+
+return pumpsById.get(deviceId)

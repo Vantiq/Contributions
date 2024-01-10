@@ -1,0 +1,10 @@
+package com.vantiq.pumpAssistant
+PROCEDURE IssueManagement.getConversationForDevice(deviceId String): Object Array
+
+// Get the existing collaboration id for the given device id
+var existingId = CollabIdsByEntity.get("/device/" + deviceId)
+if (!existingId) {
+    return []
+} else {
+	io.vantiq.ai.ConversationMemory.getConversation(conversationId: existingId)
+}

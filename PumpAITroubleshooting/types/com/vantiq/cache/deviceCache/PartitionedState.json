@@ -1,0 +1,14 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "com.vantiq.cache.deviceCache.PartitionedState",
+  "properties" : {
+    "InstancesBy_deviceId" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Map",
+      "unique" : false
+    }
+  },
+  "role" : "schema"
+}

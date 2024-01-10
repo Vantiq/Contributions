@@ -1,0 +1,372 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "2f48704e-0d96-4173-93e8-8cc1057959c7" : {
+          "x" : -100.27777777777777,
+          "y" : 400
+        },
+        "32365891-75fe-40ac-808f-00cfb5178540" : {
+          "x" : 274.72222222222223,
+          "y" : 320
+        },
+        "3fe0bbb3-fe05-4fa8-8f76-63d1fcd65136" : {
+          "x" : -297.5,
+          "y" : 320
+        },
+        "42577b3b-67bd-44a9-b41a-2ba6212e7f9f" : {
+          "x" : 97.5,
+          "y" : 240
+        },
+        "4d1b171d-68d5-48dd-8086-20e489a90248" : {
+          "x" : 97.5,
+          "y" : 160
+        },
+        "7415ed99-4650-4493-81ce-a3bded6d7b49" : {
+          "x" : -102.5,
+          "y" : 160
+        },
+        "775cf5a0-aa34-4df2-8d47-e641124da55d" : {
+          "x" : -297.5,
+          "y" : 400
+        },
+        "8da746db-0ec0-4346-816e-38cab35cdf6e" : {
+          "x" : 97.5,
+          "y" : 80
+        },
+        "9a04dc7d-e7f3-4530-aab8-89f686f24e18" : {
+          "x" : 79.72222222222223,
+          "y" : 320
+        },
+        "a8bdf30c-a41e-4a70-874b-a62bf9a667e1" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "b49107fe-25d8-4c93-a488-b046052f400c" : {
+          "x" : -297.5,
+          "y" : 160
+        },
+        "dbd5d974-8375-4d43-8463-c42dd90a8f4e" : {
+          "x" : -297.5,
+          "y" : 240
+        },
+        "ec7ee81b-11bb-4cb2-8b3a-ba3974353485" : {
+          "x" : -100.83333333333333,
+          "y" : 240
+        },
+        "edc20b33-7574-4f34-945d-cf6c8f47e7d9" : {
+          "x" : -97.5,
+          "y" : 80
+        },
+        "f3c28f68-e81e-4975-8d10-f07fb7854732" : {
+          "x" : -100.27777777777777,
+          "y" : 320
+        }
+      },
+      "lastZoomRequest" : 3,
+      "scale" : 0.8345735031287594,
+      "translate" : [ 335.3811863588838, 251.0852993742481 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "ServiceProcedures" : true,
+        "actions" : true,
+        "ai" : true,
+        "collab" : true,
+        "component" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "mobile" : true,
+        "modifiers" : true,
+        "serviceevents" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 146,
+    "propertyWidth" : 300
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "AnswerQuestion" : {
+      "configuration" : {
+        "answerProperties" : "{isVisible: true}",
+        "childStreams" : [ "NotifyUser" ],
+        "conversationContextPrompt" : null,
+        "conversationName" : null,
+        "imports" : null,
+        "minSimilarity" : null,
+        "parentStreams" : [ "InitialPrompt" ],
+        "qaLLM" : null,
+        "question" : "event.prompt",
+        "returnProperty" : null,
+        "semanticIndex" : "com.vantiq.pumpAssistant.pumpIndex",
+        "startConversation" : true,
+        "useConversation" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "AnswerQuestion",
+      "pattern" : "AnswerQuestion",
+      "patternVersion" : 4,
+      "uuid" : "3fe0bbb3-fe05-4fa8-8f76-63d1fcd65136"
+    },
+    "AnswerQuestionUpd" : {
+      "configuration" : {
+        "answerProperties" : "{isVisible: true}",
+        "childStreams" : [ "OutboundUpdate" ],
+        "conversationContextPrompt" : "Please pay very close attention to the differences between the original data payload and the latest data payload and include details on the changes in the values.",
+        "conversationName" : null,
+        "imports" : null,
+        "minSimilarity" : null,
+        "parentStreams" : [ "UpdatePrompt" ],
+        "qaLLM" : null,
+        "question" : "event.prompt",
+        "returnProperty" : null,
+        "semanticIndex" : "com.vantiq.pumpAssistant.pumpIndex",
+        "startConversation" : false,
+        "useConversation" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "AnswerQuestionUpd",
+      "pattern" : "AnswerQuestion",
+      "patternVersion" : 4,
+      "uuid" : "f3c28f68-e81e-4975-8d10-f07fb7854732"
+    },
+    "CloseCollab" : {
+      "configuration" : {
+        "childStreams" : [ "OutboundIssueResolution" ],
+        "parentStreams" : [ "Resolution" ],
+        "status" : "completed"
+      },
+      "downstreamReferences" : { },
+      "name" : "CloseCollab",
+      "pattern" : "CollaborationStatus",
+      "patternVersion" : 4,
+      "uuid" : "9a04dc7d-e7f3-4530-aab8-89f686f24e18"
+    },
+    "EstablishToClose" : {
+      "configuration" : {
+        "behavior" : "Establish existing collaboration",
+        "childStreams" : [ "Resolution" ],
+        "entityId" : "event.deviceID",
+        "parentStreams" : [ "issueResolved" ],
+        "roleName" : "device"
+      },
+      "downstreamReferences" : { },
+      "name" : "EstablishToClose",
+      "pattern" : "EstablishCollaboration",
+      "patternVersion" : 8,
+      "uuid" : "4d1b171d-68d5-48dd-8086-20e489a90248"
+    },
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "issueExists", "issueResolved" ],
+        "eventTypeName" : "InboundIssue",
+        "inboundResource" : "services",
+        "inboundResourceId" : "com.vantiq.pumpAssistant.IssueManagement",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 4,
+      "uuid" : "a8bdf30c-a41e-4a70-874b-a62bf9a667e1"
+    },
+    "ExistingCollaboration" : {
+      "configuration" : {
+        "behavior" : "Establish existing collaboration",
+        "childStreams" : [ "UpdatePrompt" ],
+        "entityId" : "event.deviceID",
+        "parentStreams" : [ "issueExists" ],
+        "roleName" : "device"
+      },
+      "downstreamReferences" : { },
+      "name" : "ExistingCollaboration",
+      "pattern" : "EstablishCollaboration",
+      "patternVersion" : 8,
+      "uuid" : "7415ed99-4650-4493-81ce-a3bded6d7b49"
+    },
+    "InitialPrompt" : {
+      "configuration" : {
+        "childStreams" : [ "AnswerQuestion" ],
+        "imports" : [ {
+          "type" : "Import",
+          "value" : "service io.vantiq.ai.ChatMessage"
+        } ],
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "OpenCollaboration" ],
+        "schema" : null,
+        "transformInPlace" : false,
+        "transformation" : {
+          "prompt" : {
+            "expression" : "ChatMessage.buildHumanMessage(com.vantiq.pumpAssistant.IssueManagement.generate1stPrompt(event), {isVisible: false})",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "InitialPrompt",
+      "pattern" : "Transformation",
+      "patternVersion" : 4,
+      "uuid" : "dbd5d974-8375-4d43-8463-c42dd90a8f4e"
+    },
+    "NotifyUser" : {
+      "configuration" : {
+        "body" : "\"Please review the information provided\"",
+        "clientName" : "com.vantiq.pumpAssistant.DeviceIssue",
+        "disableTemplateSubstitution" : false,
+        "firstResponseFilter" : null,
+        "imports" : null,
+        "maxResponseTime" : null,
+        "parentStreams" : [ "AnswerQuestion" ],
+        "pushSourceName" : null,
+        "title" : "\"Device  has abnormal readings\"",
+        "users" : [ {
+          "value" : "\"sfitts\""
+        } ]
+      },
+      "downstreamReferences" : { },
+      "name" : "NotifyUser",
+      "pattern" : "Notify",
+      "patternVersion" : 6,
+      "uuid" : "775cf5a0-aa34-4df2-8d47-e641124da55d"
+    },
+    "OpenCollaboration" : {
+      "configuration" : {
+        "behavior" : "Do not open multiple collaborations for one entity",
+        "childStreams" : [ "InitialPrompt" ],
+        "entityId" : "event.deviceID",
+        "parentStreams" : [ "issueExists" ],
+        "roleName" : "device"
+      },
+      "downstreamReferences" : { },
+      "name" : "OpenCollaboration",
+      "pattern" : "EstablishCollaboration",
+      "patternVersion" : 8,
+      "uuid" : "b49107fe-25d8-4c93-a488-b046052f400c"
+    },
+    "OutboundIssueResolution" : {
+      "configuration" : {
+        "eventTypeName" : "OutboundIssueResolution",
+        "parentStreams" : [ "Resolution" ],
+        "service" : "com.vantiq.pumpAssistant.IssueManagement"
+      },
+      "downstreamReferences" : { },
+      "name" : "OutboundIssueResolution",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 2,
+      "uuid" : "32365891-75fe-40ac-808f-00cfb5178540"
+    },
+    "OutboundUpdate" : {
+      "configuration" : {
+        "eventTypeName" : "OutboundIssueResolution",
+        "parentStreams" : [ "AnswerQuestionUpd" ],
+        "service" : "com.vantiq.pumpAssistant.IssueManagement"
+      },
+      "downstreamReferences" : { },
+      "name" : "OutboundUpdate",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 2,
+      "uuid" : "2f48704e-0d96-4173-93e8-8cc1057959c7"
+    },
+    "Resolution" : {
+      "configuration" : {
+        "childStreams" : [ "CloseCollab", "OutboundIssueResolution" ],
+        "imports" : null,
+        "parameters" : {
+          "deviceId" : "event.deviceID"
+        },
+        "parentStreams" : [ "EstablishToClose" ],
+        "partitionKey" : null,
+        "procedure" : "com.vantiq.pumpAssistant.IssueManagement.Resolution",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "Resolution",
+      "pattern" : "Procedure",
+      "patternVersion" : 3,
+      "uuid" : "42577b3b-67bd-44a9-b41a-2ba6212e7f9f"
+    },
+    "UpdatePrompt" : {
+      "configuration" : {
+        "childStreams" : [ "AnswerQuestionUpd" ],
+        "imports" : [ {
+          "type" : "Import",
+          "value" : "service io.vantiq.ai.ChatMessage"
+        } ],
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "ExistingCollaboration" ],
+        "schema" : null,
+        "transformInPlace" : false,
+        "transformation" : {
+          "prompt" : {
+            "expression" : "ChatMessage.buildHumanMessage(com.vantiq.pumpAssistant.IssueManagement.generateUpdatePrompt(event), {isVisible: false})",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "UpdatePrompt",
+      "pattern" : "Transformation",
+      "patternVersion" : 4,
+      "uuid" : "ec7ee81b-11bb-4cb2-8b3a-ba3974353485"
+    },
+    "issueExists" : {
+      "configuration" : {
+        "childStreams" : [ "OpenCollaboration", "ExistingCollaboration" ],
+        "condition" : "event.issue.exists == true",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "EventStream" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "issueExists",
+      "pattern" : "Filter",
+      "patternVersion" : 4,
+      "uuid" : "edc20b33-7574-4f34-945d-cf6c8f47e7d9"
+    },
+    "issueResolved" : {
+      "configuration" : {
+        "childStreams" : [ "EstablishToClose" ],
+        "condition" : "event.issue.exists == false",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "EventStream" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "issueResolved",
+      "pattern" : "Filter",
+      "patternVersion" : 4,
+      "uuid" : "8da746db-0ec0-4346-816e-38cab35cdf6e"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.pumpAssistant.IssueManagement.InboundIssue"
+}

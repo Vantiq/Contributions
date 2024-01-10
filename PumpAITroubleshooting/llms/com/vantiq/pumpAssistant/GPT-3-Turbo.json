@@ -1,0 +1,7 @@
+{
+  "config" : { },
+  "distanceFunction" : "Cosine",
+  "modelName" : "gpt-3.5-turbo",
+  "name" : "com.vantiq.pumpAssistant.GPT-3-Turbo",
+  "type" : "generative"
+}

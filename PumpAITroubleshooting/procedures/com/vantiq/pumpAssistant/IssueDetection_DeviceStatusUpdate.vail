@@ -1,0 +1,9 @@
+package com.vantiq.pumpAssistant 
+PROCEDURE IssueDetection.DeviceStatusUpdate(key String, newValue Object)
+
+var result = DeviceStatus.compute(key, (id, current) => {
+    var state = current
+    return newValue
+})
+
+return result

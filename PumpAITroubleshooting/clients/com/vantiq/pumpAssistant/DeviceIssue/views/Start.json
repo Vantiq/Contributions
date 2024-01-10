@@ -1,0 +1,98 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "af7d59f2-263b-46e0-8361-2eb44721e206" ],
+    "widgets" : [ {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "column" : -1,
+      "defaultMinimumHeight" : 300,
+      "defaultMinimumWidth" : 200,
+      "h" : 511.445,
+      "heightPolicy" : "explicit",
+      "horzGravity" : "center",
+      "horzizontalScrollPolicy" : "none",
+      "markdown" : "",
+      "name" : "StaticMarkdown1",
+      "row" : -1,
+      "type" : "StaticMarkdown",
+      "uuid" : "af7d59f2-263b-46e0-8361-2eb44721e206",
+      "v" : 17,
+      "vertGravity" : "center",
+      "verticalScrollPolicy" : "auto",
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "data" : {
+    "properties" : {
+      "deviceID" : {
+        "defaultLabel" : "deviceID",
+        "defaultValue" : "abc123",
+        "type" : "String"
+      }
+    }
+  },
+  "footerChildren" : {
+    "rootArray" : [ "29f75e31-7ca2-49d4-be7e-16d5632157f1" ],
+    "widgets" : [ {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "buttonBackgroundColor" : "default",
+      "buttonLabel" : "Submit",
+      "buttonLabelColor" : "default",
+      "buttonLabelSize" : 14,
+      "buttonLabelStyle" : "bold",
+      "column" : -1,
+      "h" : 60,
+      "heightPolicy" : "explicit",
+      "horzGravity" : "center",
+      "name" : "Button6",
+      "row" : -1,
+      "submitValue" : 100,
+      "type" : "Button",
+      "uuid" : "05ff839d-f55f-4fb9-8bdc-afa496842c1e",
+      "v" : 17,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "children" : [ "6ccd276e-e1d6-4328-b719-bde2f1f9ef25", "05ff839d-f55f-4fb9-8bdc-afa496842c1e" ],
+      "column" : -1,
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "horzMargin" : 0,
+      "name" : "VerticalLayout19",
+      "row" : -1,
+      "type" : "VerticalLayout",
+      "uuid" : "29f75e31-7ca2-49d4-be7e-16d5632157f1",
+      "v" : 17,
+      "vertGravity" : "center",
+      "vertMargin" : 0,
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "column" : -1,
+      "defaultValue" : "",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "MultilineInput6",
+      "optional" : true,
+      "placeholder" : "",
+      "row" : -1,
+      "rows" : 5,
+      "type" : "MultilineInput",
+      "uuid" : "6ccd276e-e1d6-4328-b719-bde2f1f9ef25",
+      "v" : 17,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell",
+      "wordwrap" : true
+    } ]
+  },
+  "hasFooter" : true,
+  "layoutType" : "mobile"
+}

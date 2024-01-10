@@ -1,0 +1,7 @@
+{
+  "distanceFunction" : "Cosine",
+  "modelName" : "all-MiniLM-L6-v2",
+  "name" : "com.vantiq.pumpAssistant.SentenceTransformers",
+  "type" : "embedding",
+  "vectorSize" : 384
+}
