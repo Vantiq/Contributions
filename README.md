@@ -14,6 +14,7 @@ The list of Contributions that show up in the Import dialog is:
 * GoogleMapsAPI
 * MSFaceAPIs
 * PublicUserRegistration
+* PumpAITroubleshooting - requires v1.38
 * TwitterAPI
 * VisionDemo
 * WeatherEmergencyProject
