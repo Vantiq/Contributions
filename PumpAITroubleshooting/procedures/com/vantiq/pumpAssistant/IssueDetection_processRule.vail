@@ -1,0 +1,26 @@
+package com.vantiq.pumpAssistant
+stateless PROCEDURE IssueDetection.processRule(event Object)
+
+// get the cached device detail
+var lookup =  com.vantiq.cache.deviceCache.GetBy_deviceId(event.deviceID)
+
+// initialize the issue
+var issue = {}
+issue.exists = false
+issue.reason = ""
+
+// process the temperature rule
+if (event.sensorData.temperature < lookup.temperatureRange[0] OR event.sensorData.temperature > lookup.temperatureRange[1]){
+    issue.exists = true
+    issue.reason += "\nTemperature out of range for device"
+}
+
+// process the vibration rule
+if (event.sensorData.vibration < lookup.vibrationRange[0] OR event.sensorData.vibration > lookup.vibrationRange[1]){
+    issue.exists = true
+    issue.reason += "\nVibration out of range for device"
+}
+
+// add the issue to the event and return
+event.issue = issue
+return event

@@ -1,0 +1,14 @@
+package com.vantiq.pumpAssistant
+PROCEDURE IssueManagement.Resolution(deviceId String)
+
+// Construct final response message
+var prompt = "Great job! Seems like the steps you took to address the problem have paid off. The temperature and vibration levels are now within the normal range."
+var resolutionMsg = io.vantiq.ai.ChatMessage.buildAIMessage(prompt, {isVisible: true})
+
+// Find the conversation (if it exists) and add the resolution message
+var existingId = CollabIdsByEntity.get("/device/" + deviceId)
+if (existingId != null) {
+	io.vantiq.ai.ConversationMemory.addChatMessages(existingId, [resolutionMsg])    
+}
+
+return resolutionMsg

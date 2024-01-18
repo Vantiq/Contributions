@@ -1,0 +1,78 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterGenerated" : false
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "DeviceInbound" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/com.vantiq.pumpAssistant.IssueDetection.DeviceInbound/EventStream",
+      "isReliable" : false
+    },
+    "OutboundIssue" : {
+      "description" : "This outbound event was added by the Design Modeler 'com.vantiq.pumpAssistant.IoT'.",
+      "direction" : "OUTBOUND",
+      "eventSchema" : null,
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "DeviceStatusGet",
+    "parameters" : [ {
+      "multi" : false,
+      "name" : "key",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "DeviceStatusGetAll",
+    "parameters" : [ ]
+  }, {
+    "name" : "DeviceStatusReset",
+    "parameters" : [ {
+      "multi" : false,
+      "name" : "key",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "DeviceStatusUpdate",
+    "parameters" : [ {
+      "multi" : false,
+      "name" : "key",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "multi" : false,
+      "name" : "newValue",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "StateChange",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "processRule",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "name" : "com.vantiq.pumpAssistant.IssueDetection",
+  "partitionedType" : "com.vantiq.pumpAssistant.IssueDetection.PartitionedState",
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

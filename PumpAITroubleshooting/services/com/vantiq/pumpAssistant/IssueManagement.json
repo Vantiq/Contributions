@@ -1,0 +1,95 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterGenerated" : false
+  },
+  "ars_relationships" : [ ],
+  "collaborationStateConfig" : {
+    "collaboratorRoles" : [ "GPTResponse" ],
+    "conversationNames" : [ "MySuperImportantConversation" ],
+    "entityRoles" : [ {
+      "name" : "device",
+      "type" : "com.vantiq.pumpAssistant.device"
+    } ],
+    "writeFrequency" : "5 minutes"
+  },
+  "description" : null,
+  "eventTypes" : {
+    "InboundIssue" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/com.vantiq.pumpAssistant.IssueManagement.InboundIssue/EventStream",
+      "isReliable" : false
+    },
+    "OutboundIssueResolution" : {
+      "description" : "This outbound event was added by the Design Modeler 'com.vantiq.pumpAssistant.IoT'.",
+      "direction" : "OUTBOUND",
+      "eventSchema" : null,
+      "isReliable" : false
+    },
+    "UserResponse" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/com.vantiq.pumpAssistant.IssueManagement.UserResponse/EventStream",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "Resolution",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "deviceId",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "generate1stPrompt",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "generateUpdatePrompt",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "getConversationForDevice",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "deviceId",
+      "required" : false,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : true,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "getEntityIdMap",
+    "parameters" : [ ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "name" : "com.vantiq.pumpAssistant.IssueManagement",
+  "partitionedType" : "com.vantiq.pumpAssistant.IssueManagement.PartitionedState",
+  "replicationFactor" : 1,
+  "scheduledProcedures" : {
+    "ActiveCollabsWriteAll" : {
+      "interval" : 300000
+    },
+    "ActiveCollabsWriteAll_InboundIssue" : {
+      "interval" : 300000
+    },
+    "ActiveCollabsWriteAll_UserResponse" : {
+      "interval" : 300000
+    }
+  }
+}

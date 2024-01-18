@@ -1,0 +1,10 @@
+package com.vantiq.pumpAssistant
+stateless PROCEDURE IssueDetection.StateChange(event Object)
+
+var result = null
+var currentStatus = IssueDetection.DeviceStatusGet(event.deviceID)
+if (currentStatus == null OR currentStatus.issue != event.issue){
+	IssueDetection.DeviceStatusUpdate(event.deviceID, event)
+	result = event
+}
+return result

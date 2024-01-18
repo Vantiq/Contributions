@@ -1,0 +1,19 @@
+package com.vantiq.pumpAssistant
+PROCEDURE sim.deviceReadingHighTempandVibration()
+
+
+var readingObj = {
+  "deviceID": "abc123",
+  "timestamp": now(),
+  "sensorData": {
+    "temperature": 95.6,
+    "vibration": 0.8,
+    "pressure": 8.2,
+    "flowRate": 12.3
+  },
+  "status": "operational"
+}
+
+publish readingObj to SERVICE EVENT "com.vantiq.pumpAssistant.IssueDetection/DeviceInbound"
+
+

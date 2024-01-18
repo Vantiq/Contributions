@@ -1,0 +1,4 @@
+package com.vantiq.pumpAssistant
+PROCEDURE IssueDetection.DeviceStatusGet(key String)
+
+var result = DeviceStatus.get(key)

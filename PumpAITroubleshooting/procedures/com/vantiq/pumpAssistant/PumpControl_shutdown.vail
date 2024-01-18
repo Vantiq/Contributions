@@ -1,0 +1,17 @@
+// Shut down the specified pump.
+package com.vantiq.pumpAssistant
+PROCEDURE PumpControl.shutdown(deviceId String Description "The id of the pump."): Object
+
+return pumpsById.computeIfPresent(deviceId, (id, cur) => {
+    return {
+   		"deviceID": id,
+   		"timestamp": "now()",
+   		"sensorData": {
+      		"temperature": 50.5,
+      		"vibration": 0.00,
+      		"pressure": 0.00,
+      		"flowRate": 0.00
+        },
+   		"status": "stopped"
+	}
+})

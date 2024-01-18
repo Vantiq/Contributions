@@ -1,0 +1,131 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "615cb525-1eee-4356-bedd-dd0df080867a" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "895be01d-b623-475a-9354-794ebfa0edc1" : {
+          "x" : 0,
+          "y" : 160
+        },
+        "92e45570-0c19-4c63-9bca-acba8c9c8cce" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "9805b964-6efd-4607-8ca7-525462976599" : {
+          "x" : 0,
+          "y" : 240
+        }
+      },
+      "lastZoomRequest" : 3,
+      "scale" : 1.968956194654026,
+      "translate" : [ 190.69648394629655, 154.84492136451985 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "ServiceProcedures" : true,
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "serviceevents" : true,
+        "vision" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : true,
+      "serviceGroupOpenHash" : {
+        "com-vantiq-cache-deviceCache" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "com-vantiq-cache-devicesCache" : {
+          "events" : true,
+          "procedures" : true
+        }
+      }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 212,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "ProcessRules" ],
+        "eventTypeName" : "DeviceInbound",
+        "inboundResource" : "services",
+        "inboundResourceId" : "com.vantiq.pumpAssistant.IssueDetection",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 4,
+      "uuid" : "615cb525-1eee-4356-bedd-dd0df080867a"
+    },
+    "OutboundIssue" : {
+      "configuration" : {
+        "eventTypeName" : "OutboundIssue",
+        "parentStreams" : [ "StateChange" ],
+        "service" : "com.vantiq.pumpAssistant.IssueDetection"
+      },
+      "downstreamReferences" : { },
+      "name" : "OutboundIssue",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 2,
+      "uuid" : "9805b964-6efd-4607-8ca7-525462976599"
+    },
+    "ProcessRules" : {
+      "configuration" : {
+        "childStreams" : [ "StateChange" ],
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "EventStream" ],
+        "partitionKey" : null,
+        "procedure" : "com.vantiq.pumpAssistant.IssueDetection.processRule",
+        "redeliverOnError" : null,
+        "returnBehavior" : null,
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "ProcessRules",
+      "pattern" : "Procedure",
+      "patternVersion" : 3,
+      "uuid" : "92e45570-0c19-4c63-9bca-acba8c9c8cce"
+    },
+    "StateChange" : {
+      "configuration" : {
+        "childStreams" : [ "OutboundIssue" ],
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "ProcessRules" ],
+        "partitionKey" : null,
+        "procedure" : "com.vantiq.pumpAssistant.IssueDetection.StateChange",
+        "redeliverOnError" : null,
+        "returnBehavior" : null,
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "StateChange",
+      "pattern" : "Procedure",
+      "patternVersion" : 3,
+      "uuid" : "895be01d-b623-475a-9354-794ebfa0edc1"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.pumpAssistant.IssueDetection.DeviceInbound"
+}

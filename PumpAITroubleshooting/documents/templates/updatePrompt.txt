@@ -1,0 +1,5 @@
+Here is the latest payload for this ${Manufacturer} ${Model} centrifugal pump
+
+${payload}
+
+Now that the readings are updated, tell me if things are getting better or worse and provide the next step for me to perform to restore normal operation.

@@ -1,0 +1,14 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "com.vantiq.pumpAssistant.PumpControl.PartitionedState",
+  "properties" : {
+    "pumpsById" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Map",
+      "unique" : false
+    }
+  },
+  "role" : "schema"
+}

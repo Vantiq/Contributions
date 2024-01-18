@@ -1,0 +1,51 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterGenerated" : false
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "description" : "Returns the most recent sensor readings for the pump with the given id.",
+    "name" : "getCurrentStatus",
+    "parameters" : [ {
+      "description" : "The id of the pump.",
+      "multi" : false,
+      "name" : "deviceId",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "description" : "Shut down the specified pump.",
+    "name" : "shutdown",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "deviceId",
+      "required" : false,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "description" : "Start the specified pump",
+    "name" : "startup",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "deviceId",
+      "required" : false,
+      "type" : "String"
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "name" : "com.vantiq.pumpAssistant.PumpControl",
+  "partitionedType" : "com.vantiq.pumpAssistant.PumpControl.PartitionedState",
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

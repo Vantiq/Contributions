@@ -1,0 +1,17 @@
+package com.vantiq.pumpAssistant
+/* The system invokes this partitioned state initializer automatically any time the partitioned state type is changed or updated as well as when the state is reinitialized */
+private multi partition PROCEDURE PumpControl.initializePartitionedState()
+
+pumpsById = Concurrent.Map()
+var status = {
+   "deviceID": "abc123",
+   "timestamp": "now()",
+   "sensorData": {
+      "temperature": 65.6,
+      "vibration": 0.35,
+      "pressure": 7.2,
+      "flowRate": 13.34
+   },
+   "status": "operational"
+}
+pumpsById.put("abc123", status)
