@@ -22,6 +22,8 @@ The list of Contributions that show up in the Import dialog is:
 
 Other Contributions can be imported by cloning this repo to a local disk and then dragging and dropping their directory into the main Project Import dialog.
 
+ComponentAssemblies contains Assembly projects that contain resources intended for use in Public Catalogs. Though they can be imported and used in any Project if desired.
+
 * 
 # Licensing
 Please note that all contributions to this repository are freely and publicly available under the MIT license. By contributing to this repository, you are agreeing that your contributions will also be available under this license. 

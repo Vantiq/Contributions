@@ -1,0 +1,330 @@
+{
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : { },
+    "page" : { }
+  },
+  "isComponent" : true,
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ ]
+  },
+  "name" : "com.vantiq.clientcomponent.Statistics",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "add",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ {
+        "defaultValue" : null,
+        "hidden" : false,
+        "propertyLabel" : "titleIcon",
+        "propertyList" : [ ],
+        "propertyName" : "glyphIcon",
+        "propertyType" : 31,
+        "type" : 0,
+        "widgetName" : "MenuButton4",
+        "widgetType" : "MenuButton"
+      }, {
+        "defaultValue" : "Title",
+        "hidden" : false,
+        "propertyLabel" : "titleText",
+        "propertyList" : [ ],
+        "propertyName" : "text",
+        "propertyType" : 50,
+        "type" : 0,
+        "widgetName" : "MenuButton4",
+        "widgetType" : "MenuButton"
+      }, {
+        "defaultValue" : 14,
+        "hidden" : false,
+        "propertyLabel" : "titleFontSize",
+        "propertyList" : [ {
+          "label" : "10",
+          "name" : 10
+        }, {
+          "label" : "12",
+          "name" : 12
+        }, {
+          "label" : "14",
+          "name" : 14
+        }, {
+          "label" : "16",
+          "name" : 16
+        }, {
+          "label" : "18",
+          "name" : 18
+        }, {
+          "label" : "20",
+          "name" : 20
+        }, {
+          "label" : "22",
+          "name" : 22
+        }, {
+          "label" : "28",
+          "name" : 28
+        }, {
+          "label" : "32",
+          "name" : 32
+        }, {
+          "label" : "40",
+          "name" : 40
+        }, {
+          "label" : "48",
+          "name" : 48
+        }, {
+          "label" : "60",
+          "name" : 60
+        } ],
+        "propertyName" : "fontSize",
+        "propertyType" : 25,
+        "type" : 0,
+        "widgetName" : "MenuButton4",
+        "widgetType" : "MenuButton"
+      }, {
+        "defaultValue" : "normal",
+        "hidden" : false,
+        "propertyLabel" : "titleFontWeight",
+        "propertyList" : [ {
+          "label" : "Normal",
+          "name" : "normal"
+        }, {
+          "label" : "Bold",
+          "name" : "bold"
+        } ],
+        "propertyName" : "fontWeight",
+        "propertyType" : 27,
+        "type" : 0,
+        "widgetName" : "MenuButton4",
+        "widgetType" : "MenuButton"
+      }, {
+        "defaultValue" : null,
+        "hidden" : false,
+        "propertyLabel" : "valueIcon",
+        "propertyList" : [ ],
+        "propertyName" : "glyphIcon",
+        "propertyType" : 31,
+        "type" : 0,
+        "widgetName" : "MenuButton5",
+        "widgetType" : "MenuButton"
+      }, {
+        "defaultValue" : "Value",
+        "hidden" : false,
+        "propertyLabel" : "valueText",
+        "propertyList" : [ ],
+        "propertyName" : "text",
+        "propertyType" : 50,
+        "type" : 0,
+        "widgetName" : "MenuButton5",
+        "widgetType" : "MenuButton"
+      }, {
+        "defaultValue" : 28,
+        "hidden" : false,
+        "propertyLabel" : "valueFontSize",
+        "propertyList" : [ {
+          "label" : "10",
+          "name" : 10
+        }, {
+          "label" : "12",
+          "name" : 12
+        }, {
+          "label" : "14",
+          "name" : 14
+        }, {
+          "label" : "16",
+          "name" : 16
+        }, {
+          "label" : "18",
+          "name" : 18
+        }, {
+          "label" : "20",
+          "name" : 20
+        }, {
+          "label" : "22",
+          "name" : 22
+        }, {
+          "label" : "28",
+          "name" : 28
+        }, {
+          "label" : "32",
+          "name" : 32
+        }, {
+          "label" : "40",
+          "name" : 40
+        }, {
+          "label" : "48",
+          "name" : 48
+        }, {
+          "label" : "60",
+          "name" : 60
+        } ],
+        "propertyName" : "fontSize",
+        "propertyType" : 25,
+        "type" : 0,
+        "widgetName" : "MenuButton5",
+        "widgetType" : "MenuButton"
+      }, {
+        "defaultValue" : "bold",
+        "hidden" : false,
+        "propertyLabel" : "valueFontWeight",
+        "propertyList" : [ {
+          "label" : "Normal",
+          "name" : "normal"
+        }, {
+          "label" : "Bold",
+          "name" : "bold"
+        } ],
+        "propertyName" : "fontWeight",
+        "propertyType" : 27,
+        "type" : 0,
+        "widgetName" : "MenuButton5",
+        "widgetType" : "MenuButton"
+      }, {
+        "defaultValue" : "glyphicon-arrow-up",
+        "hidden" : false,
+        "propertyLabel" : "deltaIcon",
+        "propertyList" : [ ],
+        "propertyName" : "glyphIcon",
+        "propertyType" : 31,
+        "type" : 0,
+        "widgetName" : "MenuButton10",
+        "widgetType" : "MenuButton"
+      }, {
+        "defaultValue" : "&#916;%",
+        "hidden" : false,
+        "propertyLabel" : "deltaText",
+        "propertyList" : [ ],
+        "propertyName" : "text",
+        "propertyType" : 50,
+        "type" : 0,
+        "widgetName" : "MenuButton10",
+        "widgetType" : "MenuButton"
+      }, {
+        "defaultValue" : 14,
+        "hidden" : false,
+        "propertyLabel" : "deltaFontSize",
+        "propertyList" : [ {
+          "label" : "10",
+          "name" : 10
+        }, {
+          "label" : "12",
+          "name" : 12
+        }, {
+          "label" : "14",
+          "name" : 14
+        }, {
+          "label" : "16",
+          "name" : 16
+        }, {
+          "label" : "18",
+          "name" : 18
+        }, {
+          "label" : "20",
+          "name" : 20
+        }, {
+          "label" : "22",
+          "name" : 22
+        }, {
+          "label" : "28",
+          "name" : 28
+        }, {
+          "label" : "32",
+          "name" : 32
+        }, {
+          "label" : "40",
+          "name" : 40
+        }, {
+          "label" : "48",
+          "name" : 48
+        }, {
+          "label" : "60",
+          "name" : 60
+        } ],
+        "propertyName" : "fontSize",
+        "propertyType" : 25,
+        "type" : 0,
+        "widgetName" : "MenuButton10",
+        "widgetType" : "MenuButton"
+      }, {
+        "defaultValue" : "normal",
+        "hidden" : false,
+        "propertyLabel" : "deltaFontWeight",
+        "propertyList" : [ {
+          "label" : "Normal",
+          "name" : "normal"
+        }, {
+          "label" : "Bold",
+          "name" : "bold"
+        } ],
+        "propertyName" : "fontWeight",
+        "propertyType" : 27,
+        "type" : 0,
+        "widgetName" : "MenuButton10",
+        "widgetType" : "MenuButton"
+      }, {
+        "defaultValue" : "#8affff",
+        "hidden" : false,
+        "propertyLabel" : "deltaBackgroundColor",
+        "propertyList" : [ ],
+        "propertyName" : "bgColor",
+        "propertyType" : 0,
+        "type" : 0,
+        "widgetName" : "HorizontalLayout35",
+        "widgetType" : "HorizontalLayout"
+      } ],
+      "originalWidgetName" : "Statistics"
+    },
+    "description" : "",
+    "docAssets" : [ ],
+    "productV" : "7.17",
+    "showCategoryButtons" : true,
+    "showCategoryComponent" : false,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : false,
+    "showCategoryLayout" : true,
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "bgImgPosition" : "center",
+      "bgImgRepeat" : "no-repeat",
+      "bgImgSize" : "auto",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17"
+    },
+    "themeName" : "light",
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ ]
+  },
+  "targetDevice" : "browser",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json"
+  }
+}
