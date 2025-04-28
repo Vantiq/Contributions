@@ -6,7 +6,7 @@
   "links" : [ ],
   "name" : "StatisticsWidget",
   "options" : {
-    "description" : "The Statistics Component has **title**, **value**, and **delta** fields, all programatically set. It also has an optional **Context Menu**, which can be used as a menu or to trigger other actions.",
+    "description" : "The Statistics Component has **title**, **value**, and **delta** fields, all programmatically set. It also has an optional **Context Menu**, which can be used as a menu or to trigger other actions.",
     "dockCollapsed" : {
       "bottom" : false,
       "left" : false,
