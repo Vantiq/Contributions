@@ -1,0 +1,163 @@
+{
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : { },
+    "page" : {
+      "Start" : {
+        "widgets" : {
+          "BatteryIndicator" : {
+            "onComponentStart" : "RELOCATED to controllers/page/Start/widgets/BatteryIndicator/onComponentStart.js"
+          }
+        }
+      }
+    }
+  },
+  "isComponent" : true,
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ ]
+  },
+  "name" : "com.vantiq.clientcomponent.BatteryIndicator",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "edit",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ {
+        "defaultValue" : 100,
+        "description" : "Height must be adjusted here because html widget does not size to parent smaller than 320 x 200",
+        "hidden" : false,
+        "propertyLabel" : "height",
+        "propertyType" : 37,
+        "type" : 1
+      }, {
+        "defaultValue" : 100,
+        "hidden" : false,
+        "propertyLabel" : "max",
+        "propertyType" : 37,
+        "type" : 1
+      }, {
+        "defaultValue" : 0,
+        "hidden" : false,
+        "propertyLabel" : "minimum",
+        "propertyType" : 37,
+        "type" : 1
+      }, {
+        "defaultValue" : "#03a13d",
+        "hidden" : false,
+        "propertyLabel" : "batteryHigh",
+        "propertyType" : 61,
+        "type" : 1
+      }, {
+        "defaultValue" : "#d1b904",
+        "hidden" : false,
+        "propertyLabel" : "batteryOk",
+        "propertyType" : 61,
+        "type" : 1
+      }, {
+        "defaultValue" : "#b80707",
+        "hidden" : false,
+        "propertyLabel" : "batteryLow",
+        "propertyType" : 61,
+        "type" : 1
+      }, {
+        "defaultValue" : "50",
+        "hidden" : false,
+        "propertyLabel" : "okLevel",
+        "propertyType" : 50,
+        "type" : 1
+      }, {
+        "defaultValue" : "25",
+        "hidden" : false,
+        "propertyLabel" : "lowLevel",
+        "propertyType" : 50,
+        "type" : 1
+      }, {
+        "defaultValue" : "\tconfiguration.drawBattery(value);",
+        "description" : "Pass in the battery value to set the percentage",
+        "functionParameters" : [ "value" ],
+        "hidden" : true,
+        "propertyLabel" : "setBattery",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : "// Configurations\nconst fullBatteryHeight = 165.82066;\nconst yAtFullBattery = 57.360992;\n\n// Clamp the battery level\nlet batteryLevel = Math.max(configuration.minimum, Math.min(value, configuration.max));\nlet range = configuration.max - configuration.minimum;\nlet batteryRatio = fullBatteryHeight / range;\nlet batteryHeight = (batteryLevel - configuration.minimum) * batteryRatio;\nlet yNew = fullBatteryHeight + yAtFullBattery - batteryHeight;\n\n// Determine the battery color\nlet color = configuration.batteryHigh;\nif (value <= configuration.lowLevel) {\n    color = configuration.batteryLow;\n} else if (value <= configuration.okLevel) {\n    color = configuration.batteryOk;\n}\n\n// Generate and set the dynamic SVG\nconst html = `<svg\n    viewBox=\"250 35 100 200\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width=\"100%\"\n    height=\"auto\"\n    style=\"max-width: 100%;\">\n  <rect\n       ry=\"5.3310223\"\n       y=\"37.078114\"\n       x=\"282.87668\"\n       height=\"37.317104\"\n       width=\"35.032387\"\n       id=\"BatteryTop\"\n       style=\"fill:#ffffff;stroke:#b3b3b3;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none\" />\n  <rect\n       ry=\"8.3773098\"\n       y=\"48.501717\"\n       x=\"250.89058\"\n       height=\"183.53922\"\n       width=\"98.242996\"\n       id=\"rect924-7\"\n       style=\"fill:#ffffff;stroke:#b3b3b3;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none\" />\n  <rect\n       ry=\"6.377718\"\n       y=\"${yNew}\"\n       x=\"258.2504\"\n       height=\"${batteryHeight}\"\n       width=\"83.523376\"\n       id=\"BatteryAmount\"\n       style=\"fill:${color};fill-opacity:1;stroke:none;stroke-width:2.26311;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1\" />\n</svg>`;\n\nconfiguration.root.apiWidget.children[0].html = html;",
+        "functionParameters" : [ "value" ],
+        "hidden" : true,
+        "propertyLabel" : "drawBattery",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : " \n  const startValue = configuration.current; // The current battery level\n  const changeInValue = targetPercent - startValue;\n  const startTime = performance.now();\n\n  function easeOutQuad(t) {\n    return t * (2 - t);\n  }\n  \n  function animate(currentTime) {\n    // Determine the time elapsed since the start of the animation\n    const elapsedTime = currentTime - startTime;\n    // Determine the proportion of the duration that has elapsed (clamped between 0 and 1)\n    const timeFraction = Math.min(elapsedTime / duration, 1);\n    // Apply the easing function to get the current progress\n    const easing = easeOutQuad(timeFraction);\n    // Calculate the current battery level using easing\n    const currentValue = startValue + changeInValue * easing;\n\n    // Update the battery level by calling setBattery\n    configuration.setBattery(currentValue);\n\n    // If the animation is not yet complete, request the next animation frame\n    if (timeFraction < 1) {\n      requestAnimationFrame(animate);\n    }\n  }\n\n  requestAnimationFrame(animate);\n  configuration.current = targetPercent;\n",
+        "functionParameters" : [ "targetPercent", "duration" ],
+        "hidden" : false,
+        "propertyLabel" : "animateBattery",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : 100,
+        "hidden" : true,
+        "propertyLabel" : "current",
+        "propertyType" : 37,
+        "type" : 1
+      } ],
+      "originalWidgetName" : "BatteryIndicator"
+    },
+    "description" : "",
+    "docAssets" : [ ],
+    "productV" : "7.17",
+    "showCategoryButtons" : false,
+    "showCategoryComponent" : false,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : false,
+    "showCategoryLayout" : true,
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "bgImgPosition" : "center",
+      "bgImgRepeat" : "no-repeat",
+      "bgImgSize" : "auto",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17"
+    },
+    "themeName" : "light",
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "topics",
+      "resourceId" : "/my/response/topic",
+      "type" : "publishes"
+    } ]
+  },
+  "targetDevice" : "browser",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json"
+  }
+}
