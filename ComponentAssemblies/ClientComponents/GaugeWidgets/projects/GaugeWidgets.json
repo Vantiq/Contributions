@@ -3,7 +3,13 @@
   "configurationMappings" : { },
   "configurationProperties" : { },
   "isAssembly" : true,
-  "links" : [ ],
+  "links" : [ {
+    "source" : "client/com.vantiq.clientcomponent.BatteryIndicator",
+    "target" : "topic//my/response/topic"
+  }, {
+    "source" : "client/com.vantiq.clientcomponent.Thermometer",
+    "target" : "topic//my/response/topic"
+  } ],
   "name" : "GaugeWidgets",
   "options" : {
     "description" : "The BatteryIndicator and Thermometer Components are gauge-like widgets to show the status of battery or thermometer devices. The high/valid/low values and colors are configuration properties. The display value is programmatically set using the *setBattery* or *setTemp* JavaScript Call-in Functions.",
@@ -22,7 +28,6 @@
       "top" : 0,
       "viewtabs" : 0
     },
-    "exclusionList" : [ "client/BatteryIndicatorScaleable", "client/BoxPlotIdea", "client/Thermometer", "client/WidgetTest", "topic//my/response/topic" ],
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "flex",
@@ -40,6 +45,10 @@
   },
   "partitions" : [ ],
   "resources" : [ {
+    "name" : "/my/response/topic",
+    "resourceReference" : "/topics//my/response/topic",
+    "type" : 10
+  }, {
     "label" : "com.vantiq.clientcomponent.BatteryIndicator",
     "name" : "com.vantiq.clientcomponent.BatteryIndicator",
     "resourceReference" : "/system.clients/com.vantiq.clientcomponent.BatteryIndicator",
@@ -49,7 +58,7 @@
     "label" : "com.vantiq.clientcomponent.Thermometer",
     "name" : "com.vantiq.clientcomponent.Thermometer",
     "resourceReference" : "/system.clients/com.vantiq.clientcomponent.Thermometer",
-    "timestamp" : "2025-05-05T17:59:24.546Z",
+    "timestamp" : "2025-05-05T21:53:38.630Z",
     "type" : 15
   } ],
   "selectData" : { },

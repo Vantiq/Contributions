@@ -22,7 +22,6 @@
       "top" : 0,
       "viewtabs" : 0
     },
-    "exclusionList" : [ "app/com.vantiq.appcomponents.MichaelAC", "client/Compound", "client/com.vantiq.clientcomponent.Compound", "client/com.vantiq.themes.Themes", "document/vantiq/themes/Cornflower.thm" ],
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "flex",
