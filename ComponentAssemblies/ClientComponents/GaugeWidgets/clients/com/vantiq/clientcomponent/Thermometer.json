@@ -1,0 +1,162 @@
+{
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : { },
+    "page" : {
+      "Start" : {
+        "widgets" : {
+          "Thermometer" : {
+            "onComponentStart" : "RELOCATED to controllers/page/Start/widgets/Thermometer/onComponentStart.js"
+          }
+        }
+      }
+    }
+  },
+  "isComponent" : true,
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ ]
+  },
+  "name" : "com.vantiq.clientcomponent.Thermometer",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "edit",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ {
+        "defaultValue" : 100,
+        "hidden" : false,
+        "propertyLabel" : "height",
+        "propertyType" : 37,
+        "type" : 1
+      }, {
+        "defaultValue" : 212,
+        "hidden" : false,
+        "propertyLabel" : "max",
+        "propertyType" : 37,
+        "type" : 1
+      }, {
+        "defaultValue" : 32,
+        "hidden" : false,
+        "propertyLabel" : "minimum",
+        "propertyType" : 37,
+        "type" : 1
+      }, {
+        "defaultValue" : "#f00e0e",
+        "hidden" : false,
+        "propertyLabel" : "tempHigh",
+        "propertyType" : 61,
+        "type" : 1
+      }, {
+        "defaultValue" : "#fac905",
+        "hidden" : false,
+        "propertyLabel" : "tempOk",
+        "propertyType" : 61,
+        "type" : 1
+      }, {
+        "defaultValue" : "#08cff7",
+        "hidden" : false,
+        "propertyLabel" : "tempLow",
+        "propertyType" : 61,
+        "type" : 1
+      }, {
+        "defaultValue" : 90,
+        "hidden" : false,
+        "propertyLabel" : "okLevel",
+        "propertyType" : 37,
+        "type" : 1
+      }, {
+        "defaultValue" : 50,
+        "hidden" : false,
+        "propertyLabel" : "lowLevel",
+        "propertyType" : 37,
+        "type" : 1
+      }, {
+        "defaultValue" : "\tconfiguration.drawTemp(value);",
+        "description" : "Pass in the temperature value to set the percentage",
+        "functionParameters" : [ "value" ],
+        "hidden" : true,
+        "propertyLabel" : "setTemp",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : "// Configuration Values\nconst thermMaxHeight = 148.98248;\nconst yTAtFullBattery = 44.320938;\nconst offset = 12;\n\n// Clamp the temperature value\nlet temperatureValue = Math.max(configuration.minimum, Math.min(value, configuration.max));\nlet range = configuration.max - configuration.minimum;\nlet thermHeightRatio = (thermMaxHeight - offset) / range;\nlet thermHeight = offset + ((temperatureValue - configuration.minimum) * thermHeightRatio);\nlet yTNew = thermMaxHeight + yTAtFullBattery - thermHeight;\n\n// Determine the thermometer color\nlet color = configuration.tempHigh;\nif (value <= configuration.lowLevel){\n    color = configuration.tempLow;\n} else if (value <= configuration.okLevel){\n    color = configuration.tempOk;\n}\n\n// Generate and set the SVG HTML\nconst therm =  `<svg\n    viewBox=\"110 33 102 206\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width=\"100%\"\n    height=\"auto\"\n    style=\"max-width: 100%;\">\n  <path\n       transform=\"matrix(0.26458333,0,0,0.26458333,124.96262,34.575823)\"\n       d=\"M 131.30664 5.6699219 C 116.22077 5.6699219 108.71844 7.4496627 94.595703 14.382812 C 85.951432 18.626455 82.796144 20.961661 74.529297 29.228516 C 66.256932 37.500885 63.931557 40.644865 59.689453 49.294922 C 49.972061 69.109688 50.911291 42.718503 50.583984 305.20312 L 50.292969 537.89844 L 41.875 546.59375 C -6.9041454 596.97066 -6.4125457 675.62226 42.986328 724.33984 C 63.013251 744.09052 88.953616 756.42173 118.34961 760.16406 L 118.35156 760.16406 C 126.21173 761.16473 149.34098 759.70979 158.63477 757.63086 C 204.61211 747.34639 240.84085 712.00563 253.47656 665.11133 C 256.9391 652.26112 257.51242 624.64118 254.60547 610.75391 C 249.23741 585.10921 235.93689 560.65603 218.26367 543.94141 L 212.32031 538.32227 L 212.03125 305.41602 C 211.70406 42.692159 212.6434 69.110112 202.92578 49.294922 C 198.68368 40.644865 196.35834 37.500885 188.08594 29.228516 C 179.81909 20.961661 176.66189 18.626455 168.01758 14.382812 C 153.89484 7.4496627 146.39251 5.6699219 131.30664 5.6699219 z M 212.3125 103.97656 L 264.8418 103.97656 L 212.3125 103.97656 z M 212.3125 160.40234 L 240.59766 160.40234 L 212.3125 160.40234 z M 212.3125 216.82617 L 264.8418 216.82617 L 212.3125 216.82617 z M 212.3125 273.25 L 240.59766 273.25 L 212.3125 273.25 z M 212.3125 329.67383 L 240.59766 329.67383 L 212.3125 329.67383 z M 212.3125 386.09766 L 264.8418 386.09766 L 212.3125 386.09766 z M 212.3125 442.52344 L 240.59766 442.52344 L 212.3125 442.52344 z M 212.3125 498.94727 L 264.8418 498.94727 L 212.3125 498.94727 z\"\n       style=\"fill:#ffffff;stroke:#b3b3b3;stroke-width:11.3386;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1\"\n       id=\"Casing\" />\n  <circle\n       r=\"25.702381\"\n       cy=\"202.78418\"\n       cx=\"159.66135\"\n       id=\"Bulb\"\n       style=\"fill:${color};fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1\" />\n  <rect\n       ry=\"13.51265\"\n       y=\"${yTNew}\"\n       x=\"146.1487\"\n       height=\"${thermHeight}\"\n       width=\"27.025299\"\n       id=\"Temperature\"\n       style=\"fill:${color};fill-opacity:1;stroke:none;stroke-width:2.99301;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1\" />\n</svg>`;\n\nconfiguration.root.apiWidget.children[0].html = therm;",
+        "functionParameters" : [ "value" ],
+        "hidden" : true,
+        "propertyLabel" : "drawTemp",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : " \n  const startValue = configuration.current; // The current battery level\n  const changeInValue = targetTemp - startValue;\n  const startTime = performance.now();\n\n  function easeOutQuad(t) {\n    return t * (2 - t);\n  }\n  \n  function animate(currentTime) {\n    // Determine the time elapsed since the start of the animation\n    const elapsedTime = currentTime - startTime;\n    // Determine the proportion of the duration that has elapsed (clamped between 0 and 1)\n    const timeFraction = Math.min(elapsedTime / duration, 1);\n    // Apply the easing function to get the current progress\n    const easing = easeOutQuad(timeFraction);\n    // Calculate the current battery level using easing\n    const currentValue = startValue + changeInValue * easing;\n\n    // Update the battery level by calling setBattery\n    configuration.setTemp(currentValue);\n\n    // If the animation is not yet complete, request the next animation frame\n    if (timeFraction < 1) {\n      requestAnimationFrame(animate);\n    }\n  }\n\n  requestAnimationFrame(animate);\n  configuration.current = targetTemp;\n",
+        "functionParameters" : [ "targetTemp", "duration" ],
+        "hidden" : false,
+        "propertyLabel" : "animateTemp",
+        "propertyType" : 62,
+        "type" : 1
+      }, {
+        "defaultValue" : 212,
+        "hidden" : true,
+        "propertyLabel" : "current",
+        "propertyType" : 37,
+        "type" : 1
+      } ],
+      "originalWidgetName" : "Thermometer"
+    },
+    "description" : "",
+    "docAssets" : [ ],
+    "productV" : "7.17",
+    "showCategoryButtons" : false,
+    "showCategoryComponent" : true,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : true,
+    "showCategoryLayout" : true,
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "bgImgPosition" : "center",
+      "bgImgRepeat" : "no-repeat",
+      "bgImgSize" : "auto",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17"
+    },
+    "themeName" : "light",
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "topics",
+      "resourceId" : "/my/response/topic",
+      "type" : "publishes"
+    } ]
+  },
+  "targetDevice" : "browser",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json"
+  }
+}

@@ -22,6 +22,7 @@
       "top" : 0,
       "viewtabs" : 0
     },
+    "exclusionList" : [ "app/com.vantiq.appcomponents.MichaelAC", "client/Compound", "client/com.vantiq.clientcomponent.Compound", "client/com.vantiq.themes.Themes", "document/vantiq/themes/Cornflower.thm" ],
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "flex",
@@ -31,7 +32,7 @@
     "showGrid" : true,
     "structure" : {
       "fraction" : 1,
-      "type" : "R[0]"
+      "type" : "R[1]"
     },
     "type" : "dev",
     "v" : 6,
@@ -42,7 +43,7 @@
     "label" : "com.vantiq.clientcomponent.Statistics",
     "name" : "com.vantiq.clientcomponent.Statistics",
     "resourceReference" : "/system.clients/com.vantiq.clientcomponent.Statistics",
-    "timestamp" : "2025-04-18T18:29:11.223Z",
+    "timestamp" : "2025-05-05T18:08:07.567Z",
     "type" : 72
   } ],
   "selectData" : { },
@@ -59,11 +60,21 @@
     "isPinned" : false,
     "name" : "Project Contents",
     "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "StatisticsWidget",
+    "pane" : {
+      "address" : "R[0]",
+      "isActive" : true,
+      "isActiveTool" : true
+    },
+    "state" : 8,
+    "type" : 120
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents" ]
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "assemblies/StatisticsWidget" ]
   } ],
   "visibleResources" : [ {
     "resourceReference" : "/system.clients/com.vantiq.clientcomponent.Statistics"

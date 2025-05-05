@@ -1,0 +1,58 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "613e7515-dd16-4369-92ac-584f1a762669" ],
+    "widgets" : [ {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "column" : -1,
+      "h" : 100,
+      "heightPolicy" : "explicit",
+      "horzGravity" : "center",
+      "horzizontalScrollPolicy" : "none",
+      "html" : "<svg\n    viewBox=\"110 33 102 206\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width=\"100%\"\n    height=\"auto\"\n    style=\"max-width: 100%;\">\n  <path\n       transform=\"matrix(0.26458333,0,0,0.26458333,124.96262,34.575823)\"\n       d=\"M 131.30664 5.6699219 C 116.22077 5.6699219 108.71844 7.4496627 94.595703 14.382812 C 85.951432 18.626455 82.796144 20.961661 74.529297 29.228516 C 66.256932 37.500885 63.931557 40.644865 59.689453 49.294922 C 49.972061 69.109688 50.911291 42.718503 50.583984 305.20312 L 50.292969 537.89844 L 41.875 546.59375 C -6.9041454 596.97066 -6.4125457 675.62226 42.986328 724.33984 C 63.013251 744.09052 88.953616 756.42173 118.34961 760.16406 L 118.35156 760.16406 C 126.21173 761.16473 149.34098 759.70979 158.63477 757.63086 C 204.61211 747.34639 240.84085 712.00563 253.47656 665.11133 C 256.9391 652.26112 257.51242 624.64118 254.60547 610.75391 C 249.23741 585.10921 235.93689 560.65603 218.26367 543.94141 L 212.32031 538.32227 L 212.03125 305.41602 C 211.70406 42.692159 212.6434 69.110112 202.92578 49.294922 C 198.68368 40.644865 196.35834 37.500885 188.08594 29.228516 C 179.81909 20.961661 176.66189 18.626455 168.01758 14.382812 C 153.89484 7.4496627 146.39251 5.6699219 131.30664 5.6699219 z M 212.3125 103.97656 L 264.8418 103.97656 L 212.3125 103.97656 z M 212.3125 160.40234 L 240.59766 160.40234 L 212.3125 160.40234 z M 212.3125 216.82617 L 264.8418 216.82617 L 212.3125 216.82617 z M 212.3125 273.25 L 240.59766 273.25 L 212.3125 273.25 z M 212.3125 329.67383 L 240.59766 329.67383 L 212.3125 329.67383 z M 212.3125 386.09766 L 264.8418 386.09766 L 212.3125 386.09766 z M 212.3125 442.52344 L 240.59766 442.52344 L 212.3125 442.52344 z M 212.3125 498.94727 L 264.8418 498.94727 L 212.3125 498.94727 z\"\n       style=\"fill:#ffffff;stroke:#b3b3b3;stroke-width:11.3386;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1\"\n       id=\"Casing\" />\n  <circle\n       r=\"25.702381\"\n       cy=\"202.78418\"\n       cx=\"159.66135\"\n       id=\"Bulb\"\n       style=\"fill:#37abc8;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1\" />\n  <rect\n       ry=\"13.51265\"\n       y=\"44.320938\"\n       x=\"146.1487\"\n       height=\"148.98248\"\n       width=\"27.025299\"\n       id=\"Temperature\"\n       style=\"fill:#37abc8;fill-opacity:1;stroke:none;stroke-width:2.99301;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1\" />\n</svg>",
+      "name" : "StaticHtmlThermometer",
+      "row" : -1,
+      "type" : "StaticHtml",
+      "uuid" : "5b7b9d01-ba03-4a71-8f5e-85a0a781d5aa",
+      "v" : 19,
+      "vertGravity" : "center",
+      "verticalScrollPolicy" : "none",
+      "w" : 52,
+      "widthPolicy" : "explicit"
+    }, {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "children" : [ "5b7b9d01-ba03-4a71-8f5e-85a0a781d5aa" ],
+      "column" : 0,
+      "componentConfiguration" : {
+        "configurationProperties" : [ ]
+      },
+      "componentName" : "com.vantiq.clientcomponent.Thermometer",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "horzMargin" : 0,
+      "innerMargin" : 20,
+      "isComponent" : true,
+      "name" : "Thermometer",
+      "row" : 0,
+      "type" : "VerticalLayout",
+      "uuid" : "613e7515-dd16-4369-92ac-584f1a762669",
+      "v" : 19,
+      "vertGravity" : "center",
+      "vertMargin" : 0,
+      "widthPolicy" : "naturalSize"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "single",
+  "responseResource" : "topics",
+  "responseResourceId" : "/my/response/topic",
+  "responseTopic" : "/my/response/topic"
+}

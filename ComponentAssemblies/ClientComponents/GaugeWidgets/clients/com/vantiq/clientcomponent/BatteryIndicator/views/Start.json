@@ -1,0 +1,59 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "a487f0bc-73cc-499b-810e-52bb005357dd" ],
+    "widgets" : [ {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "column" : -1,
+      "h" : 100,
+      "heightPolicy" : "explicit",
+      "horzGravity" : "center",
+      "horzizontalScrollPolicy" : "none",
+      "html" : "<svg\n    viewBox=\"250 35 100 200\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width=\"100%\"\n    height=\"auto\"\n    style=\"max-width: 100%;\">\n  <rect\n       ry=\"5.3310223\"\n       y=\"37.078114\"\n       x=\"282.87668\"\n       height=\"37.317104\"\n       width=\"35.032387\"\n       id=\"BatteryTop\"\n       style=\"fill:#ffffff;stroke:#b3b3b3;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none\" />\n  <rect\n       ry=\"8.3773098\"\n       y=\"48.501717\"\n       x=\"250.89058\"\n       height=\"183.53922\"\n       width=\"98.242996\"\n       id=\"rect924-7\"\n       style=\"fill:#ffffff;stroke:#b3b3b3;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none\" />\n  <rect\n       ry=\"6.377718\"\n       y=\"57.360992\"\n       x=\"258.2504\"\n       height=\"165.82066\"\n       width=\"83.523376\"\n       id=\"BatteryAmount\"\n       style=\"fill:#5fba73;fill-opacity:1;stroke:none;stroke-width:2.26311;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1\" />\n</svg>",
+      "minimumHeight" : 10,
+      "minimumWidth" : 10,
+      "name" : "StaticHtmlBatteryIndicator",
+      "row" : -1,
+      "type" : "StaticHtml",
+      "uuid" : "0d783e60-5f09-4edc-b002-98768469a3db",
+      "v" : 19,
+      "vertGravity" : "center",
+      "verticalScrollPolicy" : "none",
+      "w" : 52,
+      "widthPolicy" : "explicit"
+    }, {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "children" : [ "0d783e60-5f09-4edc-b002-98768469a3db" ],
+      "column" : 0,
+      "componentConfiguration" : {
+        "configurationProperties" : [ ]
+      },
+      "componentName" : "com.vantiq.clientcomponent.BatteryIndicator",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "horzMargin" : 0,
+      "isComponent" : true,
+      "name" : "BatteryIndicator",
+      "row" : 0,
+      "type" : "VerticalLayout",
+      "uuid" : "a487f0bc-73cc-499b-810e-52bb005357dd",
+      "v" : 19,
+      "vertGravity" : "center",
+      "vertMargin" : 0,
+      "widthPolicy" : "naturalSize"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "single",
+  "responseResource" : "topics",
+  "responseResourceId" : "/my/response/topic",
+  "responseTopic" : "/my/response/topic"
+}
