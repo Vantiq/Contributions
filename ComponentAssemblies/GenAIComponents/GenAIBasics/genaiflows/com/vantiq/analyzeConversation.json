@@ -1,0 +1,126 @@
+{
+  "name": "com.vantiq.analyzeConversation",
+  "disableTracing": false,
+  "ars_properties": {
+    "groups": {
+      "aicomponents.resources": true,
+      "aicomponents.primitives": true,
+      "aicomponents.aipatterns": true
+    },
+    "v": 1,
+    "graph": {
+      "scale": 2.11234680618353,
+      "translate": [
+        712,
+        86.38550337295158
+      ],
+      "lastZoomRequest": 3,
+      "positions": {
+        "Input": {
+          "x": 0,
+          "y": -0.3955121269176597
+        },
+        "LoadConversation": {
+          "x": 0,
+          "y": 80
+        },
+        "ReduceDocuments": {
+          "x": 0,
+          "y": 160
+        },
+        "ExtractContent": {
+          "x": 0.7910242538353194,
+          "y": 240
+        }
+      }
+    }
+  },
+  "isPrivate": false,
+  "isComponent": true,
+  "initialConfigurationProperties": {
+    "analysisPrompt": {
+      "type": "Union",
+      "order": 0,
+      "description": "The prompt used to perform the reduce on the supplied documents.",
+      "required": true,
+      "typeChoices": [
+        {
+          "type": "documents",
+          "name": "Template Document",
+          "description": "The name of the document from which to load the prompt template."
+        },
+        {
+          "type": "String",
+          "name": "Template",
+          "description": "The prompt template as a String value."
+        }
+      ],
+      "appliedTo": {
+        "ReduceDocuments": [
+          "reducePrompt"
+        ]
+      }
+    },
+    "llm": {
+      "type": "llms",
+      "order": 1,
+      "description": "The LLM used to perform the reduce operation.",
+      "required": true,
+      "appliedTo": {
+        "ReduceDocuments": [
+          "reduceLLM"
+        ]
+      }
+    }
+  },
+  "assembly": {
+    "Input": {
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {},
+      "enableAuditing": false,
+      "children": [
+        "LoadConversation"
+      ]
+    },
+    "LoadConversation": {
+      "component": "io.vantiq.ai.components.loaders.ConversationMemory",
+      "configuration": {},
+      "enableAuditing": false,
+      "children": [
+        "ReduceDocuments"
+      ]
+    },
+    "ReduceDocuments": {
+      "component": "io.vantiq.ai.components.ReduceDocuments",
+      "configuration": {
+        "maxTokensPerBatch": 8196,
+        "maxPartialReductions": null
+      },
+      "enableAuditing": false,
+      "children": [
+        "ExtractContent"
+      ]
+    },
+    "ExtractContent": {
+      "component": "io.vantiq.ai.components.Transform",
+      "configuration": {
+        "transformInPlace": false,
+        "transformation": {
+          "type": "Code Block",
+          "value": {
+            "language": "python",
+            "code": "return input.page_content"
+          }
+        }
+      },
+      "enableAuditing": false,
+      "children": [],
+      "inputType": {
+        "type": "Any"
+      },
+      "outputType": {
+        "type": "String"
+      }
+    }
+  }
+}
