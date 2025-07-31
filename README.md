@@ -12,18 +12,22 @@ To import a Contribution in Modelo, go to the Projects dropdown and click Import
 The list of Contributions that show up in the Import dialog is:
 * GoogleAPIs
 * GoogleMapsAPI
-* MSFaceAPIs
 * PublicUserRegistration
 * PumpAITroubleshooting - requires v1.38
-* TwitterAPI
-* VisionDemo
-* WeatherEmergencyProject
 * TrackingRegion - requires v1.38
 
 Other Contributions can be imported by cloning this repo to a local disk and then dragging and dropping their directory into the main Project Import dialog.
 
 ComponentAssemblies contains Assembly projects that contain resources intended for use in Public Catalogs. Though they can be imported and used in any Project if desired.
 
-* 
 # Licensing
-Please note that all contributions to this repository are freely and publicly available under the MIT license. By contributing to this repository, you are agreeing that your contributions will also be available under this license. 
+Please note that all contributions to this repository are freely and publicly available under the MIT license. By contributing to this repository, you are agreeing that your contributions will also be available under this license.
+
+# Deprecation
+
+The following contributions have been deprecated as of the 1.43 release:
+
+* MSFaceAPIs
+* TwitterAPI
+* VisionDemo
+* WeatherEmergencyProject
