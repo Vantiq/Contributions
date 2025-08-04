@@ -15,6 +15,7 @@ The list of Contributions that show up in the Import dialog is:
 * PublicUserRegistration
 * PumpAITroubleshooting - requires v1.38
 * TrackingRegion - requires v1.38
+* WeatherEmergencyProject
 
 Other Contributions can be imported by cloning this repo to a local disk and then dragging and dropping their directory into the main Project Import dialog.
 
@@ -30,4 +31,3 @@ The following contributions have been deprecated as of the 1.43 release:
 * MSFaceAPIs
 * TwitterAPI
 * VisionDemo
-* WeatherEmergencyProject
