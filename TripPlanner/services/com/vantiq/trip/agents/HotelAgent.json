@@ -1,0 +1,31 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ],
+    "tags" : [ "travel" ]
+  },
+  "ars_relationships" : [ ],
+  "description" : "Handles requests related to booking hotels.",
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "description" : "Search for available hotel rooms",
+    "isAgentSkill" : true,
+    "name" : "searchHotels",
+    "parameters" : [ {
+      "description" : "The city in which the hotel should be located.",
+      "multi" : false,
+      "name" : "city",
+      "required" : true,
+      "type" : "String"
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : true,
+  "name" : "com.vantiq.trip.agents.HotelAgent",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

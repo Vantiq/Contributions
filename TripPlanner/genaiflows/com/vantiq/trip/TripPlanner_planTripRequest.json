@@ -1,0 +1,99 @@
+{
+  "name": "planTripRequest",
+  "disableTracing": false,
+  "ars_properties": {
+    "groups": {
+      "aicomponents.resources": true,
+      "aicomponents.primitives": true
+    },
+    "v": 1,
+    "graph": {
+      "scale": 2.452498372282423,
+      "translate": [
+        486,
+        100.03128297279267
+      ],
+      "lastZoomRequest": 0,
+      "positions": {
+        "Input": {
+          "x": 0,
+          "y": 0
+        },
+        "PlanPrompt": {
+          "x": 0,
+          "y": 80
+        },
+        "BuildPlan": {
+          "x": 0,
+          "y": 160
+        },
+        "FormatPlanGraph": {
+          "x": 0,
+          "y": 240
+        }
+      }
+    }
+  },
+  "isPrivate": true,
+  "isComponent": false,
+  "returnType": null,
+  "serviceName": "com.vantiq.trip.TripPlanner",
+  "assembly": {
+    "Input": {
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {},
+      "enableAuditing": false,
+      "children": [
+        "PlanPrompt"
+      ]
+    },
+    "PlanPrompt": {
+      "component": "io.vantiq.ai.components.PromptFromTemplate",
+      "configuration": {
+        "isSystemPrompt": false,
+        "promptTemplate": {
+          "type": "documents",
+          "value": "rewooPlanPrompt.txt"
+        },
+        "defaultValues": null
+      },
+      "enableAuditing": false,
+      "children": [
+        "BuildPlan"
+      ]
+    },
+    "BuildPlan": {
+      "component": "io.vantiq.ai.components.LLM",
+      "configuration": {
+        "outputType": "String",
+        "llm": "io.vantiq.a2a.agentDispatch",
+        "outputTypeSchema": null
+      },
+      "enableAuditing": false,
+      "children": [
+        "FormatPlanGraph"
+      ]
+    },
+    "FormatPlanGraph": {
+      "component": "io.vantiq.ai.components.Transform",
+      "configuration": {
+        "transformInPlace": false,
+        "transformation": {
+          "type": "Code Block",
+          "value": {
+            "language": "python",
+            "code": "# Uses code from https://langchain-ai.github.io/langgraph/tutorials/rewoo/rewoo/ under MIT license.\n\nimport networkx as nx\nfrom networkx.readwrite import json_graph\n\nregex_pattern = r\"Plan:\\s*(.+)\\s*(#E\\d+)\\s*=\\s*([\\w.]+)\\s*\\[([^\\]]+)\\]\"\nmatches = re.findall(regex_pattern, input)\nsteps = [{\"id\": match[1], \"tool\": match[2], \"input\": match[3], \"desc\": match[0]} for match in matches]\n#return {\"steps\": steps, \"plan_string\": input}\n\nG = nx.DiGraph()\nfor step in steps:\n    G.add_node(step[\"id\"], **step)\n\n# Add edges where the source id is referenced in the target input\nfor src in steps:\n    for tgt in steps:\n        if src[\"id\"] != tgt[\"id\"] and (src[\"id\"] in tgt[\"input\"] or src[\"id\"] in tgt[\"desc\"]):\n            G.add_edge(src[\"id\"], tgt[\"id\"])\n\n#isolated_nodes = list(nx.isolates(G))\n#G.remove_nodes_from(isolated_nodes)\nreturn json_graph.node_link_data(G, edges=\"edges\")"
+          }
+        }
+      },
+      "enableAuditing": false,
+      "children": [],
+      "inputType": {
+        "type": "String"
+      },
+      "outputType": {
+        "type": "Object"
+      }
+    }
+  }
+}

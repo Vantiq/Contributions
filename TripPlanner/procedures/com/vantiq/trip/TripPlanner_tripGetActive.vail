@@ -1,0 +1,36 @@
+// Return details about all the currently active collaborations associated with the "trip" entity role.
+// The returned Object instances have the following properties:
+//      * collaborationId -- the id of the collaboration used to manage the active trip.
+//      * entity -- the current value associated with the active trip.
+//
+PACKAGE com.vantiq.trip 
+
+STATELESS PROCEDURE TripPlanner.tripGetActive(
+    forAllUsers Boolean DEFAULT false DESCRIPTION 
+        "Determines whether to return the collaborations created by the current user (the default) or by all users."
+    ): Object Sequence
+
+// Flush any cached collaborations to disk
+TripPlanner.ActiveCollabsWriteAll()
+
+// Find all active collaborations associated with the correct entity role for this owner
+var qual = {
+    status: "active",
+    owner: "/services/com.vantiq.trip.TripPlanner",
+    "entities.trip": {"$exists": true}
+}
+
+// Restrict to current user unless asked not to
+if (!forAllUsers) {
+    qual.ars_createdBy = Context.username()
+}
+
+// Process the selected collaborations and return the entity along with the collaboration id
+var entityRoleName = "trip"
+var activeWithEntity = select FROM system.collaborations where qual
+map (collab in activeWithEntity) {
+	return {
+		entity: collab.entities.get(entityRoleName),
+		collaborationId: collab.id
+	}
+}

@@ -1,0 +1,23 @@
+// Close the active collaboration associated with the trip instance.
+PACKAGE com.vantiq.trip
+import type com.vantiq.trip.Trip
+
+STATELESS PROCEDURE TripPlanner.tripClose(
+        entityId String REQUIRED DESCRIPTION "The id of the trip to be closed.", 
+        asFailure Boolean DESCRIPTION "Set to `true` to indicate that the collaboration failed.")
+
+// Get the collaboration associated with the given entity id (complain if there isn't one).
+var entityRoleName = "trip"
+var collaboration = EXECUTE TripPlanner.ActiveCollabsGetByEntityId(entityId, entityRoleName) 
+    WITH partitionKey = entityId
+if (!collaboration) {
+	exception("com.vantiq.active.entity.unknown", 
+	    "The active {0} with id {1} could not be found", 
+	    [entityRoleName, entityId])
+}
+
+// Update the collaboration's status
+var collaborationId = collaboration.id
+var status = asFailure ? "failed" : "completed"
+TripPlanner.ActiveCollabsUpdateStatus(collaborationId, status)
+return true

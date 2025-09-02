@@ -1,0 +1,15 @@
+package com.vantiq.trip
+private stateless PROCEDURE TripPlanner.a2a_requestUserInput(userRequest Any, contextId Any): Any
+
+// The context id is the trip id and we need to get from that to the active conversation.
+var collab = execute TripPlanner.ActiveCollabsGetByEntityId(contextId, "trip") WITH partitionKey = contextId
+var conversationId = execute TripPlanner.ActiveCollabsGetConversation(collab.id) WITH partitionKey = collab.id
+
+// Now invoke the callback using the conversation id
+var response = io.vantiq.Callback.invoke(conversationId, userRequest, 5 minutes)
+log.info("User response: {}", [response])
+if (typeOf(response) == "Object" && response.containsKey("input")) {
+	log.warn("User input was in wrapper")
+	response = response.input
+}
+return response

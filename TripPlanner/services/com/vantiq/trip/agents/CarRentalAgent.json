@@ -1,0 +1,31 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ],
+    "tags" : [ "travel" ]
+  },
+  "ars_relationships" : [ ],
+  "description" : "Handles requests related to managing car rental.",
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "description" : "Search for available rental cars",
+    "isAgentSkill" : true,
+    "name" : "searchCars",
+    "parameters" : [ {
+      "description" : "The IATA 3-letter code for the airport at which we will be renting the car.",
+      "multi" : false,
+      "name" : "rentalAirport",
+      "required" : true,
+      "type" : "String"
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : true,
+  "name" : "com.vantiq.trip.agents.CarRentalAgent",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

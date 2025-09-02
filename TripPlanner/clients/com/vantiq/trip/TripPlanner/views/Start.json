@@ -1,0 +1,37 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "60fea76c-498d-4862-8c87-74d4fb0c0490" ],
+    "widgets" : [ {
+      "CSSClass" : "vantiqChat",
+      "borderColor" : "Default",
+      "borderThickness" : 1,
+      "column" : -1,
+      "fontSize" : 12,
+      "h" : 558,
+      "heightPolicy" : "explicit",
+      "horzGravity" : "center",
+      "horzMargin" : 0,
+      "name" : "Conversation1",
+      "row" : -1,
+      "serviceGenAIProcName" : "processRequest",
+      "serviceName" : "com.vantiq.trip.TripPlanner",
+      "title" : "Conversation",
+      "toolbarGap" : 1,
+      "type" : "Conversation",
+      "uuid" : "60fea76c-498d-4862-8c87-74d4fb0c0490",
+      "v" : 19,
+      "vertGravity" : "center",
+      "vertMargin" : 0,
+      "w" : 758,
+      "widthPolicy" : "explicit",
+      "x" : 0,
+      "y" : 0
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "browser"
+}

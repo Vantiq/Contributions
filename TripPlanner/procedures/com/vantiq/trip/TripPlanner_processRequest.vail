@@ -1,0 +1,36 @@
+// Entry point for planning process.  This is intended to be invoked from a client via the
+// conversation widget. The parameters here mimic what a GenAI Procedure provides (this makes
+// using it from the CW a bit easier).
+package com.vantiq.trip
+stateless PROCEDURE TripPlanner.processRequest(input Any, config Object): Any
+
+// Helpful to see what the client is providing
+log.info("input: {}, config: {}", [input, config])
+
+// Figure out the available travel planning agents and use their agent cards to get a description of each
+var agentNames = TripPlanner.selectAgents()
+var agentsWithDesc = []
+for (name in agentNames) {
+	var card = io.vantiq.ai.A2A.getAgentCard(name)
+	agentsWithDesc.add({name: name, desc: card.description})
+}
+
+// Construct a list of the agents with description for insertion into the planning prompt
+var template = "@repeat(agents)* ${name}[input] - ${desc}
+@endrepeat"
+var availableAgents = io.vantiq.text.Template.format(template, {agents: agentsWithDesc})
+
+// Construct the plan
+var planInput = {
+	task: input,
+	availableAgents: availableAgents
+}
+var plan = TripPlanner.planTripRequest(planInput, {})
+
+// Execute the plan.  Here we are passing the trip id as the contextId.
+var trip = TripPlanner.ActiveCollabsGetById(config.collaborationId, "trip")
+var result = io.vantiq.ai.Agent.executePlan(plan, input, trip.id)
+
+// The result of the plan is an array of artifacts.  The first of these contains a "solution"
+// ready to be presented to the user. We return that.
+return result.head().getValue()

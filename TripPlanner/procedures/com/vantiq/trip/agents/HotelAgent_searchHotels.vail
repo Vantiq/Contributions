@@ -1,0 +1,12 @@
+// Search for available hotel rooms
+package com.vantiq.trip.agents
+stateless PROCEDURE HotelAgent.searchHotels(
+	city String Required Description "The city in which the hotel should be located."
+)
+
+// Get and display parameters and current task context
+var task = io.vantiq.ai.Agent.getCurrentTask()
+log.info("Searching for hotels in {} for trip: {}", [city, task.getContextId()])
+
+// This would be an actual list of hotel rooms...
+return [{}]

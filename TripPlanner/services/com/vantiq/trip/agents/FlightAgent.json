@@ -1,0 +1,65 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ],
+    "tags" : [ "travel" ]
+  },
+  "ars_relationships" : [ ],
+  "description" : "Handles requests related to managing airline travel.",
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "description" : "Search for available flights based on the given criteria",
+    "isAgentSkill" : true,
+    "name" : "searchFlights",
+    "parameters" : [ {
+      "description" : "The IATA 3-letter code for the originating airport.",
+      "multi" : false,
+      "name" : "originAirport",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : "The IATA 3-letter code for the destination airport.",
+      "multi" : false,
+      "name" : "destinationAirport",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : "The earliest date and time for the flight in ISO8601 format.",
+      "multi" : false,
+      "name" : "startTime",
+      "required" : false,
+      "type" : "DateTime"
+    }, {
+      "description" : "The latest date and time for the flight in ISO8601 format.",
+      "multi" : false,
+      "name" : "endTime",
+      "required" : false,
+      "type" : "DateTime"
+    }, {
+      "description" : "The name of the airline.",
+      "multi" : false,
+      "name" : "airline",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : "The type of seat desired, e.g. 'First-Class', 'Economy Plus'",
+      "multi" : false,
+      "name" : "seatClassification",
+      "required" : false,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : true,
+      "type" : "Object"
+    }
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : true,
+  "name" : "com.vantiq.trip.agents.FlightAgent",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}
