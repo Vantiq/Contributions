@@ -3,7 +3,6 @@ package com.vantiq.trip.agents
 stateless PROCEDURE FlightAgent.searchFlights(
 	originAirport String Required Description "The IATA 3-letter code for the originating airport."
     ,destinationAirport String Required Description "The IATA 3-letter code for the destination airport."
-    //criteria com.vantiq.flights.SearchCriterion Description "Additional properties to use when selecting flights."
     ,startTime DateTime Description "The earliest date and time for the flight in ISO8601 format."
     ,endTime DateTime Description "The latest date and time for the flight in ISO8601 format."
     ,airline String Description "The name of the airline."

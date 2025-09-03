@@ -20,10 +20,7 @@ var result = EXECUTE TripPlanner.ActiveCollabsGetOrCreateForEntity(entityId, "tr
     WITH partitionKey = entityId
 var collaborationId = result.collaboration.id
 
-// Check the value of "result.isNew" if you want to customize based on whether or not the collaboration
-// was created.
-
-// To start/resume a conversation for this collaboration, uncomment the following line:
+// Start a conversation for this collaboration
 EXECUTE TripPlanner.ActiveCollabsStartConversation(collaborationId) WITH partitionKey = collaborationId
 
 return collaborationId

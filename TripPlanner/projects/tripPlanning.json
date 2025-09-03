@@ -378,7 +378,7 @@
   } ],
   "name" : "tripPlanning",
   "options" : {
-    "description" : "## Multi-Agent System Example\n\nThis is a very basic (and incomplete) example of how to approach the construction of a multi-agent system in Vantiq. The application has the following resources:\n\n* TripPlanner (Client) -- this is a very simple client which allows the user to interact with the TripPlanner Agent.  On startup, the client creates an instance of the \"Trip\" type (which just holds a UUID).  It then starts a collaboration and conversation for that trip.  The collaboration instance is closed when the client exits.\n\n* TripPlanner (Agent) -- this agent is the primary contact point for the client and coordinates interactions with the other agents in the application.  The primary entry point is the **processRequest** procedure which is invoked by the client when the user provides input. It is an example of a Planning Agent.\n\n* \"Travel\" Agents -- there are 3 Agents (Flight, CarRental, and Hotel) which are provided as \"tools\" to the planning algorithm.  The planning process determines which one(s) to invoke based on the user's input.\n\n### Setup\n\nYou will need to provide a value for the secret `VANTIQ_A2A_SECRET`. This should be a valid OpenAI API Key.\n\n### Notable Features\n\nThe primary purpose of this application is to illustrate some of the issues that are common in the construction of multi-agent system.\n\n#### Use of a \"Planning Algorithm\"\n\nThe TripPlanner Agent is implemented using a \"Plan and Execute\" pattern known as Reasoning Without Observations (ReWOO). There are 3 main steps to the alogorithm (implemented by **processRequest**).\n\n1) Determining which agents will be provided as \"tools\" to the planning prompt.  This could be done by building a fixed prompt that explicitly lists the agents it wants to use.  However, here we select the target agents dynamically via a form of agent discovery.\n1) Having an LLM construct a plan given the available \"tools\" and the user's request. The specific here vary based on the approach being used. Here the prompt template **rewooPlanPrompt.txt** is used to instruct the LLM on how to build the plan.  The GenAI Procedure **xxx** formats this prompt, submits it to the LLM, and post-processes the output to produce a DAG representing the plan to be executed.\n1) Once the plan has been built, the last step is to execute the plan. Here we are using the built-in procedure **io.vantiq.ai.Agent.executePlan** to perform the execution.\n\n#### Agent Discovery\n\nApplications can leverage Agent Discovery for a variety of purposes. Here we are demonstrating how it can be used to allow an application to add new agents (and thus capabilities) dynamically. The TripPlanner selects the agents to use based on the presense of the \"tag\" \"tag\" `travel`.  It then obtains a description of each agent's capabilities by using the Agent Card.  See the procedure **selectAgents** for details on how this works.\n\n#### Gathering User Input\n\nAnother important activity for agents is gathering input from the user.  This can occur as part of the execution of a plan (one of the tools is a proxy for the user) or it can occur when the agent explicitly decides that it needs more information (via the use of the built-in procedure **io.vantiq.ai.Agent.getUserInput**).  There is an example of the latter in **CarRentalAgent.searchCars**.\n\nThe agent framework includes a mechanism for requesting input which is used when an agent is invoked during plan execution. This happens for both the implicit and explicit requests made in this context. Agents invoked directly by the client (using their service interface) must implement a \"bridge\" procedure in order to intercept these requests and forwarded them to the client.  See the procedure **TripPlanner.a2a_requestUserInput** for an example of how this works.\n\n#### Communicating Application State\n\nDuring execution agents need a mechanism to locate and establish any state which may be associated with the request.  In this application state management is accomplished using collaborations and the *id* property of the **Trip** instance is used to establish that state at runtime.  The TripPlanner passes this value as the *contextId* when calling **executePlan** and when the other agents are invoked this id is provided to them via the currently active agent \"task\".  You can see those agents using **io.vantiq.ai.Agent.getCurrentTask** to obtain the task and **getContextId** to get the context id.  We log this during execution so you can observe that it is the same value in all cases.",
+    "description" : "## Multi-Agent System Example\n\nThis is a very basic (and incomplete) example of how to approach the construction of a multi-agent system in Vantiq. The application has the following resources:\n\n* TripPlanner (Client) -- this is a very simple client which allows the user to interact with the TripPlanner Agent.  On startup, the client creates an instance of the \"Trip\" type (which just holds a UUID).  It then starts a collaboration and conversation for that trip.  The collaboration instance is closed when the client exits.\n\n* TripPlanner (Agent) -- this agent is the primary contact point for the client and coordinates interactions with the other agents in the application.  The primary entry point is the **processRequest** procedure which is invoked by the client when the user provides input. It is an example of a Planning Agent.\n\n* \"Travel\" Agents -- there are 3 Agents (Flight, CarRental, and Hotel) which are provided as \"tools\" to the planning algorithm.  The planning process determines which one(s) to invoke based on the user's input.\n\n### Setup\n\nYou will need to provide a value for the secret `VANTIQ_A2A_SECRET`. This should be a valid OpenAI API Key.\n\n### Notable Features\n\nThe primary purpose of this application is to illustrate some of the issues that are common in the construction of multi-agent system.\n\n#### Use of a \"Planning Algorithm\"\n\nThe TripPlanner Agent is implemented using a \"Plan and Execute\" pattern known as Reasoning Without Observations (ReWOO). There are 3 main steps to the algorithm (implemented by **processRequest**).\n\n1. Determining which agents will be provided as \"tools\" to the planning prompt.  This could be done by building a fixed prompt that explicitly lists the agents it wants to use.  However, here we select the target agents dynamically via a form of agent discovery.\n1. Having an LLM construct a plan given the available \"tools\" and the user's request. The specifics here vary based on the approach being used. Here the prompt template **rewooPlanPrompt.txt** is used to instruct the LLM on how to build the plan.  The GenAI Procedure **planTripRequest** formats this prompt, submits it to the LLM, and post-processes the output to produce a DAG representing the plan to be executed.\n1. Once the plan has been built, the last step is to execute the plan. Here we are using the built-in procedure **io.vantiq.ai.Agent.executePlan** to perform the execution.\n\n#### Agent Discovery\n\nApplications can leverage Agent Discovery for a variety of purposes. Here we are demonstrating how it can be used to allow an application to add new agents (and thus capabilities) dynamically. The TripPlanner selects the agents to use based on the presence of the tag\" `travel`.  It then obtains a description of each agent's capabilities by using the Agent Card.  See the procedure **selectAgents** for details on how this works.\n\n#### Gathering User Input\n\nAnother important activity for agents is gathering input from the user.  This can occur as part of the execution of a plan (one of the tools is a proxy for the user) or it can occur when the agent explicitly decides that it needs more information (via the use of the built-in procedure **io.vantiq.ai.Agent.requestUserInput**).  There is an example of the latter in **CarRentalAgent.searchCars**.\n\nThe agent framework includes a mechanism for requesting input which is used when an agent is invoked during plan execution. This happens for both the implicit and explicit requests made in this context. Agents invoked directly by the client (using their service interface) must implement a \"bridge\" procedure in order to intercept these requests and forwarded them to the client.  See the procedure **TripPlanner.a2a_requestUserInput** for an example of how this works.\n\n#### Communicating Application State\n\nDuring execution agents need a mechanism to locate and establish any state which may be associated with the request.  In this application, state management is accomplished using collaborations and the *id* property of the **Trip** instance is used to establish that state at runtime.  The TripPlanner passes this value as the *contextId* when calling **executePlan** and when the other agents are invoked, this id is provided to them via the currently active agent \"task\".  You can see those agents using **io.vantiq.ai.Agent.getCurrentTask** to obtain the task and **getContextId** to get the context id.  We log this during execution so you can observe that it is the same value in all cases.",
     "dockCollapsed" : {
       "bottom" : false,
       "left" : false,
@@ -387,7 +387,7 @@
       "viewtabs" : false
     },
     "dockDimensions" : {
-      "bottom" : 330,
+      "bottom" : 200,
       "debug" : [ 955.076057614964, 1165.923942385036 ],
       "left" : 210,
       "right" : 220,
@@ -426,7 +426,7 @@
     "label" : "com.vantiq.trip.TripPlanner",
     "name" : "com.vantiq.trip.TripPlanner",
     "resourceReference" : "/services/com.vantiq.trip.TripPlanner",
-    "timestamp" : "2025-08-30T18:05:38.762Z",
+    "timestamp" : "2025-09-03T20:59:22.262Z",
     "type" : 63
   }, {
     "label" : "com.vantiq.trip.TripPlanner",
@@ -696,7 +696,7 @@
     "procedureName" : "tripActivate",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.tripActivate",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:43.328Z",
+    "timestamp" : "2025-09-03T20:59:18.006Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.trip.TripPlanner.tripClose",
@@ -831,7 +831,7 @@
     "procedureName" : "searchFlights",
     "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.searchFlights",
     "serviceName" : "FlightAgent",
-    "timestamp" : "2025-08-30T18:05:43.267Z",
+    "timestamp" : "2025-09-03T20:53:38.710Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.trip.agents.FlightAgent:a2a_dispatchPlan",
@@ -939,8 +939,7 @@
     "name" : "Project Description",
     "pane" : {
       "address" : "RH[1]/L[0]",
-      "isActive" : true,
-      "isActiveTool" : true
+      "isActive" : true
     },
     "state" : 8,
     "type" : 82
@@ -949,7 +948,8 @@
     "name" : "com.vantiq.trip.TripPlanner",
     "pane" : {
       "address" : "RH[0]/L[0]",
-      "isActive" : true
+      "isActive" : true,
+      "isActiveTool" : true
     },
     "resourceKey" : "client/com.vantiq.trip.TripPlanner",
     "state" : 8,
@@ -966,15 +966,6 @@
     "resourceKey" : "services/com.vantiq.trip.TripPlanner",
     "state" : 8,
     "type" : 109
-  }, {
-    "isPinned" : false,
-    "name" : "com.vantiq.trip.TripPlanner.processRequest",
-    "pane" : {
-      "address" : "RH[0]/L[2]"
-    },
-    "resourceKey" : "procedure/com.vantiq.trip.TripPlanner.processRequest",
-    "state" : 8,
-    "type" : 24
   }, {
     "isPinned" : false,
     "name" : "com.vantiq.trip.agents.CarRentalAgent",
@@ -1006,6 +997,6 @@
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "documents/Documents", "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description", "client/com.vantiq.trip.TripPlanner", "services/com.vantiq.trip.TripPlanner", "cmeditorprocedure/com.vantiq.trip.TripPlanner.processRequest", "services/com.vantiq.trip.agents.CarRentalAgent", "services/com.vantiq.trip.agents.FlightAgent", "services/com.vantiq.trip.agents.HotelAgent" ]
+    "projectToolKeys" : [ "documents/Documents", "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description", "client/com.vantiq.trip.TripPlanner", "services/com.vantiq.trip.TripPlanner", "services/com.vantiq.trip.agents.CarRentalAgent", "services/com.vantiq.trip.agents.FlightAgent", "services/com.vantiq.trip.agents.HotelAgent" ]
   } ]
 }
