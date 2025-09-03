@@ -1,0 +1,11 @@
+package com.vantiq.trip
+private stateless PROCEDURE TripPlanner.selectAgents(): String Array
+
+var qual = {
+	isAgent: true,
+	"ars_properties.tags": "travel"
+}
+var agents = toArray(SELECT name FROM system.services WHERE qual)
+MAP (agent in agents) {
+	return agent.name
+}

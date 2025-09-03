@@ -1,0 +1,16 @@
+{
+  "ars_properties" : null,
+  "ars_relationships" : [ ],
+  "groupBy" : "",
+  "name" : "com.vantiq.trip.Trip",
+  "properties" : {
+    "id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    }
+  },
+  "role" : "schema"
+}

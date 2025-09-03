@@ -1,0 +1,6 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "com.vantiq.trip.TripPlanner.PartitionedState",
+  "properties" : { },
+  "role" : "schema"
+}

@@ -1,0 +1,17 @@
+// Search for available flights based on the given criteria
+package com.vantiq.trip.agents
+stateless PROCEDURE FlightAgent.searchFlights(
+	originAirport String Required Description "The IATA 3-letter code for the originating airport."
+    ,destinationAirport String Required Description "The IATA 3-letter code for the destination airport."
+    ,startTime DateTime Description "The earliest date and time for the flight in ISO8601 format."
+    ,endTime DateTime Description "The latest date and time for the flight in ISO8601 format."
+    ,airline String Description "The name of the airline."
+    ,seatClassification String Description "The type of seat desired, e.g. 'First-Class', 'Economy Plus'"
+): Object Array
+
+var task = io.vantiq.ai.Agent.getCurrentTask()
+log.info("Searching for flights for trip {}", [task.getContextId()])
+return [
+	{id : "1234", origin: originAirport, destination: destinationAirport, airline: "my airline"},
+	{id : "12345", origin: originAirport, destination: destinationAirport, airline: "my other airline"}
+]

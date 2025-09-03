@@ -1,0 +1,26 @@
+// Activate a collaboration for the specified instance of the "trip" entity role.  Returns the id of the
+// active collaboration.
+PACKAGE com.vantiq.trip
+import type com.vantiq.trip.Trip
+
+STATELESS PROCEDURE TripPlanner.tripActivate(
+        entityId String REQUIRED DESCRIPTION "The id of the trip to be activated.", 
+        entity com.vantiq.trip.Trip REQUIRED DESCRIPTION "The trip instance to be stored in the active collaboration.", 
+        collaborationName String DESCRIPTION "The (optional) name to assign to the collaboration when created"
+    ): String
+
+// Set the collaboration name, if we have one
+var initialCollab = null
+if (collaborationName) {
+    initialCollab = {name: collaborationName}
+}
+
+// Activate a collaboration for the given entity (creating if necessary).
+var result = EXECUTE TripPlanner.ActiveCollabsGetOrCreateForEntity(entityId, "trip", entity, initialCollab) 
+    WITH partitionKey = entityId
+var collaborationId = result.collaboration.id
+
+// Start a conversation for this collaboration
+EXECUTE TripPlanner.ActiveCollabsStartConversation(collaborationId) WITH partitionKey = collaborationId
+
+return collaborationId

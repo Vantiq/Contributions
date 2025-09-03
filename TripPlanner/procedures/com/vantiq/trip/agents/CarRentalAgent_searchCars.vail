@@ -1,0 +1,17 @@
+// Search for available rental cars
+package com.vantiq.trip.agents
+stateless PROCEDURE CarRentalAgent.searchCars(
+	rentalAirport String Required Description "The IATA 3-letter code for the airport at which we will be renting the car."
+)
+
+// Get and display parameters and current task context
+var task = io.vantiq.ai.Agent.getCurrentTask()
+log.info("Searching for cars at {} for trip: {}", [rentalAirport, task.getContextId()])
+
+// Illustrate the explicit gathering of user input.  This request will be forwarded to the client
+// through the TripPlanner agent.
+var answer = io.vantiq.ai.Agent.requestUserInput("What kind of car do you want?")
+log.info("User input: {}", [answer])
+
+// This would be an actual list of cars to rent...
+return [{}]

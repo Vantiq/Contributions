@@ -1,0 +1,119 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ],
+    "tags" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "collaborationStateConfig" : {
+    "entityRoles" : [ {
+      "name" : "trip",
+      "type" : "com.vantiq.trip.Trip"
+    } ],
+    "writeFrequency" : "5 minutes"
+  },
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "description" : "Entry point for planning process.  This is intended to be invoked from a client via the\n conversation widget. The parameters here mimic what a GenAI Procedure provides (this makes\n using it from the CW a bit easier).",
+    "name" : "processRequest",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "input",
+      "required" : false,
+      "type" : null
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "config",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "description" : "Activate a collaboration for the specified instance of the \"trip\" entity role.  Returns the id of the\n active collaboration.",
+    "name" : "tripActivate",
+    "parameters" : [ {
+      "description" : "The id of the trip to be activated.",
+      "multi" : false,
+      "name" : "entityId",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : "The trip instance to be stored in the active collaboration.",
+      "multi" : false,
+      "name" : "entity",
+      "required" : true,
+      "type" : "com.vantiq.trip.Trip"
+    }, {
+      "description" : "The (optional) name to assign to the collaboration when created",
+      "multi" : false,
+      "name" : "collaborationName",
+      "required" : false,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "String"
+    }
+  }, {
+    "description" : "Close the active collaboration associated with the trip instance.",
+    "name" : "tripClose",
+    "parameters" : [ {
+      "description" : "The id of the trip to be closed.",
+      "multi" : false,
+      "name" : "entityId",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : "Set to `true` to indicate that the collaboration failed.",
+      "multi" : false,
+      "name" : "asFailure",
+      "required" : false,
+      "type" : "Boolean"
+    } ]
+  }, {
+    "description" : "Return details about all the currently active collaborations associated with the \"trip\" entity role.\n The returned Object instances have the following properties:\n      * collaborationId -- the id of the collaboration used to manage the active trip.\n      * entity -- the current value associated with the active trip.",
+    "name" : "tripGetActive",
+    "parameters" : [ {
+      "description" : "Determines whether to return the collaborations created by the current user (the default) or by all users.",
+      "multi" : false,
+      "name" : "forAllUsers",
+      "required" : false,
+      "type" : "Boolean"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "description" : "Update the specified instance of the \"trip\" entity role in its active collaboration (if one exists).",
+    "name" : "tripUpdateActive",
+    "parameters" : [ {
+      "description" : "The id of the trip to be updated.",
+      "multi" : false,
+      "name" : "entityId",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : "The updated instance of the specified trip.",
+      "multi" : false,
+      "name" : "entity",
+      "required" : true,
+      "type" : "com.vantiq.trip.Trip"
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : true,
+  "name" : "com.vantiq.trip.TripPlanner",
+  "partitionedType" : "com.vantiq.trip.TripPlanner.PartitionedState",
+  "replicationFactor" : 1,
+  "scheduledProcedures" : {
+    "ActiveCollabsWriteAll" : {
+      "interval" : 300000
+    }
+  }
+}
