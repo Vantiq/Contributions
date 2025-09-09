@@ -31,6 +31,5 @@ var plan = TripPlanner.planTripRequest(planInput, {})
 var trip = TripPlanner.ActiveCollabsGetById(config.collaborationId, "trip")
 var result = io.vantiq.ai.Agent.executePlan(plan, input, trip.id)
 
-// The result of the plan is an array of artifacts.  The first of these contains a "solution"
-// ready to be presented to the user. We return that.
-return result.head().getValue()
+// Return the generated response (which is intended to be "user friendly")
+return result.response
