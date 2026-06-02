@@ -1,0 +1,75 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "7e0fe4c4-6226-4d29-9c1a-3e502a372d03" ],
+    "widgets" : [ {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "children" : [ "c59b61ba-fe07-4855-88c8-48af9116ab72" ],
+      "column" : 0,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "innerMargin" : 20,
+      "name" : "VerticalLayout204",
+      "row" : 0,
+      "type" : "VerticalLayout",
+      "uuid" : "7e0fe4c4-6226-4d29-9c1a-3e502a372d03",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "borderColor" : "Default",
+      "borderThickness" : 1,
+      "column" : -1,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "name" : "trTripDiscussionTree",
+      "row" : -1,
+      "type" : "Tree",
+      "uuid" : "9d1f6396-ea9e-41f9-9783-ff7ff9dbb16e",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "children" : [ "9d1f6396-ea9e-41f9-9783-ff7ff9dbb16e", "e2066964-0bd5-4069-ba02-cd3713f4534a" ],
+      "column" : -1,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "innerMargin" : 20,
+      "name" : "HorizontalLayout355",
+      "row" : -1,
+      "type" : "HorizontalLayout",
+      "uuid" : "c59b61ba-fe07-4855-88c8-48af9116ab72",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "CSSClass" : "vantiqChat",
+      "agentServiceName" : "com.vantiq.trip.TripPlannerDiscussion",
+      "borderColor" : "Default",
+      "borderThickness" : 1,
+      "column" : -1,
+      "fontSize" : 12,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "horzMargin" : 0,
+      "name" : "dwTripDiscussion",
+      "row" : -1,
+      "title" : "Trip Planner General Discussion",
+      "toolbarGap" : 1,
+      "type" : "Discussion",
+      "uuid" : "e2066964-0bd5-4069-ba02-cd3713f4534a",
+      "v" : 19,
+      "vertGravity" : "center",
+      "vertMargin" : 0,
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "single"
+}

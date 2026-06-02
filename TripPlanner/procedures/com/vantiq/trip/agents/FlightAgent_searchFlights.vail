@@ -3,14 +3,22 @@ package com.vantiq.trip.agents
 stateless PROCEDURE FlightAgent.searchFlights(
 	originAirport String Required Description "The IATA 3-letter code for the originating airport."
     ,destinationAirport String Required Description "The IATA 3-letter code for the destination airport."
-    ,startTime DateTime Description "The earliest date and time for the flight in ISO8601 format."
-    ,endTime DateTime Description "The latest date and time for the flight in ISO8601 format."
+    ,startTime String Description "The earliest date and time for the flight in ISO8601 format."
+    ,endTime String Description "The latest date and time for the flight in ISO8601 format."
     ,airline String Description "The name of the airline."
     ,seatClassification String Description "The type of seat desired, e.g. 'First-Class', 'Economy Plus'"
 ): Object Array
 
+// Get the current active task
 var task = io.vantiq.ai.Agent.getCurrentTask()
 log.info("Searching for flights for trip {}", [task.getContextId()])
+
+// If the agent wishes to manage state associated with the current context, it should do so by establishing
+// a collaboration instance. This could be done directly, using the supplied "context id" or indirectly
+// via an entity managed by this agent. In this case, the direct approach would probably makes more sense.
+// Calling "ActiveCollabsGetOrCreate" using the tasks' context id would accomplish this.
+
+
 return [
 	{id : "1234", origin: originAirport, destination: destinationAirport, airline: "my airline"},
 	{id : "12345", origin: originAirport, destination: destinationAirport, airline: "my other airline"}

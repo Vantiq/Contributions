@@ -375,38 +375,1014 @@
   }, {
     "source" : "procedure/com.vantiq.trip.agents.HotelAgent.a2a_dispatchSkill",
     "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateStatus",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateStatus"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetByEntityId"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGenerateId"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsSetEntity"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreateForEntity"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlanner",
+    "target" : "procedure/com.vantiq.trip.TripPlanner.ActiveCollabsUpdateDiscussion_artifacts"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlanner",
+    "target" : "procedure/com.vantiq.trip.TripPlanner.ActiveCollabsUpdateDiscussion_messages"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlanner",
+    "target" : "genaiflow/com.vantiq.trip.TripPlanner:a2a_dispatchPlan"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlanner",
+    "target" : "genaiflow/com.vantiq.trip.TripPlanner:planTripRequest"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlanner",
+    "target" : "genaiflow/com.vantiq.trip.TripPlanner:a2a_dispatchSkill"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsStartConversation"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetCached"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsSetEntity"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsWriteAll"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateDiscussion_messages"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnLoad"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnClose"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsCloseAll"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.CollabIdsByEntityStoreId"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetByEntityId"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateDiscussion_artifacts"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetActive"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsMarkAsClosing"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsSetConversation"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetAll"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsReset"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnStore"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetConversation"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGenerateId"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreateForEntity"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "type/com.vantiq.trip.agents.HotelAgent.PartitionedState"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "genaiflow/com.vantiq.trip.agents.HotelAgent:a2a_dispatchPlan"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.HotelAgent",
+    "target" : "genaiflow/com.vantiq.trip.agents.HotelAgent:a2a_dispatchSkill"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetCached"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetByEntityId"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateDiscussion_messages"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreateForEntity"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsSetEntity"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsSetConversation"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsReset"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateStatus"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetActive"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetConversation"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsStartConversation"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsWriteAll"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnStore"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateDiscussion_artifacts"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGenerateId"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsCloseAll"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnClose"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetAll"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnLoad"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsMarkAsClosing"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.CollabIdsByEntityStoreId"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "type/com.vantiq.trip.agents.FlightAgent.PartitionedState"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsWriteAll",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsMarkAsClosing",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsMarkAsClosing"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnStore",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnClose"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnLoad"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsCloseAll"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnStore"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsWriteAll"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateStatus"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetConversation"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetAll"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsStartConversation"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsReset"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGenerateId"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsSetConversation"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateDiscussion_messages"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetCached"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetActive"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateDiscussion_artifacts"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.CollabIdsByEntityStoreId"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsSetEntity"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetByEntityId"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "genaiflow/com.vantiq.trip.agents.CarRentalAgent:a2a_dispatchSkill"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "genaiflow/com.vantiq.trip.agents.CarRentalAgent:a2a_dispatchPlan"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.CarRentalAgent",
+    "target" : "type/com.vantiq.trip.agents.CarRentalAgent.PartitionedState"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateDiscussion_messages",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateDiscussion_messages",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateStatus",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetByEntityId",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetByEntityId",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetByEntityId"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGenerateId"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsSetEntity"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetConversation",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetConversation",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnLoad"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.CollabIdsByEntityStoreId",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnLoad",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsWriteAll",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetAll",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsCloseAll",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsWriteAll"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsMarkAsClosing"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreate",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreate",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsStartConversation",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsStartConversation",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsStartConversation",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnLoad"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsStartConversation",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsStartConversation",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsStartConversation",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreate",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreate",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsReset",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateDiscussion_messages",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateDiscussion_messages",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetAll",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnLoad"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateStatus",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetCached",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsMarkAsClosing",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlanner.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.TripPlanner.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsWriteAll"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsMarkAsClosing"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsCloseAll",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetByEntityId",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetByEntityId",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsCloseAll",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsMarkAsClosing"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsWriteAll"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsWriteAll",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlanner.ActiveCollabsUpdateDiscussion_messages",
+    "target" : "procedure/com.vantiq.trip.TripPlanner.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlanner.ActiveCollabsUpdateDiscussion_messages",
+    "target" : "services/com.vantiq.trip.TripPlanner"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsSetConversation",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsSetConversation",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsSetEntity",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreate",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreate",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnStore",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetActive",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetActive",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetCached"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsReset",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsMarkAsClosing",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsSetEntity",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGenerateId",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetConversation",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetConversation",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsStartConversation",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsStartConversation",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsStartConversation",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetCached",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsSetEntity"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGenerateId"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetByEntityId"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreateForEntity",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsSetEntity",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetActive",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetActive",
+    "target" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetCached"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlanner.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.trip.TripPlanner.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlanner.ActiveCollabsUpdateDiscussion_artifacts",
+    "target" : "services/com.vantiq.trip.TripPlanner"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlanner.ActiveCollabsUpdateDiscussion_artifacts",
+    "target" : "procedure/com.vantiq.trip.TripPlanner.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsReset",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnLoad",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnClose",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGenerateId",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetByEntityId",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetByEntityId",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsSetConversation",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsSetConversation",
+    "target" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.CollabIdsByEntityStoreId",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnClose",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsSetConversation",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsSetConversation",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetConversation",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetConversation",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateDiscussion_messages",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateDiscussion_messages",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnClose",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetCached",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.CollabIdsByEntityStoreId",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnLoad",
+    "target" : "services/com.vantiq.trip.agents.CarRentalAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnStore",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetActive",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetActive",
+    "target" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetCached"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetAll",
+    "target" : "services/com.vantiq.trip.agents.FlightAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGenerateId",
+    "target" : "services/com.vantiq.trip.agents.HotelAgent"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetActive",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetActive"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetActive",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetCached"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetByEntityId"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsCloseAll"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateStatus"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateDiscussion_artifacts"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.CollabIdsByEntityStoreId"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetConversation"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreateForEntity"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetConversation"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnStore"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsStartConversation"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsReset"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateDiscussion_messages"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnLoad"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetAll"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnClose"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsWriteAll"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGenerateId"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetEntity"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsMarkAsClosing"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetCached"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.a2a_dispatchPlan"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.a2a_dispatchSkill"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "type/com.vantiq.trip.TripPlannerDiscussion.PartitionedState"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "document/com.vantiq.trip.TripPlannerDiscussion.js"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsStartConversation",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsStartConversation",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsStartConversation",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetEntity",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetConversation",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetConversation",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreate",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreate",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateStatus",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsWriteAll"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsMarkAsClosing"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsCloseAll",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateDiscussion_artifacts",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateDiscussion_artifacts",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGenerateId"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetEntity"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetByEntityId"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreateForEntity",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.CollabIdsByEntityStoreId",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsWriteAll",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetCached",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetConversation",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetConversation",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsReset",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnStore",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnLoad",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "genaiflow/com.vantiq.trip.TripPlannerDiscussion:a2a_dispatchPlan",
+    "target" : "llm/io.vantiq.a2a.agentDispatch"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.a2a_dispatchSkill",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGenerateId",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetByEntityId",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetByEntityId",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsMarkAsClosing",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.a2a_dispatchPlan",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnLoad"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetAll",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateDiscussion_messages",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateDiscussion_messages",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnClose",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.userRequestSkill"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.userRequestSkill",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.selectAgents"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.selectAgents",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.userRequestSkill",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.selectAgents"
+  }, {
+    "source" : "genaiflow/com.vantiq.trip.TripPlannerDiscussion:planTripRequest",
+    "target" : "llm/io.vantiq.a2a.agentDispatch"
+  }, {
+    "source" : "genaiflow/com.vantiq.trip.TripPlannerDiscussion:planTripRequest",
+    "target" : "document/rewooPlanPrompt.txt"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.planTripRequest"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.planTripRequest",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "genaiflow/com.vantiq.trip.TripPlannerDiscussion:planTripRequest"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.userRequestSkill",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.planTripRequest"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "genaiflow/com.vantiq.trip.TripPlannerDiscussion:a2a_dispatchSkill"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "genaiflow/com.vantiq.trip.agents.FlightAgent:a2a_dispatchPlan"
+  }, {
+    "source" : "services/com.vantiq.trip.agents.FlightAgent",
+    "target" : "genaiflow/com.vantiq.trip.agents.FlightAgent:a2a_dispatchSkill"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "genaiflow/com.vantiq.trip.TripPlannerDiscussion:a2a_dispatchPlan"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetResult"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetResult",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetResult",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.discussionsUpdateStatus"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.discussionsGetById"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.discussionsList"
+  }, {
+    "source" : "services/com.vantiq.trip.TripPlannerDiscussion",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.discussionsDelete"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.discussionsUpdateStatus",
+    "target" : "procedure/com.vantiq.trip.TripPlannerDiscussion.discussionsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.discussionsUpdateStatus",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.discussionsList",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.discussionsGetById",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
+  }, {
+    "source" : "procedure/com.vantiq.trip.TripPlannerDiscussion.discussionsDelete",
+    "target" : "services/com.vantiq.trip.TripPlannerDiscussion"
   } ],
   "name" : "tripPlanning",
   "options" : {
-    "description" : "## Multi-Agent System Example\n\nThis is a very basic (and incomplete) example of how to approach the construction of a multi-agent system in Vantiq. The application has the following resources:\n\n* TripPlanner (Client) -- this is a very simple client which allows the user to interact with the TripPlanner Agent.  On startup, the client creates an instance of the \"Trip\" type (which just holds a UUID).  It then starts a collaboration and conversation for that trip.  The collaboration instance is closed when the client exits.\n\n* TripPlanner (Agent) -- this agent is the primary contact point for the client and coordinates interactions with the other agents in the application.  The primary entry point is the **processRequest** procedure which is invoked by the client when the user provides input. It is an example of a Planning Agent.\n\n* \"Travel\" Agents -- there are 3 Agents (Flight, CarRental, and Hotel) which are provided as \"tools\" to the planning algorithm.  The planning process determines which one(s) to invoke based on the user's input.\n\n### Setup\n\nYou will need to provide a value for the secret `VANTIQ_A2A_SECRET`. This should be a valid OpenAI API Key.\n\n### Notable Features\n\nThe primary purpose of this application is to illustrate some of the issues that are common in the construction of multi-agent system.\n\n#### Use of a \"Planning Algorithm\"\n\nThe TripPlanner Agent is implemented using a \"Plan and Execute\" pattern known as Reasoning Without Observations (ReWOO). There are 3 main steps to the algorithm (implemented by **processRequest**).\n\n1. Determining which agents will be provided as \"tools\" to the planning prompt.  This could be done by building a fixed prompt that explicitly lists the agents it wants to use.  However, here we select the target agents dynamically via a form of agent discovery.\n1. Having an LLM construct a plan given the available \"tools\" and the user's request. The specifics here vary based on the approach being used. Here the prompt template **rewooPlanPrompt.txt** is used to instruct the LLM on how to build the plan.  The GenAI Procedure **planTripRequest** formats this prompt, submits it to the LLM, and post-processes the output to produce a DAG representing the plan to be executed.\n1. Once the plan has been built, the last step is to execute the plan. Here we are using the built-in procedure **io.vantiq.ai.Agent.executePlan** to perform the execution.\n\n#### Agent Discovery\n\nApplications can leverage Agent Discovery for a variety of purposes. Here we are demonstrating how it can be used to allow an application to add new agents (and thus capabilities) dynamically. The TripPlanner selects the agents to use based on the presence of the tag\" `travel`.  It then obtains a description of each agent's capabilities by using the Agent Card.  See the procedure **selectAgents** for details on how this works.\n\n#### Gathering User Input\n\nAnother important activity for agents is gathering input from the user.  This can occur as part of the execution of a plan (one of the tools is a proxy for the user) or it can occur when the agent explicitly decides that it needs more information (via the use of the built-in procedure **io.vantiq.ai.Agent.requestUserInput**).  There is an example of the latter in **CarRentalAgent.searchCars**.\n\nThe agent framework includes a mechanism for requesting input which is used when an agent is invoked during plan execution. This happens for both the implicit and explicit requests made in this context. Agents invoked directly by the client (using their service interface) must implement a \"bridge\" procedure in order to intercept these requests and forwarded them to the client.  See the procedure **TripPlanner.a2a_requestUserInput** for an example of how this works.\n\n#### Communicating Application State\n\nDuring execution agents need a mechanism to locate and establish any state which may be associated with the request.  In this application, state management is accomplished using collaborations and the *id* property of the **Trip** instance is used to establish that state at runtime.  The TripPlanner passes this value as the *contextId* when calling **executePlan** and when the other agents are invoked, this id is provided to them via the currently active agent \"task\".  You can see those agents using **io.vantiq.ai.Agent.getCurrentTask** to obtain the task and **getContextId** to get the context id.  We log this during execution so you can observe that it is the same value in all cases.",
+    "description" : "## Multi-Agent System Example\n\nThis is a very basic (and incomplete) example of how to approach the construction of a multi-agent system in Vantiq. The application has the following resources:\n\n* TripPlannerDiscussion (Client) -- this is a simple client which allows the user to interact with the TripPlanner Agent. It uses the DiscussionWidget and relies on the automatic creation of discussions by the `TripPlannerDiscussion` agent for state management.\n\n* TripPlannerDiscussion (Agent) -- this agent is the primary contact point for the client and coordinates interactions with the other agents in the application.  It provides the agent skill `userRequestSkill` to which all user requests are dispatched. It is an example of a Planning Agent.\n\n* \"Travel\" Agents -- there are 3 Agents (Flight, CarRental, and Hotel) which are provided as \"tools\" to the planning algorithm.  The planning process determines which one(s) to invoke based on the user's input.\n\n### Setup\n\nYou will need to provide a value for the secret `VANTIQ_A2A_SECRET`. This should be a valid OpenAI API Key.\n\n### Notable Features\n\nThe primary purpose of this application is to illustrate some of the issues that are common in the construction of multi-agent system.\n\n#### Use of a \"Planning Algorithm\"\n\nThe TripPlanner Agent is implemented using a \"Plan and Execute\" pattern known as Reasoning Without Observations (ReWOO). There are 3 main steps to the algorithm (implemented by **processRequest**).\n\n1. Determining which agents will be provided as \"tools\" to the planning prompt.  This could be done by building a fixed prompt that explicitly lists the agents it wants to use.  However, here we select the target agents dynamically via a form of agent discovery.\n1. Having an LLM construct a plan given the available \"tools\" and the user's request. The specifics here vary based on the approach being used. Here the prompt template **rewooPlanPrompt.txt** is used to instruct the LLM on how to build the plan.  The GenAI Procedure **planTripRequest** formats this prompt, submits it to the LLM, and post-processes the output to produce a DAG representing the plan to be executed.\n1. Once the plan has been built, the last step is to execute the plan. Here we are using the built-in procedure **io.vantiq.ai.Agent.executePlan** to perform the execution.\n\n#### Agent Discovery\n\nApplications can leverage Agent Discovery for a variety of purposes. Here we are demonstrating how it can be used to allow an application to add new agents (and thus capabilities) dynamically. The TripPlannerDiscussion selects the agents to use based on the presence of the tag\" `travel`.  It then obtains a description of each agent's capabilities by using the Agent Card.  See the procedure **selectAgents** for details on how this works.\n\n#### Gathering User Input\n\nAnother important activity for agents is gathering input from the user.  This can occur as part of the execution of a plan (one of the tools is a proxy for the user) or it can occur when the agent explicitly decides that it needs more information (via the use of the built-in procedure **io.vantiq.ai.Agent.requestUserInput**).  There is an example of the latter in **CarRentalAgent.searchCars**.\n\nThe agent framework includes a mechanism for requesting input which is used when an agent is invoked during plan execution. This happens for both the implicit and explicit requests made in this context. The client's DiscussionWidget handles this interaction automatically.\n\n#### Communicating Application State\n\nDuring execution agents need a mechanism to locate and establish any state which may be associated with the request. This application demonstrates the use of a discussion (owned by the `TripPlannerDiscussion` agent) for this purpose. The discussion id is automatically propagated to the any participating agents via the *contextId* of the current task. You can see those agents using **io.vantiq.ai.Agent.getCurrentTask** to obtain the task and **getContextId** to get the context id.  We log this during execution so you can observe that it is the same value in all cases.\n\n## Legacy (1.43) Version\n\nThe `TripPlanner` client and service represent the previous (1.43) version of this demo. That client uses the ConversationWidget which interacts with the `TripPlanner` agent as a Vantiq service (aka not using the A2A protocol). We have retained this version for continuity/reference, but it does not represent the current best practice.",
     "dockCollapsed" : {
-      "bottom" : false,
+      "bottom" : true,
       "left" : false,
       "right" : false,
       "top" : false,
+      "via" : true,
       "viewtabs" : false
     },
     "dockDimensions" : {
       "bottom" : 200,
-      "debug" : [ 955.076057614964, 1165.923942385036 ],
-      "left" : 210,
+      "debug" : [ 351.66727573305496, 354.1117201774994, 1273.2210040894456 ],
+      "left" : 304,
       "right" : 220,
       "top" : 0,
+      "via" : 582,
       "viewtabs" : 0
     },
+    "exclusionList" : [ "rule/com.vantiq.trip.beforeDiscussionInert", "services/TestDiscussion", "services/com.test.TestDiscussion" ],
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "flex",
+    "openFolders" : [ "com.vantiq.trip.TripPlanner/type", "com.vantiq.trip.agents/services", "com.vantiq.trip/client", "com.vantiq.trip/services", "com.vantiq.trip/type", "document", "services/com.vantiq.trip.TripPlanner", "services/com.vantiq.trip.TripPlannerDiscussion" ],
     "partitionsSettings" : { },
     "rootViewFlavor" : 5,
     "showGrid" : true,
     "structure" : {
       "fraction" : 1,
       "groups" : [ {
-        "fraction" : 0.6600209863588667,
-        "type" : "L[7]"
+        "fraction" : 0.4806110458284371,
+        "type" : "L[5]"
       }, {
-        "fraction" : 0.33997901364113325,
+        "fraction" : 0.5193889541715628,
         "type" : "L[1]"
       } ],
       "type" : "RH"
@@ -420,232 +1396,275 @@
     "label" : "com.vantiq.trip.Trip",
     "name" : "com.vantiq.trip.Trip",
     "resourceReference" : "/types/com.vantiq.trip.Trip",
-    "timestamp" : "2025-08-30T18:05:28.247Z",
+    "timestamp" : "2026-04-27T19:10:25.252Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.trip.TripPlanner",
     "name" : "com.vantiq.trip.TripPlanner",
     "resourceReference" : "/services/com.vantiq.trip.TripPlanner",
-    "timestamp" : "2025-09-03T20:59:22.262Z",
+    "timestamp" : "2026-04-27T19:10:45.047Z",
     "type" : 63
   }, {
     "label" : "com.vantiq.trip.TripPlanner",
     "name" : "com.vantiq.trip.TripPlanner",
     "resourceReference" : "/system.clients/com.vantiq.trip.TripPlanner",
-    "timestamp" : "2025-08-30T18:05:28.756Z",
+    "timestamp" : "2026-04-27T19:10:25.840Z",
     "type" : 15
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsCloseAll",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsCloseAll",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsCloseAll",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsCloseAll",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:35.855Z",
+    "timestamp" : "2026-04-27T19:10:38.622Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsGenerateId",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsGenerateId",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsGenerateId",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsGenerateId",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:39.416Z",
+    "timestamp" : "2026-04-27T19:10:48.486Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetActive",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetActive",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsGetActive",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsGetActive",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:38.571Z",
+    "timestamp" : "2026-04-27T19:10:44.542Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetAll",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetAll",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsGetAll",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsGetAll",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:33.711Z",
+    "timestamp" : "2026-04-27T19:10:33.643Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetByEntityId",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetByEntityId",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsGetByEntityId",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsGetByEntityId",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:37.004Z",
+    "timestamp" : "2026-04-27T19:10:40.892Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetById",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetById",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsGetById",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsGetById",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:32.761Z",
+    "timestamp" : "2026-04-27T19:10:31.563Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetCached",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetCached",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsGetCached",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsGetCached",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:37.973Z",
+    "timestamp" : "2026-04-27T19:10:42.341Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetConversation",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetConversation",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsGetConversation",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsGetConversation",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:39.717Z",
+    "timestamp" : "2026-04-27T19:10:49.001Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetOrCreate",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetOrCreate",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsGetOrCreate",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsGetOrCreate",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:36.382Z",
+    "timestamp" : "2026-04-27T19:10:39.968Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetOrCreateForEntity",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsGetOrCreateForEntity",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsGetOrCreateForEntity",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsGetOrCreateForEntity",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:37.359Z",
+    "timestamp" : "2026-04-27T19:10:41.473Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsMarkAsClosing",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsMarkAsClosing",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsMarkAsClosing",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsMarkAsClosing",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:35.556Z",
+    "timestamp" : "2026-04-27T19:10:38.232Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsOnClose",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsOnClose",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsOnClose",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsOnClose",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:29.938Z",
+    "timestamp" : "2026-04-27T19:10:28.371Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsOnLoad",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsOnLoad",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsOnLoad",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsOnLoad",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:32.056Z",
+    "timestamp" : "2026-04-27T19:10:30.949Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsOnStore",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsOnStore",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsOnStore",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsOnStore",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:31.068Z",
+    "timestamp" : "2026-04-27T19:10:29.977Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsReset",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsReset",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsReset",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsReset",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:34.082Z",
+    "timestamp" : "2026-04-27T19:10:34.356Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsSetConversation",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsSetConversation",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsSetConversation",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsSetConversation",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:39.964Z",
+    "timestamp" : "2026-04-27T19:10:49.508Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsSetEntity",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsSetEntity",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsSetEntity",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsSetEntity",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:36.660Z",
+    "timestamp" : "2026-04-27T19:10:40.407Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsStartConversation",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsStartConversation",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsStartConversation",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsStartConversation",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:39.136Z",
+    "timestamp" : "2026-04-27T19:10:47.957Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsUpdateDiscussion_artifacts",
+    "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsUpdateDiscussion_artifacts",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsUpdateDiscussion_artifacts",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsUpdateDiscussion_artifacts",
+    "serviceName" : "TripPlanner",
+    "timestamp" : "2026-04-27T19:11:01.280Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsUpdateDiscussion_messages",
+    "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsUpdateDiscussion_messages",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsUpdateDiscussion_messages",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsUpdateDiscussion_messages",
+    "serviceName" : "TripPlanner",
+    "timestamp" : "2026-04-27T19:11:01.280Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsUpdateStatus",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsUpdateStatus",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsUpdateStatus",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsUpdateStatus",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:34.413Z",
+    "timestamp" : "2026-04-27T19:10:35.040Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.ActiveCollabsWriteAll",
     "name" : "com.vantiq.trip.TripPlanner.ActiveCollabsWriteAll",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "ActiveCollabsWriteAll",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.ActiveCollabsWriteAll",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:34.960Z",
+    "timestamp" : "2026-04-27T19:10:36.733Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.CollabIdsByEntityStoreId",
     "name" : "com.vantiq.trip.TripPlanner.CollabIdsByEntityStoreId",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "CollabIdsByEntityStoreId",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.CollabIdsByEntityStoreId",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:37.725Z",
+    "timestamp" : "2026-04-27T19:10:41.956Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.trip.TripPlanner.PartitionedState",
     "name" : "com.vantiq.trip.TripPlanner.PartitionedState",
     "resourceReference" : "/types/com.vantiq.trip.TripPlanner.PartitionedState",
-    "timestamp" : "2025-08-30T18:05:29.358Z",
+    "timestamp" : "2026-04-27T19:10:27.057Z",
     "type" : 1
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.a2a_dispatchPlan",
     "name" : "com.vantiq.trip.TripPlanner.a2a_dispatchPlan",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "a2a_dispatchPlan",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.a2a_dispatchPlan",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:42.811Z",
+    "timestamp" : "2026-04-27T19:11:00.677Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.a2a_dispatchSkill",
     "name" : "com.vantiq.trip.TripPlanner.a2a_dispatchSkill",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "a2a_dispatchSkill",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.a2a_dispatchSkill",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:42.554Z",
+    "timestamp" : "2026-04-27T19:11:00.162Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.trip.TripPlanner.a2a_requestUserInput",
@@ -654,22 +1673,24 @@
     "procedureName" : "a2a_requestUserInput",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.a2a_requestUserInput",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:43.313Z",
+    "timestamp" : "2026-04-27T19:11:02.837Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.js",
     "name" : "com.vantiq.trip.TripPlanner.js",
     "resourceReference" : "/documents/com.vantiq.trip.TripPlanner.js",
-    "timestamp" : "2025-08-30T18:05:43.055Z",
+    "timestamp" : "2026-04-27T19:11:02.216Z",
     "type" : 19
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner.planTripRequest",
     "name" : "com.vantiq.trip.TripPlanner.planTripRequest",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "planTripRequest",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.planTripRequest",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:44.357Z",
+    "timestamp" : "2026-04-27T19:11:03.748Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.trip.TripPlanner.processRequest",
@@ -678,7 +1699,7 @@
     "procedureName" : "processRequest",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.processRequest",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:43.188Z",
+    "timestamp" : "2026-04-27T19:11:02.836Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.trip.TripPlanner.selectAgents",
@@ -687,7 +1708,7 @@
     "procedureName" : "selectAgents",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.selectAgents",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:43.264Z",
+    "timestamp" : "2026-04-27T19:11:02.902Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.trip.TripPlanner.tripActivate",
@@ -696,7 +1717,7 @@
     "procedureName" : "tripActivate",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.tripActivate",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-09-03T20:59:18.006Z",
+    "timestamp" : "2026-04-27T19:11:02.945Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.trip.TripPlanner.tripClose",
@@ -705,7 +1726,7 @@
     "procedureName" : "tripClose",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.tripClose",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:43.190Z",
+    "timestamp" : "2026-04-27T19:11:02.917Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.trip.TripPlanner.tripGetActive",
@@ -714,7 +1735,7 @@
     "procedureName" : "tripGetActive",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.tripGetActive",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:43.270Z",
+    "timestamp" : "2026-04-27T19:11:02.998Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.trip.TripPlanner.tripUpdateActive",
@@ -723,55 +1744,669 @@
     "procedureName" : "tripUpdateActive",
     "resourceReference" : "/procedures/com.vantiq.trip.TripPlanner.tripUpdateActive",
     "serviceName" : "TripPlanner",
-    "timestamp" : "2025-08-30T18:05:43.312Z",
+    "timestamp" : "2026-04-27T19:11:03.243Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner:a2a_dispatchPlan",
     "name" : "com.vantiq.trip.TripPlanner:a2a_dispatchPlan",
     "resourceReference" : "/system.genaiflows/com.vantiq.trip.TripPlanner:a2a_dispatchPlan",
-    "timestamp" : "2025-08-30T18:05:42.951Z",
+    "timestamp" : "2026-04-27T19:11:00.976Z",
     "type" : 81
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.TripPlanner:a2a_dispatchSkill",
     "name" : "com.vantiq.trip.TripPlanner:a2a_dispatchSkill",
     "resourceReference" : "/system.genaiflows/com.vantiq.trip.TripPlanner:a2a_dispatchSkill",
-    "timestamp" : "2025-08-30T18:05:42.696Z",
+    "timestamp" : "2026-04-27T19:11:00.367Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.trip.TripPlanner:planTripRequest",
     "name" : "com.vantiq.trip.TripPlanner:planTripRequest",
     "resourceReference" : "/system.genaiflows/com.vantiq.trip.TripPlanner:planTripRequest",
-    "timestamp" : "2025-08-30T18:05:44.535Z",
+    "timestamp" : "2026-04-27T19:11:03.955Z",
+    "type" : 81
+  }, {
+    "label" : "com.vantiq.trip.TripPlannerDiscussion",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion",
+    "resourceReference" : "/system.clients/com.vantiq.trip.TripPlannerDiscussion",
+    "timestamp" : "2026-06-01T22:43:38.902Z",
+    "type" : 15
+  }, {
+    "label" : "com.vantiq.trip.TripPlannerDiscussion",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion",
+    "resourceReference" : "/services/com.vantiq.trip.TripPlannerDiscussion",
+    "timestamp" : "2026-06-01T22:51:25.166Z",
+    "type" : 63
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsCloseAll",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsCloseAll",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsCloseAll",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsCloseAll",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:38.513Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGenerateId",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGenerateId",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsGenerateId",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGenerateId",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:48.506Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetActive",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetActive",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsGetActive",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetActive",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:44.639Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetAll",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetAll",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsGetAll",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetAll",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:33.512Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetByEntityId",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetByEntityId",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsGetByEntityId",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetByEntityId",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:40.892Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsGetById",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetById",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:31.578Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetCached",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetCached",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsGetCached",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetCached",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:42.427Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetConversation",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetConversation",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsGetConversation",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetConversation",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:49.075Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreate",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreate",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsGetOrCreate",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreate",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:39.846Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreateForEntity",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreateForEntity",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsGetOrCreateForEntity",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsGetOrCreateForEntity",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:41.596Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsMarkAsClosing",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsMarkAsClosing",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsMarkAsClosing",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsMarkAsClosing",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:38.043Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnClose",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnClose",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsOnClose",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnClose",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:28.430Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnLoad",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnLoad",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsOnLoad",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnLoad",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:30.964Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnStore",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnStore",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsOnStore",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsOnStore",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:29.977Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsReset",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsReset",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsReset",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsReset",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:34.331Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetConversation",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetConversation",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsSetConversation",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetConversation",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:49.587Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetEntity",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetEntity",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsSetEntity",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetEntity",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:40.309Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetResult",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetResult",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsSetResult",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsSetResult",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-06-01T22:37:06.118Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsStartConversation",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsStartConversation",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsStartConversation",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsStartConversation",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:47.878Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateDiscussion_artifacts",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateDiscussion_artifacts",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsUpdateDiscussion_artifacts",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateDiscussion_artifacts",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-06-01T22:51:24.075Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateDiscussion_messages",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateDiscussion_messages",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsUpdateDiscussion_messages",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateDiscussion_messages",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-06-01T22:51:24.074Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateStatus",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateStatus",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsUpdateStatus",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsUpdateStatus",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:34.948Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsWriteAll",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsWriteAll",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "ActiveCollabsWriteAll",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.ActiveCollabsWriteAll",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:36.586Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.CollabIdsByEntityStoreId",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.CollabIdsByEntityStoreId",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "CollabIdsByEntityStoreId",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.CollabIdsByEntityStoreId",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:10:42.067Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.PartitionedState",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.PartitionedState",
+    "resourceReference" : "/types/com.vantiq.trip.TripPlannerDiscussion.PartitionedState",
+    "timestamp" : "2026-04-27T19:10:27.057Z",
+    "type" : 1
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.a2a_dispatchPlan",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.a2a_dispatchPlan",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "a2a_dispatchPlan",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.a2a_dispatchPlan",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:11:00.667Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.a2a_dispatchSkill",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.a2a_dispatchSkill",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "a2a_dispatchSkill",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.a2a_dispatchSkill",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:11:00.147Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.discussionsDelete",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.discussionsDelete",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "discussionsDelete",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.discussionsDelete",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-06-01T22:51:24.413Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.discussionsGetById",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.discussionsGetById",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "discussionsGetById",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.discussionsGetById",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-06-01T22:51:24.431Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.discussionsList",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.discussionsList",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "discussionsList",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.discussionsList",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-06-01T22:51:24.423Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.discussionsUpdateStatus",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.discussionsUpdateStatus",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "discussionsUpdateStatus",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.discussionsUpdateStatus",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-06-01T22:51:24.415Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.js",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.js",
+    "resourceReference" : "/documents/com.vantiq.trip.TripPlannerDiscussion.js",
+    "timestamp" : "2026-06-01T22:51:25.981Z",
+    "type" : 19
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.planTripRequest",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.planTripRequest",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "planTripRequest",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.planTripRequest",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:11:03.753Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.selectAgents",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.selectAgents",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "selectAgents",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.selectAgents",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-04-27T19:11:02.463Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.trip.TripPlannerDiscussion.userRequestSkill",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion.userRequestSkill",
+    "packageName" : "com.vantiq.trip",
+    "procedureName" : "userRequestSkill",
+    "resourceReference" : "/procedures/com.vantiq.trip.TripPlannerDiscussion.userRequestSkill",
+    "serviceName" : "TripPlannerDiscussion",
+    "timestamp" : "2026-06-01T18:05:18.341Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion:a2a_dispatchPlan",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion:a2a_dispatchPlan",
+    "resourceReference" : "/system.genaiflows/com.vantiq.trip.TripPlannerDiscussion:a2a_dispatchPlan",
+    "timestamp" : "2026-04-27T19:11:00.851Z",
+    "type" : 81
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.TripPlannerDiscussion:a2a_dispatchSkill",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion:a2a_dispatchSkill",
+    "resourceReference" : "/system.genaiflows/com.vantiq.trip.TripPlannerDiscussion:a2a_dispatchSkill",
+    "timestamp" : "2026-04-27T19:11:00.343Z",
+    "type" : 81
+  }, {
+    "label" : "com.vantiq.trip.TripPlannerDiscussion:planTripRequest",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion:planTripRequest",
+    "resourceReference" : "/system.genaiflows/com.vantiq.trip.TripPlannerDiscussion:planTripRequest",
+    "timestamp" : "2026-04-27T19:11:03.952Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.trip.agents.CarRentalAgent",
     "name" : "com.vantiq.trip.agents.CarRentalAgent",
     "resourceReference" : "/services/com.vantiq.trip.agents.CarRentalAgent",
-    "timestamp" : "2025-08-30T18:05:29.110Z",
+    "timestamp" : "2026-04-27T19:10:45.151Z",
     "type" : 63
   }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsCloseAll",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsCloseAll",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsCloseAll",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsCloseAll",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:38.608Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGenerateId",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGenerateId",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGenerateId",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGenerateId",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:48.648Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetActive",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetActive",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetActive",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetActive",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:44.652Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetAll",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetAll",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetAll",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetAll",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:33.611Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetByEntityId",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetByEntityId",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetByEntityId",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetByEntityId",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:40.946Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetById",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetById",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:31.591Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetCached",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetCached",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetCached",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetCached",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:42.361Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetConversation",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetConversation",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetConversation",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetConversation",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:49.202Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreate",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreate",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetOrCreate",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreate",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:39.935Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreateForEntity",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreateForEntity",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetOrCreateForEntity",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsGetOrCreateForEntity",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:41.496Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsMarkAsClosing",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsMarkAsClosing",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsMarkAsClosing",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsMarkAsClosing",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:38.152Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnClose",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnClose",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsOnClose",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnClose",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:28.452Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnLoad",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnLoad",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsOnLoad",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnLoad",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:30.992Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnStore",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnStore",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsOnStore",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsOnStore",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:29.995Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsReset",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsReset",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsReset",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsReset",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:34.321Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsSetConversation",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsSetConversation",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsSetConversation",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsSetConversation",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:49.699Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsSetEntity",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsSetEntity",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsSetEntity",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsSetEntity",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:40.408Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsStartConversation",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsStartConversation",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsStartConversation",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsStartConversation",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:48.216Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsUpdateDiscussion_artifacts",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:11:01.296Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateDiscussion_messages",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateDiscussion_messages",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsUpdateDiscussion_messages",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateDiscussion_messages",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:11:01.358Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateStatus",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateStatus",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsUpdateStatus",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsUpdateStatus",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:34.993Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsWriteAll",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsWriteAll",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsWriteAll",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.ActiveCollabsWriteAll",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:36.593Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.CollabIdsByEntityStoreId",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.CollabIdsByEntityStoreId",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "CollabIdsByEntityStoreId",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.CollabIdsByEntityStoreId",
+    "serviceName" : "CarRentalAgent",
+    "timestamp" : "2026-04-27T19:10:41.995Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.trip.agents.CarRentalAgent.PartitionedState",
+    "name" : "com.vantiq.trip.agents.CarRentalAgent.PartitionedState",
+    "resourceReference" : "/types/com.vantiq.trip.agents.CarRentalAgent.PartitionedState",
+    "timestamp" : "2026-04-27T19:10:27.065Z",
+    "type" : 1
+  }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.CarRentalAgent.a2a_dispatchPlan",
     "name" : "com.vantiq.trip.agents.CarRentalAgent.a2a_dispatchPlan",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "a2a_dispatchPlan",
     "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.a2a_dispatchPlan",
     "serviceName" : "CarRentalAgent",
-    "timestamp" : "2025-08-30T18:05:31.774Z",
+    "timestamp" : "2026-04-27T19:11:00.692Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.CarRentalAgent.a2a_dispatchSkill",
     "name" : "com.vantiq.trip.agents.CarRentalAgent.a2a_dispatchSkill",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "a2a_dispatchSkill",
     "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.a2a_dispatchSkill",
     "serviceName" : "CarRentalAgent",
-    "timestamp" : "2025-08-30T18:05:30.332Z",
+    "timestamp" : "2026-04-27T19:11:00.191Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.CarRentalAgent.js",
     "name" : "com.vantiq.trip.agents.CarRentalAgent.js",
     "resourceReference" : "/documents/com.vantiq.trip.agents.CarRentalAgent.js",
-    "timestamp" : "2025-08-30T18:05:33.113Z",
+    "timestamp" : "2026-04-27T19:11:02.172Z",
     "type" : 19
   }, {
     "label" : "com.vantiq.trip.agents.CarRentalAgent.searchCars",
@@ -780,49 +2415,290 @@
     "procedureName" : "searchCars",
     "resourceReference" : "/procedures/com.vantiq.trip.agents.CarRentalAgent.searchCars",
     "serviceName" : "CarRentalAgent",
-    "timestamp" : "2025-09-02T16:31:45.547Z",
+    "timestamp" : "2026-04-27T19:11:03.295Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.CarRentalAgent:a2a_dispatchPlan",
     "name" : "com.vantiq.trip.agents.CarRentalAgent:a2a_dispatchPlan",
     "resourceReference" : "/system.genaiflows/com.vantiq.trip.agents.CarRentalAgent:a2a_dispatchPlan",
-    "timestamp" : "2025-08-30T18:05:32.338Z",
+    "timestamp" : "2026-04-27T19:11:01.039Z",
     "type" : 81
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.CarRentalAgent:a2a_dispatchSkill",
     "name" : "com.vantiq.trip.agents.CarRentalAgent:a2a_dispatchSkill",
     "resourceReference" : "/system.genaiflows/com.vantiq.trip.agents.CarRentalAgent:a2a_dispatchSkill",
-    "timestamp" : "2025-08-30T18:05:31.097Z",
+    "timestamp" : "2026-04-27T19:11:00.390Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.trip.agents.FlightAgent",
     "name" : "com.vantiq.trip.agents.FlightAgent",
     "resourceReference" : "/services/com.vantiq.trip.agents.FlightAgent",
-    "timestamp" : "2025-08-30T18:05:29.103Z",
+    "timestamp" : "2026-06-01T18:24:15.322Z",
     "type" : 63
   }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsCloseAll",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsCloseAll",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsCloseAll",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsCloseAll",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:38.559Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGenerateId",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGenerateId",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGenerateId",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGenerateId",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:48.656Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetActive",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetActive",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetActive",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetActive",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:44.670Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetAll",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetAll",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetAll",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetAll",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:33.627Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetByEntityId",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetByEntityId",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetByEntityId",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetByEntityId",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:40.891Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetById",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetById",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:31.671Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetCached",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetCached",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetCached",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetCached",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:42.373Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetConversation",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetConversation",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetConversation",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetConversation",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:49.209Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreate",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreate",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetOrCreate",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreate",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:39.983Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreateForEntity",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreateForEntity",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetOrCreateForEntity",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsGetOrCreateForEntity",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:41.500Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsMarkAsClosing",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsMarkAsClosing",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsMarkAsClosing",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsMarkAsClosing",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:38.051Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnClose",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnClose",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsOnClose",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnClose",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:28.441Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnLoad",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnLoad",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsOnLoad",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnLoad",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:31.060Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnStore",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnStore",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsOnStore",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsOnStore",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:30.074Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsReset",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsReset",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsReset",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsReset",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:34.338Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsSetConversation",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsSetConversation",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsSetConversation",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsSetConversation",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:49.690Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsSetEntity",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsSetEntity",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsSetEntity",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsSetEntity",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:40.427Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsStartConversation",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsStartConversation",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsStartConversation",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsStartConversation",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:48.243Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsUpdateDiscussion_artifacts",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:11:01.445Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateDiscussion_messages",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateDiscussion_messages",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsUpdateDiscussion_messages",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateDiscussion_messages",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:11:01.419Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateStatus",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateStatus",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsUpdateStatus",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsUpdateStatus",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:34.993Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsWriteAll",
+    "name" : "com.vantiq.trip.agents.FlightAgent.ActiveCollabsWriteAll",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsWriteAll",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.ActiveCollabsWriteAll",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:36.473Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.FlightAgent.CollabIdsByEntityStoreId",
+    "name" : "com.vantiq.trip.agents.FlightAgent.CollabIdsByEntityStoreId",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "CollabIdsByEntityStoreId",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.CollabIdsByEntityStoreId",
+    "serviceName" : "FlightAgent",
+    "timestamp" : "2026-04-27T19:10:41.980Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.trip.agents.FlightAgent.PartitionedState",
+    "name" : "com.vantiq.trip.agents.FlightAgent.PartitionedState",
+    "resourceReference" : "/types/com.vantiq.trip.agents.FlightAgent.PartitionedState",
+    "timestamp" : "2026-04-27T19:10:27.067Z",
+    "type" : 1
+  }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.FlightAgent.a2a_dispatchPlan",
     "name" : "com.vantiq.trip.agents.FlightAgent.a2a_dispatchPlan",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "a2a_dispatchPlan",
     "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.a2a_dispatchPlan",
     "serviceName" : "FlightAgent",
-    "timestamp" : "2025-08-30T18:05:31.748Z",
+    "timestamp" : "2026-04-27T19:11:00.692Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.FlightAgent.a2a_dispatchSkill",
     "name" : "com.vantiq.trip.agents.FlightAgent.a2a_dispatchSkill",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "a2a_dispatchSkill",
     "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.a2a_dispatchSkill",
     "serviceName" : "FlightAgent",
-    "timestamp" : "2025-08-30T18:05:30.325Z",
+    "timestamp" : "2026-04-27T19:11:00.180Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.FlightAgent.js",
     "name" : "com.vantiq.trip.agents.FlightAgent.js",
     "resourceReference" : "/documents/com.vantiq.trip.agents.FlightAgent.js",
-    "timestamp" : "2025-08-30T18:05:33.110Z",
+    "timestamp" : "2026-06-01T18:24:15.522Z",
     "type" : 19
   }, {
     "label" : "com.vantiq.trip.agents.FlightAgent.searchFlights",
@@ -831,49 +2707,290 @@
     "procedureName" : "searchFlights",
     "resourceReference" : "/procedures/com.vantiq.trip.agents.FlightAgent.searchFlights",
     "serviceName" : "FlightAgent",
-    "timestamp" : "2025-09-03T20:53:38.710Z",
+    "timestamp" : "2026-06-01T18:24:11.157Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.FlightAgent:a2a_dispatchPlan",
     "name" : "com.vantiq.trip.agents.FlightAgent:a2a_dispatchPlan",
     "resourceReference" : "/system.genaiflows/com.vantiq.trip.agents.FlightAgent:a2a_dispatchPlan",
-    "timestamp" : "2025-08-30T18:05:32.240Z",
+    "timestamp" : "2026-04-27T19:11:01.110Z",
     "type" : 81
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.FlightAgent:a2a_dispatchSkill",
     "name" : "com.vantiq.trip.agents.FlightAgent:a2a_dispatchSkill",
     "resourceReference" : "/system.genaiflows/com.vantiq.trip.agents.FlightAgent:a2a_dispatchSkill",
-    "timestamp" : "2025-08-30T18:05:30.997Z",
+    "timestamp" : "2026-04-27T19:11:00.376Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.trip.agents.HotelAgent",
     "name" : "com.vantiq.trip.agents.HotelAgent",
     "resourceReference" : "/services/com.vantiq.trip.agents.HotelAgent",
-    "timestamp" : "2025-08-30T18:05:29.097Z",
+    "timestamp" : "2026-04-27T19:10:44.724Z",
     "type" : 63
   }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsCloseAll",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsCloseAll",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsCloseAll",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsCloseAll",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:38.426Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGenerateId",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGenerateId",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGenerateId",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGenerateId",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:48.239Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetActive",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetActive",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetActive",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetActive",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:44.056Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetAll",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetAll",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetAll",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetAll",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:33.558Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetByEntityId",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetByEntityId",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetByEntityId",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetByEntityId",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:40.764Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetById",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetById",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:31.593Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetCached",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetCached",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetCached",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetCached",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:42.143Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetConversation",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetConversation",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetConversation",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetConversation",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:48.743Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreate",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreate",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetOrCreate",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreate",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:39.771Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreateForEntity",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreateForEntity",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsGetOrCreateForEntity",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsGetOrCreateForEntity",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:41.241Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsMarkAsClosing",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsMarkAsClosing",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsMarkAsClosing",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsMarkAsClosing",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:37.954Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnClose",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnClose",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsOnClose",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnClose",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:28.431Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnLoad",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnLoad",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsOnLoad",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnLoad",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:31.008Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnStore",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnStore",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsOnStore",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsOnStore",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:30.005Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsReset",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsReset",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsReset",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsReset",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:34.320Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsSetConversation",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsSetConversation",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsSetConversation",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsSetConversation",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:49.293Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsSetEntity",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsSetEntity",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsSetEntity",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsSetEntity",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:40.213Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsStartConversation",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsStartConversation",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsStartConversation",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsStartConversation",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:47.351Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsUpdateDiscussion_artifacts",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateDiscussion_artifacts",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:11:01.219Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateDiscussion_messages",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateDiscussion_messages",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsUpdateDiscussion_messages",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateDiscussion_messages",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:11:01.216Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateStatus",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateStatus",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsUpdateStatus",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsUpdateStatus",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:34.978Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsWriteAll",
+    "name" : "com.vantiq.trip.agents.HotelAgent.ActiveCollabsWriteAll",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "ActiveCollabsWriteAll",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.ActiveCollabsWriteAll",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:36.574Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.trip.agents.HotelAgent.CollabIdsByEntityStoreId",
+    "name" : "com.vantiq.trip.agents.HotelAgent.CollabIdsByEntityStoreId",
+    "packageName" : "com.vantiq.trip.agents",
+    "procedureName" : "CollabIdsByEntityStoreId",
+    "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.CollabIdsByEntityStoreId",
+    "serviceName" : "HotelAgent",
+    "timestamp" : "2026-04-27T19:10:41.829Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.trip.agents.HotelAgent.PartitionedState",
+    "name" : "com.vantiq.trip.agents.HotelAgent.PartitionedState",
+    "resourceReference" : "/types/com.vantiq.trip.agents.HotelAgent.PartitionedState",
+    "timestamp" : "2026-04-27T19:10:27.057Z",
+    "type" : 1
+  }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.HotelAgent.a2a_dispatchPlan",
     "name" : "com.vantiq.trip.agents.HotelAgent.a2a_dispatchPlan",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "a2a_dispatchPlan",
     "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.a2a_dispatchPlan",
     "serviceName" : "HotelAgent",
-    "timestamp" : "2025-08-30T18:05:31.739Z",
+    "timestamp" : "2026-04-27T19:11:00.663Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.HotelAgent.a2a_dispatchSkill",
     "name" : "com.vantiq.trip.agents.HotelAgent.a2a_dispatchSkill",
     "packageName" : "com.vantiq.trip.agents",
     "procedureName" : "a2a_dispatchSkill",
     "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.a2a_dispatchSkill",
     "serviceName" : "HotelAgent",
-    "timestamp" : "2025-08-30T18:05:30.304Z",
+    "timestamp" : "2026-04-27T19:10:59.820Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.HotelAgent.js",
     "name" : "com.vantiq.trip.agents.HotelAgent.js",
     "resourceReference" : "/documents/com.vantiq.trip.agents.HotelAgent.js",
-    "timestamp" : "2025-08-30T18:05:33.112Z",
+    "timestamp" : "2026-04-27T19:11:01.942Z",
     "type" : 19
   }, {
     "label" : "com.vantiq.trip.agents.HotelAgent.searchHotels",
@@ -882,41 +2999,40 @@
     "procedureName" : "searchHotels",
     "resourceReference" : "/procedures/com.vantiq.trip.agents.HotelAgent.searchHotels",
     "serviceName" : "HotelAgent",
-    "timestamp" : "2025-09-02T16:32:15.440Z",
+    "timestamp" : "2026-04-27T19:11:03.401Z",
     "type" : 3
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.HotelAgent:a2a_dispatchPlan",
     "name" : "com.vantiq.trip.agents.HotelAgent:a2a_dispatchPlan",
     "resourceReference" : "/system.genaiflows/com.vantiq.trip.agents.HotelAgent:a2a_dispatchPlan",
-    "timestamp" : "2025-08-30T18:05:32.214Z",
+    "timestamp" : "2026-04-27T19:11:00.851Z",
     "type" : 81
   }, {
+    "isGenerated" : true,
     "label" : "com.vantiq.trip.agents.HotelAgent:a2a_dispatchSkill",
     "name" : "com.vantiq.trip.agents.HotelAgent:a2a_dispatchSkill",
     "resourceReference" : "/system.genaiflows/com.vantiq.trip.agents.HotelAgent:a2a_dispatchSkill",
-    "timestamp" : "2025-08-30T18:05:30.995Z",
+    "timestamp" : "2026-04-27T19:11:00.137Z",
     "type" : 81
   }, {
+    "isGenerated" : true,
     "label" : "io.vantiq.a2a.agentDispatch",
     "name" : "io.vantiq.a2a.agentDispatch",
     "resourceReference" : "/system.llms/io.vantiq.a2a.agentDispatch",
-    "timestamp" : "2025-08-18T17:28:05.154Z",
+    "timestamp" : "2026-04-27T19:10:59.364Z",
     "type" : 80
   }, {
     "label" : "rewooPlanPrompt.txt",
     "name" : "rewooPlanPrompt.txt",
     "resourceReference" : "/documents/rewooPlanPrompt.txt",
-    "timestamp" : "2025-08-30T18:05:28.938Z",
+    "timestamp" : "2026-04-27T19:10:26.211Z",
     "type" : 19
   } ],
   "tools" : [ {
     "isPinned" : false,
-    "name" : "Documents",
-    "pane" : {
-      "address" : "RH[0]/L[6]"
-    },
-    "state" : 8,
-    "type" : 26
+    "name" : "Autopsies",
+    "type" : 100
   }, {
     "isPinned" : false,
     "name" : "Errors",
@@ -939,19 +3055,18 @@
     "name" : "Project Description",
     "pane" : {
       "address" : "RH[1]/L[0]",
-      "isActive" : true
+      "isActive" : true,
+      "isActiveTool" : true
     },
     "state" : 8,
     "type" : 82
   }, {
     "isPinned" : false,
-    "name" : "com.vantiq.trip.TripPlanner",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion",
     "pane" : {
-      "address" : "RH[0]/L[0]",
-      "isActive" : true,
-      "isActiveTool" : true
+      "address" : "RH[0]/L[0]"
     },
-    "resourceKey" : "client/com.vantiq.trip.TripPlanner",
+    "resourceKey" : "client/com.vantiq.trip.TripPlannerDiscussion",
     "state" : 8,
     "toolOptions" : {
       "isRunning" : false
@@ -959,18 +3074,19 @@
     "type" : 63
   }, {
     "isPinned" : false,
-    "name" : "com.vantiq.trip.TripPlanner",
+    "name" : "com.vantiq.trip.TripPlannerDiscussion",
     "pane" : {
-      "address" : "RH[0]/L[1]"
+      "address" : "RH[0]/L[1]",
+      "isActive" : true
     },
-    "resourceKey" : "services/com.vantiq.trip.TripPlanner",
+    "resourceKey" : "services/com.vantiq.trip.TripPlannerDiscussion",
     "state" : 8,
     "type" : 109
   }, {
     "isPinned" : false,
     "name" : "com.vantiq.trip.agents.CarRentalAgent",
     "pane" : {
-      "address" : "RH[0]/L[4]"
+      "address" : "RH[0]/L[2]"
     },
     "resourceKey" : "services/com.vantiq.trip.agents.CarRentalAgent",
     "state" : 8,
@@ -988,7 +3104,7 @@
     "isPinned" : false,
     "name" : "com.vantiq.trip.agents.HotelAgent",
     "pane" : {
-      "address" : "RH[0]/L[5]"
+      "address" : "RH[0]/L[4]"
     },
     "resourceKey" : "services/com.vantiq.trip.agents.HotelAgent",
     "state" : 8,
@@ -997,6 +3113,6 @@
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "documents/Documents", "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description", "client/com.vantiq.trip.TripPlanner", "services/com.vantiq.trip.TripPlanner", "services/com.vantiq.trip.agents.CarRentalAgent", "services/com.vantiq.trip.agents.FlightAgent", "services/com.vantiq.trip.agents.HotelAgent" ]
+    "projectToolKeys" : [ "autopsyviewer/Autopsies", "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description", "client/com.vantiq.trip.TripPlannerDiscussion", "services/com.vantiq.trip.TripPlannerDiscussion", "services/com.vantiq.trip.agents.CarRentalAgent", "services/com.vantiq.trip.agents.FlightAgent", "services/com.vantiq.trip.agents.HotelAgent" ]
   } ]
 }

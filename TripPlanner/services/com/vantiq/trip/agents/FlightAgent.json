@@ -1,8 +1,14 @@
 {
   "active" : true,
+  "agentExtensionConfig" : {
+    "https://vantiq.com/agents/discussion" : {
+      "creationDisabled" : false
+    }
+  },
+  "agentFrameworkVersion" : "1.0",
   "ars_properties" : {
-    "filterPrivateGenerated" : false,
-    "filterPublicGenerated" : false,
+    "filterPrivateGenerated" : true,
+    "filterPublicGenerated" : true,
     "fragmentList" : [ ],
     "tags" : [ "travel" ]
   },
@@ -31,13 +37,13 @@
       "multi" : false,
       "name" : "startTime",
       "required" : false,
-      "type" : "DateTime"
+      "type" : "String"
     }, {
       "description" : "The latest date and time for the flight in ISO8601 format.",
       "multi" : false,
       "name" : "endTime",
       "required" : false,
-      "type" : "DateTime"
+      "type" : "String"
     }, {
       "description" : "The name of the airline.",
       "multi" : false,
@@ -59,7 +65,11 @@
   "internalEventHandlers" : [ ],
   "isAgent" : true,
   "name" : "com.vantiq.trip.agents.FlightAgent",
-  "partitionedType" : null,
+  "partitionedType" : "com.vantiq.trip.agents.FlightAgent.PartitionedState",
   "replicationFactor" : 1,
-  "scheduledProcedures" : { }
+  "scheduledProcedures" : {
+    "ActiveCollabsWriteAll" : {
+      "interval" : 300000
+    }
+  }
 }
