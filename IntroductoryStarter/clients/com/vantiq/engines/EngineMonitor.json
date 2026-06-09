@@ -1,0 +1,51 @@
+{
+  "ars_relationships" : [ ],
+  "controllers" : { },
+  "isComponent" : false,
+  "isLaunchable" : false,
+  "models" : {
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "AnomalyDetected0",
+      "pauseAtStartup" : false,
+      "service" : "com.vantiq.engines.EngineMonitor",
+      "serviceEventName" : "AnomalyDetected0",
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 8,
+      "updateInterval" : 60,
+      "uuid" : "185f1040-639b-11f1-895e-621d5f9e4d93",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "AnomalyDetected1",
+      "pauseAtStartup" : false,
+      "service" : "com.vantiq.engines.EngineMonitor",
+      "serviceEventName" : "AnomalyDetected1",
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 8,
+      "updateInterval" : 60,
+      "uuid" : "185f1041-639b-11f1-895e-621d5f9e4d93",
+      "v" : 1
+    } ]
+  },
+  "name" : "com.vantiq.engines.EngineMonitor",
+  "options" : { },
+  "targetDevice" : "browser",
+  "views" : {
+    "Start" : { }
+  }
+}

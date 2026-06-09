@@ -1,0 +1,224 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "Analysis" : {
+          "x" : 50.342870625328516,
+          "y" : 244.88047275857036
+        },
+        "Analytics" : {
+          "x" : 0,
+          "y" : 200
+        },
+        "DetectAnomaly" : {
+          "x" : -86.81575066226713,
+          "y" : 511.3767272031768
+        },
+        "DetectSituation" : {
+          "x" : -86.81575066226713,
+          "y" : 457.87672720317704
+        },
+        "GetStatistics" : {
+          "x" : -86.81575066226713,
+          "y" : 411.37672720317704
+        },
+        "Ingest" : {
+          "x" : 0,
+          "y" : -5
+        },
+        "React" : {
+          "x" : -85.2246545593646,
+          "y" : 633.6520726438123
+        },
+        "SensorReading" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "StoreAnalytics" : {
+          "x" : 80.45136625065702,
+          "y" : 299.7609455171407
+        },
+        "reset" : {
+          "x" : 77.26917404485195,
+          "y" : 245.90273250131403
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 0.8950120567822858,
+      "translate" : [ 463.92353383855146, 128.06412546312606 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "collab" : true,
+        "component" : true,
+        "custom" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "math" : true,
+        "mobile" : true,
+        "modifiers" : true,
+        "nlp" : true,
+        "serviceevents" : true,
+        "vision" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : true,
+      "serviceGroupOpenHash" : {
+        "Chat" : true,
+        "NLCustomTest" : true,
+        "NLTest" : true,
+        "NatLangTutorial" : true,
+        "Notification" : true,
+        "Recommend" : true,
+        "Utils" : true,
+        "a-b-c-daphne" : true,
+        "apps-services-ChatApp" : true,
+        "apps-services-TestApp" : true,
+        "apps-services-TestNotifyClose" : true,
+        "com-vantiq-aService" : true,
+        "com-vantiq-engines-EngineMonitor" : true,
+        "io-fred-test2-Recommender" : true,
+        "io-fred-test2-Utils" : true,
+        "patient-monitoring-HeartRate" : true
+      }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "Analytics" : {
+      "configuration" : {
+        "childStreams" : [ "GetStatistics" ],
+        "dimension" : null,
+        "inboundProperties" : null,
+        "operations" : {
+          "Count" : true,
+          "Max" : true,
+          "Mean" : true,
+          "Median" : true,
+          "Min" : true
+        },
+        "parentStreams" : [ "SensorReading" ],
+        "reservoirType" : "Fixed Time Window",
+        "resetStreams" : [ "StoreAnalytics" ],
+        "windowLength" : "1 hour"
+      },
+      "context" : "Analysis",
+      "name" : "Analytics",
+      "pattern" : "Analytics",
+      "patternVersion" : 5
+    },
+    "DetectAnomaly" : {
+      "configuration" : {
+        "childStreams" : [ "React" ],
+        "condition" : null,
+        "imports" : null,
+        "parentStreams" : [ "GetStatistics" ]
+      },
+      "context" : "DetectSituation",
+      "name" : "DetectAnomaly",
+      "pattern" : "Filter",
+      "patternVersion" : 5
+    },
+    "GetStatistics" : {
+      "configuration" : {
+        "childStreams" : [ "DetectAnomaly" ],
+        "imports" : null,
+        "parameters" : { },
+        "parentStreams" : [ "Analytics" ],
+        "partitionKey" : "",
+        "procedure" : "com.vantiq.engines.EngineMonitor.AnalyticsStateGet_SensorReading0",
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "context" : "DetectSituation",
+      "name" : "GetStatistics",
+      "pattern" : "Procedure",
+      "patternVersion" : 5
+    },
+    "React" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "AnomalyDetected0",
+        "parentStreams" : [ "DetectAnomaly" ],
+        "service" : "com.vantiq.engines.EngineMonitor"
+      },
+      "context" : "React",
+      "name" : "React",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3
+    },
+    "SensorReading" : {
+      "configuration" : {
+        "childStreams" : [ "Analytics" ],
+        "condition" : "",
+        "eventTypeName" : "SensorReading0",
+        "inboundResource" : "services",
+        "inboundResourceId" : "com.vantiq.engines.EngineMonitor",
+        "op" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "schema" : null,
+        "upsert" : false
+      },
+      "context" : "Ingest",
+      "name" : "SensorReading",
+      "pattern" : "EventStream",
+      "patternVersion" : 5
+    },
+    "StoreAnalytics" : {
+      "configuration" : {
+        "parentStreams" : [ "Analytics:reset" ],
+        "type" : null,
+        "upsert" : null
+      },
+      "context" : "Analysis",
+      "name" : "StoreAnalytics",
+      "pattern" : "SaveToType",
+      "patternVersion" : 3
+    }
+  },
+  "contextualizedAssembly" : {
+    "Analysis" : {
+      "children" : [ "DetectSituation" ],
+      "description" : "Compute statistics and analysis on the incoming event",
+      "name" : "Analysis",
+      "type" : "Analyze"
+    },
+    "DetectSituation" : {
+      "children" : [ "React" ],
+      "description" : "Determine if there is a significant situation which must be reported",
+      "name" : "DetectSituation",
+      "type" : "Detect"
+    },
+    "Ingest" : {
+      "children" : [ "Analysis" ],
+      "description" : "The events arriving from the configured event path",
+      "name" : "Ingest",
+      "type" : "Ingest"
+    },
+    "React" : {
+      "children" : [ ],
+      "description" : "React to the situation detected by taking the appropriate action",
+      "name" : "React",
+      "type" : "React"
+    }
+  },
+  "description" : null,
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.engines.EngineMonitor.SensorReading0"
+}

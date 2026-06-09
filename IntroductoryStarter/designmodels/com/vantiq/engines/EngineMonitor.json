@@ -1,0 +1,256 @@
+{
+  "ars_properties" : {
+    "lpPct" : 15,
+    "rpPct" : 30
+  },
+  "ars_relationships" : [ ],
+  "contents" : {
+    "connectors" : [ {
+      "key" : "185f1042-639b-11f1-895e-621d5f9e4d93&EXTERNALIN1",
+      "name" : "NEW-EXT-IN",
+      "parent" : "185f1042-639b-11f1-895e-621d5f9e4d93",
+      "type" : 13
+    }, {
+      "key" : "185f1042-639b-11f1-895e-621d5f9e4d93&EXTERNALOUT1",
+      "name" : "NEW-EXT-OUT",
+      "parent" : "185f1042-639b-11f1-895e-621d5f9e4d93",
+      "type" : 8
+    }, {
+      "key" : "1861a851-639b-11f1-895e-621d5f9e4d93&EXTERNALIN1",
+      "name" : "NEW-EXT-IN",
+      "parent" : "1861a851-639b-11f1-895e-621d5f9e4d93",
+      "type" : 13
+    }, {
+      "key" : "1861a851-639b-11f1-895e-621d5f9e4d93&EXTERNALOUT1",
+      "name" : "NEW-EXT-OUT",
+      "parent" : "1861a851-639b-11f1-895e-621d5f9e4d93",
+      "type" : 8
+    }, {
+      "key" : "1861a850-639b-11f1-895e-621d5f9e4d93&EXTOUTBOUND1",
+      "name" : "EXTOUTBOUND",
+      "parent" : "1861a850-639b-11f1-895e-621d5f9e4d93",
+      "type" : 15
+    }, {
+      "key" : "1861a850-639b-11f1-895e-621d5f9e4d93&EXTINBOUND1",
+      "name" : "EXTINBOUND",
+      "parent" : "1861a850-639b-11f1-895e-621d5f9e4d93",
+      "type" : 14
+    }, {
+      "key" : "1861cf60-639b-11f1-895e-621d5f9e4d93&EXTOUTBOUND1",
+      "name" : "EXTOUTBOUND",
+      "parent" : "1861cf60-639b-11f1-895e-621d5f9e4d93",
+      "type" : 15
+    }, {
+      "key" : "1861cf60-639b-11f1-895e-621d5f9e4d93&EXTINBOUND1",
+      "name" : "EXTINBOUND",
+      "parent" : "1861cf60-639b-11f1-895e-621d5f9e4d93",
+      "type" : 14
+    }, {
+      "key" : "1861cf62-639b-11f1-895e-621d5f9e4d93&EXTOUTBOUND1",
+      "name" : "EXTOUTBOUND",
+      "parent" : "1861cf62-639b-11f1-895e-621d5f9e4d93",
+      "type" : 15
+    }, {
+      "key" : "1861cf62-639b-11f1-895e-621d5f9e4d93&EXTINBOUND1",
+      "name" : "EXTINBOUND",
+      "parent" : "1861cf62-639b-11f1-895e-621d5f9e4d93",
+      "type" : 14
+    }, {
+      "key" : "185f3750-639b-11f1-895e-621d5f9e4d93&INPUT1",
+      "name" : "SensorReading0",
+      "parent" : "185f1042-639b-11f1-895e-621d5f9e4d93",
+      "type" : 1
+    }, {
+      "key" : "185f3751-639b-11f1-895e-621d5f9e4d93&OUTPUT2",
+      "name" : "AnomalyDetected0",
+      "parent" : "185f1042-639b-11f1-895e-621d5f9e4d93",
+      "type" : 2
+    }, {
+      "key" : "185f3752-639b-11f1-895e-621d5f9e4d93&INPUT1",
+      "name" : "SensorReading1",
+      "parent" : "185f1042-639b-11f1-895e-621d5f9e4d93",
+      "type" : 1
+    }, {
+      "key" : "185f3753-639b-11f1-895e-621d5f9e4d93&OUTPUT2",
+      "name" : "AnomalyDetected1",
+      "parent" : "185f1042-639b-11f1-895e-621d5f9e4d93",
+      "type" : 2
+    }, {
+      "key" : "1861a851-639b-11f1-895e-621d5f9e4d93&EXTERNALIN2",
+      "name" : "Sensors",
+      "parent" : "1861a851-639b-11f1-895e-621d5f9e4d93",
+      "type" : 12
+    }, {
+      "key" : "1861cf61-639b-11f1-895e-621d5f9e4d93&EXTERNAL1",
+      "name" : "DataWarehouse",
+      "parent" : "185f1042-639b-11f1-895e-621d5f9e4d93",
+      "type" : 7
+    }, {
+      "key" : "1861cf63-639b-11f1-895e-621d5f9e4d93&EXTERNAL2",
+      "name" : "OutsideWorld",
+      "parent" : "185f1042-639b-11f1-895e-621d5f9e4d93",
+      "type" : 7
+    }, {
+      "key" : "189896d0-639b-11f1-895e-621d5f9e4d93&OUTPUT2",
+      "name" : "Sensor0",
+      "parent" : "1861a851-639b-11f1-895e-621d5f9e4d93",
+      "type" : 2
+    }, {
+      "key" : "18d66320-639b-11f1-895e-621d5f9e4d93&OUTPUT2",
+      "name" : "Sensor1",
+      "parent" : "1861a851-639b-11f1-895e-621d5f9e4d93",
+      "type" : 2
+    }, {
+      "key" : "185f1042-639b-11f1-895e-621d5f9e4d93&INPUT1",
+      "name" : "NEW-IN",
+      "parent" : "185f1042-639b-11f1-895e-621d5f9e4d93",
+      "type" : 3
+    }, {
+      "key" : "185f1042-639b-11f1-895e-621d5f9e4d93&OUTPUT1",
+      "name" : "NEW-OUT",
+      "parent" : "185f1042-639b-11f1-895e-621d5f9e4d93",
+      "type" : 4
+    }, {
+      "key" : "185f1043-639b-11f1-895e-621d5f9e4d93&DATASTREAM1",
+      "name" : "NEW-DS",
+      "parent" : "185f1043-639b-11f1-895e-621d5f9e4d93",
+      "type" : 11
+    }, {
+      "key" : "52&185f1043-639b-11f1-895e-621d5f9e4d93&DATASTREAM1",
+      "name" : "AnomalyDetected0",
+      "parent" : "185f1043-639b-11f1-895e-621d5f9e4d93",
+      "type" : 10
+    }, {
+      "key" : "52&185f1043-639b-11f1-895e-621d5f9e4d93&DATASTREAM2",
+      "name" : "AnomalyDetected1",
+      "parent" : "185f1043-639b-11f1-895e-621d5f9e4d93",
+      "type" : 10
+    }, {
+      "key" : "1861a851-639b-11f1-895e-621d5f9e4d93&INPUT1",
+      "name" : "NEW-IN",
+      "parent" : "1861a851-639b-11f1-895e-621d5f9e4d93",
+      "type" : 3
+    }, {
+      "key" : "1861a851-639b-11f1-895e-621d5f9e4d93&OUTPUT1",
+      "name" : "NEW-OUT",
+      "parent" : "1861a851-639b-11f1-895e-621d5f9e4d93",
+      "type" : 4
+    } ],
+    "links" : [ {
+      "isBidirectional" : false,
+      "source" : "1861a850-639b-11f1-895e-621d5f9e4d93&EXTOUTBOUND1",
+      "target" : "1861a851-639b-11f1-895e-621d5f9e4d93&EXTERNALIN2"
+    }, {
+      "isBidirectional" : false,
+      "source" : "1861cf61-639b-11f1-895e-621d5f9e4d93&EXTERNAL1",
+      "target" : "1861cf60-639b-11f1-895e-621d5f9e4d93&EXTINBOUND1"
+    }, {
+      "isBidirectional" : false,
+      "source" : "1861cf63-639b-11f1-895e-621d5f9e4d93&EXTERNAL2",
+      "target" : "1861cf62-639b-11f1-895e-621d5f9e4d93&EXTINBOUND1"
+    }, {
+      "isBidirectional" : false,
+      "source" : "185f3751-639b-11f1-895e-621d5f9e4d93&OUTPUT2",
+      "target" : "52&185f1043-639b-11f1-895e-621d5f9e4d93&DATASTREAM1"
+    }, {
+      "isBidirectional" : false,
+      "source" : "185f3753-639b-11f1-895e-621d5f9e4d93&OUTPUT2",
+      "target" : "52&185f1043-639b-11f1-895e-621d5f9e4d93&DATASTREAM2"
+    }, {
+      "isBidirectional" : false,
+      "source" : "189896d0-639b-11f1-895e-621d5f9e4d93&OUTPUT2",
+      "target" : "185f3750-639b-11f1-895e-621d5f9e4d93&INPUT1"
+    }, {
+      "isBidirectional" : false,
+      "source" : "18d66320-639b-11f1-895e-621d5f9e4d93&OUTPUT2",
+      "target" : "185f3752-639b-11f1-895e-621d5f9e4d93&INPUT1"
+    } ],
+    "objects" : [ {
+      "h" : 100,
+      "label" : "EngineMonitor",
+      "resourceName" : "com.vantiq.engines.EngineMonitor",
+      "resourceType" : "services",
+      "type" : 51,
+      "uuid" : "185f1042-639b-11f1-895e-621d5f9e4d93",
+      "w" : 148,
+      "x" : 0,
+      "y" : 0
+    }, {
+      "h" : 100,
+      "label" : "EngineMonitor",
+      "resourceName" : "com.vantiq.engines.EngineMonitor",
+      "resourceType" : "system.clients",
+      "type" : 52,
+      "uuid" : "185f1043-639b-11f1-895e-621d5f9e4d93",
+      "w" : 100,
+      "x" : 348,
+      "y" : 0
+    }, {
+      "h" : 100,
+      "label" : "EngineMonitorSensors",
+      "resourceName" : "com.vantiq.engines.EngineMonitorSensors",
+      "resourceType" : "services",
+      "type" : 51,
+      "uuid" : "1861a851-639b-11f1-895e-621d5f9e4d93",
+      "w" : 300,
+      "x" : -374,
+      "y" : 0
+    }, {
+      "h" : 60,
+      "label" : "Sensors",
+      "resourceName" : null,
+      "type" : 56,
+      "uuid" : "1861a850-639b-11f1-895e-621d5f9e4d93",
+      "w" : 110.234375,
+      "x" : -374,
+      "y" : -200
+    }, {
+      "h" : 60,
+      "label" : "DataWarehouse",
+      "resourceName" : null,
+      "type" : 56,
+      "uuid" : "1861cf60-639b-11f1-895e-621d5f9e4d93",
+      "w" : 110.234375,
+      "x" : 0,
+      "y" : 200
+    }, {
+      "h" : 60,
+      "label" : "OutsideWorld",
+      "resourceName" : null,
+      "type" : 56,
+      "uuid" : "1861cf62-639b-11f1-895e-621d5f9e4d93",
+      "w" : 110.234375,
+      "x" : 200,
+      "y" : 200
+    } ],
+    "prefs" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.7961593322595515,
+        "translate" : [ 445.1061009625113, 281.3702767641374 ]
+      }
+    },
+    "v" : 1
+  },
+  "description" : "Determine if there is an engine malfunction",
+  "name" : "com.vantiq.engines.EngineMonitor",
+  "serviceEventRoutes" : [ {
+    "eventSource" : {
+      "eventTypeName" : "Sensor0",
+      "serviceName" : "com.vantiq.engines.EngineMonitorSensors"
+    },
+    "eventTarget" : {
+      "eventTypeName" : "SensorReading0",
+      "serviceName" : "com.vantiq.engines.EngineMonitor"
+    }
+  }, {
+    "eventSource" : {
+      "eventTypeName" : "Sensor1",
+      "serviceName" : "com.vantiq.engines.EngineMonitorSensors"
+    },
+    "eventTarget" : {
+      "eventTypeName" : "SensorReading1",
+      "serviceName" : "com.vantiq.engines.EngineMonitor"
+    }
+  } ]
+}
