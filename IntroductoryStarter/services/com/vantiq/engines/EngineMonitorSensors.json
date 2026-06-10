@@ -1,0 +1,20 @@
+{
+  "active" : true,
+  "ars_relationships" : [ ],
+  "collaborationStateConfig" : {
+    "writeFrequency" : "5 minutes"
+  },
+  "description" : null,
+  "eventTypes" : {
+    "Sensor0" : {
+      "direction" : "OUTBOUND"
+    },
+    "Sensor1" : {
+      "direction" : "OUTBOUND"
+    }
+  },
+  "internalEventHandlers" : [ "/collaborationtypes/com.vantiq.engines.EngineMonitorSensors.IngestSensor0", "/collaborationtypes/com.vantiq.engines.EngineMonitorSensors.IngestSensor1" ],
+  "isAgent" : false,
+  "name" : "com.vantiq.engines.EngineMonitorSensors",
+  "replicationFactor" : 1
+}

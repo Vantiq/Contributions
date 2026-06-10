@@ -12,6 +12,7 @@ To import a Contribution in Modelo, go to the Projects dropdown and click Import
 The list of Contributions that show up in the Import dialog is:
 * GoogleAPIs
 * GoogleMapsAPI
+* IntroductoryStarter
 * PublicUserRegistration
 * PumpAITroubleshooting - requires v1.38
 * TrackingRegion - requires v1.38

@@ -1,0 +1,32 @@
+{
+  "active" : true,
+  "ars_relationships" : [ ],
+  "collaborationStateConfig" : {
+    "writeFrequency" : "5 minutes"
+  },
+  "description" : null,
+  "eventTypes" : {
+    "AnomalyDetected0" : {
+      "direction" : "OUTBOUND"
+    },
+    "AnomalyDetected1" : {
+      "direction" : "OUTBOUND"
+    },
+    "SensorReading0" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor.SensorReading0/SensorReading"
+    },
+    "SensorReading1" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor.SensorReading1/SensorReading"
+    }
+  },
+  "globalType" : null,
+  "interface" : [ ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "com.vantiq.engines.EngineMonitor",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

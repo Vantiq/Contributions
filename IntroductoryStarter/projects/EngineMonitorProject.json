@@ -1,0 +1,142 @@
+{
+  "ars_relationships" : [ ],
+  "links" : [ {
+    "source" : "app/com.vantiq.engines.EngineMonitorSensors.IngestSensor0",
+    "target" : "services/com.vantiq.engines.EngineMonitorSensors"
+  }, {
+    "source" : "app/com.vantiq.engines.EngineMonitorSensors.IngestSensor1",
+    "target" : "services/com.vantiq.engines.EngineMonitorSensors"
+  }, {
+    "source" : "services/com.vantiq.engines.EngineMonitor",
+    "target" : "document/com.vantiq.engines.EngineMonitor.js"
+  }, {
+    "source" : "app/com.vantiq.engines.EngineMonitor.SensorReading0",
+    "target" : "services/com.vantiq.engines.EngineMonitor"
+  }, {
+    "source" : "app/com.vantiq.engines.EngineMonitor.SensorReading1",
+    "target" : "services/com.vantiq.engines.EngineMonitor"
+  }, {
+    "source" : "designmodel/com.vantiq.engines.EngineMonitor",
+    "target" : "services/com.vantiq.engines.EngineMonitorSensors"
+  }, {
+    "source" : "designmodel/com.vantiq.engines.EngineMonitor",
+    "target" : "services/com.vantiq.engines.EngineMonitor"
+  }, {
+    "source" : "designmodel/com.vantiq.engines.EngineMonitor",
+    "target" : "client/com.vantiq.engines.EngineMonitor"
+  }, {
+    "source" : "services/com.vantiq.engines.EngineMonitor",
+    "target" : "app/com.vantiq.engines.EngineMonitor.SensorReading1"
+  }, {
+    "source" : "services/com.vantiq.engines.EngineMonitor",
+    "target" : "app/com.vantiq.engines.EngineMonitor.SensorReading0"
+  } ],
+  "name" : "EngineMonitorProject",
+  "options" : {
+    "description" : "",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
+    "dockSort" : 1,
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "openFolders" : [ "com.vantiq.engines", "com.vantiq.engines/client", "com.vantiq.engines/designmodel", "com.vantiq.engines/services" ],
+    "partitionsSettings" : { },
+    "rootViewFlavor" : 5,
+    "showGrid" : true,
+    "tileColumns" : 1,
+    "tileRows" : 1,
+    "type" : "dev",
+    "v" : 6,
+    "viewUUID" : "MAINVIEW"
+  },
+  "partitions" : [ ],
+  "resources" : [ {
+    "name" : "com.vantiq.engines.EngineMonitor",
+    "resourceReference" : "/system.clients/com.vantiq.engines.EngineMonitor",
+    "timestamp" : "2026-06-09T00:35:29.180Z",
+    "type" : 15
+  }, {
+    "name" : "com.vantiq.engines.EngineMonitor",
+    "resourceReference" : "/system.designmodels/com.vantiq.engines.EngineMonitor",
+    "timestamp" : "2026-06-09T00:36:49.372Z",
+    "type" : 75
+  }, {
+    "name" : "com.vantiq.engines.EngineMonitor",
+    "resourceReference" : "/services/com.vantiq.engines.EngineMonitor",
+    "timestamp" : "2026-06-09T00:35:21.374Z",
+    "type" : 63
+  }, {
+    "name" : "com.vantiq.engines.EngineMonitor.SensorReading0",
+    "resourceReference" : "/collaborationtypes/com.vantiq.engines.EngineMonitor.SensorReading0",
+    "timestamp" : "2026-06-09T00:35:22.361Z",
+    "type" : 12
+  }, {
+    "name" : "com.vantiq.engines.EngineMonitor.SensorReading1",
+    "resourceReference" : "/collaborationtypes/com.vantiq.engines.EngineMonitor.SensorReading1",
+    "timestamp" : "2026-06-09T00:35:25.744Z",
+    "type" : 12
+  }, {
+    "name" : "com.vantiq.engines.EngineMonitor.js",
+    "resourceReference" : "/documents/com.vantiq.engines.EngineMonitor.js",
+    "timestamp" : "2026-06-09T00:35:21.860Z",
+    "type" : 19
+  }, {
+    "name" : "com.vantiq.engines.EngineMonitorSensors",
+    "resourceReference" : "/services/com.vantiq.engines.EngineMonitorSensors",
+    "timestamp" : "2026-06-09T00:35:22.065Z",
+    "type" : 63
+  }, {
+    "name" : "com.vantiq.engines.EngineMonitorSensors.IngestSensor0",
+    "resourceReference" : "/collaborationtypes/com.vantiq.engines.EngineMonitorSensors.IngestSensor0",
+    "timestamp" : "2026-06-09T00:35:27.246Z",
+    "type" : 12
+  }, {
+    "name" : "com.vantiq.engines.EngineMonitorSensors.IngestSensor1",
+    "resourceReference" : "/collaborationtypes/com.vantiq.engines.EngineMonitorSensors.IngestSensor1",
+    "timestamp" : "2026-06-09T00:35:28.269Z",
+    "type" : 12
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.engines.EngineMonitor",
+    "pane" : {
+      "c" : 0,
+      "r" : 0
+    },
+    "resourceKey" : "designmodel/com.vantiq.engines.EngineMonitor",
+    "state" : 2,
+    "type" : 121
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "designmodel/com.vantiq.engines.EngineMonitor" ]
+  } ]
+}

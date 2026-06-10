@@ -1,0 +1,70 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "isHidden" : false
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "Ingest" : {
+      "configuration" : {
+        "childStreams" : [ "Transform" ],
+        "condition" : "",
+        "eventTypeName" : null,
+        "inboundResource" : null,
+        "inboundResourceId" : null,
+        "parentStreams" : [ ]
+      },
+      "context" : "Ingest",
+      "name" : "Ingest",
+      "pattern" : "EventStream",
+      "patternVersion" : 5
+    },
+    "PublishEvent" : {
+      "configuration" : {
+        "eventTypeName" : "Sensor0",
+        "parentStreams" : [ "Transform" ],
+        "service" : "com.vantiq.engines.EngineMonitorSensors"
+      },
+      "context" : "Publish",
+      "name" : "PublishEvent",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3
+    },
+    "Transform" : {
+      "configuration" : {
+        "childStreams" : [ "PublishEvent" ],
+        "parentStreams" : [ "Ingest" ],
+        "transformation" : null
+      },
+      "context" : "Transform",
+      "name" : "Transform",
+      "pattern" : "Transformation",
+      "patternVersion" : 5
+    }
+  },
+  "contextualizedAssembly" : {
+    "Ingest" : {
+      "children" : [ "Transform" ],
+      "description" : "The events arriving from the external source",
+      "name" : "Ingest",
+      "type" : "Ingest"
+    },
+    "Publish" : {
+      "children" : [ ],
+      "description" : "Publish the transformed event back to the external source for additional processing",
+      "name" : "Publish",
+      "type" : "React"
+    },
+    "Transform" : {
+      "children" : [ "Publish" ],
+      "description" : "Transform the event schema to conform to the internal representation",
+      "name" : "Transform",
+      "type" : "Transform"
+    }
+  },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.engines.EngineMonitorSensors.IngestSensor0"
+}
