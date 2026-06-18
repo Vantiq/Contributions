@@ -1,0 +1,123 @@
+{
+  "ars_properties" : {
+    "tags" : [ "#launchable" ]
+  },
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : {
+      "dsDiscussionChange" : {
+        "onDataArrived" : "RELOCATED to controllers/dataStream/dsDiscussionChange/onDataArrived.js"
+      }
+    },
+    "page" : {
+      "Start" : {
+        "onClientStart" : "RELOCATED to controllers/page/Start/onClientStart.js",
+        "widgets" : {
+          "dwTripDiscussion" : {
+            "onDataArrived" : "RELOCATED to controllers/page/Start/widgets/dwTripDiscussion/onDataArrived.js"
+          },
+          "trTripDiscussionTree" : {
+            "onNodeClicked" : "RELOCATED to controllers/page/Start/widgets/trTripDiscussionTree/onNodeClicked.js",
+            "onNodeMenuClicked" : "RELOCATED to controllers/page/Start/widgets/trTripDiscussionTree/onNodeMenuClicked.js"
+          }
+        }
+      }
+    }
+  },
+  "isComponent" : false,
+  "isLaunchable" : true,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : {
+          "nodeMenuItems" : {
+            "defaultLabel" : "nodeMenuItems",
+            "defaultValue" : [ ],
+            "isArray" : true,
+            "type" : "Object"
+          }
+        }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "system.discussions"
+      } ],
+      "isDeleteOp" : true,
+      "isInsertOp" : true,
+      "isUpdateOp" : true,
+      "maxRecords" : 100,
+      "name" : "dsDiscussionChange",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 1,
+      "updateInterval" : 60,
+      "uuid" : "151c0767-d7cc-4f1e-84a4-bc293a5aaee2",
+      "v" : 1
+    } ]
+  },
+  "name" : "com.vantiq.trip.TripPlannerDiscussion",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "edit",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ ]
+    },
+    "description" : "",
+    "docAssets" : [ ],
+    "productV" : "8.0",
+    "showCategoryButtons" : true,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : true,
+    "showCategoryLayout" : true,
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "bgImgPosition" : "center",
+      "bgImgRepeat" : "no-repeat",
+      "bgImgSize" : "auto",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17"
+    },
+    "themeName" : "light",
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "types",
+      "resourceId" : "system.discussions",
+      "type" : "subscribes_to"
+    } ]
+  },
+  "targetDevice" : "all",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json"
+  }
+}

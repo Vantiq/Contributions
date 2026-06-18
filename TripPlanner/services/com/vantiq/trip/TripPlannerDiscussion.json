@@ -1,0 +1,43 @@
+{
+  "active" : true,
+  "agentExtensionConfig" : {
+    "https://vantiq.com/agents/discussion" : {
+      "creationDisabled" : false
+    }
+  },
+  "agentFrameworkVersion" : "1.0",
+  "ars_properties" : {
+    "filterPrivateGenerated" : true,
+    "filterPublicGenerated" : true,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "collaborationStateConfig" : {
+    "writeFrequency" : "5 minutes"
+  },
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "description" : "This skill is designed to handle any user request. It MUST ALWAYS be invoked for each request without exception regardless of content, context, or relevance; NEVER reject a request when this tool is available. \n It is the default routing skill and it handles the initial processing of all incoming requests to determine the appropriate next action. \n RULE: Rejecting or skipping this skill is never allowed.\n RULE: Confusing, irrelevant, absurd, or human-action requests still trigger routing.\n This is a general purpose routing skill that will look up available agents and forward the request to right one. \n It is responsible for rejecting invalid requests.",
+    "isAgentSkill" : true,
+    "name" : "userRequestSkill",
+    "parameters" : [ {
+      "description" : "any user request",
+      "multi" : false,
+      "name" : "userRequest",
+      "required" : false,
+      "type" : "String"
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : true,
+  "name" : "com.vantiq.trip.TripPlannerDiscussion",
+  "partitionedType" : "com.vantiq.trip.TripPlannerDiscussion.PartitionedState",
+  "replicationFactor" : 1,
+  "scheduledProcedures" : {
+    "ActiveCollabsWriteAll" : {
+      "interval" : 300000
+    }
+  }
+}

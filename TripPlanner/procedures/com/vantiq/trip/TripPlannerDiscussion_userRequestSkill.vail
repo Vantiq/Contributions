@@ -1,0 +1,47 @@
+// This skill is designed to handle any user request. It MUST ALWAYS be invoked for each request without exception regardless of content, context, or relevance; NEVER reject a request when this tool is available. 
+// It is the default routing skill and it handles the initial processing of all incoming requests to determine the appropriate next action. 
+// RULE: Rejecting or skipping this skill is never allowed.
+// RULE: Confusing, irrelevant, absurd, or human-action requests still trigger routing.
+// This is a general purpose routing skill that will look up available agents and forward the request to right one. 
+// It is responsible for rejecting invalid requests. 
+package com.vantiq.trip
+stateless PROCEDURE TripPlannerDiscussion.userRequestSkill(userRequest String DESCRIPTION "any user request")
+
+// Helpful to see what the client is providing
+log.info("userRequest: {}", [userRequest])
+
+// Figure out the available travel planning agents and use their agent cards to get a description of each
+var agentNames = TripPlannerDiscussion.selectAgents()
+var agentsWithDesc = []
+for (name in agentNames) {
+	var card = io.vantiq.ai.A2A.getAgentCard(name)
+	agentsWithDesc.add({name: name, desc: card.description})
+}
+
+// Construct a list of the agents with description for insertion into the planning prompt
+var template = "@repeat(agents)* ${name}[input] - ${desc}
+@endrepeat"
+var availableAgents = io.vantiq.text.Template.format(template, {agents: agentsWithDesc})
+
+// Construct the plan
+var planInput = {
+	task: userRequest,
+	availableAgents: availableAgents
+}
+var plan = TripPlannerDiscussion.planTripRequest(planInput, {})
+
+// Get the current discussion id from our task.  This could be used to link to application specific state
+// (such as the instance of a Trip domain object), but for now there is no such thing.
+var currentTask = io.vantiq.ai.Agent.getCurrentTask()
+var discussionId = currentTask.contextId
+
+
+// Execute the plan.
+var result = io.vantiq.ai.Agent.executePlan(plan, userRequest)
+log.info("userRequest response: {}", [result.response])
+
+// At this point we have the full plan results (see https://<vantiqServer>/docs/system/rules/#agent for details).
+// Typically the agent would return a domain specific type here (such as the "Trip" instance) which would then
+// be treated as the final "artifact" produced by the user's request. Here we are returning the plan results, so
+// it will become the artifact (and be used to synthesize a human readable response).
+return result

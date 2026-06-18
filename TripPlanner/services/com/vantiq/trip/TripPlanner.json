@@ -1,5 +1,6 @@
 {
   "active" : true,
+  "agentFrameworkVersion" : "1.0",
   "ars_properties" : {
     "filterPrivateGenerated" : false,
     "filterPublicGenerated" : false,

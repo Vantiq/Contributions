@@ -1,0 +1,6 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "com.vantiq.trip.agents.HotelAgent.PartitionedState",
+  "properties" : { },
+  "role" : "schema"
+}
