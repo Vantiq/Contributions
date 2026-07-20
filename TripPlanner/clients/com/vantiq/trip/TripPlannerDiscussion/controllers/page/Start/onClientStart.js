@@ -1,3 +1,5 @@
+    // lock the text-entry field in Discussion widget until TripPlannerDiscussion service is initialized
+    client.getWidget("dwTripDiscussion").isReadOnly = true;
     
     // Configure the menu items for the tree nodes
 
@@ -45,6 +47,7 @@
             rootNode.addChild(newTreeNode);
         });
            
+        client.getWidget("dwTripDiscussion").isReadOnly = false;  // unlock the text-entry field
     });
 
 
